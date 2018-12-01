@@ -49,6 +49,12 @@ def format_url(url):
 
 
 def get_abs_url(base_url, raw_link):
+    """
+    如果raw_link和base_url不是一个站点的就会返回raw_link本身
+    :param base_url:
+    :param raw_link:
+    :return:
+    """
     u = urljoin(base_url, raw_link)
     return format_url(u)
 
@@ -83,3 +89,9 @@ def get_file_name_by_type(url, suffix):
         return "%s.%s"%(str(uuid.uuid4()), suffix)
     else:
         return raw_name
+
+
+def is_same_web_site_link(url1, url2):
+    domain1 = get_domain(url1)
+    domain2 = get_domain(url2)
+    return domain1==domain2

@@ -1,7 +1,8 @@
 import os
 
 from spider.request_util import spider_get
-from spider.utils import get_date, get_domain, get_abs_url, format_url, get_url_file_name, get_file_name_by_type
+from spider.utils import get_date, get_domain, get_abs_url, format_url, get_url_file_name, get_file_name_by_type, \
+    is_same_web_site_link
 from datetime import datetime
 from bs4 import BeautifulSoup
 import logging
@@ -89,11 +90,16 @@ def __dl_js(soup, url, tpl_mapping, url_list, tpl_dir, js_dir):
         if raw_link is None:
             continue
         abs_link = get_abs_url(url, raw_link)
-        file_name = get_file_name_by_type(abs_link, 'js')
-        ctx = spider_get(abs_link)
-        __save_text_file(ctx.text, "%s/%s/%s" % (tpl_dir, js_dir, file_name))  #存储js文件
 
-        scripts['src'] = "%s/%s"%(js_dir, file_name)
+        if is_same_web_site_link(url, abs_link) is True:
+            """
+            如果是外链引入的js就不管了
+            """
+            file_name = get_file_name_by_type(abs_link, 'js')
+            ctx = spider_get(abs_link)
+            __save_text_file(ctx.text, "%s/%s/%s" % (tpl_dir, js_dir, file_name))  #存储js文件
+
+            scripts['src'] = "%s/%s"%(js_dir, file_name)
 
 
 def __dl_img(soup, url, tpl_mapping, url_list, tpl_dir, img_dir):
@@ -117,11 +123,12 @@ def __dl_css(soup, url, tpl_mapping, url_list, tpl_dir, css_dir):
         if raw_link is None:
             continue
         abs_link = get_abs_url(url, raw_link)
-        file_name = get_file_name_by_type(abs_link, 'css')
-        ctx = spider_get(abs_link)
-        __save_text_file(ctx.text, "%s/%s/%s" % (tpl_dir, css_dir, file_name))  #存储js文件
+        if is_same_web_site_link(url, abs_link) is True:
+            file_name = get_file_name_by_type(abs_link, 'css')
+            ctx = spider_get(abs_link)
+            __save_text_file(ctx.text, "%s/%s/%s" % (tpl_dir, css_dir, file_name))  #存储js文件
 
-        css['href'] = "%s/%s"%(css_dir, file_name)
+            css['href'] = "%s/%s"%(css_dir, file_name)
 
 
 def __rend_template(url, html, tpl_mapping, url_list, tpl_dir, js_dir, img_dir, css_dir):
@@ -158,11 +165,11 @@ def template_crawl(url_list, save_path):
 
 if __name__=="__main__":
     """
-    动态渲染的： 'https://docs.python.org/3/library/os.html',
+    动态渲染的： 'https://docs.python.org/3/library/os.html',http://www.gd-n-tax.gov.cn/gdsw/index.shtml
     需要UA：'https://stackoverflow.com/questions/13137817/how-to-download-image-using-requests',
     """
     url_list=[
-        'http://boke1.wscso.com/',
+        'https://www.mi.com/',
 
     ]
 
