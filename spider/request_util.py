@@ -1,4 +1,5 @@
 import requests
 
+
 def spider_get(url):
-    pass
+    return requests.get(url, timeout=10)

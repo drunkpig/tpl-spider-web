@@ -1,6 +1,7 @@
-import requests
 import os
-from spider.utils import get_date, get_domain, get_abs_url, format_url, get_url_file_name
+
+from spider.request_util import spider_get
+from spider.utils import get_date, get_domain, get_abs_url, format_url, get_url_file_name, get_file_name_by_type
 from datetime import datetime
 from bs4 import BeautifulSoup
 import logging
@@ -56,7 +57,9 @@ def __get_tpl_replace_url(url_list):
 
 
 def __make_template(soup, url, tpl_mapping, url_list):
-    soup.base.decompose()
+    for base_tag in soup.find_all("base"):
+        base_tag.decompose()
+
     a_list = soup.find_all("a")
 
     """
@@ -86,8 +89,8 @@ def __dl_js(soup, url, tpl_mapping, url_list, tpl_dir, js_dir):
         if raw_link is None:
             continue
         abs_link = get_abs_url(url, raw_link)
-        file_name = get_url_file_name(abs_link)
-        ctx = requests.get(abs_link)
+        file_name = get_file_name_by_type(abs_link, 'js')
+        ctx = spider_get(abs_link)
         __save_text_file(ctx.text, "%s/%s/%s" % (tpl_dir, js_dir, file_name))  #存储js文件
 
         scripts['src'] = "%s/%s"%(js_dir, file_name)
@@ -101,21 +104,21 @@ def __dl_img(soup, url, tpl_mapping, url_list, tpl_dir, img_dir):
             continue
         abs_link = get_abs_url(url, raw_link)
         file_name = get_url_file_name(abs_link)
-        resp = requests.get(abs_link)
+        resp = spider_get(abs_link)
         __save_bin_file(resp, "%s/%s/%s" % (tpl_dir, img_dir, file_name))  #存储图片文件
 
         img['src'] = "%s/%s"%(img_dir, file_name)
 
 
 def __dl_css(soup, url, tpl_mapping, url_list, tpl_dir, css_dir):
-    css_src = soup.find_all("link")
+    css_src = soup.find_all("link", rel="stylesheet")
     for css in css_src:
         raw_link = css.get("href")
         if raw_link is None:
             continue
         abs_link = get_abs_url(url, raw_link)
-        file_name = get_url_file_name(abs_link)
-        ctx = requests.get(abs_link)
+        file_name = get_file_name_by_type(abs_link, 'css')
+        ctx = spider_get(abs_link)
         __save_text_file(ctx.text, "%s/%s/%s" % (tpl_dir, css_dir, file_name))  #存储js文件
 
         css['href'] = "%s/%s"%(css_dir, file_name)
@@ -145,7 +148,7 @@ def template_crawl(url_list, save_path):
 
     i = 0
     for url in url_list:
-        ctx = requests.get(url)
+        ctx = spider_get(url)
         html = ctx.text
         tpl_html = __rend_template(url, html, tpl_mapping, url_list, tpl_dir=tpl_dir, js_dir=js_dir, img_dir=img_dir, css_dir=css_dir)
         save_file_path = "%s/%s"%(tpl_dir, __get_file_name(url, i) )
@@ -154,14 +157,13 @@ def template_crawl(url_list, save_path):
 
 
 if __name__=="__main__":
+    """
+    动态渲染的： 'https://docs.python.org/3/library/os.html',
+    需要UA：'https://stackoverflow.com/questions/13137817/how-to-download-image-using-requests',
+    """
     url_list=[
-        'http://www.xinbencaifu.com/index.php#',
-        'http://www.xinbencaifu.com/index.php?id=about-us',
-        'http://www.xinbencaifu.com/index.php?id=news&cate=company',
-        'http://www.xinbencaifu.com/index.php?id=xbcp',
-        'http://www.xinbencaifu.com/index.php?id=industry',
-        'http://www.xinbencaifu.com/index.php?id=zrln',
-        'http://www.xinbencaifu.com/index.php?id=lxfs',
+        'http://boke1.wscso.com/',
+
     ]
 
     url_list = list(map(lambda x: format_url(x), url_list))
