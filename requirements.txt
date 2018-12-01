@@ -1,0 +1,9 @@
+lxml
+pyquery==1.4.0
+psycopg2==2.7.5
+requests[socks]==2.18.4
+redis
+django==2.0.3
+apscheduler==3.5.1
+beautifulsoup4==4.6.3
+html5lib==1.0b8

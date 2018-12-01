@@ -1,0 +1,9 @@
+venv
+*.out
+*.pyc
+__pycache__
+*.log
+.idea
+*.log.*
+
+test.py
