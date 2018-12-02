@@ -7,3 +7,4 @@ django==2.0.3
 apscheduler==3.5.1
 beautifulsoup4==4.6.3
 html5lib==1.0b8
+chardet

@@ -1,5 +1,8 @@
 import os,re
+import zipfile
 from logging.config import fileConfig
+
+import chardet,shutil
 
 from spider.request_util import spider_get
 from spider.utils import get_date, get_domain, get_abs_url, format_url, get_url_file_name, get_file_name_by_type, \
@@ -7,12 +10,13 @@ from spider.utils import get_date, get_domain, get_abs_url, format_url, get_url_
 from datetime import datetime
 from bs4 import BeautifulSoup
 import logging
+import spider.config as config
 
 
 class TemplateCrawler(object):
     logger = logging.getLogger()
 
-    def __init__(self, url_list, save_base_dir, header):
+    def __init__(self, url_list, save_base_dir, header, encoding='utf-8'):
         self.url_list = list(set(list(map(lambda x: format_url(x), url_list))))
         self.save_base_dir = "%s/%s"%(save_base_dir, get_date())
         self.tpl_mapping = self.__get_tpl_replace_url(url_list)
@@ -20,6 +24,7 @@ class TemplateCrawler(object):
         self.tpl_dir, self.js_dir, self.img_dir, self.css_dir, self.other_dir = self.__prepare_dirs()
         self.dl_urls = {}  #去重使用,存储 url=>磁盘绝对路径
         self.header=header
+        self.charset=encoding
 
     def template_crawl(self):
         """
@@ -33,13 +38,16 @@ class TemplateCrawler(object):
         i = 0
         for url in url_list:
             ctx = self.__get_request(url)
+            self.charset = chardet.detect(ctx.content)['encoding']
             html = ctx.text
             tpl_html = self.__rend_template(url, html)
             tpl_file_name = self.__get_file_name(url, i)
             save_file_path = "%s/%s" % (self.__get_tpl_full_path(), tpl_file_name)
-            self.__save_text_file(str(tpl_html), save_file_path)
+            self.__save_text_file(str(tpl_html), save_file_path, encoding=self.charset)
             self.dl_urls[url] = save_file_path
             i += 1
+
+        self.__make_zip(self.__get_zip_full_path())
 
     def __is_dup(self, url, save_path):
         """
@@ -58,6 +66,20 @@ class TemplateCrawler(object):
 
     def __get_tpl_full_path(self):
         return "%s/%s"%(self.save_base_dir, self.tpl_dir)
+
+    def __get_tpl_dir(self):
+        return self.tpl_dir
+
+    def __get_save_base_dir(self):
+        return self.save_base_dir
+
+    def __get_zip_full_path(self):
+        zip_base_dir = "%s/%s"%(config.template_archive_dir, get_date())
+        if not os.path.exists(zip_base_dir):
+            os.makedirs(zip_base_dir)
+        zip_file_path = "%s/%s"%(zip_base_dir, self.tpl_dir)
+
+        return zip_file_path
 
     def __get_img_full_path(self):
         return "%s/%s"%(self.__get_tpl_full_path(), self.img_dir)
@@ -255,6 +277,11 @@ class TemplateCrawler(object):
     def __get_request(self, url):
         return spider_get(url, self.header)
 
+    def __make_zip(self, zip_full_path):
+        shutil.make_archive(zip_full_path, 'zip', self.__get_save_base_dir(), base_dir=self.__get_tpl_dir())
+        self.logger.info("zip file %s make ok", zip_full_path)
+        shutil.rmtree(self.__get_tpl_full_path())
+
 
 if __name__=="__main__":
     fileConfig('logging.ini')
@@ -263,12 +290,13 @@ if __name__=="__main__":
     需要UA：'https://stackoverflow.com/questions/13137817/how-to-download-image-using-requests',
     """
     url_list=[
-        'https://www.sfmotors.com/',
-        'https://www.sfmotors.com/company',
-        'https://www.sfmotors.com/technology',
-        'https://www.sfmotors.com/vehicles',
-        'https://www.sfmotors.com/manufacturing'
+        'http://boke1.wscso.com/'
+        # 'https://www.sfmotors.com/',
+        # 'https://www.sfmotors.com/company',
+        # 'https://www.sfmotors.com/technology',
+        # 'https://www.sfmotors.com/vehicles',
+        # 'https://www.sfmotors.com/manufacturing'
     ]
 
-    spider = TemplateCrawler(url_list, save_base_dir="d:/", header={'User-Agent':"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"})
+    spider = TemplateCrawler(url_list, save_base_dir="d:/", header={'User-Agent':config.default_ua})
     spider.template_crawl()
