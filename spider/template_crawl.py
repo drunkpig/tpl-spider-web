@@ -1,4 +1,5 @@
 import os,re
+from logging.config import fileConfig
 
 from spider.request_util import spider_get
 from spider.utils import get_date, get_domain, get_abs_url, format_url, get_url_file_name, get_file_name_by_type, \
@@ -11,13 +12,14 @@ import logging
 class TemplateCrawler(object):
     logger = logging.getLogger()
 
-    def __init__(self, url_list, save_base_dir):
+    def __init__(self, url_list, save_base_dir, header):
         self.url_list = list(set(list(map(lambda x: format_url(x), url_list))))
         self.save_base_dir = "%s/%s"%(save_base_dir, get_date())
         self.tpl_mapping = self.__get_tpl_replace_url(url_list)
         self.domain = get_domain(url_list[0])
         self.tpl_dir, self.js_dir, self.img_dir, self.css_dir, self.other_dir = self.__prepare_dirs()
         self.dl_urls = {}  #去重使用,存储 url=>磁盘绝对路径
+        self.header=header
 
     def template_crawl(self):
         """
@@ -30,7 +32,7 @@ class TemplateCrawler(object):
         """
         i = 0
         for url in url_list:
-            ctx = spider_get(url)
+            ctx = self.__get_request(url)
             html = ctx.text
             tpl_html = self.__rend_template(url, html)
             tpl_file_name = self.__get_file_name(url, i)
@@ -160,7 +162,7 @@ class TemplateCrawler(object):
                 file_save_path = "%s/%s" % (self.__get_js_full_path(), file_name)
 
                 if not self.__is_dup(abs_link, file_save_path):
-                    ctx = spider_get(abs_link)
+                    ctx = self.__get_request(abs_link)
                     self.__save_text_file(ctx.text, file_save_path)  #存储js文件
                     self.dl_urls[abs_link] = file_save_path
 
@@ -183,7 +185,7 @@ class TemplateCrawler(object):
             file_save_path = "%s/%s" % (self.__get_img_full_path(), file_name)
 
             if not self.__is_dup(abs_link, file_save_path):
-                resp = spider_get(abs_link)
+                resp = self.__get_request(abs_link)
                 self.__save_bin_file(resp, file_save_path)  #存储图片文件
                 self.dl_urls[abs_link] = file_save_path
 
@@ -204,7 +206,7 @@ class TemplateCrawler(object):
             file_save_path = "%s/%s" % (self.__get_img_full_path(), file_name)
 
             if not self.__is_dup(abs_link, file_save_path):
-                resp = spider_get(abs_link)
+                resp = self.__get_request(abs_link)
                 self.__save_bin_file(resp, file_save_path)  # 存储图片文件
                 self.dl_urls[abs_link] = file_save_path
 
@@ -226,7 +228,7 @@ class TemplateCrawler(object):
             if is_same_web_site_link(url, abs_link) is True: # 不是外链
                 file_name = get_url_file_name(abs_link)
 
-                resp = spider_get(abs_link)
+                resp = self.__get_request(abs_link)
                 if "image" in resp.headers.get("Content-Type"):
                     self.__save_bin_file(resp, "%s/%s" % (self.__get_img_full_path(), file_name))  # 存储图片文件
                     css['href'] = "%s/%s"%(self.img_dir, file_name)
@@ -250,8 +252,12 @@ class TemplateCrawler(object):
 
         return soup.prettify()
 
+    def __get_request(self, url):
+        return spider_get(url, self.header)
+
 
 if __name__=="__main__":
+    fileConfig('logging.ini')
     """
     动态渲染的： 'https://docs.python.org/3/library/os.html',http://www.gd-n-tax.gov.cn/gdsw/index.shtml
     需要UA：'https://stackoverflow.com/questions/13137817/how-to-download-image-using-requests',
@@ -262,8 +268,7 @@ if __name__=="__main__":
         'https://www.sfmotors.com/technology',
         'https://www.sfmotors.com/vehicles',
         'https://www.sfmotors.com/manufacturing'
-
     ]
 
-    spider = TemplateCrawler(url_list, save_base_dir="d:/")
+    spider = TemplateCrawler(url_list, save_base_dir="d:/", header={'User-Agent':"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"})
     spider.template_crawl()
