@@ -55,7 +55,7 @@ def get_abs_url(base_url, raw_link):
     :param raw_link:
     :return:
     """
-    u = urljoin(base_url, raw_link)
+    u = urljoin(base_url, raw_link.strip())
     return format_url(u)
 
 
@@ -83,12 +83,14 @@ def get_url_file_name(url):
     return file_name
 
 
-def get_file_name_by_type(url, suffix):
+def get_file_name_by_type(url, suffix_list):
     raw_name = get_url_file_name(url)
-    if not raw_name.endswith(".%s"%suffix):
-        return "%s.%s"%(str(uuid.uuid4()), suffix)
+    for suffix in suffix_list:
+        if raw_name.endswith(".%s"%suffix):
+            return raw_name
+
     else:
-        return raw_name
+        return "%s.%s"%(str(uuid.uuid4()), 'unknown')
 
 
 def is_same_web_site_link(url1, url2):
