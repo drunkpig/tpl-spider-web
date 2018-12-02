@@ -1,6 +1,6 @@
 from datetime import datetime
 from urllib.parse import urlparse, urljoin
-import uuid
+import uuid,os
 
 """
 urlparse.urlparse("http://some.page.pl/nothing.py;someparam=some;otherparam=other?query1=val1&query2=val2#frag")
@@ -97,3 +97,14 @@ def is_same_web_site_link(url1, url2):
     domain1 = get_domain(url1)
     domain2 = get_domain(url2)
     return domain1==domain2
+
+
+def __get_file_ext(file_name):
+    _, file_extension = os.path.splitext(file_name)
+    return file_extension[1:]
+
+def is_img_ext(file_name):
+    return file_name.lower().endswith(('gif','jpg','jpeg','png','swf','psd','bmp','tiff',\
+                                       'jpc','jp2','jpf','jb2','swc','aiff','wbmp','xbm',\
+                                       'tif','jfif','ras','cmx','ico','cod','pnm',\
+                                       'pbm','pgm','xwd','fh','wbmp','svg','aiff','webp'))

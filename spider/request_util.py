@@ -18,6 +18,6 @@ def spider_get(url, header):
             if i<max_retry:
                 continue
             else:
-                raise e
+                return None
 
 

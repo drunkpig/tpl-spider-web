@@ -6,7 +6,7 @@ import chardet,shutil
 
 from spider.request_util import spider_get
 from spider.utils import get_date, get_domain, get_abs_url, format_url, get_url_file_name, get_file_name_by_type, \
-    is_same_web_site_link
+    is_same_web_site_link, is_img_ext
 from datetime import datetime
 from bs4 import BeautifulSoup
 import logging
@@ -16,7 +16,7 @@ import spider.config as config
 class TemplateCrawler(object):
     logger = logging.getLogger()
 
-    def __init__(self, url_list, save_base_dir, header, encoding='utf-8'):
+    def __init__(self, url_list, save_base_dir, header, encoding='utf-8', grab_out_site_link=False):
         self.url_list = list(set(list(map(lambda x: format_url(x), url_list))))
         self.save_base_dir = "%s/%s"%(save_base_dir, get_date())
         self.tpl_mapping = self.__get_tpl_replace_url(url_list)
@@ -25,6 +25,7 @@ class TemplateCrawler(object):
         self.dl_urls = {}  #去重使用,存储 url=>磁盘绝对路径
         self.header=header
         self.charset=encoding
+        self.is_grab_outer_link = grab_out_site_link
 
     def template_crawl(self):
         """
@@ -176,7 +177,7 @@ class TemplateCrawler(object):
                 continue
             abs_link = get_abs_url(url, raw_link)
 
-            if is_same_web_site_link(url, abs_link) is True:
+            if is_same_web_site_link(url, abs_link) is True or self.is_grab_outer_link:
                 """
                 如果是外链引入的js就不管了
                 """
@@ -184,8 +185,14 @@ class TemplateCrawler(object):
                 file_save_path = "%s/%s" % (self.__get_js_full_path(), file_name)
 
                 if not self.__is_dup(abs_link, file_save_path):
-                    ctx = self.__get_request(abs_link)
-                    self.__save_text_file(ctx.text, file_save_path)  #存储js文件
+                    resp = self.__get_request(abs_link)
+                    if resp is None:
+                        self.logger.error("get %s error", abs_link)
+                        file_name = "%s.txt" % file_name
+                        file_save_path = "%s/%s" % (self.__get_js_full_path(), file_name)
+                        self.__save_text_file("crawl error, please get the link content yourself: %s " % abs_link,
+                                              file_save_path)
+                    self.__save_text_file(resp.text, file_save_path)  #存储js文件
                     self.dl_urls[abs_link] = file_save_path
 
                 scripts['src'] = "%s/%s"%(self.js_dir, file_name)
@@ -208,8 +215,14 @@ class TemplateCrawler(object):
 
             if not self.__is_dup(abs_link, file_save_path):
                 resp = self.__get_request(abs_link)
-                self.__save_bin_file(resp, file_save_path)  #存储图片文件
-                self.dl_urls[abs_link] = file_save_path
+                if resp is None:
+                    self.logger.error("get %s error", abs_link)
+                    file_name = "%s.txt"%file_name
+                    file_save_path = "%s/%s" % (self.__get_img_full_path(), file_name)
+                    self.__save_text_file("crawl error, please get the link content yourself: %s "%abs_link, file_save_path)
+                else:
+                    self.__save_bin_file(resp, file_save_path)  #存储图片文件
+                    self.dl_urls[abs_link] = file_save_path
 
             img['src'] = "%s/%s"%(self.img_dir, file_name)
 
@@ -229,8 +242,15 @@ class TemplateCrawler(object):
 
             if not self.__is_dup(abs_link, file_save_path):
                 resp = self.__get_request(abs_link)
-                self.__save_bin_file(resp, file_save_path)  # 存储图片文件
-                self.dl_urls[abs_link] = file_save_path
+                if resp is None:
+                    self.logger.error("get %s error", abs_link)
+                    file_name = "%s.txt" % file_name
+                    file_save_path = "%s/%s" % (self.__get_img_full_path(), file_name)
+                    self.__save_text_file("crawl error, please get the link content yourself: %s " % abs_link,
+                                          file_save_path)
+                else:
+                    self.__save_bin_file(resp, file_save_path)  # 存储图片文件
+                    self.dl_urls[abs_link] = file_save_path
 
             style['style'] = style['style'].replace(reource_url, "%s/%s"%(self.img_dir, file_name))
 
@@ -247,16 +267,56 @@ class TemplateCrawler(object):
             if raw_link is None:
                 continue
             abs_link = get_abs_url(url, raw_link)
-            if is_same_web_site_link(url, abs_link) is True: # 不是外链
+            if is_same_web_site_link(url, abs_link) is True or self.is_grab_outer_link: # 不是外链
                 file_name = get_url_file_name(abs_link)
 
                 resp = self.__get_request(abs_link)
-                if "image" in resp.headers.get("Content-Type"):
-                    self.__save_bin_file(resp, "%s/%s" % (self.__get_img_full_path(), file_name))  # 存储图片文件
-                    css['href'] = "%s/%s"%(self.img_dir, file_name)
+                if resp is not None:
+                    if "image" in resp.headers.get("Content-Type"):
+                        self.__save_bin_file(resp, "%s/%s" % (self.__get_img_full_path(), file_name))  # 存储图片文件
+                        css['href'] = "%s/%s"%(self.img_dir, file_name)
+                    else:
+                        text_content = resp.text
+                        text_content = self.__replace_and_grab_css_url(abs_link, text_content)
+                        self.__save_text_file(text_content, "%s/%s" % (self.__get_css_full_path(), file_name))  # 存储css文件
+                        css['href'] = "%s/%s" % (self.css_dir, file_name)
                 else:
-                    self.__save_text_file(resp.text, "%s/%s" % (self.__get_css_full_path(), file_name))  # 存储js文件
+                    self.logger.error("get %s error", abs_link)
+                    file_name = "%s.txt" % file_name
+                    file_save_path = "%s/%s" % (self.__get_css_full_path(), file_name)
+                    self.__save_text_file("crawl error, please get the link content yourself: %s " % abs_link,
+                                          file_save_path)
                     css['href'] = "%s/%s" % (self.css_dir, file_name)
+
+    def __replace_and_grab_css_url(self, url, text):
+        urls = re.findall("url\(.*?\)", text)
+        for u in urls:
+            relative_u = u.strip()[5:-2]
+            abs_url = get_abs_url(url, relative_u)
+            file_name = get_url_file_name(abs_url)
+            file_save_path = "%s/%s" % (self.__get_css_full_path(), file_name)
+            replace_url = "%s/%s" % (self.css_dir, file_save_path)
+            is_img = is_img_ext(file_name)
+            if is_img:
+                file_save_path = "%s/%s" % (self.__get_img_full_path(), file_name)
+                replace_url = "%s/%s" % (self.img_dir, file_save_path)
+
+            if not self.__is_dup(abs_url, file_save_path):
+                resp = self.__get_request(abs_url)
+                if resp is None:
+                    self.logger.error("get %s error", abs_url)
+                    file_name = "%s.txt" % file_name
+                    file_save_path = "%s/%s" % (self.__get_img_full_path(), file_name)
+                    self.__save_text_file("crawl error, please get the link content yourself: %s " % abs_url,
+                                          file_save_path)
+                    replace_url = "%s/%s"%(self.img_dir, file_name)
+                else:
+                    self.__save_bin_file(resp, file_save_path)  # 存储图片文件
+                    text = text.replace(relative_u, replace_url)
+                self.dl_urls[abs_url] = replace_url
+
+        return text
+
 
     def __rend_template(self, url, html):
         """
@@ -290,13 +350,13 @@ if __name__=="__main__":
     需要UA：'https://stackoverflow.com/questions/13137817/how-to-download-image-using-requests',
     """
     url_list=[
-        'http://boke1.wscso.com/'
-        # 'https://www.sfmotors.com/',
+        # 'http://boke1.wscso.com/'
+        'https://www.sfmotors.com/',
         # 'https://www.sfmotors.com/company',
         # 'https://www.sfmotors.com/technology',
         # 'https://www.sfmotors.com/vehicles',
         # 'https://www.sfmotors.com/manufacturing'
     ]
 
-    spider = TemplateCrawler(url_list, save_base_dir="d:/", header={'User-Agent':config.default_ua})
+    spider = TemplateCrawler(url_list, save_base_dir=config.template_base_dir, header={'User-Agent':config.default_ua}, grab_out_site_link=False)
     spider.template_crawl()
