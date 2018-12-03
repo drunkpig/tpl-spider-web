@@ -15,7 +15,7 @@ import spider.config as config
 class TemplateCrawler(object):
     logger = logging.getLogger()
 
-    def __init__(self, url_list, save_base_dir, header, encoding='utf-8', grab_out_site_link=False):
+    def __init__(self, url_list, save_base_dir, header, encoding=None, grab_out_site_link=False):
         self.url_list = list(set(list(map(lambda x: format_url(x), url_list))))
         self.save_base_dir = "%s/%s"%(save_base_dir, get_date())
         self.tpl_mapping = self.__get_tpl_replace_url(url_list)
@@ -39,12 +39,17 @@ class TemplateCrawler(object):
         i = 0
         for url in url_list:
             ctx = self.__get_request(url)
-            self.charset = chardet.detect(ctx.content)['encoding']
+            if self.charset is None:
+                self.charset = chardet.detect(ctx.content)['encoding']
+
+            ctx.encoding = self.charset
             html = ctx.text
+
+            # html = html.encode()
             tpl_html = self.__rend_template(url, html)
             tpl_file_name = self.__get_file_name(url, i)
             save_file_path = "%s/%s" % (self.__get_tpl_full_path(), tpl_file_name)
-            self.__save_text_file(str(tpl_html), save_file_path, encoding=self.charset)
+            self.__save_text_file(str(tpl_html), save_file_path)
             self.dl_urls[url] = save_file_path
             i += 1
 
@@ -96,7 +101,7 @@ class TemplateCrawler(object):
             f.writelines("""
                 <br><br>
                 <hr/>
-                <center><a href='http://template-spider.com'>web template spider</a></center>
+                <center><a href='http://template-spider.com'>web template spider</a>&nbsp;|&nbsp;<a href=''>report bug</a></center>
             """)
 
     def __is_dup(self, url, save_path):
@@ -425,15 +430,17 @@ if __name__=="__main__":
     """
     动态渲染的： 'https://docs.python.org/3/library/os.html',http://www.gd-n-tax.gov.cn/gdsw/index.shtml
     需要UA：'https://stackoverflow.com/questions/13137817/how-to-download-image-using-requests',
+    gb2312 : https://www.jb51.net/web/25623.html
     """
     url_list=[
-        'http://boke1.wscso.com/'
+        # 'http://boke1.wscso.com/'
         # 'https://www.sfmotors.com/',
         # 'https://www.sfmotors.com/company',
         # 'https://www.sfmotors.com/technology',
         # 'https://www.sfmotors.com/vehicles',
         # 'https://www.sfmotors.com/manufacturing'
+        'https://www.jb51.net/web/25623.html'
     ]
 
-    spider = TemplateCrawler(url_list, save_base_dir=config.template_base_dir, header={'User-Agent':config.default_ua}, grab_out_site_link=True)
+    spider = TemplateCrawler(url_list, save_base_dir=config.template_base_dir, header={'User-Agent':config.default_ua}, grab_out_site_link=False)
     spider.template_crawl()

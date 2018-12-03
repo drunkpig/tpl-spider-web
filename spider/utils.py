@@ -1,6 +1,7 @@
 from datetime import datetime
 from urllib.parse import urlparse, urljoin
 import uuid,os
+import tldextract
 
 """
 urlparse.urlparse("http://some.page.pl/nothing.py;someparam=some;otherparam=other?query1=val1&query2=val2#frag")
@@ -95,9 +96,10 @@ def get_file_name_by_type(url, suffix_list):
 
 
 def is_same_web_site_link(url1, url2):
-    domain1 = get_domain(url1)
-    domain2 = get_domain(url2)
-    return domain1==domain2
+    domain1 = tldextract.extract(url1)
+    domain2 = tldextract.extract(url2)
+
+    return domain1.domain == domain2.domain
 
 
 def __get_file_ext(file_name):
