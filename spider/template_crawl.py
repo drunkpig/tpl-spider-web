@@ -206,7 +206,7 @@ class TemplateCrawler(object):
         images = soup.find_all("img")
         for img in images:
             raw_link = img.get("src")
-            if raw_link is None:
+            if raw_link is None or raw_link.lower().strip().startswith('data:image'): # 跳过base64内嵌图片 <img src='data:image...'/>
                 continue
             abs_link = get_abs_url(url, raw_link)
             file_name = get_url_file_name(abs_link)
@@ -235,13 +235,14 @@ class TemplateCrawler(object):
         """
         url_src = url_src.strip()
         if '"' in url_src or "'" in url_src:
-            return url_src[5: -2]
+            return url_src[5: -2].strip()
         else:
-            return url_src[4: -1]
+            return url_src[4: -1].strip()
 
     def __dl_inner_style_img(self, soup, url):
         """
         获取到html页面内嵌样式的图片资源
+        <xx style='background: url(xxxxx.jpg)'>
         :param soup:
         :param url:
         :return:
@@ -250,6 +251,8 @@ class TemplateCrawler(object):
         for style in inner_style_node:
             resource_url = re.findall('url\(.*?\)', style.get("style"))[0] # TODO 便利匹配到的全部
             resource_url = self.__get_style_url_link(resource_url)
+            if resource_url.lower().startswith("data:image"):  # 内嵌base64图片
+                continue
             abs_link = get_abs_url(url, resource_url)
             file_name = get_url_file_name(abs_link)
             file_save_path = "%s/%s" % (self.__get_img_full_path(), file_name)
@@ -306,14 +309,16 @@ class TemplateCrawler(object):
         urls = re.findall("url\(.*?\)", text)
         for u in urls:
             relative_u = self.__get_style_url_link(u)
+            if relative_u.lower().startswith("data:image"):  # 内嵌base64图片
+                continue
             abs_url = get_abs_url(url, relative_u)
             file_name = get_url_file_name(abs_url)
             file_save_path = "%s/%s" % (self.__get_css_full_path(), file_name)
-            replace_url = "%s/%s" % (self.css_dir, file_save_path)
+            replace_url = "%s" % (file_name) # 由于是相对于css文件的引入,因此是平级关系, 如果是图片就需要从../img目录下
             is_img = is_img_ext(file_name)
             if is_img:
                 file_save_path = "%s/%s" % (self.__get_img_full_path(), file_name)
-                replace_url = "%s/%s" % (self.img_dir, file_save_path)
+                replace_url = "../%s/%s" % (self.img_dir, file_name)
 
             if not self.__is_dup(abs_url, file_save_path):
                 resp = self.__get_request(abs_url)
@@ -325,7 +330,7 @@ class TemplateCrawler(object):
                                           file_save_path)
                     replace_url = "%s/%s"%(self.img_dir, file_name)
                 else:
-                    self.__save_bin_file(resp, file_save_path)  # 存储图片文件
+                    self.__save_bin_file(resp, file_save_path)  # 存储二进制文件
                     text = text.replace(relative_u, replace_url)
                 self.dl_urls[abs_url] = replace_url
 

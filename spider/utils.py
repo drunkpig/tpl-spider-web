@@ -63,6 +63,7 @@ def get_url_file_name(url):
     """
     http://a.com?main.css?a=b;c=d;
     http://a.com/a/b/c/xx-dd;a=c;b=d
+    http://res.weiunity.com/template/boke1/resource/fonts/icomoon.ttf?ngfxmq
 
     :param url:
     :return:
@@ -70,7 +71,7 @@ def get_url_file_name(url):
     i = url.rfind("?")
     if i>0:
         start_i = url.rfind("/")
-        file_name = url[start_i:i]
+        file_name = url[start_i+1:i]
         return file_name
 
     i = url.rfind("=")
