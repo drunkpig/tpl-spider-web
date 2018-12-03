@@ -1,5 +1,4 @@
 import os,re
-import zipfile
 from logging.config import fileConfig
 
 import chardet,shutil
@@ -226,17 +225,32 @@ class TemplateCrawler(object):
 
             img['src'] = "%s/%s"%(self.img_dir, file_name)
 
+    def __get_style_url_link(self, url_src):
+        """
+        url('xxxx')
+        url("xxxx")
+        url(xxxx)
+        :param url_src:
+        :return:  xxxx
+        """
+        url_src = url_src.strip()
+        if '"' in url_src or "'" in url_src:
+            return url_src[5: -2]
+        else:
+            return url_src[4: -1]
+
     def __dl_inner_style_img(self, soup, url):
         """
-        获取到内嵌样式的图片资源
+        获取到html页面内嵌样式的图片资源
         :param soup:
         :param url:
         :return:
         """
-        inner_style_node = soup.find_all(style=re.compile("url(.*?)"))
+        inner_style_node = soup.find_all(style=re.compile("url(.*?)"))  # TODO url/URL 大小写
         for style in inner_style_node:
-            reource_url = re.findall('url\(.*?\)', style.get("style"))[0][5:-2]
-            abs_link = get_abs_url(url, reource_url)
+            resource_url = re.findall('url\(.*?\)', style.get("style"))[0] # TODO 便利匹配到的全部
+            resource_url = self.__get_style_url_link(resource_url)
+            abs_link = get_abs_url(url, resource_url)
             file_name = get_url_file_name(abs_link)
             file_save_path = "%s/%s" % (self.__get_img_full_path(), file_name)
 
@@ -252,7 +266,7 @@ class TemplateCrawler(object):
                     self.__save_bin_file(resp, file_save_path)  # 存储图片文件
                     self.dl_urls[abs_link] = file_save_path
 
-            style['style'] = style['style'].replace(reource_url, "%s/%s"%(self.img_dir, file_name))
+            style['style'] = style['style'].replace(resource_url, "%s/%s"%(self.img_dir, file_name))
 
     def __dl_link(self, soup, url):
         """
@@ -291,7 +305,7 @@ class TemplateCrawler(object):
     def __replace_and_grab_css_url(self, url, text):
         urls = re.findall("url\(.*?\)", text)
         for u in urls:
-            relative_u = u.strip()[5:-2]
+            relative_u = self.__get_style_url_link(u)
             abs_url = get_abs_url(url, relative_u)
             file_name = get_url_file_name(abs_url)
             file_save_path = "%s/%s" % (self.__get_css_full_path(), file_name)
@@ -316,7 +330,6 @@ class TemplateCrawler(object):
                 self.dl_urls[abs_url] = replace_url
 
         return text
-
 
     def __rend_template(self, url, html):
         """
@@ -350,13 +363,13 @@ if __name__=="__main__":
     需要UA：'https://stackoverflow.com/questions/13137817/how-to-download-image-using-requests',
     """
     url_list=[
-        # 'http://boke1.wscso.com/'
-        'https://www.sfmotors.com/',
+        'http://boke1.wscso.com/'
+        # 'https://www.sfmotors.com/',
         # 'https://www.sfmotors.com/company',
         # 'https://www.sfmotors.com/technology',
         # 'https://www.sfmotors.com/vehicles',
         # 'https://www.sfmotors.com/manufacturing'
     ]
 
-    spider = TemplateCrawler(url_list, save_base_dir=config.template_base_dir, header={'User-Agent':config.default_ua}, grab_out_site_link=False)
+    spider = TemplateCrawler(url_list, save_base_dir=config.template_base_dir, header={'User-Agent':config.default_ua}, grab_out_site_link=True)
     spider.template_crawl()
