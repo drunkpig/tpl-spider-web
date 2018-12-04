@@ -106,6 +106,7 @@ def __get_file_ext(file_name):
     _, file_extension = os.path.splitext(file_name)
     return file_extension[1:]
 
+
 def is_img_ext(file_name):
     return file_name.lower().endswith(('gif','jpg','jpeg','png','swf','psd','bmp','tiff',\
                                        'jpc','jp2','jpf','jb2','swc','aiff','wbmp','xbm',\

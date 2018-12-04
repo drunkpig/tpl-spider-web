@@ -433,14 +433,14 @@ if __name__=="__main__":
     gb2312 : https://www.jb51.net/web/25623.html
     """
     url_list=[
-        # 'http://boke1.wscso.com/'
+        'https://stackoverflow.com/questions/13137817/how-to-download-image-using-requests',
+        # 'http://boke1.wscso.com/',
         # 'https://www.sfmotors.com/',
         # 'https://www.sfmotors.com/company',
         # 'https://www.sfmotors.com/technology',
         # 'https://www.sfmotors.com/vehicles',
         # 'https://www.sfmotors.com/manufacturing'
-        'https://www.jb51.net/web/25623.html'
     ]
 
-    spider = TemplateCrawler(url_list, save_base_dir=config.template_base_dir, header={'User-Agent':config.default_ua}, grab_out_site_link=False)
+    spider = TemplateCrawler(url_list, save_base_dir=config.template_base_dir, header={'User-Agent':config.default_ua}, grab_out_site_link=True)
     spider.template_crawl()
