@@ -10,3 +10,5 @@ html5lib==1.0b8
 chardet
 tldextract
 #Jinja2==2.10
+aiohttp
+aiodns
