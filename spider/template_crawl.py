@@ -259,7 +259,13 @@ class TemplateCrawler(object):
                 img['src'] = replace_url
                 self.__url_enqueue(abs_link, file_save_path, self.FILE_TYPE_BIN)
 
-    def __get_style_url_link(self, url_src):
+            if img.get("crossorigin ") is not None:
+                del img['crossorigin ']
+            if img.get("integrity") is not None:
+                del img['integrity']
+
+    @staticmethod
+    def __get_style_url_link(url_src):
         """
         url('xxxx')
         url("xxxx")
@@ -586,12 +592,12 @@ if __name__ == "__main__":
     """
     url_list = [
         # 'https://stackoverflow.com/questions/13137817/how-to-download-image-using-requests',
-        # 'http://boke1.wscso.com/',
-        'https://www.sfmotors.com/',
-        'https://www.sfmotors.com/company',
-        'https://www.sfmotors.com/technology',
-        'https://www.sfmotors.com/vehicles',
-        'https://www.sfmotors.com/manufacturing'
+        'http://boke1.wscso.com/',
+        # 'https://www.sfmotors.com/',
+        # 'https://www.sfmotors.com/company',
+        # 'https://www.sfmotors.com/technology',
+        # 'https://www.sfmotors.com/vehicles',
+        # 'https://www.sfmotors.com/manufacturing'
     ]
     n1 = datetime.now()
     spider = TemplateCrawler(url_list, save_base_dir=config.template_base_dir, header={'User-Agent': config.default_ua},
