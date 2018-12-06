@@ -20,15 +20,3 @@ def spider_get(url, header):
                 continue
             else:
                 return None
-
-
-# async def async_spider_get(url, header, file_save_path, file_type='bin'):
-#     async with aiohttp.ClientSession() as session:
-#         resp = await fetch(session, url, header, file_save_path, file_type)
-#         print(resp)
-#
-#
-# async def fetch(session, url, header, file_save_path, file_type):
-#     async with session.get(url, headers=header) as response:
-#         # TODO 根据文件类型保存二进制或者文本
-#         return await response.text()

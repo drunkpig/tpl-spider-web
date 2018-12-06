@@ -337,8 +337,6 @@ class TemplateCrawler(object):
             abs_link = get_abs_url(url, relative_u)
             if is_same_web_site_link(url, abs_link) is True or self.is_grab_outer_link:  # 控制是否抓外链资源
                 file_name = get_url_file_name(abs_link)
-                file_save_path = "%s/%s" % (self.__get_css_full_path(), file_name)
-                replace_url = "%s" % (file_name)  # 由于是相对于css文件的引入,因此是平级关系, 如果是图片就需要从../img目录下
                 is_img = is_img_ext(file_name)
                 if is_img:
                     file_save_path = "%s/%s" % (self.__get_img_full_path(), file_name)
@@ -346,7 +344,9 @@ class TemplateCrawler(object):
                     self.__url_enqueue(abs_link, file_save_path, self.FILE_TYPE_BIN)
                     text = text.replace(relative_u, replace_url)
                 else:
-                    self.__url_enqueue(abs_link, file_save_path, self.FILE_TYPE_TEXT)
+                    file_save_path = "%s/%s" % (self.__get_css_full_path(), file_name)
+                    replace_url = "%s" % (file_name)  # 由于是相对于css文件的引入,因此是平级关系, 如果是图片就需要从../img目录下
+                    self.__url_enqueue(abs_link, file_save_path, self.FILE_TYPE_BIN)
                     text = text.replace(relative_u, replace_url)
 
         return text
@@ -382,6 +382,7 @@ class TemplateCrawler(object):
                 'file_save_path': file_save_path,
                 'file_type': file_type,
             })
+            self.__set_dup_url(url, file_save_path)
 
     def __quit_cmd_enqueue(self):
         self.download_queue.put({
@@ -394,7 +395,7 @@ class TemplateCrawler(object):
     def __wait_unitl_task_finished(self):
         while True:
             if not self.download_finished:
-                self.logger.info("task not finish, wait. leave %s URL.", self.download_queue.qsize())
+                self.logger.info("task not finish, wait. Left %s URL.", self.download_queue.qsize())
                 time.sleep(config.wait_download_finish_sleep)
             else:
                 break
@@ -463,25 +464,29 @@ class TemplateCrawler(object):
         for i in range(1, max_retry + 1):
             to = time_out * i
             try:
-                self.logger.info("async craw[%s] %s" % (i, url))
+                self.logger.info("async craw[%s] %s, file_type: %s", i, url, file_type)
                 is_succ = await self.__async_spider_get(url, self.header, file_save_path, file_type, to)
-            except Exception:
-                is_succ = False
+                if not is_succ:
+                    continue
+                else:
+                    return is_succ
+            except asyncio.TimeoutError as te:
+                self.logger.error("async retry[%s] asyncio.TimeoutError:", i)
+                if i < max_retry:
+                    continue
+            except Exception as e:
+                self.logger.error("async retry[%s] error: %s", i, e)
                 if i < max_retry:
                     self.logger.info("async retry craw[%s] %s" % (i+1, url))
                     continue
-        return is_succ
 
     async def __async_spider_get(self, url, header, file_save_path, file_type='bin', to=10):
-        timeout = aiohttp.ClientTimeout(total=to)
-        async with aiohttp.ClientSession(timeout=timeout) as session:
-            is_succ = await self.__do_download(session, url, header, file_save_path, file_type)
+        async with aiohttp.ClientSession() as session:
+            is_succ = await self.__do_download(session, url, header, file_save_path, file_type, to)
             return is_succ
 
-    async def __do_download(self, session, url, header, file_save_path, file_type):
-        async with session.get(url, headers=header) as response:
-            # TODO 根据文件类型保存二进制或者文本
-
+    async def __do_download(self, session, url, header, file_save_path, file_type, to):
+        async with session.get(url, timeout=to, headers=header) as response:
             if file_type == self.FILE_TYPE_TEXT:
                 text = await response.text()
                 self.__save_text_file(text, file_save_path)
@@ -530,35 +535,35 @@ class TemplateCrawler(object):
                 else:
                     self.__set_dup_url(url, save_path)
 
-    def __download_url(self):
-        while True:
-            cmd = self.download_queue.get()
-            if not cmd:  # 超时没拿到东西，让出cpu然后再来拿
-                self.logger.debug("queue get nothing")
-                time.sleep(config.url_download_queue_timeout)
-                asyncio.sleep(config.url_download_queue_timeout)
-                continue
-
-            self.logger.debug("queue get cmd %s", cmd)
-            cmd_content = cmd['cmd']
-            if cmd_content == self.CMD_QUIT:
-                self.logger.info("quit download task")
-                self.download_finished = True
-                break  # 收到最后一条命令，退出。任务结束
-            else:
-                url = cmd['url']
-                save_path = cmd['file_save_path']
-                file_type = cmd['file_type']
-                resp = self.__get_request(url)
-                if resp is None:
-                    self.logger.error("get %s error", url)
-                    self.__log_error_resource(url, self.__get_relative_report_file_path(save_path))
-                else:
-                    self.__set_dup_url(url, save_path)
-                    if file_type == self.FILE_TYPE_TEXT:
-                        self.__save_text_file(resp.text, save_path)
-                    else:
-                        self.__save_bin_file(resp, save_path)
+    # def __download_url(self):
+    #     while True:
+    #         cmd = self.download_queue.get()
+    #         if not cmd:  # 超时没拿到东西，让出cpu然后再来拿
+    #             self.logger.debug("queue get nothing")
+    #             time.sleep(config.url_download_queue_timeout)
+    #             asyncio.sleep(config.url_download_queue_timeout)
+    #             continue
+    #
+    #         self.logger.debug("queue get cmd %s", cmd)
+    #         cmd_content = cmd['cmd']
+    #         if cmd_content == self.CMD_QUIT:
+    #             self.logger.info("quit download task")
+    #             self.download_finished = True
+    #             break  # 收到最后一条命令，退出。任务结束
+    #         else:
+    #             url = cmd['url']
+    #             save_path = cmd['file_save_path']
+    #             file_type = cmd['file_type']
+    #             resp = self.__get_request(url)
+    #             if resp is None:
+    #                 self.logger.error("get %s error", url)
+    #                 self.__log_error_resource(url, self.__get_relative_report_file_path(save_path))
+    #             else:
+    #                 self.__set_dup_url(url, save_path)
+    #                 if file_type == self.FILE_TYPE_TEXT:
+    #                     self.__save_text_file(resp.text, save_path)
+    #                 else:
+    #                     self.__save_bin_file(resp, save_path)
 
     def __make_zip(self, zip_full_path):
         shutil.make_archive(zip_full_path, 'zip', self.__get_save_base_dir(), base_dir=self.__get_tpl_dir())
@@ -575,12 +580,12 @@ if __name__ == "__main__":
     """
     url_list = [
         # 'https://stackoverflow.com/questions/13137817/how-to-download-image-using-requests',
-        'http://boke1.wscso.com/',
-        # 'https://www.sfmotors.com/',
-        # 'https://www.sfmotors.com/company',
-        # 'https://www.sfmotors.com/technology',
-        # 'https://www.sfmotors.com/vehicles',
-        # 'https://www.sfmotors.com/manufacturing'
+        # 'http://boke1.wscso.com/',
+        'https://www.sfmotors.com/',
+        'https://www.sfmotors.com/company',
+        'https://www.sfmotors.com/technology',
+        'https://www.sfmotors.com/vehicles',
+        'https://www.sfmotors.com/manufacturing'
     ]
     n1 = datetime.now()
     spider = TemplateCrawler(url_list, save_base_dir=config.template_base_dir, header={'User-Agent': config.default_ua},
