@@ -328,6 +328,12 @@ class TemplateCrawler(object):
 
                 css['href'] = replace_url
 
+                # 将跨域锁定和来源校验关闭
+                if css.get("crossorigin") is not None:
+                    del css['crossorigin']
+                if css.get('integrity') is not None:
+                    del css['integrity']
+
     def __replace_and_grab_css_url(self, url, text):
         urls = re.findall("url\(.*?\)", text)  # TODO 区分大小写
         for u in urls:
