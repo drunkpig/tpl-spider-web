@@ -15,6 +15,7 @@ from queue import Queue
 import threading
 import aiohttp
 import asyncio
+import aiofiles
 
 
 class TemplateCrawler(object):
@@ -141,6 +142,11 @@ class TemplateCrawler(object):
     def __save_text_file(content, file_abs_path, encoding='utf-8'):
         with open(file_abs_path, "w+", encoding=encoding) as f:
             f.writelines(content)
+
+    @staticmethod
+    async def __async_save_text_file(content, file_abs_path, encoding='utf-8'):
+        async with aiofiles.open(file_abs_path, "w", encoding=encoding) as f:
+            await f.writelines(content)
 
     @staticmethod
     def __save_bin_file(rsp, file_abs_path):
@@ -405,6 +411,10 @@ class TemplateCrawler(object):
         })
 
     def __wait_unitl_task_finished(self):
+        """
+        TODO 上报状态到redis里
+        :return:
+        """
         while True:
             if not self.download_finished:
                 self.logger.info("task not finish, wait. Left %s URL.", self.download_queue.qsize())
@@ -488,6 +498,7 @@ class TemplateCrawler(object):
                     continue
             except Exception as e:
                 self.logger.error("async retry[%s] error: %s", i, e)
+                self.logger.exception(e)
                 if i < max_retry:
                     self.logger.info("async retry craw[%s] %s" % (i+1, url))
                     continue
@@ -501,16 +512,15 @@ class TemplateCrawler(object):
         async with session.get(url, timeout=to, headers=header) as response:
             if file_type == self.FILE_TYPE_TEXT:
                 text = await response.text()
-                self.__save_text_file(text, file_save_path)
+                await self.__async_save_text_file(text, file_save_path)
             else:
-                with open(file_save_path, 'wb') as fd:
+                async with aiofiles.open(file_save_path, 'wb') as fd:
                     while True:
                         chunk = await response.content.read(512)
                         if not chunk:
                             break
                         else:
-                            fd.write(chunk)
-                # self.__save_bin_file(resp, file_save_path)
+                            await fd.write(chunk)
 
             return True
 
@@ -546,36 +556,6 @@ class TemplateCrawler(object):
                     self.__log_error_resource(url, self.__get_relative_report_file_path(save_path))
                 else:
                     self.__set_dup_url(url, save_path)
-
-    # def __download_url(self):
-    #     while True:
-    #         cmd = self.download_queue.get()
-    #         if not cmd:  # 超时没拿到东西，让出cpu然后再来拿
-    #             self.logger.debug("queue get nothing")
-    #             time.sleep(config.url_download_queue_timeout)
-    #             asyncio.sleep(config.url_download_queue_timeout)
-    #             continue
-    #
-    #         self.logger.debug("queue get cmd %s", cmd)
-    #         cmd_content = cmd['cmd']
-    #         if cmd_content == self.CMD_QUIT:
-    #             self.logger.info("quit download task")
-    #             self.download_finished = True
-    #             break  # 收到最后一条命令，退出。任务结束
-    #         else:
-    #             url = cmd['url']
-    #             save_path = cmd['file_save_path']
-    #             file_type = cmd['file_type']
-    #             resp = self.__get_request(url)
-    #             if resp is None:
-    #                 self.logger.error("get %s error", url)
-    #                 self.__log_error_resource(url, self.__get_relative_report_file_path(save_path))
-    #             else:
-    #                 self.__set_dup_url(url, save_path)
-    #                 if file_type == self.FILE_TYPE_TEXT:
-    #                     self.__save_text_file(resp.text, save_path)
-    #                 else:
-    #                     self.__save_bin_file(resp, save_path)
 
     def __make_zip(self, zip_full_path):
         shutil.make_archive(zip_full_path, 'zip', self.__get_save_base_dir(), base_dir=self.__get_tpl_dir())
