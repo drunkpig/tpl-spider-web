@@ -8,3 +8,4 @@ __pycache__
 
 test.py
 *test.py
+db.sqlite3
