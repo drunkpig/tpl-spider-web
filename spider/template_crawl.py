@@ -52,6 +52,7 @@ class TemplateCrawler(object):
         2，源url
         3，error url
         4，ok url
+        TODO js里的替换,保存原始文件和替换后文件
         :return:
         """
         report_file = "%s/_report.html" % (self.__get_tpl_full_path())
