@@ -3,7 +3,8 @@ from django.db import models
 # Create your models here.
 
 
-class Task(models.Model):
+class SpiderTask(models.Model):
+
     """
 
     """
@@ -13,4 +14,8 @@ class Task(models.Model):
     user_id_str = models.TextField(max_length=128)
     status = models.CharField(help_text='状态：I:插进来，P：处理中', max_length=1)
     is_grab_out_link = models.BooleanField(default=False)
+    gmt_modified = models.DateTimeField(auto_now=True)
     gmt_created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = 'spider_task'

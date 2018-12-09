@@ -1,10 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load i18n %}
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 
+<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+    <input name="next" type="hidden" value="{{ redirect_to }}">
+    <select name="language">
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        {% for language in languages %}
+            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                {{ language.name_local }} ({{ language.code }})
+            </option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Go">
+</form>
+
+<form method="post" action=".">{% csrf_token %}
+    <table>
+
+        <tr>
+            <td>{% trans 'url list' %}</td>
+            <td>
+                {% if error.url_list.0 %}
+                    <span>{{ error.url_list.0 }}</span><br/>
+                {% endif %}
+                <textarea name="seeds"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>User-Agent</td>
+            <td>
+                <select name="user_agent">
+                    <option value="pc">PC Browser</option>
+                    <option value="ipad">Ipad Browser</option>
+                    <option value="iphone">Iphone</option>
+                    <option value="android_pad">Android pad</option>
+                    <option value="android">Android mobile</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>{% trans 'encoding' %}</td>
+            <td>
+                <select name="encoding">
+                    <option value="utf-8">UTF-8</option>
+                    <option value="gb2312">GB2312</option>
+                    <option value="gbk">GBK</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit">{% trans 'submit' %}</button></td>
+        </tr>
+
+    </table>
+
+</form>
 </body>
 </html>
