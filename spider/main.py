@@ -65,6 +65,7 @@ def __get_user_agent(key):
 
 
 def __process_thread():
+
     while True:
         task = __get_a_task()
         if not task:
@@ -104,5 +105,7 @@ def __create_process():
 
 
 if __name__ == "__main__":
+
     process = __create_process()
     process[0].join()
+    db.close()

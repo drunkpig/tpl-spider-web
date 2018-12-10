@@ -4,6 +4,10 @@
     {% load i18n %}
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -31,29 +35,28 @@
                 {% if error.url_list.0 %}
                     <span>{{ error.url_list.0 }}</span><br/>
                 {% endif %}
-                <textarea name="seeds"></textarea>
+                {{ form.seeds }}
             </td>
         </tr>
         <tr>
             <td>User-Agent</td>
             <td>
-                <select name="user_agent">
-                    <option value="pc">PC Browser</option>
-                    <option value="ipad">Ipad Browser</option>
-                    <option value="iphone">Iphone</option>
-                    <option value="android_pad">Android pad</option>
-                    <option value="android">Android mobile</option>
-                </select>
+                {{ form.user_agent }}
             </td>
         </tr>
         <tr>
             <td>{% trans 'encoding' %}</td>
             <td>
-                <select name="encoding">
-                    <option value="utf-8">UTF-8</option>
-                    <option value="gb2312">GB2312</option>
-                    <option value="gbk">GBK</option>
-                </select>
+                {{ form.encoding }}
+            </td>
+        </tr>
+        <tr>
+            <td>{% trans 'is grab outsite link' %}</td>
+            <td>
+                {% if error.is_grab_out_link.0 %}
+                    <span>{{ error.is_grab_out_link.0 }}</span><br/>
+                {% endif %}
+                {{ form.is_grab_out_link }}
             </td>
         </tr>
         <tr>
@@ -64,5 +67,6 @@
     </table>
 
 </form>
+
 </body>
 </html>

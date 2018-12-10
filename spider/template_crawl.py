@@ -573,12 +573,35 @@ if __name__ == "__main__":
     """
     url_list = [
         # 'https://stackoverflow.com/questions/13137817/how-to-download-image-using-requests',
-        'http://boke1.wscso.com/',
+        # 'http://boke1.wscso.com/',
         # 'https://www.sfmotors.com/',
         # 'https://www.sfmotors.com/company',
         # 'https://www.sfmotors.com/technology',
         # 'https://www.sfmotors.com/vehicles',
         # 'https://www.sfmotors.com/manufacturing'
+        'https://www.getreplacer.com/index.html',
+        'https://www.getreplacer.com/icons.html',
+        'https://www.getreplacer.com/template-1.html',
+        'https://www.getreplacer.com/template-2.html',
+        'https://www.getreplacer.com/template-3.html',
+        'https://www.getreplacer.com/template-4.html',
+        'https://www.getreplacer.com/template-5.html',
+        'https://www.getreplacer.com/template-6.html',
+        'https://www.getreplacer.com/template-7.html',
+        'https://www.getreplacer.com/template-8.html',
+        'https://www.getreplacer.com/template-9.html',
+
+        'https://www.getreplacer.com/page-about.html',
+        'https://www.getreplacer.com/page-features.html',
+        'https://www.getreplacer.com/page-faq.html',
+        'https://www.getreplacer.com/page-login.html',
+        'https://www.getreplacer.com/page-register.html',
+        'https://www.getreplacer.com/page-404.html',
+        'https://www.getreplacer.com/page-soon.html',
+        'https://www.getreplacer.com/page-blog.html',
+        'https://www.getreplacer.com/page-blog-entry.html',
+
+
     ]
     n1 = datetime.now()
     spider = TemplateCrawler(url_list, save_base_dir=config.template_base_dir, header={'User-Agent': config.default_ua},
