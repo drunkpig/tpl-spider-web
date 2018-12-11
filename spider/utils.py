@@ -60,7 +60,7 @@ def get_abs_url(base_url, raw_link):
     return format_url(u)
 
 
-def get_url_file_name(url):
+def get_url_file_name(url, file_ext='css'):
     """
     http://a.com?main.css?a=b;c=d;
     http://a.com/a/b/c/xx-dd;a=c;b=d
@@ -82,6 +82,8 @@ def get_url_file_name(url):
         i = url.rfind("/")
         file_name = url[i + 1:]
 
+    if file_name.find(".")<0:
+        file_name = f'{file_name}.{file_ext}'
     return file_name
 
 

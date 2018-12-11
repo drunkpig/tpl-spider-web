@@ -1,72 +1,189 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load i18n %}
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</head>
-<body>
+{% extends "_layout.html" %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+    <div class="pt-5">
+    </div>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 py-5 mr-auto text-left my-5">
+                <h1 class="h5 text-secondary">
+                    {% trans '网站模版爬虫' %}
+                </h1>
+                <p class="display-4 mb-2 mt-4 mr-5" style="font-family: 'Montserrat', sans-serif; font-weight: 300;">
+                    {% trans '加速您的网站设计' %}
+                </p>
 
-<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-    <input name="next" type="hidden" value="{{ redirect_to }}">
-    <select name="language">
-        {% get_current_language as LANGUAGE_CODE %}
-        {% get_available_languages as LANGUAGES %}
-        {% get_language_info_list for LANGUAGES as languages %}
-        {% for language in languages %}
-            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-                {{ language.name_local }} ({{ language.code }})
-            </option>
-        {% endfor %}
-    </select>
-    <input type="submit" value="Go">
-</form>
+                <div class="pt-3 pb-4 mr-5 pr-5">
+                    <form method="post" action=".">{% csrf_token %}
+                        <div class="form-group">
+                            <label for="seeds">{% trans '模版URL' %}</label>
+                            {% if error.url_list.0 %}
+                                <span>{{ error.url_list.0 }}</span><br/>
+                            {% endif %}
+                            {{ form.seeds }}
+                            <small id="emailHelp" class="form-text text-muted">{% trans '每行一个URL' %}
+                            </small>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="user_agent">User-Agent</label>
+                                    {{ form.user_agent }}
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="encoding">{% trans '网页编码' %}</label>
+                                    {{ form.encoding }}
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="is_grab_out_link">{% trans '抓取外链' %}</label>
+                                    {{ form.is_grab_out_link }}
+                                    {% if error.is_grab_out_link.0 %}
+                                        <span>{{ error.is_grab_out_link.0 }}</span><br/>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
 
-<form method="post" action=".">{% csrf_token %}
-    <table>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            {% if error.email.0 %}
+                                <span>{{ error.email.0 }}</span><br/>
+                            {% endif %}
+                            {{ form.email }}
+                            <small class="form-text text-muted">{% trans '用来接收爬取结果' %}
+                            </small>
+                        </div>
 
-        <tr>
-            <td>{% trans 'url list' %}</td>
-            <td>
-                {% if error.url_list.0 %}
-                    <span>{{ error.url_list.0 }}</span><br/>
-                {% endif %}
-                {{ form.seeds }}
-            </td>
-        </tr>
-        <tr>
-            <td>User-Agent</td>
-            <td>
-                {{ form.user_agent }}
-            </td>
-        </tr>
-        <tr>
-            <td>{% trans 'encoding' %}</td>
-            <td>
-                {{ form.encoding }}
-            </td>
-        </tr>
-        <tr>
-            <td>{% trans 'is grab outsite link' %}</td>
-            <td>
-                {% if error.is_grab_out_link.0 %}
-                    <span>{{ error.is_grab_out_link.0 }}</span><br/>
-                {% endif %}
-                {{ form.is_grab_out_link }}
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button type="submit">{% trans 'submit' %}</button></td>
-        </tr>
+                        <button type="submit" class=" btn btn-lg btn-info mr-2">{% trans '开始抓取' %}</button>
 
-    </table>
+                    </form>
+                </div>
 
-</form>
+            </div>
 
-</body>
-</html>
+            <div class="col-lg-6 col-md-12 col-sm-12"
+                 style="background: url('{% static "img/promo.jpg" %}') center bottom no-repeat; background-size: 100%;">
+            </div>
+        </div>
+    </div>
+    <div class="bg-white" id="post-hero-01">
+        <div class="container">
+            <div class="row py-3 text-center">
+
+                <div class="col mx-auto">
+                    {#                    <span class="badge badge-pill badge-secondary mr-3">Discount</span>#}
+                    {#                    <span class="text-secondary">Hello world!&nbsp;to get –10% off use this coupone code:#}
+                    {#                            <mark class="px-2">RPLCR10</mark>#}
+                    {#                        </span>#}
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="m-0"/>
+
+
+    <div class="bg-light1" id="features-03">
+        <div class="container">
+            <div class="row" style="min-height: 100vh;">
+                <div class="col-lg-6 col-md-12"
+                     style="background: url('{% static 'img/files_regular.png' %}') center center no-repeat; background-size: 100%; min-height: 80vh;">
+                </div>
+                <div class="col-lg-4 col-md-8 col-sm-12 py-5 m-auto text-center">
+                    <h2 class="display-4 mb-3">
+                        {% trans '模版文件井井有条' %}
+                    </h2>
+                    <p class="mb-4 lead text-secondary">
+                        Most necessary inner pages
+                    </p>
+                    <hr class="my-4"/>
+                    <a class="text-warning" href="index_11.html">
+                        About
+                    </a>
+                    ,
+                    <a class="text-warning" href="index_12.html">
+                        Features
+                    </a>
+                    ,
+                    <a class="text-warning" href="index_13.html">
+                        FAQ
+                    </a>
+                    ,
+                    <a class="text-warning" href="index_14.html">
+                        Login
+                    </a>
+                    ,
+                    <a class="text-warning" href="index_15.html">
+                        Register
+                    </a>
+                    ,
+                    <a class="text-warning" href="index_16.html">
+                        404
+                    </a>
+                    ,
+                    <a class="text-warning" href="index_17.html">
+                        Coming soon
+                    </a>
+                    ,
+                    <a class="text-warning" href="index_18.html">
+                        Blog
+                    </a>
+                    ,
+                    <a class="text-warning" href="index_19.html">
+                        Blog entry
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-light1" id="features-03">
+        <div class="container">
+            <div class="row" style="min-height: 80vh;">
+                <div class="col-lg-4 col-md-8 col-sm-12 py-5 m-auto text-center">
+                    <h2 class="display-4 mb-3">
+                        {% trans '所看即所得' %}
+                    </h2>
+                    <p class="mb-4 lead text-secondary">
+                        All icons are included in SVG file format and have 8 different styles. These icons are specially
+                        designed for theme
+                    </p>
+                    <hr class="my-4"/>
+                    <a class="btn-link text-warning" href="index_1.html">
+                        <i class="fa fa-angle-right mr-2">
+                        </i>
+                        See all icons
+                    </a>
+                </div>
+                <div class="col-lg-6 col-md-12"
+                     style="background: url('{% static "img/pages.jpg" %}') center center no-repeat; background-size: cover; min-height: 80vh;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-light1" id="features-03">
+        <div class="container mb-5">
+            <div class="row" style="min-height: 80vh;">
+                <div class="col-lg-6 col-md-12"
+                     style="background: url('{% static 'img/blocks.jpg' %}') center center no-repeat; background-size: 100%; min-height: 80vh;">
+                </div>
+                <div class="col-lg-4 col-md-8 col-sm-12 py-5 m-auto text-center">
+                    <h2 class="display-4 mb-3">
+                        {% trans '免费享用优美模版设计' %}
+                    </h2>
+                    <p class="mb-4 lead text-secondary">
+                        Use premade components to build websites that are code consistent and visually beautiful
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+

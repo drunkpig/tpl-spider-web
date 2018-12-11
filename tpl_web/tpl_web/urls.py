@@ -20,6 +20,8 @@ from web import views as web_views
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
     path('admin/', admin.site.urls),
-    path('', web_views.index),
-    path('index', web_views.index),
+    path('', web_views.index, name='home'),
+    path('index', web_views.index, name='index'),
+    path('market', web_views.market, name='market'),
+    path('help', web_views.help, name='help')
 ]

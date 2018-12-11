@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 def index(request):
     if request.method=='GET':
         f = TaskForm()
-        return render(request, "index.html", {'form':f})
+        return render(request, "index.html", {'form':f, 'activate_index':'active'})
     elif request.method=='POST':
         f = TaskForm(request.POST)
         if f.is_valid():
@@ -23,9 +23,17 @@ def index(request):
                                        'ip':client_ip, 'user_id_str':'test_user'}) # TODO
             # TODO return
         else:
-            return render(request, "index.html", {"error": f.errors, 'form': f})
+            return render(request, "index.html", {"error": f.errors, 'form': f, 'activate_index':'active'})
     else:
         raise Http404("page not found")
+
+
+def market(request):
+    return render(request, "market.html", {'activate_market':'active'})
+
+
+def help(request):
+    return render(request, "help.html", {'activate_help':'active'})
 
 
 def __get_client_ip(request):
