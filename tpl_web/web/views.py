@@ -20,7 +20,8 @@ def index(request):
                                        'user_agent':f.cleaned_data['user_agent'],
                                        'encoding': f.cleaned_data['encoding'],
                                        'is_grab_out_link': f.cleaned_data['is_grab_out_link'],
-                                       'ip':client_ip, 'user_id_str':'test_user'}) # TODO
+                                       'ip':client_ip, 'user_id_str':'test_user',
+                                         'user_id_str':f.cleaned_data['email']}) # TODO
             # TODO return
         else:
             return render(request, "index.html", {"error": f.errors, 'form': f, 'activate_index':'active'})
