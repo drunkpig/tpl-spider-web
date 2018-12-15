@@ -122,6 +122,10 @@ class TemplateCrawler(object):
     def __get_save_base_dir(self):
         return self.save_base_dir
 
+    @staticmethod
+    def __get_zip_relative_path(full_path):
+        return full_path[len(config.template_archive_dir):]
+
     def __get_zip_full_path(self):
         zip_base_dir = "%s/%s" % (config.template_archive_dir, get_date())
         if not os.path.exists(zip_base_dir):
@@ -458,7 +462,9 @@ class TemplateCrawler(object):
         self.__quit_cmd_enqueue()  # 没有新的url产生了
         self.__wait_unitl_task_finished()
         self.__make_report()
-        self.__make_zip(self.__get_zip_full_path())
+        zip_full_path = self.__get_zip_full_path()
+        self.__make_zip(zip_full_path)
+        return self.__get_zip_relative_path(zip_full_path)
 
     def __download_thread(self):
         """

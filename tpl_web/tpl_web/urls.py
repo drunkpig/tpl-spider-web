@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from web import views as web_views
+from web.error_views import page_not_found, page_error
 
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
@@ -23,5 +24,10 @@ urlpatterns = [
     path('', web_views.index, name='home'),
     path('index', web_views.index, name='index'),
     path('market', web_views.market, name='market'),
-    path('help', web_views.help, name='help')
+    path('help', web_views.help, name='help'),
+    path('status', web_views.status, name='status'),
+
 ]
+
+handler404 = page_not_found
+handler500 = page_error

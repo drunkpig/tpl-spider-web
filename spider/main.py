@@ -14,9 +14,6 @@ import random
 """
 
 """
-fileConfig('logging.ini')
-logger = logging.getLogger()
-
 db = psycopg2.connect(database=dbconfig.db_name, user=dbconfig.db_user, password=dbconfig.db_psw,
                       host=dbconfig.db_url, port=dbconfig.db_port)
 
@@ -30,7 +27,7 @@ def __get_a_task():
             order by gmt_created DESC 
             limit 1
         )
-        returning id, seeds, ip, user_id_str, status, is_grab_out_link, gmt_modified, gmt_created;
+        returning id, seeds, ip, user_id_str, user_agent, status, is_grab_out_link, gmt_modified, gmt_created;
     """
     cursor = db.cursor()
     cursor.execute(sql)
@@ -38,20 +35,30 @@ def __get_a_task():
     if row is None:
         return None
 
-    r = row[0]
+    r = row
     cursor.close()
     task = {
         'id': r[0],
         'seeds': json.loads(r[1]),
         'ip': r[2],
         'user_id_str': r[3],
-        'status': r[4],
-        'is_grab_out_link': r[5],
-        'gmt_modified':r[6],
-        'gmt_created': r[7],
+        'user_agent':r[4],
+        'status': r[5],
+        'is_grab_out_link': r[6],
+        'gmt_modified':r[7],
+        'gmt_created': r[8],
     }
 
     return task
+
+
+def __save_crawl_result(task_id,  zip_path):
+    sql = f"""
+        update spider_task set result='{zip_path}' where id={task_id};
+    """
+    cursor = db.cursor()
+    cursor.execute(sql)
+    db.commit()
 
 
 def __get_user_agent(key):
@@ -65,7 +72,7 @@ def __get_user_agent(key):
 
 
 def __process_thread():
-
+    logger = logging.getLogger()
     while True:
         task = __get_a_task()
         if not task:
@@ -78,7 +85,8 @@ def __process_thread():
         spider = TemplateCrawler(seeds, save_base_dir=config.template_base_dir,
                                  header={'User-Agent': user_agent},
                                  grab_out_site_link=is_grab_out_site_link)
-        spider.template_crawl()
+        template_zip_file = spider.template_crawl()
+        __save_crawl_result(task['id'], template_zip_file)
 
 
 def __create_thread(n):
@@ -105,7 +113,7 @@ def __create_process():
 
 
 if __name__ == "__main__":
-
+    fileConfig('logging.ini')
     process = __create_process()
     process[0].join()
     db.close()

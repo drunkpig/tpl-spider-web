@@ -30,7 +30,7 @@ wait_url_sleep_time = 2  # 队列没有url时候等待多久
 wait_download_finish_sleep = 3  # 主线程等待任务完成的每次等待时间
 
 max_spider_process = 1  # 最多开几个进程
-max_spider_thread_per_process = 5  # 一个python进程最大可以有多少个模版爬虫同时运行
+max_spider_thread_per_process = 1  # 一个python进程最大可以有多少个模版爬虫同时运行
 
 
 db_name = "tpl_spider"

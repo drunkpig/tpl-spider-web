@@ -31,6 +31,7 @@ class TaskForm(forms.Form):
         #     (True, _('Yes')),
         #     (False, _("No")),
         # ),
+        required=False,
         initial=False,
         widget=forms.Select(
             choices=(
