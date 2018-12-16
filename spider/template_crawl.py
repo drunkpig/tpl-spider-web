@@ -466,7 +466,7 @@ class TemplateCrawler(object):
             i += 1
 
         self.__quit_cmd_enqueue()  # 没有新的url产生了
-        self.__wait_unitl_task_finished()
+        self.__wait_unitl_task_finished() # 这个时候异步请求也全部落到磁盘上了
         self.__make_report()
         zip_full_path = self.__get_zip_full_path()
         self.__make_zip(zip_full_path)
