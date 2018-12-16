@@ -1,5 +1,5 @@
 import requests,logging
-import spider.config as config
+import config
 
 
 logger = logging.getLogger()

@@ -1,16 +1,14 @@
 import os, re
+import logging
 from logging.config import fileConfig
-
 import chardet, shutil
-
-from spider.request_util import spider_get
-from spider.utils import get_date, get_domain, get_abs_url, format_url, get_url_file_name, get_file_name_by_type, \
+from request_util import spider_get
+from utils import get_date, get_domain, get_abs_url, format_url, get_url_file_name, get_file_name_by_type, \
     is_same_web_site_link, is_img_ext
 from datetime import datetime
 import time
 from bs4 import BeautifulSoup
-import logging
-import spider.config as config
+import config
 from queue import Queue
 import threading
 import aiohttp
@@ -39,7 +37,6 @@ class TemplateCrawler(object):
         self.download_queue = Queue()  # 数据格式json  {'cmd':quit/download, "url":'http://baidu.com', "save_path":'/full/path/file.ext', 'type':'bin/text'}
         self.download_finished = False
 
-        self.event_loop = asyncio.get_event_loop()
         self.thread = threading.Thread(target=self.__download_thread)
         self.thread.start()
 
@@ -213,7 +210,7 @@ class TemplateCrawler(object):
                 if raw_link is None:
                     continue
                 abs_link = get_abs_url(url, raw_link)
-                if abs_link in url_list:
+                if abs_link in self.url_list:
                     tpl_link = self.tpl_mapping.get(abs_link)
                     a['href'] = tpl_link
         except Exception as e:
@@ -398,6 +395,7 @@ class TemplateCrawler(object):
         :param file_type: bin/text
         :return:
         """
+        file_save_path = file_save_path.replace("//", '/')
         if not self.__is_dup(url, file_save_path):
             self.download_queue.put({
                 'cmd': self.CMD_DOWNLOAD,
@@ -441,7 +439,7 @@ class TemplateCrawler(object):
         :return:
         """
         i = 0
-        for url in url_list:
+        for url in self.url_list:
             ctx = self.__get_request(url)
             if self.charset is None:
                 self.charset = chardet.detect(ctx.content)['encoding']
@@ -472,7 +470,7 @@ class TemplateCrawler(object):
         :return:
         """
         loop = asyncio.new_event_loop()
-        asyncio.set_event_loop(asyncio.new_event_loop())
+        asyncio.set_event_loop(loop)
         tasks = [asyncio.ensure_future(self.__async_download_url(), loop=loop),
                  asyncio.ensure_future(self.__async_download_url(), loop=loop),
                  asyncio.ensure_future(self.__async_download_url(), loop=loop),

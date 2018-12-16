@@ -1,15 +1,15 @@
-import logging
+
 from logging.config import fileConfig
+import logging
 from multiprocessing import Process
 import threading
-import spider.config as config
-import spider.config as dbconfig
+import config
+import config as dbconfig
 import time
 import json
-from spider.template_crawl import TemplateCrawler
+from template_crawl import TemplateCrawler
 import psycopg2
 import random
-
 
 """
 
