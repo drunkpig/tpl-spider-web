@@ -265,6 +265,9 @@ class TemplateCrawler(object):
                 file_save_path = "%s/%s" % (self.__get_img_full_path(), file_name)
                 replace_url = "%s/%s" % (self.img_dir, file_name)
                 img['src'] = replace_url
+                # if file_name is None or len(file_name)==0:
+                #     print("ffffffffffffffff")
+                #     return False
                 self.__url_enqueue(abs_link, file_save_path, self.FILE_TYPE_BIN)
 
             if img.get("crossorigin ") is not None:
@@ -565,7 +568,10 @@ class TemplateCrawler(object):
     def __make_zip(self, zip_full_path):
         shutil.make_archive(zip_full_path, 'zip', self.__get_save_base_dir(), base_dir=self.__get_tpl_dir())
         self.logger.info("zip file %s make ok", zip_full_path)
-        shutil.rmtree(self.__get_tpl_full_path())
+        try:
+            shutil.rmtree(self.__get_tpl_full_path())
+        except Exception as e:
+            self.logger.error(e)
 
 
 if __name__ == "__main__":

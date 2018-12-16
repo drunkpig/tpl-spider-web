@@ -65,13 +65,14 @@ def get_url_file_name(url, file_ext='css'):
     http://a.com?main.css?a=b;c=d;
     http://a.com/a/b/c/xx-dd;a=c;b=d
     http://res.weiunity.com/template/boke1/resource/fonts/icomoon.ttf?ngfxmq
+    'https://upload.jianshu.io/users/upload_avatars/8739889/da9dcd2a-3a25-49fa-a0db-ed752b7bc6f8.png?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96'
 
     :param url:
     :return:
     """
     i = url.rfind("?")
     if i>0:
-        start_i = url.rfind("/")
+        start_i = url[0:i].rfind("/")
         file_name = url[start_i+1:i]
         return file_name
 
