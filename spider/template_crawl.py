@@ -35,7 +35,8 @@ class TemplateCrawler(object):
         self.charset = encoding
         self.is_grab_outer_link = grab_out_site_link
         self.download_queue = Queue()  # 数据格式json  {'cmd':quit/download, "url":'http://baidu.com', "save_path":'/full/path/file.ext', 'type':'bin/text'}
-        self.download_finished = False
+        self.download_finished = False  # url消耗完毕不代表网络请求都返回了
+        self.task_finished = False  #全部网络都返回， eventloop结束
 
         self.thread = threading.Thread(target=self.__download_thread)
         self.thread.start()
@@ -121,7 +122,8 @@ class TemplateCrawler(object):
 
     @staticmethod
     def __get_zip_relative_path(full_path):
-        return full_path[len(config.template_archive_dir):]
+        zip_file = "%s.zip"% full_path[len(config.template_archive_dir)+1:]
+        return zip_file
 
     def __get_zip_full_path(self):
         zip_base_dir = "%s/%s" % (config.template_archive_dir, get_date())
@@ -425,7 +427,10 @@ class TemplateCrawler(object):
             if not self.download_finished:
                 self.logger.info("task not finish, wait. Left %s URL.", self.download_queue.qsize())
                 time.sleep(config.wait_download_finish_sleep)
-            else:
+                if not self.task_finished:
+                    self.logger.info("url process finished, waiting request finish.")
+                    time.sleep(2)
+            elif self.task_finished:
                 break
 
     def __get_request(self, url):
@@ -465,6 +470,7 @@ class TemplateCrawler(object):
         self.__make_report()
         zip_full_path = self.__get_zip_full_path()
         self.__make_zip(zip_full_path)
+        self.__clean_dl_files()
         return self.__get_zip_relative_path(zip_full_path)
 
     def __download_thread(self):
@@ -481,6 +487,7 @@ class TemplateCrawler(object):
                  ]
         loop.run_until_complete(asyncio.gather(*tasks))
         loop.close()
+        self.task_finished = True
 
     async def __async_dl_and_save(self, url, file_save_path, file_type):
         """
@@ -549,7 +556,7 @@ class TemplateCrawler(object):
 
             self.logger.debug("queue get cmd %s", cmd)
             cmd_content = cmd['cmd']
-            if cmd_content == self.CMD_QUIT:
+            if cmd_content == self.CMD_QUIT: # 虽然这里收到了，但是不能排除其他协程还在等待网络返回
                 self.logger.info("quit download task")
                 self.download_finished = True
                 break  # 收到最后一条命令，退出。任务结束
@@ -568,8 +575,10 @@ class TemplateCrawler(object):
     def __make_zip(self, zip_full_path):
         shutil.make_archive(zip_full_path, 'zip', self.__get_save_base_dir(), base_dir=self.__get_tpl_dir())
         self.logger.info("zip file %s make ok", zip_full_path)
+
+    def __clean_dl_files(self):
         try:
-            shutil.rmtree(self.__get_tpl_full_path())
+            shutil.rmtree(self.__get_tpl_full_path(), ignore_errors=True)
         except Exception as e:
             self.logger.error(e)
 
