@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="74px" viewBox="0 0 104 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>e-commerce-10</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-7882.000000, -1662.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="e-commerce-10" transform="translate(7884.000000, 1664.000000)">
+                <rect id="Layer-1" x="0" y="0" width="100" height="70" rx="6"></rect>
+                <path d="M73.5,42.1932863 C75.2383358,40.8208979 77.4449045,40 79.8461538,40 C85.4539682,40 90,44.4771525 90,50 C90,55.5228475 85.4539682,60 79.8461538,60 C77.4449045,60 75.2383358,59.1791021 73.5,57.8067137 C71.7616642,59.1791021 69.5550955,60 67.1538462,60 C61.5460318,60 57,55.5228475 57,50 C57,44.4771525 61.5460318,40 67.1538462,40 C69.5550955,40 71.7616642,40.8208979 73.5,42.1932863 L73.5,42.1932863 Z" id="Layer-2"></path>
+                <path d="M10,28 L90,28" id="Layer-3" stroke-dasharray="1,6"></path>
+                <path d="M10,58 L22,58" id="Layer-4"></path>
+                <path d="M28,58 L40,58" id="Layer-5"></path>
+                <path d="M10,48 L40,48" id="Layer-6"></path>
+                <path d="M10,12 L19,12" id="Layer-7"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="84px" viewBox="0 0 104 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>layouts-48</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-8997.000000, -9926.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="layouts-48" transform="translate(8999.000000, 9927.000000)">
+                <path d="M10,47 L90,47 L90,79.0000796 C90,80.1046051 89.1015625,81 88.0025017,81 L11.9974983,81 C10.8943104,81 10,80.1080589 10,79.0000796 L10,47 Z" id="Layer-1"></path>
+                <rect id="Layer-2" x="25" y="1" width="50" height="34" rx="2"></rect>
+                <path d="M24.988158,11.0118418 L35.0124769,0.987522423" id="Layer-3"></path>
+                <path d="M24.988158,21.0118418 L45.0062447,0.993754566" id="Layer-4"></path>
+                <path d="M24.988158,31.0118418 L55.0041637,0.995835125" id="Layer-5"></path>
+                <path d="M30.9963236,35.0036736 L65.0041637,0.995835125" id="Layer-6"></path>
+                <path d="M51.4787362,34.5212631 L75.0041637,10.9958351" id="Layer-7"></path>
+                <path d="M61.4999994,34.499999 L75.0041637,20.9958351" id="Layer-8"></path>
+                <path d="M40.9963236,35.0036736 L73.5,2.49999857" id="Layer-9"></path>
+                <path d="M0,18 L24,18" id="Layer-10" transform="translate(12.000000, 18.000000) scale(-1, 1) translate(-12.000000, -18.000000) "></path>
+                <path d="M76,18 L100,18" id="Layer-11" transform="translate(88.000000, 18.000000) scale(-1, 1) translate(-88.000000, -18.000000) "></path>
+                <path d="M90,64 L100,64" id="Layer-12" transform="translate(95.000000, 64.000000) scale(-1, 1) translate(-95.000000, -64.000000) "></path>
+                <path d="M0,64 L10,64" id="Layer-13" transform="translate(5.000000, 64.000000) scale(-1, 1) translate(-5.000000, -64.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

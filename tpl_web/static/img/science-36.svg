@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="105px" viewBox="0 0 104 105" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>science-36</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-7220.000000, -2912.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="science-36" transform="translate(7222.000000, 2914.000000)">
+                <rect id="Layer-1" x="0" y="47" width="100" height="53"></rect>
+                <path d="M12,99 L12,64.0000319 C12,61.2385905 14.2441952,59 17,59 C19.7614237,59 22,61.245531 22,64.0000319 L22,99 L12,99 Z" id="Layer-2"></path>
+                <path d="M34,100 L34,64.0000319 C34,61.2385905 36.2441952,59 39,59 C41.7614237,59 44,61.245531 44,64.0000319 L44,100 L34,100 Z" id="Layer-3"></path>
+                <path d="M56,100 L56,64.0000319 C56,61.2385905 58.2441952,59 61,59 C63.7614237,59 66,61.245531 66,64.0000319 L66,100 L56,100 Z" id="Layer-4"></path>
+                <path d="M78,100 L78,64.0000319 C78,61.2385905 80.2441952,59 83,59 C85.7614237,59 88,61.245531 88,64.0000319 L88,100 L78,100 Z" id="Layer-5"></path>
+                <polyline id="Layer-6" points="0 101 0 101 12 101"></polyline>
+                <polyline id="Layer-7" points="88 101 88 101 100 101"></polyline>
+                <polygon id="Layer-8" points="6 47 6 39 94 39 94 47"></polygon>
+                <path d="M80,39 C80,22.4314575 66.5685425,9 50,9 C33.4314575,9 20,22.4314575 20,39 L80,39 Z" id="Layer-9"></path>
+                <path d="M50.5,8.5 L50.5,0.5" id="Layer-10"></path>
+            </g>
+        </g>
+    </g>
+</svg>

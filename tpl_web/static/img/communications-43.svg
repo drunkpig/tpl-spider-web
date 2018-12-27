@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>communications-43</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-2252.000000, -5041.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="communications-43" transform="translate(2254.000000, 5043.000000)">
+                <path d="M20,20 L0,20 L0,20 L0,90.0073108 C0,95.5193001 4.4771525,100 10,100 C15.5240618,100 20,95.5261207 20,90.0073108" id="Layer-1"></path>
+                <path d="M8.49678884,100 L90.0032295,100 C95.5144167,100 100,95.5228189 100,89.9999362 L100,0 L20.0893555,0 L20,0 L20,90.0068862 C20,95.5259306 15.530501,100 9.99357768,100 L8.49678884,100 L8.49678884,100 Z" id="Layer-2"></path>
+                <rect id="Layer-3" x="30" y="10" width="25" height="30"></rect>
+                <polyline id="Layer-4" points="30 50 53.2804687 50 90 50"></polyline>
+                <path d="M30,60 L90,60" id="Layer-5"></path>
+                <path d="M30,70 L90,70" id="Layer-6"></path>
+                <path d="M30,80 L90,80" id="Layer-7"></path>
+                <path d="M65,30 L90,30" id="Layer-8"></path>
+                <path d="M65,40 L90,40" id="Layer-9"></path>
+            </g>
+        </g>
+    </g>
+</svg>

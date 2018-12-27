@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>sports-18</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-8191.000000, -4137.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="sports-18" transform="translate(8193.000000, 4139.000000)">
+                <rect id="Layer-1" x="78" y="82" width="6" height="12"></rect>
+                <rect id="Layer-2" x="5" y="75" width="5" height="7"></rect>
+                <rect id="Layer-3" x="90" y="75" width="5" height="7"></rect>
+                <polyline id="Layer-4" points="0 100 0 82 100 82 100 100"></polyline>
+                <path d="M89,96.9999186 C89,95.345802 87.5735002,94 85.8201985,94 L76.1798015,94 C74.4264998,94 73,95.345802 73,96.9999186 L73,100 L89,100 L89,96.9999186 L89,96.9999186 Z" id="Layer-5"></path>
+                <rect id="Layer-6" x="0" y="65" width="100" height="10"></rect>
+                <rect id="Layer-7" x="78" y="75" width="6" height="7"></rect>
+                <circle id="Layer-8" cx="81" cy="19" r="19"></circle>
+                <path d="M89,96.9999186 C89,95.345802 87.5735002,94 85.8201985,94 L76.1798015,94 C74.4264998,94 73,95.345802 73,96.9999186 L73,100 L89,100 L89,96.9999186 L89,96.9999186 Z" id="Layer-9"></path>
+                <path d="M84,37.7644965 L84,65 L78,65 L78,37.7644965 C78.9771963,37.9194981 79.9791971,38 81,38 C82.0208029,38 83.0228037,37.9194981 84,37.7644965 L84,37.7644965 Z" id="Layer-10"></path>
+                <circle id="Layer-11" cx="81" cy="19" r="8.3125"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

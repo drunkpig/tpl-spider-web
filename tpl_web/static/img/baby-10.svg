@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>baby-10</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-3678.000000, -8404.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="baby-10" transform="translate(3680.000000, 8406.000000)">
+                <path d="M100,40 L100,90 C100,90 88.2109375,100.158203 50,100.158203 C11.7890625,100.158203 0,90 0,90 L0,40 C0,45.5228475 22.3857625,50 50,50 C77.6142375,50 100,45.5228475 100,40 L100,40 Z" id="Layer-1"></path>
+                <polyline id="Layer-2" points="100.126465 44 80.4394531 97.5966797 50 50.5478516 50 50.5478516"></polyline>
+                <polyline id="Layer-3" points="0 44 19.6870117 97.5966797 50.1264648 50.5478516 50.1264648 50.5478516"></polyline>
+                <ellipse id="Layer-4" cx="50" cy="40" rx="50" ry="10"></ellipse>
+                <path d="M99.5,0.5 L71,13" id="Layer-5"></path>
+                <circle id="Layer-6" cx="65" cy="15" r="6"></circle>
+                <path d="M0.5,0.5 L29,12" id="Layer-7"></path>
+                <path d="M35,21 C31.6862915,21 29,18.3137085 29,15 C29,11.6862915 31.6862915,9 35,9 C38.3137085,9 41,11.6862915 41,15 C41,18.3137085 38.3137085,21 35,21 L35,21 Z" id="Layer-8"></path>
+            </g>
+        </g>
+    </g>
+</svg>

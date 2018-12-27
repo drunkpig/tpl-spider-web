@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="85px" viewBox="0 0 104 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>weather-46</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-4839.000000, -2603.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="weather-46" transform="translate(4841.000000, 2604.000000)">
+                <path d="M0,60 L58.6956522,60" id="Layer-1"></path>
+                <path d="M4.34782609,71 L93.4782609,71" id="Layer-2"></path>
+                <path d="M72.826087,82 L46.7391304,82" id="Layer-3"></path>
+                <path d="M38.0434783,82 L25,82" id="Layer-4"></path>
+                <path d="M67.3913043,60 L97.826087,60" id="Layer-5"></path>
+                <path d="M0,49 L50,49 L100,49" id="Layer-6"></path>
+                <path d="M21.7391304,37 L56.7391304,37 L91.7391304,37" id="Layer-7"></path>
+                <path d="M7.60869565,37 L10.326087,37 L13.0434783,37" id="Layer-8"></path>
+                <path d="M3.26086957,25 L38.5869565,25 L73.9130435,25" id="Layer-9"></path>
+                <path d="M82.6086957,25 L88.0434783,25 L93.4782609,25" id="Layer-10"></path>
+                <path d="M16.3043478,13 L48.9130435,13 L81.5217391,13" id="Layer-11"></path>
+                <path d="M46.7391304,1 L72.826087,1" id="Layer-12"></path>
+                <path d="M25,1 L38.0434783,1" id="Layer-13"></path>
+            </g>
+        </g>
+    </g>
+</svg>

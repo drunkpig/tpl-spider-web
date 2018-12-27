@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="94px" height="104px" viewBox="0 0 94 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>food-21</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-2140.000000, -6263.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="food-21" transform="translate(2142.000000, 6265.000000)">
+                <path d="M73.0833333,90.9790606 L73.0833333,54.0205992 C75.0682159,53.5095507 76.5416667,51.7166492 76.5416667,49.5833333 C76.5416667,47.0571789 74.4748429,45 71.9252866,45 L5.0747134,45 C2.53283747,45 0.458333333,47.0520282 0.458333333,49.5833333 C0.458333333,51.7132268 1.92759594,53.5097352 3.91666667,54.0209394 L3.91666667,90.9794008 C1.93178409,91.4904493 0.458333333,93.2833508 0.458333333,95.4166667 C0.458333333,97.9428211 2.52515709,100 5.0747134,100 L71.9252866,100 C74.4671625,100 76.5416667,97.9479718 76.5416667,95.4166667 C76.5416667,93.2867732 75.0724041,91.4902648 73.0833333,90.9790606 L73.0833333,90.9790606 Z" id="Layer-1"></path>
+                <path d="M66,45 C66,30.0883118 53.9116882,18 39,18 C24.0883118,18 12,30.0883118 12,45 L66,45 L66,45 Z" id="Layer-2"></path>
+                <polyline id="Layer-3" points="39 16 39 12 86.7021484 12"></polyline>
+                <rect id="Layer-4" x="18" y="78" width="40" height="12" rx="1"></rect>
+                <path d="M34,84 L42,84" id="Layer-5"></path>
+                <polygon id="Layer-6" points="90 0 87.5024292 12 77.4975708 12 75 0"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

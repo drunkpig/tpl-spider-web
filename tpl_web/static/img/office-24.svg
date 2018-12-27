@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>office-24</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-1898.000000, -6881.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="office-24" transform="translate(1900.000000, 6883.000000)">
+                <path d="M45,100 L70,100 L70,100 C75.5228475,100 80,95.5228475 80,90.0000052 L80,10.004525 C80,4.47917841 84.4750951,0 89.9999892,0 L90.038813,0 L30.0031794,0 C24.4768888,0 20,4.47718108 20,10.0000638 L20,80 L60,80 L60,89.9999043 C60,95.522787 64.4759382,99.9999681 70,100 L45,100 L45,100 Z" id="Layer-1"></path>
+                <path d="M100,30 L100,10.0000638 C100,4.47473288 95.5228475,0 90,0 C84.4759382,0 80,4.47718108 80,10.0000638 L80,30 L100,30 L100,30 Z" id="Layer-2"></path>
+                <path d="M60,80 L0,80 L0,90 C0,95.5240618 4.47361428,100 9.99209717,100 L70,100 C64.4759382,99.9999681 60,95.522787 60,89.9999043 L60,80 L60,80 Z" id="Layer-3"></path>
+                <path d="M29.7422928,27 L70,27" id="Layer-4"></path>
+                <path d="M29.7422928,37 L70,37" id="Layer-5"></path>
+                <path d="M29.7422928,47 L70,47" id="Layer-6"></path>
+                <path d="M29.7422928,57 L70,57" id="Layer-7"></path>
+                <path d="M29.7422928,67 L53.9215686,67" id="Layer-8"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>baby-9</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-3378.000000, -8404.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="baby-9" transform="translate(3380.000000, 8406.000000)">
+                <circle id="Layer-1" cx="50" cy="50" r="50"></circle>
+                <path d="M37.9828145,98.5464705 C16.1729192,93.1656634 0,73.4715255 0,50 C0,46.6176349 0.335851076,43.3137121 0.976024178,40.1197605 C5.56233954,55.4507301 25.7681276,67 50,67 C54.1886181,67 58.2569403,66.6549182 62.1450896,66.0048722 C58.6204437,82.3627335 41.8322495,99.4961802 37.9828145,98.5464705 Z" id="Layer-2"></path>
+                <path d="M50,0 C46.2048781,0 42.5085114,0.422821685 38.9554376,1.22392747 C53.1861035,6.25186372 63.8147545,26.1808845 63.8147545,50 C63.8147545,55.5974129 63.2278039,60.9800013 62.1450896,66.0048722 C80.7505492,62.8942912 95.2304314,52.8006841 99.0239758,40.1197605 C99.6641489,43.3137121 100,46.6176349 100,50 C100,22.3857625 77.6142375,0 50,0 Z" id="Layer-3"></path>
+            </g>
+        </g>
+    </g>
+</svg>

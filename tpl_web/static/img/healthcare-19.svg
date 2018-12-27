@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>healthcare-19</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-2739.000000, -7191.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="healthcare-19" transform="translate(2741.000000, 7193.000000)">
+                <path d="M79.9035809,2.05696282 C77.7541852,-0.0924328892 74.267427,-0.0905336894 72.1246958,2.05219757 L2.05219757,72.1246958 C-0.0945663649,74.2714597 -0.0919908256,77.7546273 2.05696282,79.9035809 L20.2221851,98.0688032 C22.3715808,100.218199 25.858339,100.2163 28.0010703,98.0735685 L98.0735685,28.0010703 C100.220332,25.8543063 100.217757,22.3711388 98.0688032,20.2221851 L79.9035809,2.05696282 L79.9035809,2.05696282 Z" id="Layer-1"></path>
+                <polygon id="Layer-2" points="50.062883 24.1140103 24.1140103 50.062883 50.062883 76.0117557 76.0117557 50.062883"></polygon>
+                <path d="M45.3431458,44.3431458 L56.6568542,55.6568542" id="Layer-3" stroke-dasharray="1,6"></path>
+                <path d="M38.2720779,51.4142136 L49.5857864,62.7279221" id="Layer-4" stroke-dasharray="1,6"></path>
+                <path d="M52.4142136,37.2720779 L63.7279221,48.5857864" id="Layer-5" stroke-dasharray="1,6"></path>
+            </g>
+        </g>
+    </g>
+</svg>

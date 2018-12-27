@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="92px" height="104px" viewBox="0 0 92 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>devices-3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-5175.000000, -3515.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="devices-3" transform="translate(5177.000000, 3517.000000)">
+                <path d="M57.924652,0 C59.0313353,0 60.1239033,0.876274186 60.3616658,1.94239318 L79.5668135,88.0576068 C79.8060558,89.130361 79.1015625,90 78.0025017,90 L1.99749826,90 C0.894310431,90 0.195423949,89.1237258 0.433186498,88.0576068 L19.6383342,1.94239318 C19.8775765,0.869639047 20.9598723,0 22.075348,0 L57.924652,0 Z" id="Layer-1"></path>
+                <polygon id="Layer-2" points="75.5396621 70 62.1586483 10 17.8413517 10 4.46033793 70"></polygon>
+                <rect id="Layer-3" x="34" y="10" width="12" height="60"></rect>
+                <path d="M46,22 L34,22" id="Layer-4"></path>
+                <path d="M46,34 L34,34" id="Layer-5"></path>
+                <path d="M46,46 L34,46" id="Layer-6"></path>
+                <path d="M46,58 L34,58" id="Layer-7"></path>
+                <path d="M87.499999,21.4999995 L83.4999993,25.4999993" id="Layer-8"></path>
+                <circle id="Layer-9" cx="80" cy="29" r="5"></circle>
+                <path d="M34,80 L46,80" id="Layer-10"></path>
+                <rect id="Layer-11" x="10" y="90" width="60" height="10"></rect>
+                <path d="M40,69 L76.5547523,32.4452466" id="Layer-12"></path>
+            </g>
+        </g>
+    </g>
+</svg>

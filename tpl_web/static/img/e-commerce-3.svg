@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="111px" viewBox="0 0 104 111" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>e-commerce-3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-5787.000000, -1662.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="e-commerce-3" transform="translate(5789.000000, 1664.000000)">
+                <path d="M93.4230877,44.4136085 C97.3922658,41.7148762 100,37.1619349 100,32 C100,23.7139073 93.2851438,17 85.0019488,17 L14.9980512,17 C6.71655983,17 0,23.7157288 0,32 C0,37.5455659 3.00766097,42.3869319 7.48021109,44.9827639 L9.46993537,32.9150795 C10.0085679,29.6482713 13.1298347,27 16.4418502,27 L84.4485815,27 C87.7604312,27 90.8964994,29.6389569 91.4567436,32.9150795 L93.4230877,44.4136085 L93.4230877,44.4136085 Z" id="Layer-1"></path>
+                <path d="M9.46993537,32.9150795 C10.0085679,29.6482713 13.1298347,27 16.4418502,27 L84.4485815,27 C87.7604312,27 90.8964994,29.6389569 91.4567436,32.9150795 L99.0705752,77.4382455 C101.862544,93.7647517 90.6987958,107 74.1253014,107 L27.2553659,107 C10.6865032,107 -0.559683727,93.7447528 2.13596201,77.3956524 L9.46993537,32.9150795 Z" id="Layer-2"></path>
+                <circle id="Layer-3" cx="42.5" cy="7.5" r="7.5"></circle>
+                <circle id="Layer-4" cx="57.5" cy="7.5" r="7.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="99px" viewBox="0 0 104 99" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>e-commerce-15</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-9392.000000, -1662.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="e-commerce-15" transform="translate(9394.000000, 1664.000000)">
+                <path d="M3,35 L97,35 L90.7971988,89.0414214 C90.4194816,92.3322535 87.4242056,95 84.1230678,95 L15.9706822,95 C12.6623787,95 9.6692494,92.3249417 9.28724089,89.0414214 L3,35 Z" id="Layer-1"></path>
+                <path d="M18,50 L85,50" id="Layer-2" stroke-dasharray="1,6"></path>
+                <path d="M18,60 L85,60" id="Layer-3" stroke-dasharray="1,6"></path>
+                <path d="M18,70 L85,70" id="Layer-4" stroke-dasharray="1,6"></path>
+                <path d="M18,80 L85,80" id="Layer-5" stroke-dasharray="1,6"></path>
+                <rect id="Layer-6" x="10" y="15" width="20" height="10" rx="1"></rect>
+                <path d="M40,35.022501 L73.3919347,1.63056626 C75.5663909,-0.543889884 79.087219,-0.542789092 81.2594788,1.62947067 C83.4273185,3.79731032 83.4312481,7.32414989 81.2583832,9.49701473 L55.732897,35.022501 L40,35.022501 L40,35.022501 Z" id="Layer-7"></path>
+                <path d="M1.00595856,25 C0.445842743,25 0,25.4456547 0,25.9953976 L0,34.0046024 C0,34.5443356 0.450382987,35 1.00595856,35 L40.022501,35 L50.022501,25 L1.00595856,25 Z" id="Layer-8"></path>
+                <path d="M65.755398,25 L98.9940414,25 C99.549617,25 100,25.4556644 100,25.9953976 L100,34.0046024 C100,34.5543453 99.5541573,35 98.9940414,35 L55.755398,35 L65.755398,25 L65.755398,25 Z" id="Layer-9"></path>
+                <path d="M65.022501,10 L31.0015783,10 C30.4427194,10 30,10.4510659 30,11.007484 L30,23.992516 C30,24.5510798 30.4484219,25 31.0015783,25 L50.022501,25 L65.022501,10 L65.022501,10 Z" id="Layer-10"></path>
+                <path d="M80.755398,10 L83.9984217,10 C84.5515781,10 85,10.4489202 85,11.007484 L85,23.992516 C85,24.5489341 84.5572806,25 83.9984217,25 L65.755398,25 L80.755398,10 L80.755398,10 Z" id="Layer-11"></path>
+            </g>
+        </g>
+    </g>
+</svg>

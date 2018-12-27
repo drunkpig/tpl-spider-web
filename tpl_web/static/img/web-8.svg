@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>web-8</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-7202.000000, -7802.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="web-8" transform="translate(7204.000000, 7804.000000)">
+                <path d="M13.0140841,81.8270445 L5.99306484,81.8270445 C2.68768095,81.8270445 0,79.1405954 0,75.8266924 L0,6.00035205 C0,2.68760658 2.68318653,0 5.99306484,0 L94.0069352,0 C97.312319,0 100,2.68750566 100,6.0027119 L100,20.8015498 L100,75.8366386 C100,79.145897 97.3168135,81.8270445 94.0069352,81.8270445 L29.7345276,81.8270445 C26.3406023,100 10.8956473,100.000001 10.8956473,100 C10.8956473,99.9999994 14.4035666,91.9812737 13.0140841,81.8270445 L13.0140841,81.8270445 Z" id="Layer-1"></path>
+                <circle id="Layer-2" cx="50" cy="40" r="28"></circle>
+                <path d="M65,45 C65,53.2842712 56.2842712,57 50,57 C43.7157288,57 35,53.2842712 35,45" id="Layer-3"></path>
+                <path d="M45,33 C45,30.2385763 42.7614237,28 40,28 C37.2385763,28 35,30.2385763 35,33" id="Layer-4"></path>
+                <path d="M65,33 C65,30.2385763 62.7614237,28 60,28 C57.2385763,28 55,30.2385763 55,33" id="Layer-5"></path>
+            </g>
+        </g>
+    </g>
+</svg>

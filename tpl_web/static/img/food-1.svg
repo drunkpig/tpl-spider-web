@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>food-1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-5806.000000, -5962.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="food-1" transform="translate(5808.000000, 5964.000000)">
+                <path d="M76,20 L88.9904364,20 C95.0708505,20 100,24.9227926 100,31.0049248 L100,68.9950752 C100,75.0729274 95.0751716,80 88.9904364,80 L76,80 L76,90.9935237 C76,95.9676632 71.9675693,100 67.0021268,100 L8.99787322,100 C4.02848506,100 0,95.9716043 0,90.9935237 L0,2.99280137 C0,1.33992281 1.3513777,0 3.00269837,0 L72.9973016,0 C74.6556461,0 76,1.33801252 76,2.99280137 L76,20 L76,20 L76,20 Z M76,30 L86.9999809,30 C88.6568457,30 90,31.3423094 90,33.0065012 L90,66.9934988 C90,68.6539436 88.6526814,70 86.9999809,70 L76,70 L76,30 L76,30 L76,30 Z" id="Layer-1"></path>
+                <path d="M0,35 L12.6790365,45 L25.3611654,35 L38,45 L50.9870443,35 L63.414974,45 L76,35 M76,55 L63.414974,64.8759766 L50.9870443,55 L38,64.8759766 L25.3611654,55 L12.6790365,64.8759766 L0,55" id="Layer-2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

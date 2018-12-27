@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>layouts-19</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-416.000000, -9925.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="layouts-19" transform="translate(418.000000, 9927.000000)">
+                <path d="M50,0 L98.0090859,0 C99.1086374,0 100,0.889064278 100,1.99091407 L100,50 L50,50 L50,0 Z" id="Layer-1"></path>
+                <path d="M0,0 L48.0090859,0 C49.1086374,0 50,0.889064278 50,1.99091407 L50,50 L0,50 L0,0 Z" id="Layer-2" transform="translate(25.000000, 25.000000) scale(-1, 1) translate(-25.000000, -25.000000) "></path>
+                <path d="M0,50 L48.0090859,50 C49.1086374,50 50,50.8890643 50,51.9909141 L50,100 L0,100 L0,50 Z" id="Layer-3" transform="translate(25.000000, 75.000000) scale(-1, -1) translate(-25.000000, -75.000000) "></path>
+                <path d="M50,50 L98.0090859,50 C99.1086374,50 100,50.8890643 100,51.9909141 L100,100 L50,100 L50,50 Z" id="Layer-4" transform="translate(75.000000, 75.000000) scale(1, -1) translate(-75.000000, -75.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

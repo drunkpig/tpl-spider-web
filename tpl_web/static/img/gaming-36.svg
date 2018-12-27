@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>gaming-36</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-1306.000000, -5962.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="gaming-36" transform="translate(1308.000000, 5964.000000)">
+                <path d="M51,59.5 L51,99.8267659" id="Layer-1"></path>
+                <ellipse id="Layer-2" cx="50" cy="36" rx="50" ry="36"></ellipse>
+                <ellipse id="Layer-3" cx="50" cy="36" rx="33" ry="23"></ellipse>
+                <path d="M41,32 L41,40" id="Layer-4"></path>
+                <path d="M59,32 L59,40" id="Layer-5"></path>
+                <path d="M51,91.5 C51,86.8055796 54.7995207,83 59.4965203,83 L81,83 L81,91.5 C81,96.1944204 77.2004793,100 72.5034797,100 L51,100 L51,91.5 L51,91.5 Z" id="Layer-6"></path>
+                <path d="M51,94 C51,90.6862915 48.3190052,88 44.9962991,88 L30,88 L30,94 C30,97.3137085 32.6809948,100 36.0037009,100 L51,100 L51,94 L51,94 Z" id="Layer-7"></path>
+            </g>
+        </g>
+    </g>
+</svg>

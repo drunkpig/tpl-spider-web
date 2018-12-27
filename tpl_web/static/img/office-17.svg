@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="114px" height="114px" viewBox="0 0 114 114" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>office-17</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-9355.000000, -6565.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="office-17" transform="translate(9357.000000, 6567.000000)">
+                <path d="M45.0018309,100 L89.887207,100 L109.789062,80 L109.789062,0 L10.1025393,0 L10.1025391,64.9215572 C14.263135,61.8294821 19.4179183,60 25,60 C38.8071187,60 50,71.1928813 50,85 C50,90.6280296 48.1402759,95.8216973 45.0018309,100 L45.0018309,100 Z" id="Layer-1"></path>
+                <polygon id="Layer-2" points="90 100 110 80 90 80"></polygon>
+                <path d="M25,60 C38.8071187,60 50,71.1928813 50,85 C50,98.8071187 38.8071187,110 25,110 C11.1928813,110 0,98.8071187 0,85 C0,71.1928813 11.1928813,60 25,60 L25,60 Z" id="Layer-3"></path>
+                <path d="M34.9727017,75.8492424 L15.8808186,94.9411255" id="Layer-4"></path>
+                <path d="M34.9727017,94.9411255 L15.8808186,75.8492424" id="Layer-5"></path>
+            </g>
+        </g>
+    </g>
+</svg>

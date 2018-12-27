@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>gaming-24</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-7206.000000, -5661.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="gaming-24" transform="translate(7208.000000, 5663.000000)">
+                <path d="M93.0437252,24.5599091 C84.3270869,9.85235662 68.3134583,0 50,0 C22.4020443,0 0,22.3736513 0,50 C0,77.5979557 22.3736513,100 50,100 C68.3134583,100 84.3270869,90.1476434 93.0153322,75.4684838 L49.6308915,50.028393 L93.0437252,24.5599091 L93.0437252,24.5599091 L93.0437252,24.5599091 Z M43.4412266,24.2475866 C43.4412266,20.8404316 46.1953436,18.0579216 49.6308915,18.0579216 C53.0664395,18.0579216 55.8205565,20.8120386 55.8205565,24.2475866 C55.8205565,27.6831346 53.0664395,30.4372516 49.6308915,30.4372516 C46.1953436,30.4372516 43.4412266,27.6547416 43.4412266,24.2475866 L43.4412266,24.2475866 L43.4412266,24.2475866 Z" id="Layer-1"></path>
+                <circle id="Layer-2" cx="77" cy="50" r="5"></circle>
+                <circle id="Layer-3" cx="95" cy="50" r="5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

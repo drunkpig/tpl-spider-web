@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="102px" height="102px" viewBox="0 0 102 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>devices-33</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-4518.000000, -3816.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="devices-33" transform="translate(4519.000000, 3817.000000)">
+                <path d="M13.1096012,81.446499 L1.99809728,92.5580029 C0.466629467,94.0894707 0.466629467,96.5724706 1.99809728,98.1039384 C3.52956509,99.6354062 6.01256501,99.6354062 7.54403282,98.1039384 L18.5670197,87.0809515 L13.1096012,81.446499 Z" id="Layer-1"></path>
+                <polygon id="Layer-2" points="90.8297331 0.953399308 98.0019027 2.10013296 99.1486364 9.27230262 67.4992573 40.9216817 59.180354 32.6027784"></polygon>
+                <polygon id="Layer-3" points="86.9100316 4.87310073 95.228935 13.192004 88.2965155 20.1244235 79.9776122 11.8055202"></polygon>
+                <path d="M52.9411765,26.5029496 L73.7384347,47.3002079 L36.6812192,84.3574234 C30.9374462,90.1011964 21.626836,90.1030824 15.882569,84.3588154 L15.882569,84.3588154 C10.1395647,78.6158111 10.1424536,69.3016725 15.883961,63.5601651 L52.9411765,26.5029496 L52.9411765,26.5029496 Z" id="Layer-4"></path>
+            </g>
+        </g>
+    </g>
+</svg>

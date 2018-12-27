@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>web-42</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-7907.000000, -8103.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="web-42" transform="translate(7909.000000, 8105.000000)">
+                <rect id="Layer-1" x="0" y="0" width="48" height="25"></rect>
+                <rect id="Layer-2" x="0" y="38" width="48" height="25"></rect>
+                <rect id="Layer-3" x="0" y="75" width="48" height="25"></rect>
+                <path d="M60,2 L100,2" id="Layer-4"></path>
+                <path d="M60,11.2336913 L100,11.2336913" id="Layer-5"></path>
+                <path d="M60,20.4673825 L75,20.4673825" id="Layer-6"></path>
+                <path d="M60,45 L100,45" id="Layer-7"></path>
+                <path d="M60,54.2336913 L85,54.2336913" id="Layer-8"></path>
+                <path d="M60,82 L100,82" id="Layer-9"></path>
+                <path d="M60,91.2336913 L78,91.2336913" id="Layer-10"></path>
+                <path d="M86,91.2336913 L92,91.2336913" id="Layer-11"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>science-13</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-416.000000, -2912.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="science-13" transform="translate(418.000000, 2914.000000)">
+                <circle id="Layer-1" cx="50" cy="50" r="50"></circle>
+                <path d="M99.8400657,45.9714933 C99.9460112,47.3003644 100,48.6438773 100,50 C100,77.6142375 77.6142375,100 50,100 C22.3857625,100 -3.73745479e-12,77.6142375 -3.73745479e-12,50 C-3.73745479e-12,48.6438773 0.0539888081,47.3003644 0.159934318,45.9714933 C10.9309637,54.8785582 29.2334357,60.7396879 50,60.7396879 C70.7665643,60.7396879 89.0690363,54.8785582 99.8400657,45.9714933 L99.8400657,45.9714933 Z" id="Layer-2"></path>
+                <path d="M78.0710678,36.0710678 C81.1952621,32.9468735 80.5620972,27.2483887 76.6568542,23.3431458 C72.7516113,19.4379028 67.0531265,18.8047379 63.9289322,21.9289322 C60.8047379,25.0531265 61.4379028,30.7516113 65.3431458,34.6568542 C69.2483887,38.5620972 74.9468735,39.1952621 78.0710678,36.0710678 L78.0710678,36.0710678 Z" id="Layer-3"></path>
+            </g>
+        </g>
+    </g>
+</svg>

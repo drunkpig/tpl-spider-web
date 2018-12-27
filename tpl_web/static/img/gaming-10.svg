@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>gaming-10</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-3033.000000, -5661.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="gaming-10" transform="translate(3035.000000, 5663.000000)">
+                <circle id="Layer-1" cx="50" cy="18" r="18"></circle>
+                <circle id="Layer-2" cx="50" cy="82" r="18"></circle>
+                <path d="M82,68 C91.9411255,68 100,59.9411255 100,50 C100,40.0588745 91.9411255,32 82,32 C72.0588745,32 64,40.0588745 64,50 C64,59.9411255 72.0588745,68 82,68 Z" id="Layer-3"></path>
+                <circle id="Layer-4" cx="18" cy="50" r="18"></circle>
+                <path d="M50,19 L50,26" id="Layer-5"></path>
+                <polyline id="Layer-6" transform="translate(50.000000, 14.500000) rotate(-270.000000) translate(-50.000000, -14.500000) " points="45.5 8.5 54.5 14.5 45.5 20.5"></polyline>
+                <polyline id="Layer-7" transform="translate(18.000000, 46.000000) rotate(-270.000000) translate(-18.000000, -46.000000) " points="14 39 22 46 14 53"></polyline>
+                <polyline id="Layer-8" transform="translate(18.000000, 54.000000) scale(1, -1) rotate(-270.000000) translate(-18.000000, -54.000000) " points="14 47 22 54 14 61"></polyline>
+                <path d="M80.3849477,49.5789474 L82.7698953,49.5789474 C84.1515271,49.5789474 85.2562677,49.2351973 86.0841502,48.5476867 C86.9120327,47.8601762 87.3259678,46.9271401 87.3259678,45.7485506 C87.3259678,44.4390068 86.9421869,43.4868735 86.1746137,42.8921223 C85.4070405,42.2973711 84.2392502,42 82.6712078,42 L78,42 L78,49.5789474 L80.3849477,49.5789474 L78,49.5789474 L78,57.7780906 L83.5328129,57.7780906 C85.0920151,57.7780906 86.3224864,57.4156003 87.2242638,56.6906088 C88.1260412,55.9656173 88.5769231,54.9668131 88.5769231,53.6941662 C88.5769231,50.9506733 86.9130233,49.5789474 83.5851739,49.5789474 L80.3849477,49.5789474 Z" id="Layer-9"></path>
+                <polyline id="Layer-10" points="43 90.5620609 49.0765027 74 50.9125683 74 57 90.5620609"></polyline>
+                <path d="M45.3333333,85.3333333 L54.9441997,85.3333333 L45.3333333,85.3333333 Z" id="Layer-11"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>sports-22</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-9337.000000, -4137.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="sports-22" transform="translate(9339.000000, 4139.000000)">
+                <path d="M7,29 L93,29 L93,95.0074179 C93,97.7647448 90.7658677,100 88.0045533,100 L11.9954467,100 C9.23653765,100 7,97.757846 7,95.0074179 L7,29 Z" id="Layer-1"></path>
+                <rect id="Layer-2" x="0" y="21" width="100" height="8.5" rx="4.25"></rect>
+                <path d="M33.7799996,41.4657338 L26.0733999,49.1723335" id="Layer-3"></path>
+                <path d="M33.7799996,49.1723335 L26.0733999,41.4657338" id="Layer-4"></path>
+                <path d="M33.7799996,60.9657338 L26.0733999,68.6723335" id="Layer-5"></path>
+                <path d="M33.7799996,68.6723335 L26.0733999,60.9657338" id="Layer-6"></path>
+                <circle id="Layer-7" cx="30.0025407" cy="83.8948746" r="4.5"></circle>
+                <path d="M52.7799996,41.4657338 L45.0733999,49.1723335" id="Layer-8"></path>
+                <path d="M52.7799996,49.1723335 L45.0733999,41.4657338" id="Layer-9"></path>
+                <path d="M72.0922319,41.3948746 L34.1463464,79.3407603" id="Layer-10"></path>
+                <polyline id="Layer-11" points="61.9198039 41.3948746 72.0922319 41.3948746 72.0922319 51.5673025"></polyline>
+                <path d="M65.4271096,87.6737246 L73.1337093,79.967125" id="Layer-12"></path>
+                <path d="M65.4271096,79.967125 L73.1337093,87.6737246" id="Layer-13"></path>
+                <path d="M65.4271096,68.1737246 L73.1337093,60.467125" id="Layer-14"></path>
+                <path d="M65.4271096,60.467125 L73.1337093,68.1737246" id="Layer-15"></path>
+                <path d="M46.4271096,87.6737246 L54.1337093,79.967125" id="Layer-16"></path>
+                <path d="M46.4271096,79.967125 L54.1337093,87.6737246" id="Layer-17"></path>
+                <circle id="Layer-18" cx="50.5" cy="6" r="6"></circle>
+                <path d="M50.5,11.9872777 L50.5,19.9949434" id="Layer-19"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>web-12</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-8402.000000, -7802.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="web-12" transform="translate(8404.000000, 7804.000000)">
+                <rect id="Layer-1" x="0" y="0" width="100" height="10"></rect>
+                <rect id="Layer-2" x="5" y="10" width="90" height="72"></rect>
+                <path d="M0,82 L100,82" id="Layer-3"></path>
+                <path d="M50,82 L50,92" id="Layer-4"></path>
+                <circle id="Layer-5" cx="50" cy="95" r="5"></circle>
+                <path d="M78,50.9987461 C78,50.4471539 77.5525106,50 77.0014977,50 L65.9985023,50 C65.4470447,50 65,50.4386148 65,50.9987461 L65,70.0012539 C65,70.5528461 65.4474894,71 65.9985023,71 L77.0014977,71 C77.5529553,71 78,70.5613852 78,70.0012539 L78,50.9987461 L78,50.9987461 Z" id="Layer-6"></path>
+                <path d="M57,29.9967825 C57,29.4462747 56.5525106,29 56.0014977,29 L44.9985023,29 C44.4470447,29 44,29.4432618 44,29.9967825 L44,70.0032175 C44,70.5537253 44.4474894,71 44.9985023,71 L56.0014977,71 C56.5529553,71 57,70.5567382 57,70.0032175 L57,29.9967825 L57,29.9967825 Z" id="Layer-7"></path>
+                <path d="M36,37.9991421 C36,37.4473312 35.5525106,37 35.0014977,37 L23.9985023,37 C23.4470447,37 23,37.4549243 23,37.9991421 L23,70.0008579 C23,70.5526688 23.4474894,71 23.9985023,71 L35.0014977,71 C35.5529553,71 36,70.5450757 36,70.0008579 L36,37.9991421 L36,37.9991421 Z" id="Layer-8"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="74px" height="104px" viewBox="0 0 74 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>sports-23</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-431.000000, -4438.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="sports-23" transform="translate(433.000000, 4440.000000)">
+                <rect id="Layer-1" x="0" y="19" width="70" height="81" rx="5"></rect>
+                <path d="M13,19 L58,19 L58,20.837681 C58,23.155582 56.1765377,25 53.927183,25 L17.072817,25 C14.8197876,25 13,23.1364663 13,20.837681 L13,19 L13,19 Z" id="Layer-2"></path>
+                <circle id="Layer-3" cx="55.3699699" cy="39.3699699" r="4.63003008"></circle>
+                <path d="M43.2101082,46.0360484 C43.2101082,46.0360484 32.9472589,49.8254658 21.5277606,61.5026372 C10.1082622,73.1798085 11.3180685,88.8041524 11.3180685,88.8041524" id="Layer-4"></path>
+                <polyline id="Layer-5" points="33.2381467 42.5529462 43.9972425 45.4358373 41.0113485 56.5793453"></polyline>
+                <path d="M40.6002748,79.8120311 L32.3878052,88.0245007" id="Layer-6"></path>
+                <path d="M40.6002748,88.0245007 L32.3878052,79.8120311" id="Layer-7"></path>
+                <path d="M17.8208006,35.3482709 L9.60833108,43.5607405" id="Layer-8"></path>
+                <path d="M17.8208006,43.5607405 L9.60833108,35.3482709" id="Layer-9"></path>
+                <path d="M60.1755527,79.8041784 L52.0690946,87.9106365" id="Layer-10"></path>
+                <path d="M60.1755527,87.9106365 L52.0690946,79.8041784" id="Layer-11"></path>
+                <path d="M58,19 L58,16.662319 C58,14.3635337 56.1802124,12.5 53.927183,12.5 L45.7272727,12.5 L45.7272727,8.32463801 C45.7272727,3.72706739 42.0704099,0 37.5254848,0 L33.4745152,0 C28.9447928,0 25.2727273,3.7427526 25.2727273,8.32463801 L25.2727273,12.5 L17.072817,12.5 C14.8234623,12.5 13,14.344418 13,16.662319 L13,19 L58,19 L58,19 Z" id="Layer-12"></path>
+            </g>
+        </g>
+    </g>
+</svg>

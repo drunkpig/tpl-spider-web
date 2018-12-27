@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="105px" viewBox="0 0 104 105" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>web-34</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-5507.000000, -8103.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="web-34" transform="translate(5509.000000, 8105.000000)">
+                <rect id="Layer-1" x="0" y="77" width="16" height="24"></rect>
+                <rect id="Layer-2" x="28" y="66" width="16" height="35"></rect>
+                <rect id="Layer-3" x="56" y="50" width="16" height="51"></rect>
+                <rect id="Layer-4" x="84" y="33" width="16" height="68"></rect>
+                <circle id="Layer-5" cx="8" cy="60" r="6"></circle>
+                <path d="M42.6630984,37.3678531 L57.7190422,33.7617806" id="Layer-6"></path>
+                <path d="M13.0269783,56.1419423 L30.3077372,43.3823429" id="Layer-7"></path>
+                <path d="M68.9702123,27.9782396 L87.8874367,11.2288885" id="Layer-8"></path>
+                <circle id="Layer-9" cx="36" cy="39" r="6"></circle>
+                <circle id="Layer-10" cx="64" cy="32" r="6"></circle>
+                <circle id="Layer-11" cx="92" cy="6" r="6"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>weather-30</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-9926.000000, -2282.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="weather-30" transform="translate(9928.000000, 2284.000000)">
+                <path d="M1.9812403,77.25 L98.304474,22.75" id="Layer-1"></path>
+                <polyline id="Layer-2" points="84.0003596 14.8875844 79.5387782 34.9019242 99.7540636 41.2155477"></polyline>
+                <polyline id="Layer-3" points="0.713926135 58.6813203 20.6313767 64.9019242 16.1030792 85.2155477"></polyline>
+                <path d="M97.4641095,74.1764428 L2.82160475,25.8235572" id="Layer-4"></path>
+                <polyline id="Layer-5" points="0.713926135 41.3186797 20.6313767 35.0980758 16.1030792 14.7844523"></polyline>
+                <polyline id="Layer-6" points="84.0003596 85.1124156 79.5387782 65.0980758 99.7540636 58.7844523"></polyline>
+                <path d="M50.1428571,100 L50.1428571,0" id="Layer-7"></path>
+                <polyline id="Layer-8" points="34.5714286 4.20626413 50.0272978 18 65.7142857 4"></polyline>
+                <polyline id="Layer-9" points="34.5714286 93.7937359 50.0272978 80 65.7142857 94"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

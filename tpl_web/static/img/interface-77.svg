@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>interface-77</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-3987.000000, -1662.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="interface-77" transform="translate(3989.000000, 1664.000000)">
+                <path d="M100,43.3333333 L100,93.3422374 C100,97.0192182 97.0071986,100 93.3224073,100 L6.67759266,100 C2.98966007,100 0,97.0071986 0,93.3224073 L0,6.67759266 C0,2.98966007 2.99390093,4.03225172e-15 6.67216756,3.89455045e-15 C6.67216756,3.89455045e-15 36.2222558,2.87565074e-15 59.7037261,0" id="Layer-1"></path>
+                <path d="M44.4444444,55.5555556 L98.9351796,1.06481997" id="Layer-2"></path>
+                <polyline id="Layer-3" points="66.2309368 55.5555556 44.4444444 55.5555556 44.4444444 33.7690632"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

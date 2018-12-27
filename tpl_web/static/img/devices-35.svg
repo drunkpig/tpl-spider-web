@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>devices-35</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-5139.000000, -3815.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="devices-35" transform="translate(5141.000000, 3817.000000)">
+                <path d="M40,20 L97.0071986,20 C98.6600772,20 100,21.3358366 100,23.0078125 L100,86.9921875 C100,88.6533565 98.6619875,90 97.0071986,90 L40,90 L40,20 L40,20 Z" id="Layer-1"></path>
+                <path d="M50,58 L60,58 L60,68 L50,68 L50,58 L50,58 L50,58 L50,58 L50,58 Z M50,48 L60,48 L60,58 L50,58 L50,48 L50,48 L50,48 L50,48 L50,48 Z M50,68 L60,68 L60,78 L50,78 L50,68 L50,68 L50,68 L50,68 L50,68 Z M60,58 L70,58 L70,68 L60,68 L60,58 L60,58 L60,58 L60,58 L60,58 Z M60,48 L70,48 L70,58 L60,58 L60,48 L60,48 L60,48 L60,48 L60,48 Z M60,68 L70,68 L70,78 L60,78 L60,68 L60,68 L60,68 L60,68 L60,68 Z M70,58 L80,58 L80,68 L70,68 L70,58 L70,58 L70,58 L70,58 L70,58 Z M70,48 L80,48 L80,58 L70,58 L70,48 L70,48 L70,48 L70,48 L70,48 Z M80,48 L90,48 L90,58 L80,58 L80,48 L80,48 L80,48 L80,48 L80,48 Z M80,58 L90,58 L90,78 L80,78 L80,58 L80,58 L80,58 L80,58 L80,58 Z M70,68 L80,68 L80,78 L70,78 L70,68 L70,68 L70,68 L70,68 L70,68 Z" id="Layer-2"></path>
+                <rect id="Layer-3" x="10" y="10" width="30" height="90" rx="8"></rect>
+                <rect id="Layer-4" x="50" y="30" width="40" height="18"></rect>
+                <path d="M20,9 L20,0.5" id="Layer-5"></path>
+                <path d="M10,20 L2.99280137,20 C1.33801252,20 0,21.3466435 0,23.0078125 L0,86.9921875 C0,88.6641634 1.33992281,90 2.99280137,90 L10,90 L10,20 L10,20 Z" id="Layer-6"></path>
+            </g>
+        </g>
+    </g>
+</svg>

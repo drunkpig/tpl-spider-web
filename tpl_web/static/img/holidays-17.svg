@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="74px" height="104px" viewBox="0 0 74 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>holidays-17</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-4439.000000, -7501.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="holidays-17" transform="translate(4441.000000, 7503.000000)">
+                <path d="M65.6854513,93.3334278 C63.7792124,97.015274 58.8678003,100 54.7318427,100 L15.2681573,100 C11.1248852,100 6.22248289,97.0185485 4.31454866,93.3334278 L-2.95585778e-12,85 L70,85 L65.6854513,93.3334278 Z" id="Layer-1"></path>
+                <polygon id="Layer-2" points="20 85 20 30 50 30 50 85"></polygon>
+                <path d="M46.0595763,19.5767942 C46.0595763,25.3333684 41.3929481,30 35.6363705,30 C35.5811198,30 35.5259695,29.9995701 35.4709228,29.9987135 C35.4158761,29.9995701 35.3607258,30 35.3054751,30 C29.5488975,30 24.8822693,25.3333361 24.8822693,19.5767942 C24.8822693,14.3151046 27.8790702,13.3127242 30.2573811,8.98232424 C32.6356919,4.6519243 30.8199679,0 30.8199679,0 C30.8199679,0 46.0595763,3.85667661 46.0595763,19.5767942 Z" id="Layer-3"></path>
+                <path d="M27.5,30.5 L27.5,54.5208244" id="Layer-4"></path>
+                <path d="M35,30.5 L35,41.5" id="Layer-5"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="74px" viewBox="0 0 104 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>devices-52</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-701.000000, -4137.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="devices-52" transform="translate(703.000000, 4139.000000)">
+                <path d="M50,20 L2.99280137,20 C1.33801252,20 0,21.3460944 0,23.0065859 L0,59.9934141 C0,61.6659433 1.33992281,63 2.99280137,63 L97.0071986,63 C98.6619875,63 100,61.6539056 100,59.9934141 L100,23.0065859 C100,21.3340567 98.6600772,20 97.0071986,20 L90,20 C90,8.954305 81.045695,0 70,0 C58.954305,0 50,8.954305 50,20 L50,20 Z" id="Layer-1"></path>
+                <path d="M46,34 L21,34" id="Layer-2"></path>
+                <path d="M46,41 L21,41" id="Layer-3"></path>
+                <path d="M46,48 L21,48" id="Layer-4"></path>
+                <path d="M8,33 C9.65685425,33 11,31.6568542 11,30 C11,28.3431458 9.65685425,27 8,27 C6.34314575,27 5,28.3431458 5,30 C5,31.6568542 6.34314575,33 8,33 Z" id="Layer-5"></path>
+                <path d="M91,33 C92.6568542,33 94,31.6568542 94,30 C94,28.3431458 92.6568542,27 91,27 C89.3431458,27 88,28.3431458 88,30 C88,31.6568542 89.3431458,33 91,33 Z" id="Layer-6"></path>
+                <path d="M70,33 C77.1797017,33 83,27.1797017 83,20 C83,12.8202983 77.1797017,7 70,7 C62.8202983,7 57,12.8202983 57,20 C57,27.1797017 62.8202983,33 70,33 Z" id="Layer-7"></path>
+                <path d="M69,14 C67.1086426,14 64,16.9619141 64,19" id="Layer-8"></path>
+                <path d="M10,64 L20,64 L20,67 C20,68.6568542 18.6513555,70 16.9996703,70 L13.0003297,70 C11.3432934,70 10,68.6534829 10,67 L10,64 Z" id="Layer-9"></path>
+                <path d="M80,64 L90,64 L90,67 C90,68.6568542 88.6513555,70 86.9996703,70 L83.0003297,70 C81.3432934,70 80,68.6534829 80,67 L80,64 Z" id="Layer-10"></path>
+            </g>
+        </g>
+    </g>
+</svg>

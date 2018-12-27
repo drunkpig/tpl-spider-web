@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="103px" viewBox="0 0 64 103" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>devices-14</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-8458.000000, -3515.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="devices-14" transform="translate(8460.000000, 3517.000000)">
+                <path d="M14.9527875,9.83026874 L2.99593743,9.83026874 C1.33730974,9.83026874 0,11.1775513 0,12.8395086 L0,46.4249893 C0,48.0938411 1.34132688,49.4342291 2.99593743,49.4342291 L57.0040626,49.4342291 C58.6626903,49.4342291 60,48.0869466 60,46.4249893 L60,12.8395086 C60,11.1706567 58.6586731,9.83026874 57.0040626,9.83026874 L45.069735,9.83026874 L40.7388863,2.58326003 C39.8860216,1.15612215 37.8496967,0 36.1900364,0 L23.8776393,0 C22.2198601,0 20.1806228,1.14901646 19.3270768,2.56640008 L14.9527875,9.83026874 L14.9527875,9.83026874 Z" id="Layer-1"></path>
+                <ellipse id="Layer-2" cx="30" cy="29.2432815" rx="14.58" ry="14.321075"></ellipse>
+                <path d="M27.5657143,22.1122112 C25.5684408,22.1122112 22.2857143,25.1844465 22.2857143,27.2984441" id="Layer-3"></path>
+                <path d="M26,7.92079208 L34,7.92079208" id="Layer-4"></path>
+                <rect id="Layer-5" x="25" y="49.5049505" width="10" height="7.92079208" rx="1"></rect>
+                <path d="M30,57.4257426 L10,99.009901" id="Layer-6"></path>
+                <path d="M30,57.4257426 L50,99.009901" id="Layer-7"></path>
+                <path d="M30,59.4059406 L30,99.0222742" id="Layer-8"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="98px" viewBox="0 0 104 98" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>interface-32</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-9594.000000, -1062.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="interface-32" transform="translate(9596.000000, 1064.000000)">
+                <path d="M0.0541079255,28.9314424 C0.0182674951,29.1726397 0,29.4234682 0,29.6842105 C0,74.2105259 50,94 50,94 C50,94 100,74.2105259 100,29.6842105 C100,29.4228738 99.9817603,29.1715748 99.9459815,28.9300243 C99.9818153,28.3614142 100,27.7880715 100,27.2105263 C100,12.1825676 87.6878306,0 72.5,0 C63.1992112,0 54.976837,4.56863968 50,11.5616085 C45.023163,4.56863968 36.8007888,0 27.5,0 C12.3121694,0 0,12.1825676 0,27.2105263 C0,27.7885517 0.018214966,28.3623675 0.0541079255,28.9314424 L0.0541079255,28.9314424 Z" id="Layer-1"></path>
+            </g>
+        </g>
+    </g>
+</svg>

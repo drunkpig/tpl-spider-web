@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="106px" height="103px" viewBox="0 0 106 103" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>baby-24</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-7839.000000, -8404.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="baby-24" transform="translate(7841.000000, 8406.000000)">
+                <path d="M90,41 L90,35.4544824 L90,35.4544824 C90,31.8897702 92.8936568,29 96.4544824,29 L102,29" id="Layer-1"></path>
+                <circle id="Layer-2" cx="20" cy="89" r="10"></circle>
+                <circle id="Layer-3" cx="70" cy="89" r="10"></circle>
+                <path d="M90,39.5 L90,20 C90,8.95187636 81.0482045,0 70.0056051,0 L48.6163192,0 C45.8450323,0 43.9612365,2.21390883 44.397689,4.94490378 L49.8401855,39 L0,39 L0,59 C0,70.0481236 8.95513468,79 20.0018531,79 L69.9981469,79 C81.0414219,79 90,70.045695 90,59 L90,39.5 Z" id="Layer-4" transform="translate(45.000000, 39.500000) scale(-1, 1) translate(-45.000000, -39.500000) "></path>
+                <path d="M26,39 L51.5,39" id="Layer-5"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -35,10 +35,10 @@ def market(request):
 
 
 def status(request):
-    total_task = SpiderTask.objects.count()
+    total_task = SpiderTask.objects.filter(status__in=['I', 'P']).count()
     task_id = request.session.get("task_id")
     if task_id is not None:
-        task_order = SpiderTask.objects.filter(id__lt=task_id).count()
+        task_order = SpiderTask.objects.filter(id__lt=task_id, status__in=['I', 'P']).count()
         return render(request, 'status.html', {"total_task":total_task, "task_order":task_order})
     else:
         return render(request, 'status.html', {"total_task": total_task})

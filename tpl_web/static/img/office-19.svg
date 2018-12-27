@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="94px" viewBox="0 0 104 94" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>office-19</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-416.000000, -6881.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="office-19" transform="translate(418.000000, 6883.000000)">
+                <path d="M80,22.0061061 C81.9991541,20.7357304 84.3712128,20 86.9154148,20 L89.8254737,20 C95.3512792,20 99.8308297,24.4786784 99.8308297,30.0007601 L99.8308296,49.8859587 C99.8308296,55.4092259 95.3609319,59.8867188 89.8254737,59.8867188 L86.9154148,59.8867188 C84.1993465,59.8867188 81.6790959,59.0488847 79.5993409,57.6168609 C79.8630478,55.9499983 80,54.2409857 80,52.5 L80,22.0061061 L80,22.0061061 Z" id="Layer-1"></path>
+                <path d="M0,21.5 L0,52.5 C0,66.231126 8.51055242,77.9696325 20.5428267,82.7313422 C20.1956352,83.4122253 20,84.1832427 20,85 C20,87.7558048 22.240959,90 25.0053221,90 L54.9946779,90 C57.7637156,90 60,87.7614237 60,85 C60,84.1835906 59.8033232,83.4120823 59.4546267,82.730523 C71.4850778,77.9676897 80,66.2278018 80,52.5 L80,21.5 L80,10 L0,10 L0,21.5 L0,21.5 Z" id="Layer-2"></path>
+                <rect id="Layer-3" x="0" y="0" width="80" height="10"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

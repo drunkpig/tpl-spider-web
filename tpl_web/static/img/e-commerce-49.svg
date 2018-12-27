@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="109px" viewBox="0 0 104 109" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>e-commerce-49</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-416.000000, -2282.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="e-commerce-49" transform="translate(418.000000, 2284.000000)">
+                <path d="M53.1235896,8.90448703 L90,55 L10,55 L46.8764104,8.90448703 C47.7321921,9.59000171 48.8182159,10 50,10 C51.1817841,10 52.2678079,9.59000171 53.1235896,8.90448703 L53.1235896,8.90448703 Z" id="Layer-1"></path>
+                <rect id="Layer-2" x="0" y="55" width="100" height="50" rx="3"></rect>
+                <circle id="Layer-3" cx="50" cy="5" r="5"></circle>
+                <rect id="Layer-4" x="13" y="70" width="11" height="20" rx="3"></rect>
+                <path d="M35,70 L42.9942017,70 C44.6542582,70 46,71.3422643 46,72.9987856 L46,80.0012144 C46,81.6573979 44.6511841,83 42.9942017,83 L35,83 L35,70 Z" id="Layer-5"></path>
+                <path d="M35,91.0273438 L35,83" id="Layer-6"></path>
+                <polyline id="Layer-7" points="67 90 56 90 56 70 67 70"></polyline>
+                <path d="M67,80 L57.1,80" id="Layer-8"></path>
+                <polyline id="Layer-9" points="87 69.1911621 87 91.0803223 76 69.1911621 76 91.0803223"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

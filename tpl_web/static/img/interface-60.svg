@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="86px" height="104px" viewBox="0 0 86 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>interface-60</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-8383.000000, -1362.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="interface-60" transform="translate(8385.000000, 1364.000000)">
+                <ellipse id="Layers-1" cx="41" cy="91.2507577" rx="41" ry="8.0824409"></ellipse>
+                <ellipse id="Layers-2" cx="41" cy="8.0824409" rx="41" ry="8.0824409"></ellipse>
+                <path d="M82,7.92079255 L82,91.0891089 C82,86.6253001 63.6436747,83.006668 41,83.006668 C18.3563253,83.006668 0,86.6253001 0,91.0891089 L0,7.92079208 C0,12.3846009 18.3563253,16.003233 41,16.003233 C63.6436747,16.003233 82,12.3846009 82,7.92079208 L82,7.92079255 Z" id="Layers-3"></path>
+            </g>
+        </g>
+    </g>
+</svg>

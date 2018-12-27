@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="104px" viewBox="0 0 60 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>devices-55</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-1586.000000, -4137.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="devices-55" transform="translate(1588.000000, 4139.000000)">
+                <rect id="Layer-1" x="0" y="8" width="56" height="92" rx="3"></rect>
+                <rect id="Layer-2" x="18" y="0" width="20" height="8"></rect>
+                <path d="M30.3200888,48.7377584 L30.3200888,33.4039563 C30.3200888,31.7540745 29.5679831,31.5234777 28.6402137,32.8977069 L13.4392536,55.4136524 C12.5099686,56.7901267 13.1037454,57.9019147 14.762106,57.9019147 L25.679911,57.9019147 L25.6799112,73.2357164 C25.6799112,74.8855982 26.4320169,75.116195 27.3597863,73.7419657 L42.5607464,51.2260202 C43.4900314,49.8495459 42.8962545,48.737758 41.2378939,48.7377581 L30.3200888,48.7377584 L30.3200888,48.7377584 Z" id="Layer-3"></path>
+            </g>
+        </g>
+    </g>
+</svg>

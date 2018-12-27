@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>gaming-14</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-4234.000000, -5661.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="gaming-14" transform="translate(4236.000000, 5663.000000)">
+                <rect id="Layer-1" x="28" y="56" width="43" height="44"></rect>
+                <rect id="Layer-2" x="5" y="56" width="24" height="44"></rect>
+                <polygon id="Layer-3" points="0 56 0 38 7.13636364 38 7.13636364 43.021322 13.2532468 43.021322 13.2532468 38 20.3896104 38 20.3896104 43.021322 26.5064935 43.021322 26.5064935 38 33.6428571 38 33.6428571 56"></polygon>
+                <rect id="Layer-4" x="11" y="64" width="12" height="12"></rect>
+                <rect id="Layer-5" x="71" y="56" width="24" height="44"></rect>
+                <polygon id="Layer-6" points="66 56 66 38 73.1363636 38 73.1363636 43.021322 79.2532468 43.021322 79.2532468 38 86.3896104 38 86.3896104 43.021322 92.5064935 43.021322 92.5064935 38 99.6428571 38 99.6428571 56"></polygon>
+                <rect id="Layer-7" x="77" y="64" width="12" height="12"></rect>
+                <path d="M39,100 L39,68.5 C39,62.7103 43.7476833,58 49.5833333,58 C55.4189833,58 60.1666667,62.7103 60.1666667,68.5 L60.1666667,100 L39,100 L39,100 Z" id="Layer-8"></path>
+                <polygon id="Layer-9" points="25 15 25 0 42.0690703 7.58659105"></polygon>
+                <polygon id="Layer-10" points="76 15 76 0 93.0690703 7.58659105"></polygon>
+                <path d="M25,4 L25,24" id="Layer-11"></path>
+                <path d="M76,4 L76,24" id="Layer-12"></path>
+                <polygon id="Layer-13" points="83 38 83 24 69 24 69 30.9554747 57 30.9554747 57 24 43 24 43 30.9554747 31 30.9554747 31 24 17 24 17 38 20.3896104 38 20.3896104 43.021322 26.5064935 43.021322 26.5064935 38 33.6428571 38 33.6428571 56 66 56 66 38 73.1363636 38 73.1363636 43.021322 79.2532468 43.021322 79.2532468 38"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

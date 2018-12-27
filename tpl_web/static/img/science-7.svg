@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="94px" height="104px" viewBox="0 0 94 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>science-7</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-8139.000000, -2602.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="science-7" transform="translate(8141.000000, 2604.000000)">
+                <path d="M45,24.5086184 L45,10" id="Layer-1"></path>
+                <circle id="Layer-2" cx="45" cy="5" r="5"></circle>
+                <path d="M10,60.0022552 C10,40.6710435 25.6657836,25 45,25 L45,25 C64.3299662,25 80,40.6767891 80,60.0022552 L80,100 L10,100 L10,60.0022552 Z" id="Layer-3"></path>
+                <rect id="Layer-4" x="20" y="55" width="50" height="12" rx="6"></rect>
+                <path d="M26,61 L64,61" id="Layer-5"></path>
+                <path d="M60,80 L60,80 C60,82.7614237 58.3227867,85 56.2460084,85 L33.7539916,85 C31.6807193,85 30,82.7558048 30,80 L30,80 L30,80" id="Layer-6"></path>
+                <path d="M80,80 C85.5668168,79.7511738 90,75.3691964 90,70 C90,64.6308036 85.5668168,60.2488262 80,60 L80,80 L80,80 Z" id="Layer-7"></path>
+                <path d="M10,80 C4.4331832,79.7511738 0,75.3691964 0,70 C0,64.6308036 4.4331832,60.2488262 10,60 L10,80 L10,80 Z" id="Layer-8"></path>
+            </g>
+        </g>
+    </g>
+</svg>

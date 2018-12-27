@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>sports-6</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-4645.000000, -4137.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="sports-6" transform="translate(4647.000000, 4139.000000)">
+                <path d="M49.7508831,99.5017662 C77.2275371,99.5017662 99.5017662,77.2275371 99.5017662,49.7508831 C99.5017662,22.2742291 77.2275371,0 49.7508831,0 C22.2742291,0 0,22.2742291 0,49.7508831 C0,77.2275371 22.2742291,99.5017662 49.7508831,99.5017662 Z" id="Layer-1"></path>
+                <polygon id="Layer-2" points="65.9157484 45.9903796 59.349313 65.4291374 40.1554495 65.4291374 33.5890142 45.9903796 49.7523813 33.6633663"></polygon>
+                <polyline id="Layer-3" points="49.7247243 33.5631312 49.7247243 15.8950528 66.5110447 3.49913547"></polyline>
+                <polyline id="Layer-4" points="49.7247243 33.5631312 49.7247243 15.8950528 32.938404 3.49913547"></polyline>
+                <polyline id="Layer-5" points="40.4463931 65.7382697 31.083738 80.7216499 37.882062 98.1173687"></polyline>
+                <polyline id="Layer-6" points="40.4463931 65.7382697 31.083738 80.7216499 12.8324325 82.0433714"></polyline>
+                <polyline id="Layer-7" points="59.2828281 65.7590715 68.6454831 80.7424516 61.8471591 98.1381705"></polyline>
+                <polyline id="Layer-8" points="59.2828281 65.7590715 68.6454831 80.7424516 86.8967886 82.0641731"></polyline>
+                <polyline id="Layer-9" points="33.8034952 46.1138169 17.4219383 39.4952383 0.143410856 50.3554351"></polyline>
+                <polyline id="Layer-10" points="33.8034952 46.1138169 17.4219383 39.4952383 10.9195943 20.1409399"></polyline>
+                <polyline id="Layer-11" points="65.4216221 46.1138169 81.8031791 39.4952383 99.0817065 50.3554351"></polyline>
+                <polyline id="Layer-12" points="65.4216221 46.1138169 81.8031791 39.4952383 88.305523 20.1409399"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

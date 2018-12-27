@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="68px" height="104px" viewBox="0 0 68 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>food-14</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-9583.000000, -5962.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="food-14" transform="translate(9585.000000, 5964.000000)">
+                <path d="M55.5166664,19.1376953 L55.5166667,28.4258911 C55.5166667,35.1866333 64,35.7624512 64,45.970752 L64,87.0912167 C64,94.2171233 58.2730026,100 51.2083933,100 L32,100 L12.7916067,100 C5.7269974,100 0,94.2171233 0,87.0912167 L0,45.970752 C0,35.7624512 8.48333333,35.1866333 8.48333333,28.4258911 L8.48333359,19.1376953" id="Layer-1"></path>
+                <path d="M8,61.4970703 L8,56.3012695 M8,48.970752 C8,38.7624512 16.4833333,38.1866333 16.4833333,31.4258911 L16.4833333,25.2456055" id="Layer-2"></path>
+                <rect id="Layer-3" x="5" y="9" width="54" height="10" rx="3"></rect>
+                <path d="M24,4.5 C24,2.01471863 26.0102102,0 28.4994709,0 L35.5005291,0 C37.9855182,0 40,2.01977567 40,4.5 L40,9 L24,9 L24,4.5 Z" id="Layer-4"></path>
+            </g>
+        </g>
+    </g>
+</svg>

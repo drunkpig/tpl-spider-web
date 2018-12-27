@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>communications-47</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-3453.000000, -5041.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="communications-47" transform="translate(3455.000000, 5043.000000)">
+                <path d="M22.5,80 L100,80 L100,35 C100,26.7157288 93.2842712,20 85,20 L15,20 C23.2842712,20 30,26.7157288 30,35 L30,80 L22.5,80 L22.5,80 Z" id="Layer-1"></path>
+                <path d="M30,35 C30,26.7157288 23.2842712,20 15,20 C6.71572875,20 0,26.7157288 0,35 L0,80 L30,80 L30,35 L30,35 Z" id="Layer-2"></path>
+                <rect id="Layer-3" x="44" y="80" width="12" height="20"></rect>
+                <path d="M50,40 L50,0" id="Layer-4"></path>
+                <rect id="Layer-5" x="50" y="0" width="15" height="8"></rect>
+                <path d="M10,70 L20,70" id="Layer-6"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="94px" height="103px" viewBox="0 0 94 103" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>weather-39</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-2749.000000, -2602.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="weather-39" transform="translate(2751.000000, 2604.000000)">
+                <path d="M10,14.5 L10,98.5" id="Layer-1"></path>
+                <circle id="Layer-2" cx="10" cy="7" r="7"></circle>
+                <path d="M5.55111512e-17,99 L20,99" id="Layer-3"></path>
+                <polygon id="Layer-4" points="22.0884573 49.1147367 11.5 31.4544827 32.0884573 31.7942286"></polygon>
+                <path d="M89.0200115,62.8947769 C89.5314948,63.2742055 89.6974268,64.0125665 89.3885711,64.5475202 L79.1036968,82.3614451 C78.7957633,82.8948015 78.0731445,83.1221853 77.4880993,82.8686348 L17.5884573,56.9089653 L36.5884573,24 L89.0200115,62.8947769 L89.0200115,62.8947769 L89.0200115,62.8947769 L89.0200115,62.8947769 Z" id="Layer-5"></path>
+                <path d="M58.2269084,74.5211033 L77.4880993,82.8686348 C78.0731445,83.1221853 78.7957633,82.8948015 79.1036968,82.3614451 L89.3885711,64.5475202 C89.6974268,64.0125665 89.5314948,63.2742055 89.0200115,62.8947769 L72.1602417,50.387862 L58.2269084,74.5211033 L58.2269084,74.5211033 L58.2269084,74.5211033 Z" id="Layer-6"></path>
+                <polygon id="Layer-7" points="58.2269084 74.5211033 37.9076828 65.7150343 54.3743495 37.193931 72.1602417 50.387862 58.2269084 74.5211033"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

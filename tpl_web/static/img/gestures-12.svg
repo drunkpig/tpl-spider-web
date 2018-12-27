@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="104px" viewBox="0 0 46 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>gestures-12</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-2506.000000, -9323.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="gestures-12" transform="translate(2508.000000, 9325.000000)">
+                <path d="M9.44444444,62 C9.44444444,62 9.44444444,52 21,52 C32.5555556,52 32.5555556,62 32.5555556,62 L34,100 L8,100 L9.44444444,62 Z" id="Layer-1" transform="translate(21.000000, 76.000000) rotate(-360.000000) translate(-21.000000, -76.000000) "></path>
+                <path d="M27.1810291,67.474177 L15,67.474177 L15,62.7370885 C15,60.125282 17.1280088,58 19.7452687,58 L22.4365395,58 C25.0534098,58 27.1814186,60.125282 27.1814186,62.7370885 L27.1810291,67.474177 L27.1810291,67.474177 Z" id="Layer-2" transform="translate(21.090709, 62.737088) rotate(-360.000000) translate(-21.090709, -62.737088) "></path>
+                <path d="M16,73 L26.3224927,73" id="Layer-3" transform="translate(21.161246, 73.000000) rotate(-360.000000) translate(-21.161246, -73.000000) "></path>
+                <polyline id="Layer-4" transform="translate(21.000000, 7.000000) scale(1, -1) rotate(-270.000000) translate(-21.000000, -7.000000) " points="14 -7 28 7 14 21"></polyline>
+                <path d="M21,30 L21,0" id="Layer-5" transform="translate(21.000000, 15.000000) scale(1, -1) translate(-21.000000, -15.000000) "></path>
+                <path d="M32.8349378,69.3499017 C38.3683427,65.5680933 42,59.2081561 42,52 C42,40.4020203 32.5979797,31 21,31 C9.40202025,31 0,40.4020203 0,52 C0,59.2081561 3.63165731,65.5680933 9.16506222,69.3499017 L9.44444444,62 C9.44444444,62 9.44444444,52 21,52 C32.5555556,52 32.5555556,62 32.5555556,62 L32.8349378,69.3499017 L32.8349378,69.3499017 Z" id="Layer-6"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="68px" height="104px" viewBox="0 0 68 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>gaming-2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-720.000000, -5661.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="gaming-2" transform="translate(721.000000, 5663.000000)">
+                <path d="M0.833308919,0 L0.833308919,100 L48.8329589,100 C51.0351796,100 53.8700061,98.8533091 55.4270207,97.3325911 L62.1018833,90.8143634 C63.6590979,89.2938408 64.8333089,86.5254544 64.8333089,84.3748474 L64.8333074,0 L60.0332639,0 L0.833308919,0 Z" id="Layer-1"></path>
+                <path d="M39.1099603,88 L35,92.1099603" id="Layer-2"></path>
+                <path d="M30.1099603,88 L26,92.1099603" id="Layer-3"></path>
+                <polygon id="Layer-4" points="21.3677886 67.6672223 21.3661175 61 14.6830588 61 14.6847299 67.6672223 8 67.6672225 8 74.3327775 14.6830587 74.3327777 14.6830588 81 21.3661175 81 21.3661174 74.3327777 28.0508473 74.3327775 28.0508473 67.6672225"></polygon>
+                <rect id="Layer-5" x="8" y="7" width="50" height="46"></rect>
+                <circle id="Layer-6" cx="54.5" cy="67.5" r="3.5"></circle>
+                <circle id="Layer-7" cx="46.5" cy="75.5" r="3.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

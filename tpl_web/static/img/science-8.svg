@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="94px" viewBox="0 0 104 94" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>science-8</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-8429.000000, -2602.000000)" stroke="#FFFFFF" stroke-width="3.5">
+            <g id="science-8" transform="translate(8431.000000, 2604.000000)">
+                <path d="M70,20 L80,20 L80,30 L90,30 L90,50 L92.5,50 L100,50 L100,80 L90,80 L90,60 L80,60 L80,80 L70,80 L70,70 L30,70 L30,80 L20,80 L20,60 L10,60 L10,80 L0,80 L0,50 L7.5,50 L10,50 L10,30 L20,30 L20,20 L30,20 L30,10 L40,10 L40,20 L60,20 L60,10 L70,10 L70,20 L70,20 Z M30,80 L45,80 L45,90 L30,90 L30,80 L30,80 Z M55,80 L70,80 L70,90 L55,90 L55,80 L55,80 Z M20,0 L30,0 L30,10 L20,10 L20,0 L20,0 Z M80,0 L70,0 L70,10 L80,10 L80,0 L80,0 Z" id="Layer-1"></path>
+                <rect id="Layer-2" x="30" y="30" width="10" height="10"></rect>
+                <rect id="Layer-3" x="60" y="30" width="10" height="10"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

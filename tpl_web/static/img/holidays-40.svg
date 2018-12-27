@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="84px" viewBox="0 0 104 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>holidays-40</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-1870.000000, -7802.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="holidays-40" transform="translate(1872.000000, 7804.000000)">
+                <polyline id="Layer-1" points="85 55.8 85 65.8 7.98734177 65.8 7.98734177 55.8 7.98734177 55.8"></polyline>
+                <path d="M7.98734177,0.363888624 L7.98734177,56.1638886 L84.7345169,56.1638886 C85.165877,56.1638886 85.5110361,50.2143333 79.6523583,46.6106413 C73.2315634,42.276503 53.8642568,31.1838101 52.0683583,28.2638882 C50.2724599,25.3439664 45.352538,0.363888624 45.352538,0.363888624 L7.98734177,0.363888624 Z" id="Layer-2"></path>
+                <polygon id="Layer-3" points="23.3898734 7.68292683 7.98734177 7.68292683 7.98734177 17.6707317 23.3898734 17.6707317"></polygon>
+                <path d="M20,66 L20,80" id="Layer-4"></path>
+                <path d="M70,66 L70,80" id="Layer-5"></path>
+                <path d="M100,64 L100,66.8317593 C100,74.0156563 94.173014,79.8393555 87.0036645,79.8393555 L0,79.8393555" id="Layer-6"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="84px" viewBox="0 0 104 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>communications-3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-9044.000000, -4438.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="communications-3" transform="translate(9046.000000, 4440.000000)">
+                <path d="M65.1816406,64.1082401 C68.4978276,64.1082401 70.9875243,72.7747484 70.9875243,72.7747484 C72.1841997,75.865321 75.8265116,78.57687 79.1455827,78.8329159 L94.0087141,79.9795151 C97.31761,80.2347761 100,77.7520937 100,74.4497221 L100,65.0007324 C100,59.1879883 93.338623,54.7216797 88.0444336,52.4411621 C88.0444336,52.4411621 79.7841797,48 50,48 C20.2158203,48 11.9555664,52.4411621 11.9555664,52.4411621 C6.66137695,54.7216797 0,59.1879883 0,65.0007324 L0,74.4497221 C0,77.7520937 2.68239005,80.2347761 5.99128586,79.9795151 L20.8544173,78.8329159 C24.1734884,78.57687 27.8158003,75.865321 29.0124757,72.7747484 C29.0124757,72.7747484 31.9899654,64.1082401 35.3061523,64.1082401 L50,64.10824 L65.1816406,64.1082401 Z" id="Layer-1"></path>
+                <polyline id="Layer-2" points="90.2197266 0 50.1098633 40 10 0"></polyline>
+                <polyline id="Layer-3" points="75 0 90 0 90 15"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

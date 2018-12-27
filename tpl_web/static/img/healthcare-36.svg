@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="84px" height="104px" viewBox="0 0 84 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>healthcare-36</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-7747.000000, -7191.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="healthcare-36" transform="translate(7749.000000, 7193.000000)">
+                <polygon id="Layer-1" points="60 0.23014612 59.7695312 0 0 0 2.70108432e-07 100 80 100 80 20.2021484 79.7975682 20 60 20 60 0.23014612"></polygon>
+                <path d="M60,0 L80,20" id="Layer-2"></path>
+                <path d="M10,50 L60,50" id="Layer-3"></path>
+                <path d="M10,60 L60,60" id="Layer-4"></path>
+                <path d="M10,70 L60,70" id="Layer-5"></path>
+                <path d="M10,80 L60,80" id="Layer-6"></path>
+                <path d="M26.8,10.7182723 C26.8,10.321123 26.4769465,10 26.0784397,10 L17.9215603,10 C17.5221543,10 17.2,10.3215815 17.2,10.7182723 L17.2,17.2 L10.7182723,17.2 C10.321123,17.2 10,17.5230535 10,17.9215603 L10,26.0784397 C10,26.4778457 10.3215815,26.8 10.7182723,26.8 L17.2,26.8 L17.2,33.2817277 C17.2,33.678877 17.5230535,34 17.9215603,34 L26.0784397,34 C26.4778457,34 26.8,33.6784185 26.8,33.2817277 L26.8,26.8 L33.2817277,26.8 C33.678877,26.8 34,26.4769465 34,26.0784397 L34,17.9215603 C34,17.5221543 33.6784185,17.2 33.2817277,17.2 L26.8,17.2 L26.8,10.7182723 Z" id="Layer-7"></path>
+            </g>
+        </g>
+    </g>
+</svg>

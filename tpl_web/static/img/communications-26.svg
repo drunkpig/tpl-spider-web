@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="116px" height="104px" viewBox="0 0 116 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>communications-26</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-6768.000000, -4740.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="communications-26" transform="translate(6770.000000, 4742.000000)">
+                <circle id="Layer-1" cx="82" cy="70" r="20"></circle>
+                <path d="M112,100 L96.4919376,84.4919376" id="Layer-2"></path>
+                <path d="M100,61.2717495 L100,6.00035205 C100,2.68644912 97.312319,0 94.0069352,0 L5.99306484,0 C2.68318653,0 0,2.68760658 0,6.00035205 L0,75.8266924 C0,79.1405954 2.68768095,81.8270445 5.99306484,81.8270445 L13.0140841,81.8270445 C14.4035666,91.9812737 10.8956473,99.9999994 10.8956473,100 C10.8956473,100.000001 26.3406023,100 29.7345276,81.8270445 L65.8700693,81.8270445 C63.4371102,78.5145256 62,74.4250904 62,70 C62,58.954305 70.954305,50 82,50 C89.9164034,50 96.7585583,54.5994047 100,61.2717495 L100,61.2717495 Z" id="Layer-3"></path>
+            </g>
+        </g>
+    </g>
+</svg>

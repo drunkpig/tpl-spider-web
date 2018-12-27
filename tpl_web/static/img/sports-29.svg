@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="105px" viewBox="0 0 104 105" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>sports-29</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-2177.000000, -4438.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="sports-29" transform="translate(2179.000000, 4440.000000)">
+                <polyline id="Layer-1" points="0 101.003641 0 55 32 55 32 101.003641"></polyline>
+                <polyline id="Layer-2" points="68 101 68 75 100 75 100 101"></polyline>
+                <polyline id="Layer-3" points="32 101.003641 32 35 32 35 68 35 68 101.003641"></polyline>
+                <path d="M50,45 L50,51" id="Layer-4"></path>
+                <path d="M13,65 L13,71" id="Layer-5"></path>
+                <path d="M20,65 L20,71" id="Layer-6"></path>
+                <path d="M77,85 L77,91" id="Layer-7"></path>
+                <path d="M84,85 L84,91" id="Layer-8"></path>
+                <path d="M91,85 L91,91" id="Layer-9"></path>
+                <polygon id="Layer-10" points="50.7239737 0 54.8819671 8.71948617 64.4479475 9.98489809 57.4513984 16.6391408 59.2059432 26.1409023 50.7239737 21.5338909 42.2420042 26.1409023 43.996549 16.6391408 37 9.98489809 46.5659804 8.71948617"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

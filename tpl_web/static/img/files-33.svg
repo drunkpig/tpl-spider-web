@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="114px" height="104px" viewBox="0 0 114 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>files-33</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-3496.000000, -9023.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="files-33" transform="translate(3498.000000, 9025.000000)">
+                <path d="M100,54.9981691 L100,12.9900874 C100,11.3383447 98.6600772,10 97.0071986,10 L30,10 L26.2273507,2.66668016 C25.4658163,1.18640065 23.5131511,0 21.8573185,0 L2.99815028,0 C1.33633795,0 0,1.34329338 0,3.00032973 L0,10 L0,87.0099126 C0,88.6616553 1.33992281,90 2.99280137,90 L64.9981691,90 C61.8597241,85.8216973 60,80.6280296 60,75 C60,61.1928813 71.1928813,50 85,50 C90.6280296,50 95.8216973,51.8597241 100,54.9981691 L100,54.9981691 Z" id="Layer-1"></path>
+                <path d="M100,25 L100,12.9900874 C100,11.3383447 98.6600772,10 97.0071986,10 L30,10 L26.2273507,2.66668016 C25.4658163,1.18640065 23.5131511,0 21.8573185,0 L2.99815028,0 C1.33633795,0 0,1.34329338 0,3.00032973 L0,10 L0,25 L100,25 L100,25 Z" id="Layer-2"></path>
+                <circle id="Layer-3" cx="85" cy="75" r="25"></circle>
+                <path d="M99,75 L72,75" id="Layer-4"></path>
+            </g>
+        </g>
+    </g>
+</svg>

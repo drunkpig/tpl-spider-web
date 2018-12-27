@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="114px" height="104px" viewBox="0 0 114 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>files-24</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-696.000000, -9023.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="files-24" transform="translate(698.000000, 9025.000000)">
+                <path d="M100,54.9981691 L100,2.99446106 C100,1.34209558 98.6600772,0 97.0071986,0 L2.99280137,0 C1.33801252,0 0,1.34066588 0,2.99446106 L0,87.0055389 C0,88.6579044 1.33992281,90 2.99280137,90 L64.9981691,90 C61.8597241,85.8216973 60,80.6280296 60,75 C60,61.1928813 71.1928813,50 85,50 C90.6280296,50 95.8216973,51.8597241 100,54.9981691 L100,54.9981691 Z" id="Layer-1"></path>
+                <path d="M0,3.00947762 C0,1.34738902 1.33801252,0 2.99280137,0 L97.0071986,0 C98.6600772,0 100,1.33663106 100,3.00947762 L100,16 L0,16 L0,3.00947762 Z" id="Layer-2"></path>
+                <path d="M7,8 L22.2800007,8" id="Layer-3"></path>
+                <circle id="Layer-4" cx="85" cy="75" r="25"></circle>
+                <polyline id="Layer-5" points="75 74.0326948 82.4628609 81.5647746 95.9836877 68"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

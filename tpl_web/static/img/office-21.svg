@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="114px" viewBox="0 0 104 114" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>office-21</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-998.000000, -6881.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="office-21" transform="translate(1000.000000, 6883.000000)">
+                <rect id="Layer-1" x="15" y="70" width="70" height="8" rx="4"></rect>
+                <rect id="Layer-2" x="46" y="62" width="8" height="8"></rect>
+                <path d="M50,78 L50,86.5" id="Layer-3"></path>
+                <path d="M50,97.5 L50,102" id="Layer-4"></path>
+                <path d="M20,102 L20,102 L20,102 C20,99.2385763 24.485214,97 30.0088711,97 L69.9911289,97 C75.5188758,97 80,99.2379691 80,102 L80,102" id="Layer-5"></path>
+                <circle id="Layer-6" cx="20" cy="106" r="4"></circle>
+                <circle id="Layer-7" cx="80" cy="106" r="4"></circle>
+                <circle id="Layer-8" cx="50" cy="106" r="4"></circle>
+                <path d="M61.4942633,0 C70.3291579,0 77.8342557,7.15759516 78.2573565,15.986687 L79.9833593,52.004196 C80.2479098,57.5247261 75.9820654,62 70.4693004,62 L29.5257598,62 C24.0067396,62 19.7469623,57.5286498 20.0117009,52.004196 L21.7377036,15.986687 C22.1608098,7.15748358 29.6642462,0 38.5007969,0 L61.4942633,0 Z" id="Layer-9"></path>
+                <path d="M14.9765921,73.4443933 C9.92958631,72.9323952 5.9911289,68.6748026 5.9911289,63.4960149 L5.9911289,59.5614445 L5.9911289,54" id="Layer-10"></path>
+                <path d="M12,50 C12,47.790861 10.2034788,46 8.00417376,46 L3.99582624,46 C1.78899235,46 0,47.7953562 0,50 L0,50 C0,52.209139 1.79652125,54 3.99582624,54 L8.00417376,54 C10.2110077,54 12,52.2046438 12,50 L12,50 L12,50 Z" id="Layer-11"></path>
+                <path d="M85.0234079,73.4443933 C90.0704137,72.9323952 94.0088711,68.6748026 94.0088711,63.4960149 L94.0088711,59.5614445 L94.0088711,54" id="Layer-12"></path>
+                <rect id="Layer-13" x="88" y="46" width="12" height="8" rx="4"></rect>
+                <path d="M44,92 C44,89.2385763 46.2289849,87 49.0021863,87 L50.9978137,87 C53.7604449,87 56,89.2441952 56,92 L56,97 L44,97 L44,92 Z" id="Layer-14"></path>
+            </g>
+        </g>
+    </g>
+</svg>

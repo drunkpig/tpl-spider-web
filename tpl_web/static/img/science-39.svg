@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>science-39</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-8108.000000, -2912.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="science-39" transform="translate(8110.000000, 2914.000000)">
+                <circle id="Layer-1" cx="65" cy="85" r="15"></circle>
+                <circle id="Layer-2" cx="85" cy="15" r="15"></circle>
+                <circle id="Layer-3" cx="15" cy="50" r="15"></circle>
+                <path d="M24,50 C24,45.0294373 19.9705627,41 15,41" id="Layer-4"></path>
+                <path d="M94,15 C94,10.0294373 89.9705627,6 85,6" id="Layer-5"></path>
+                <path d="M74,86 C74,81.0294373 69.9705627,77 65,77" id="Layer-6"></path>
+                <path d="M28.5,43.5000009 L71.5,21.5" id="Layer-7"></path>
+                <path d="M27.5,58.5000007 L52.5,76.5" id="Layer-8"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="84px" viewBox="0 0 104 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>multimedia-10</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-1906.000000, -3214.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="multimedia-10" transform="translate(1908.000000, 3216.000000)">
+                <polyline id="Layer-1" points="0 20 0 0 20 0"></polyline>
+                <polyline id="Layer-2" points="100 20 100 0 80 0"></polyline>
+                <polyline id="Layer-3" points="100 60 100 80 80 80"></polyline>
+                <polyline id="Layer-4" points="0 60 0 80 20 80"></polyline>
+                <circle id="Layer-5" cx="50" cy="40" r="10"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

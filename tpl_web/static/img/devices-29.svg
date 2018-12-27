@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>devices-29</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-3318.000000, -3815.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="devices-29" transform="translate(3320.000000, 3817.000000)">
+                <path d="M80,90 L94.0069352,90 C97.312319,90 100,87.3108807 100,83.9936839 L100,46.0063161 C100,42.6882172 97.3168135,40 94.0069352,40 L5.99306484,40 C2.68768095,40 0,42.6891193 0,46.0063161 L0,83.9936839 C0,87.3117828 2.68318653,90 5.99306484,90 L20,90 L20,70 L80,70 L80,90 L80,90 Z" id="Layer-1"></path>
+                <path d="M30,70 L30,94 L20,94 L20,70 L30,70 L30,70 L30,70 L30,70 L30,70 Z M40,70 L40,100 L30,100 L30,70 L40,70 L40,70 L40,70 L40,70 L40,70 Z M50,70 L50,94 L40,94 L40,70 L50,70 L50,70 L50,70 L50,70 L50,70 Z M60,70 L60,100 L50,100 L50,70 L60,70 L60,70 L60,70 L60,70 L60,70 Z M70,70 L70,100 L60,100 L60,70 L70,70 L70,70 L70,70 L70,70 L70,70 Z M80,70 L80,94 L70,94 L70,70 L80,70 L80,70 L80,70 L80,70 L80,70 Z" id="Layer-2"></path>
+                <path d="M12,70 L88,70" id="Layer-3"></path>
+                <polygon id="Layer-4" points="20 0 60.1557617 0 80 20.090332 80 40 20 40"></polygon>
+                <path d="M72,50 L88.0277557,50" id="Layer-5"></path>
+                <circle id="Layer-6" cx="10" cy="50" r="3"></circle>
+                <circle id="Layer-7" cx="20" cy="50" r="3"></circle>
+                <circle id="Layer-8" cx="30" cy="50" r="3"></circle>
+                <polygon id="Layer-9" points="60 0 80 20 60 20"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

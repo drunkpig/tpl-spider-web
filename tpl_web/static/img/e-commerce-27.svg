@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>e-commerce-27</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-3441.000000, -1972.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="e-commerce-27" transform="translate(3443.000000, 1974.000000)">
+                <path d="M0,0 L100,0 L100,94.0069352 C100,97.3168135 97.312319,100 94.0069352,100 L5.99306484,100 C2.68318653,100 0,97.312319 0,94.0069352 L0,0 Z" id="Layer-1"></path>
+                <polygon id="Layer-2" points="0 0 100 0 90.0009766 30 10.1943359 30"></polygon>
+                <path d="M44,30 L56,30 L56,35 C56,37.7614237 53.7710151,40 50.9978137,40 L49.0021863,40 C46.2395551,40 44,37.7558048 44,35 L44,30 Z" id="Layer-3"></path>
+                <rect id="Layer-4" x="10" y="70" width="30" height="20" rx="3"></rect>
+                <path d="M50.5,42 L50.5,99.5" id="Layer-5"></path>
+            </g>
+        </g>
+    </g>
+</svg>

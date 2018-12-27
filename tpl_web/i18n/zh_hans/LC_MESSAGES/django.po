@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-11 20:17+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\web\forms.py:37
+msgid "Yes"
+msgstr ""
+
+#: .\web\forms.py:38
+msgid "No"
+msgstr ""
+
+#: .\web\templates\_layout.html:31
+msgid "others invent, we copy"
+msgstr ""
+
+#: .\web\templates\_layout.html:52 .\web\templates\_layout.html:111
+msgid "Home"
+msgstr ""
+
+#: .\web\templates\_layout.html:58
+msgid "Market"
+msgstr ""
+
+#: .\web\templates\_layout.html:63
+msgid "Help"
+msgstr ""
+
+#: .\web\templates\_layout.html:116
+msgid "market"
+msgstr ""
+
+#: .\web\templates\_layout.html:121
+msgid "help"
+msgstr ""
+
+#: .\web\templates\help.html:12
+msgid "如何使用"
+msgstr ""
+
+#: .\web\templates\help.html:15
+msgid "加速您的网站设计和开发"
+msgstr ""
+
+#: .\web\templates\help.html:26
+msgid "Template-spider的功能"
+msgstr ""
+
+#: .\web\templates\help.html:31
+msgid "借鉴别人的网站设计样式"
+msgstr ""
+
+#: .\web\templates\help.html:34
+msgid "复用别人的网站模版加速开发"
+msgstr ""
+
+#: .\web\templates\help.html:37
+msgid "收集漂亮的网站模版学习"
+msgstr ""
+
+#: .\web\templates\help.html:44
+msgid "使用教程"
+msgstr ""
+
+#: .\web\templates\help.html:52
+msgid "第一步：找到一个喜欢的网站"
+msgstr ""
+
+#: .\web\templates\help.html:56 .\web\templates\help.html:82
+#: .\web\templates\help.html:108
+msgid ""
+"\n"
+"                        Replacer is a library of 9 amazing HTML templates "
+"and 8 web pages made without any\n"
+"                        third-party\n"
+"                        plugins making it super easy to create and customize "
+"your own working websites in\n"
+"                        minutes.\n"
+"                        Replacer is suitable for all kind of modern web "
+"projects: landing and product pages,\n"
+"                        blogs,\n"
+"                        portfolios, eCommerce, business and corporate "
+"websites, marketing and advertising\n"
+"                        campaigns. Use\n"
+"                        Replacer as a starting point in your next project or "
+"choose predesigned elements to\n"
+"                        customize\n"
+"                        and shape it at your own will.\n"
+"                        "
+msgstr ""
+
+#: .\web\templates\help.html:77
+msgid "第二步：粘贴模版URL到 template-spider输入框"
+msgstr ""
+
+#: .\web\templates\help.html:103
+msgid "第三步：输入接收邮箱地址并提交任务"
+msgstr ""
+
+#: .\web\templates\index-bak.html:33
+msgid "url list"
+msgstr "模版页面url"
+
+#: .\web\templates\index-bak.html:48
+msgid "encoding"
+msgstr "页面编码"
+
+#: .\web\templates\index-bak.html:54
+msgid "is grab outsite link"
+msgstr ""
+
+#: .\web\templates\index-bak.html:64 .\web\templates\index.html:51
+msgid "submit"
+msgstr "开始抓取"
+
+#: .\web\templates\index.html:14
+msgid "Accelerate your web design"
+msgstr ""
+
+#: .\web\templates\index.html:20
+msgid "Template URL list"
+msgstr ""
+
+#: .\web\templates\index.html:25
+msgid "One  URL per line"
+msgstr ""
+
+#: .\web\templates\index.html:37
+#, fuzzy
+#| msgid "encoding"
+msgid "Page encoding"
+msgstr "页面编码"
+
+#: .\web\templates\index.html:43
+msgid "Grab external links"
+msgstr ""

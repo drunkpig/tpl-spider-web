@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="114px" viewBox="0 0 104 114" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>office-7</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-6301.000000, -6565.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="office-7" transform="translate(6303.000000, 6567.000000)">
+                <path d="M29.9981691,40 L19.9960937,40 L0,65 L30,65 L30,75 L70,75 L70,65 L100,65 L81.0761719,40 L70.0018309,40 C65.4407993,46.0722335 58.1790892,50 50,50 C41.8209108,50 34.5592007,46.0722335 29.9981691,40 L29.9981691,40 Z" id="Layer-1"></path>
+                <path d="M30,65 L0,65 L0,104.001088 C0,107.319808 2.68318653,110 5.99306484,110 L94.0069352,110 C97.312319,110 100,107.314196 100,104.001088 L100,65 L70,65 L70,75 L30,75 L30,65 L30,65 Z" id="Layer-2"></path>
+                <circle id="Layer-3" cx="50" cy="25" r="25"></circle>
+                <polyline id="Layer-4" points="40 24.0326948 47.4628609 31.5647746 60.9836877 18"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

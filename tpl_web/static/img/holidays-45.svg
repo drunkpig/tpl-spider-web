@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>holidays-45</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-3316.000000, -7802.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="holidays-45" transform="translate(3318.000000, 7804.000000)">
+                <path d="M41,9 C41,4.02943725 45.0294373,0 50,0 C54.9705627,0 59,4.02943725 59,9 C59,13.9705627 54.9705627,18 50,18 L50,29.84375" id="Layer-1"></path>
+                <path d="M20,69.9999998 C9.67174374,69.9999998 2.59954747,69.9999997 2.59954747,69.9999997 C-3.28414749,66.6739807 2.6464982,62.1726168 2.73767371,62.1693758 L42.1881339,32.4037403 C46.4339926,29.2002116 53.3140244,29.1972952 57.5637485,32.4037403 L97.1523349,62.1743022 C97.1523349,62.1743022 103.559581,66.9835165 97.1523349,69.9999997 C93.8598186,69.9999998 87.6832698,69.9999999 80,70 L80,65 L20,65 L20,69.9999998 L20,69.9999998 Z" id="Layer-2"></path>
+                <rect id="Layer-3" x="20" y="65" width="60" height="35"></rect>
+                <rect id="Layer-4" x="20" y="91" width="60" height="9"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

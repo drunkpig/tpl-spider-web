@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>web-2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-5412.000000, -7802.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="web-2" transform="translate(5414.000000, 7804.000000)">
+                <circle id="Layer-1" cx="50" cy="50" r="50"></circle>
+                <path d="M50,0 L50,100" id="Layer-2"></path>
+                <path d="M100,50 L0,50" id="Layer-3"></path>
+                <path d="M93,26 L7,26" id="Layer-4"></path>
+                <path d="M93,73 L7,73" id="Layer-5"></path>
+                <path d="M50,0 C50,0 75.149395,19.3148632 75.149395,50 C75.149395,80.6851368 50,100 50,100" id="Layer-6"></path>
+                <path d="M50.149395,0 C50.149395,0 25,19.3148632 25,50 C25,80.6851368 50.149395,100 50.149395,100" id="Layer-7"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>science-30</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-5426.000000, -2912.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="science-30" transform="translate(5428.000000, 2914.000000)">
+                <path d="M68.1318681,62.9998368 L68.1318681,97.0089949 C68.1318681,98.6608814 66.7809615,100 65.1280624,100 L11.7950146,100 C10.1360584,100 8.79120879,98.6572461 8.79120879,97.0089949 L8.79120879,62.9998368 C15.8456947,71.550454 26.5178475,77 38.4615385,77 C50.4052294,77 61.0773822,71.550454 68.1318681,62.9998368 L68.1318681,62.9998368 Z" id="Layer-1"></path>
+                <ellipse id="Layer-2" cx="38.4615385" cy="38.5" rx="38.4615385" ry="38.5"></ellipse>
+                <path d="M9.94520135,31.2149892 C9.57546077,32.526108 9.29027333,33.8727288 9.09590596,35.2485787 M30.3799392,10.1942744 C23.133311,12.4588396 17.0377331,17.3334991 13.1914626,23.7188976" id="Layer-3"></path>
+                <ellipse id="Layer-4" cx="38.4615385" cy="38.5" rx="8.79120879" ry="8.8"></ellipse>
+                <path d="M27.4725275,85 L49.4505495,85" id="Layer-5"></path>
+                <path d="M27.4725275,91.6 L49.4505495,91.6" id="Layer-6"></path>
+                <path d="M93.4065934,33.2168518 L93.4065934,53 C93.4065934,67.414474 82.330444,79.2386853 68.2286867,80.4054771" id="Layer-7"></path>
+                <ellipse id="Layer-8" cx="93.4065934" cy="26.6" rx="6.59340659" ry="6.6"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

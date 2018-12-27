@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="114px" height="104px" viewBox="0 0 114 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>files-14</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-7151.000000, -8712.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="files-14" transform="translate(7153.000000, 8714.000000)">
+                <path d="M100,54.9981691 L100,4.99926819 C100,2.24718554 97.7644552,0 95.0067709,0 L4.99322906,0 C2.22884957,0 0,2.23824861 0,4.99926819 L0,85.0007318 C0,87.7528145 2.2355448,90 4.99322906,90 L64.9981691,90 C63.4199055,87.8988121 62.1650165,85.5408494 61.3073899,83 L7,83 L7,7 L93,7 L93,51.3073899 C95.5408494,52.1650165 97.8988121,53.4199055 100,54.9981691 L100,54.9981691 Z" id="Layer-1"></path>
+                <path d="M92.5414008,51.1575488 L61.2530189,18 L20,55.3529134 L46.0885571,83 L61.3073899,83 C60.4595891,80.488261 60,77.7978019 60,75 C60,61.1928813 71.1928813,50 85,50 C87.6282507,50 90.1617747,50.4055733 92.5414008,51.1575488 L92.5414008,51.1575488 Z" id="Layer-2"></path>
+                <polygon id="Layer-3" points="46.1888545 83 7 42 7.00000089 82.9999997"></polygon>
+                <path d="M25.45,32.0285714 C21.8877634,32.0285714 19,29.1120264 19,25.5142857 C19,21.9165451 21.8877634,19 25.45,19 C29.0122366,19 31.9,21.9165451 31.9,25.5142857 C31.9,29.1120264 29.0122366,32.0285714 25.45,32.0285714 L25.45,32.0285714 Z" id="Layer-4"></path>
+                <circle id="Layer-5" cx="85" cy="75" r="25"></circle>
+                <polyline id="Layer-6" points="75 74.0326948 82.4628609 81.5647746 95.9836877 68"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

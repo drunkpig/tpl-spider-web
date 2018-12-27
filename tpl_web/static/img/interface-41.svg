@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="103px" height="104px" viewBox="0 0 103 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>interface-41</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-2806.000000, -1362.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="interface-41" transform="translate(2808.000000, 1364.000000)">
+                <polygon id="Layer-1" points="16.0840504 10.7302537 12.694169 0 9.29415117 10.7623391 -3.97903932e-13 11.3727276 7.3623386 16.8772547 4.16438008 27 12.694169 21 21.2239578 27 18.1174098 17.1666034 25.8667541 11.3727276 16.0840504 10.7302537"></polygon>
+                <polygon id="Layer-2" points="16.0840504 83.7302537 12.694169 73 9.29415117 83.7623391 -3.97903932e-13 84.3727276 7.3623386 89.8772547 4.16438008 100 12.694169 94 21.2239578 100 18.1174098 90.1666034 25.8667541 84.3727276 16.0840504 83.7302537"></polygon>
+                <polygon id="Layer-3" points="16.0840504 46.7302537 12.694169 36 9.29415117 46.7623391 -3.97903932e-13 47.3727276 7.3623386 52.8772547 4.16438008 63 12.694169 57 21.2239578 63 18.1174098 53.1666034 25.8667541 47.3727276 16.0840504 46.7302537"></polygon>
+                <path d="M39,50 L99.0333252,50" id="Layer-4"></path>
+                <path d="M39,87 L99.0333252,87" id="Layer-5"></path>
+                <path d="M39,14 L99.0333252,14" id="Layer-6"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="103px" viewBox="0 0 104 103" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>web-32</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-4907.000000, -8103.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="web-32" transform="translate(4909.000000, 8105.000000)">
+                <path d="M22.9275185,20.6401622 C22.9259259,20.5523784 22.9259259,20.4661622 22.9259259,20.3783784 C22.9259259,9.14205405 32.2139259,0 43.6296296,0 C51.3951111,0 58.3897778,4.20891892 61.9492222,10.8726486 C63.6325926,9.918 65.5532593,9.40540541 67.5185185,9.40540541 C73.6643333,9.40540541 78.6666667,14.3291351 78.6666667,20.3783784 C78.6666667,20.5743243 78.6618889,20.7702703 78.6507407,20.9662162 C87.0516667,23.0745946 93,30.5142703 93,39.1891892 C93,49.5617838 84.4270741,58 73.8888889,58 L24.5185185,58 C24.3098889,58 24.1092222,57.9576757 23.9276667,57.8792973 C14.2462963,56.8008108 7,48.8422703 7,39.1891892 C7,30.0173514 13.8815926,22.1481622 22.9275185,20.6401622 L22.9275185,20.6401622 L22.9275185,20.6401622 Z" id="Layer-1"></path>
+                <rect id="Layer-2" x="37" y="74" width="26" height="18" rx="5"></rect>
+                <path d="M46,99 L54,99" id="Layer-3"></path>
+                <rect id="Layer-4" x="74" y="74" width="26" height="18" rx="5"></rect>
+                <path d="M83,99 L91,99" id="Layer-5"></path>
+                <rect id="Layer-6" x="0" y="74" width="26" height="18" rx="5"></rect>
+                <path d="M9,99 L17,99" id="Layer-7"></path>
+            </g>
+        </g>
+    </g>
+</svg>

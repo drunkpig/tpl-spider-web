@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="84px" height="103px" viewBox="0 0 84 103" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>food-2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-6106.000000, -5962.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="food-2" transform="translate(6108.000000, 5964.000000)">
+                <path d="M2.99008742,0 L77.0099126,0 C78.6612923,0 79.8691126,1.32476487 79.7072375,2.96316967 L70.510539,96.0467313 C70.3488507,97.6832447 69.2067314,99.009901 67.9589316,99.009901 L12.0410684,99.009901 C10.7935428,99.009901 9.65133618,97.6851361 9.48946103,96.0467313 L0.29276252,2.96316967 C0.131074245,1.32665625 1.33834472,0 2.99008742,0 Z" id="Layer-1"></path>
+                <path d="M10,93.2031452 C10,93.2031452 22.0683594,91.0891089 40,91.0891089 C57.9316406,91.0891089 70,93.2031452 70,93.2031452 M68,99.009901 L12,99.009901" id="Layer-2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

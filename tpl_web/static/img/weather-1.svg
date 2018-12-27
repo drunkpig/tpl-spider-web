@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="71px" viewBox="0 0 104 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>weather-1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-1006.000000, -2282.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="weather-1" transform="translate(1008.000000, 2284.000000)">
+                <path d="M18.5185185,23.5405405 C18.5185185,10.5606486 29.3185185,0 42.5925926,0 C51.6222222,0 59.7555556,4.86202703 63.8944444,12.5597838 C65.8518519,11.457 68.0851852,10.8648649 70.3703704,10.8648649 C77.5166667,10.8648649 83.3333333,16.5526216 83.3333333,23.5405405 C83.3333333,23.7668919 83.3277778,23.9932432 83.3148148,24.2195946 C93.0833333,26.6551351 100,35.2492432 100,45.2702703 C100,57.2524054 90.0314815,67 77.7777778,67 C77.7777778,67 19.8944444,66.9511081 19.6833333,66.8605676 C8.42592593,65.6147297 0,56.4212432 0,45.2702703 C0,34.6752162 8.00185185,25.5849459 18.5203704,23.8429459 C18.5185185,23.7415405 18.5185185,23.6419459 18.5185185,23.5405405 Z" id="Layer-1"></path>
+            </g>
+        </g>
+    </g>
+</svg>

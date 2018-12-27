@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>business-42</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-7164.000000, -5351.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="business-42" transform="translate(7166.000000, 5353.000000)">
+                <polygon id="Layer-1" points="20 100 79.9685465 100 100 80 100 0 20 0"></polygon>
+                <polygon id="Layer-2" points="80.1138942 100 100.113894 80 80.1138942 80"></polygon>
+                <rect id="Layer-3" x="0" y="0" width="10" height="85" rx="2"></rect>
+                <rect id="Layer-4" x="0.113894156" y="0" width="10" height="20" rx="2"></rect>
+                <path d="M5.11389416,86 L5.11389416,100" id="Layer-5"></path>
+                <path d="M36.037234,18 L86.1138942,18" id="Layer-6"></path>
+                <path d="M36.037234,28 L86.1138942,28" id="Layer-7"></path>
+                <path d="M36.037234,38 L86.1138942,38" id="Layer-8"></path>
+                <path d="M36.037234,48 L86.1138942,48" id="Layer-9"></path>
+                <path d="M36.037234,58 L66.1138942,58" id="Layer-10"></path>
+            </g>
+        </g>
+    </g>
+</svg>

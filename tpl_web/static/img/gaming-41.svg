@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="103px" height="103px" viewBox="0 0 103 103" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>gaming-41</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-2806.000000, -5962.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="gaming-41" transform="translate(2808.000000, 5964.000000)">
+                <path d="M56,26.3247362 C56.1095532,26.3778225 56.218003,26.4352652 56.325141,26.4971213 L96.1722816,49.5028787 C98.560991,50.8820007 99.3825107,53.931084 98.0003013,56.325141 L74.9945439,96.1722816 C73.6154219,98.560991 70.5663386,99.3825107 68.1722816,98.0003013 L28.325141,74.9945439 C25.9364316,73.6154219 25.1149119,70.5663386 26.4971213,68.1722816 L33.5247914,56 L51.0057574,56 C53.7701762,56 56,53.7640014 56,51.0057574 L56,26.3247362 Z" id="Layer-1"></path>
+                <path d="M62.2487113,67.5167102 C64.5683073,67.5167102 66.4487113,65.6363062 66.4487113,63.3167102 C66.4487113,60.9971143 64.5683073,59.1167102 62.2487113,59.1167102 C59.9291154,59.1167102 58.0487113,60.9971143 58.0487113,63.3167102 C58.0487113,65.6363062 59.9291154,67.5167102 62.2487113,67.5167102 Z" id="Layer-2" transform="translate(62.248711, 63.316710) rotate(-330.000000) translate(-62.248711, -63.316710) "></path>
+                <rect id="Layer-3" x="0" y="0" width="56" height="56" rx="5"></rect>
+                <circle id="Layer-4" cx="11.6666667" cy="11.6666667" r="4.2"></circle>
+                <circle id="Layer-5" cx="28.4666667" cy="28.4666667" r="4.2"></circle>
+                <circle id="Layer-6" cx="11.6666667" cy="44.3333333" r="4.2"></circle>
+                <circle id="Layer-7" cx="44.3333333" cy="11.6666667" r="4.2"></circle>
+                <circle id="Layer-8" cx="44.3333333" cy="44.3333333" r="4.2"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

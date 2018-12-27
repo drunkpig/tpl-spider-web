@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="94px" viewBox="0 0 104 94" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>office-6</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-6001.000000, -6565.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="office-6" transform="translate(6003.000000, 6567.000000)">
+                <polygon id="Layer-1" points="44.0108938 20 19.9960938 20 0.796657122 44.5918367 0 44.5918367 0 45 30 45 30 55 70 55 70 45 100 45 100 44.5918367 99.2460626 44.5918367 81.0761719 20 56.1566753 20 56.1566753 43.5953399 44.0108938 43.5953399"></polygon>
+                <path d="M44.0108938,13.5953399 L36.5107306,13.5953399 C35.9660276,13.5953399 35.8319529,13.2845081 36.2305246,12.9010777 L49.3400159,0.289602071 C49.7442029,-0.0992302596 50.3848001,-0.0938283415 50.7833719,0.289602071 L63.8928632,12.9010777 C64.2970501,13.28991 64.1659824,13.5953399 63.6126572,13.5953399 L56.1566753,13.5953399 L56.1566753,43.5953399 L44.0108938,43.5953399 L44.0108938,13.5953399 L44.0108938,13.5953399 L44.0108938,13.5953399 Z" id="Layer-2"></path>
+                <path d="M30,45 L0,45 L0,84.0010878 C0,87.319808 2.68318653,90 5.99306484,90 L94.0069352,90 C97.312319,90 100,87.3141955 100,84.0010878 L100,45 L70,45 L70,55 L30,55 L30,45 L30,45 Z" id="Layer-3"></path>
+            </g>
+        </g>
+    </g>
+</svg>

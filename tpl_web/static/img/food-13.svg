@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="104px" viewBox="0 0 80 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>food-13</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-9307.000000, -5962.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="food-13" transform="translate(9309.000000, 5964.000000)">
+                <path d="M62.4362003,30 C65.1936542,30 67.7628403,32.2105744 68.1765554,34.9501536 L75.6111845,84.1815076 C76.9304909,92.9178197 70.8301294,100 62.0030801,100 L13.9969199,100 C5.16206498,100 -0.930674337,92.9190347 0.388815536,84.1815076 L7.82344461,34.9501536 C8.23630123,32.2162593 10.8064201,30 13.5637997,30 L62.4362003,30 Z" id="Layer-1"></path>
+                <path d="M71.9594356,60 L75.6111845,84.1815076 C76.9304909,92.9178197 70.8301294,100 62.0030801,100 L13.9969199,100 C5.16206498,100 -0.930674337,92.9190347 0.388815536,84.1815076 L4.04056437,60 L71.9594356,60 L71.9594356,60 Z" id="Layer-2"></path>
+                <path d="M58.5002387,14 C55.2999623,5.80528628 47.3279298,0 38,0 C28.6720702,0 20.7000377,5.80528628 17.4997613,14 L12.0065556,14 C9.79568082,14 8,15.790861 8,18 C8,20.2046438 9.79379604,22 12.0065556,22 L63.9934444,22 C66.2043192,22 68,20.209139 68,18 C68,15.7953562 66.206204,14 63.9934444,14 L58.5002387,14 L58.5002387,14 Z" id="Layer-3"></path>
+                <circle id="Layer-4" cx="38" cy="8.5" r="2.5"></circle>
+                <rect id="Layer-5" x="20" y="22" width="36" height="8"></rect>
+                <path d="M13.0209557,69.5277392 L63.0209557,69.5277392" id="Layer-6" stroke-dasharray="1,6"></path>
+                <path d="M12.9790443,79.5481559 L62.9790443,79.5481559" id="Layer-7" stroke-dasharray="1,6"></path>
+                <path d="M13.0209557,89.5685725 L63.0209557,89.5685725" id="Layer-8" stroke-dasharray="1,6"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="96px" viewBox="0 0 104 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>devices-19</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-416.000000, -3815.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="devices-19" transform="translate(418.000000, 3817.000000)">
+                <path d="M13,3.0014819 C13,1.34380922 14.3475781,0 15.9925396,0 L84.0074604,0 C85.6601944,0 87,1.3376562 87,3.0014819 L87,52 L13,52 L13,3.0014819 Z" id="Layer-1"></path>
+                <path d="M96.7621526,92 C98.854267,92 100.086661,90.6576906 99.5145358,88.9934988 L87.0374868,52 L12.8742269,52 L0.235521604,88.9934988 C-0.335665413,90.6539436 0.894690732,92 2.98726506,92 L96.7621526,92 Z" id="Layer-2"></path>
+                <rect id="Layer-3" x="19" y="6" width="62" height="40"></rect>
+                <path d="M18,62 L82,62" id="Layer-4"></path>
+                <path d="M15,72 L86,72" id="Layer-5"></path>
+                <path d="M10.5,82 L25.5100002,82" id="Layer-6"></path>
+                <path d="M74,82 L89.0100002,82" id="Layer-7"></path>
+                <path d="M35.4956906,82 L64.5040989,82" id="Layer-8"></path>
+            </g>
+        </g>
+    </g>
+</svg>

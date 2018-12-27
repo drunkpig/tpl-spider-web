@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>business-14</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-8545.000000, -5041.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="business-14" transform="translate(8547.000000, 5043.000000)">
+                <polygon id="Layer-1" points="0 100 100 100 100 40 0 40"></polygon>
+                <path d="M20,50 L80,50 C80,55.5228475 84.4771525,60 90,60 L90,80 C84.4771525,80 80,84.4771525 80,90 L20,90 C20,84.4771525 15.5228475,80 10,80 L10,60 C15.5228475,60 20,55.5228475 20,50 L20,50 L20,50 Z" id="Layer-2"></path>
+                <path d="M50,50 C58.2842712,50 65,58.954305 65,70 C65,81.045695 58.2842712,90 50,90 C41.7157288,90 35,81.045695 35,70 C35,58.954305 41.7157288,50 50,50 L50,50 Z" id="Layer-3"></path>
+                <polygon id="Layer-4" points="44.1696628 14.58196 36 14.58196 49.9999997 0 64 14.58196 55.854039 14.58196 55.854039 32 44.1696628 32 44.1696628 14.58196"></polygon>
+                <path d="M25,67 C26.6568542,67 28,68.3431458 28,70 C28,71.6568542 26.6568542,73 25,73 C23.3431458,73 22,71.6568542 22,70 C22,68.3431458 23.3431458,67 25,67 L25,67 Z" id="Layer-5"></path>
+                <path d="M75,67 C76.6568542,67 78,68.3431458 78,70 C78,71.6568542 76.6568542,73 75,73 C73.3431458,73 72,71.6568542 72,70 C72,68.3431458 73.3431458,67 75,67 L75,67 Z" id="Layer-6"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>numbers-2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" fill-opacity="0" stroke-linejoin="round">
+        <g id="Primary" transform="translate(-701.000000, -10227.000000)" stroke="#343A40" stroke-width="3.5" fill="#DBECFF">
+            <g id="numbers-2" transform="translate(703.000000, 10229.000000)">
+                <circle id="Layer-1" cx="50" cy="50" r="50"></circle>
+                <path d="M66.390625,75 L33.2928258,75 L49.6910688,59.1874085 C58.329429,50.9150805 62.7218155,45.204978 62.7218155,38.7628111 C62.7218155,31.2225476 58.0366032,25 48.5929722,25 C40.3206442,25 34.0248902,30.9297218 33.0732064,40.0805271 L33,40.8125915" id="Layer-2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

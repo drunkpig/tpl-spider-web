@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>files-46</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-7439.000000, -9023.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="files-46" transform="translate(7441.000000, 9025.000000)">
+                <rect id="Layer-1" x="0" y="0" width="100" height="100" rx="3"></rect>
+                <path d="M0,3.00947762 C0,1.34738902 1.33801252,0 2.99280137,0 L97.0071986,0 C98.6600772,0 100,1.33663106 100,3.00947762 L100,16 L0,16 L0,3.00947762 Z" id="Layer-2"></path>
+                <path d="M7,8 L22.2800007,8" id="Layer-3"></path>
+                <polyline id="Layer-4" points="15 30 30 45 15 60"></polyline>
+                <path d="M35,60 L55.0997505,60" id="Layer-5"></path>
+            </g>
+        </g>
+    </g>
+</svg>

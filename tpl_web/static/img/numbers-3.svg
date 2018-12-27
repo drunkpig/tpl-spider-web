@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>numbers-3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" fill-opacity="0" stroke-linejoin="round">
+        <g id="Primary" transform="translate(-1006.000000, -10227.000000)" stroke="#343A40" stroke-width="3.5" fill="#DBECFF">
+            <g id="numbers-3" transform="translate(1008.000000, 10229.000000)">
+                <circle id="Layer-1" cx="50" cy="50" r="50"></circle>
+                <path d="M32,59.8189415 L32.08,60.5153203 C33.2,69.9860724 39.92,75 49.52,75 C59.68,75 67.44,69.8467967 67.44,61.281337 C67.44,54.0389972 62.4799994,50.3111898 54.6399994,49.2666215 L47.7382565,49.2666215 C47.7382565,49.2666215 54.4216412,49.1977679 54.6399994,49.1462301 C60.9915449,47.6471124 66.56,42.7717856 66.56,37.0473538 C66.56,30.2228412 61.28,25 51.36,25 C42.48,25 35.52,29.9442897 34.56,38.5793872 L34.48,39.275766" id="Layer-2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

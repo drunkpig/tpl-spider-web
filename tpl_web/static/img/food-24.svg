@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="92px" height="104px" viewBox="0 0 92 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>food-24</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-3030.000000, -6263.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="food-24" transform="translate(3032.000000, 6265.000000)">
+                <path d="M84,30 C84,52.09139 66.09139,70 44,70 C21.90861,70 4,52.09139 4,30 L84,30 L84,30 Z" id="Layer-1"></path>
+                <path d="M0,30 L88,30" id="Layer-2"></path>
+                <path d="M44.0338542,16.0589225 C44.0338542,16.0589225 46.3600262,12.2074442 44.0338542,7.92521732 C41.7076822,3.64299044 44.0338542,0 44.0338542,0" id="Layer-3"></path>
+                <path d="M64.0338542,16.0589225 C64.0338542,16.0589225 66.3600262,12.2074442 64.0338542,7.92521732 C61.7076822,3.64299044 64.0338542,0 64.0338542,0" id="Layer-4"></path>
+                <path d="M24.0338542,16.0589225 C24.0338542,16.0589225 26.3600262,12.2074442 24.0338542,7.92521732 C21.7076822,3.64299044 24.0338542,0 24.0338542,0" id="Layer-5"></path>
+                <path d="M14,100 L24,66" id="Layer-6"></path>
+                <path d="M70,85 L64,66" id="Layer-7"></path>
+                <circle id="Layer-8" cx="72" cy="93" r="7"></circle>
+                <path d="M20,80 L68.0416489,80" id="Layer-9"></path>
+                <path d="M28.9130542,58.227398 C30.5349967,59.0961075 32.2405163,59.8291094 34.0144365,60.411227 M13.6625616,40.2076573 C15.3903475,45.3447033 18.3863404,49.8990486 22.2783749,53.4985278" id="Layer-10"></path>
+            </g>
+        </g>
+    </g>
+</svg>

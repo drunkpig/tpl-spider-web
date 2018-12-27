@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="74px" height="104px" viewBox="0 0 74 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>devices-1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-4604.000000, -3515.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="devices-1" transform="translate(4606.000000, 3517.000000)">
+                <rect id="Layer-1" x="0" y="0" width="70" height="94" rx="3"></rect>
+                <circle id="Layer-2" cx="35" cy="17" r="10"></circle>
+                <circle id="Layer-3" cx="35" cy="60" r="24"></circle>
+                <circle id="Layer-4" cx="35" cy="60" r="8"></circle>
+                <path d="M2,94 L14,94 L14,97 C14,98.6568542 12.6583772,100 11.002848,100 L4.99715203,100 C3.34187067,100 2,98.6534829 2,97 L2,94 Z" id="Layer-5"></path>
+                <path d="M56,94 L68,94 L68,97 C68,98.6568542 66.6583772,100 65.002848,100 L58.997152,100 C57.3418707,100 56,98.6534829 56,97 L56,94 Z" id="Layer-6"></path>
+            </g>
+        </g>
+    </g>
+</svg>

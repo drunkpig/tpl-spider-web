@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>interface-63</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-9265.000000, -1362.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="interface-63" transform="translate(9267.000000, 1364.000000)">
+                <polygon id="Layer-1" points="29.8866535 56.5853119 72.7837107 13.6391733 86.2576155 27.1284945 43.3605582 70.074633 24.9758563 74.9910489"></polygon>
+                <polygon id="Layer-2" points="43.91945 69.5151017 24.9758563 74.9910489 25.0129383 74.9539245 30.4826272 55.9886562"></polygon>
+                <polygon id="Layer-3" points="78.6673253 7.74882694 92.1412301 21.2381481 86.6454532 26.740213 73.1715484 13.2508919"></polygon>
+                <path d="M83.7710771,2.6392356 C86.5898014,-0.182713768 91.1604932,-0.182076279 93.9783391,2.63899372 L97.2452235,5.90961595 C100.063814,8.73143173 100.057971,13.3123495 97.2449819,16.1285567 L92.1412301,21.2381481 L78.6673253,7.74882694 L83.7710771,2.6392356 L83.7710771,2.6392356 Z" id="Layer-4"></path>
+                <polyline id="Layer-5" points="100 38.6363636 100 100 0 100 0 0 0 0 61.3636364 0"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

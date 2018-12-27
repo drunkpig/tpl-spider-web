@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="103px" viewBox="0 0 104 103" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>science-33</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-6320.000000, -2912.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="science-33" transform="translate(6322.000000, 2914.000000)">
+                <path d="M65,10 C65,7.23857625 67.2883224,5 70.1111111,5 C70.2559202,5 70.3993228,5.00589124 70.541082,5.0174421 C71.5885022,2.09535365 74.4330042,0 77.7777778,0 C80.0639002,0 82.1163158,0.978865111 83.5209537,2.53152593 C83.7332977,2.51067714 83.9487076,2.5 84.1666667,2.5 C87.6951526,2.5 90.5555556,5.29822031 90.5555556,8.75 C90.5555556,9.1780823 90.5115613,9.59611257 90.4277546,10" id="Layer-1"></path>
+                <path d="M50,10 C50,7.23857625 52.2883224,5 55.1111111,5 C55.2559202,5 55.3993228,5.00589124 55.541082,5.0174421 C56.5885022,2.09535365 59.4330042,0 62.7777778,0 C65.0639002,0 67.1163158,0.978865111 68.5209537,2.53152593" id="Layer-2"></path>
+                <path d="M10,98 C21.8721117,62.7054036 21.872112,26 21.872112,26 L78.127888,26 C78.127888,26 78.1278861,62.5855035 90,98" id="Layer-3"></path>
+                <polygon id="Layer-4" points="43 43 58.4107797 43 50.7053898 58.7319336"></polygon>
+                <polygon id="Layer-5" points="69.4769491 62.1929034 61.7715592 75.5390302 52 61"></polygon>
+                <polygon id="Layer-6" points="32 62.1929034 39.7053898 75.5390302 49.4769491 61"></polygon>
+                <polygon id="Layer-7" points="21 26 21 18 79 18 79 26"></polygon>
+                <path d="M0,99 L100,99" id="Layer-8"></path>
+            </g>
+        </g>
+    </g>
+</svg>

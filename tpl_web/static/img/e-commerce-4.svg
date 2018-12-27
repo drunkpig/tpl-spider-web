@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="99px" height="104px" viewBox="0 0 99 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>e-commerce-4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ALL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Secondary" transform="translate(-6087.000000, -1662.000000)" stroke="#868E96" stroke-width="3.5">
+            <g id="e-commerce-4" transform="translate(6089.000000, 1664.000000)">
+                <path d="M0,30 L70,30 L70,4.38626541 C70,1.0889465 68.1217694,-0.741386332 65.8048546,0.285398485 L0,29.4480699" id="Layer-1"></path>
+                <path d="M90,55 L90,34.0021821 C90,31.800691 88.2100616,30 86.0020607,30 L0,30 L0,100 L86.0020607,100 C88.2022159,100 90,98.208162 90,95.9978179 L90,75 L74.9999892,75 C69.4771477,75 65,70.5240618 65,65 C65,59.4771525 69.4750951,55 74.9999892,55 L90,55 L90,55 Z" id="Layer-2"></path>
+                <path d="M90,90 L0,90" id="Layer-3" stroke-dasharray="1,6"></path>
+                <path d="M65,65 C65,59.4771525 69.4750951,55 74.9999892,55 L91.9999809,55 C93.6568457,55 95,56.343312 95,57.9942021 L95,72.0057979 C95,73.6594501 93.6526814,75 91.9999809,75 L74.9999892,75 C69.4771477,75 65,70.5240618 65,65 L65,65 Z" id="Layer-4"></path>
+                <path d="M0,40 L90,40" id="Layer-5" stroke-dasharray="1,6"></path>
+            </g>
+        </g>
+    </g>
+</svg>
