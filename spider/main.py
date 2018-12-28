@@ -10,10 +10,12 @@ import json
 from template_crawl import TemplateCrawler
 import psycopg2
 import random
+import cloghandler
 
 """
 
 """
+fileConfig('logging.ini')
 db = psycopg2.connect(database=dbconfig.db_name, user=dbconfig.db_user, password=dbconfig.db_psw,
                       host=dbconfig.db_url, port=dbconfig.db_port)
 
@@ -52,6 +54,15 @@ def __get_a_task():
     return task
 
 
+def __update_task_finished(task_id, status='C'):
+    sql = f"""
+        update spider_task set status = '{status}' where id = '{task_id}'
+    """
+    cursor = db.cursor()
+    cursor.execute(sql)
+    cursor.close()
+
+
 def __save_crawl_result(task_id,  zip_path):
     sql = f"""
         update spider_task set result='{zip_path}' where id={task_id};
@@ -87,6 +98,7 @@ def __process_thread():
                                  grab_out_site_link=is_grab_out_site_link)
         template_zip_file = spider.template_crawl()
         __save_crawl_result(task['id'], template_zip_file)
+        __update_task_finished(task['id'])
 
 
 def __create_thread(n):
@@ -113,7 +125,7 @@ def __create_process():
 
 
 if __name__ == "__main__":
-    fileConfig('logging.ini')
+    #fileConfig('logging.ini')
     process = __create_process()
     process[0].join()
     db.close()
