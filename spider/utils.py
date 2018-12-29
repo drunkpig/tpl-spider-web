@@ -2,11 +2,18 @@ from datetime import datetime
 from urllib.parse import urlparse, urljoin
 import uuid,os
 import tldextract
+from email.mime.text import MIMEText
+from email.header import Header
+from config import SEND_MAIL
+from smtplib import SMTP_SSL
+import logging
 
 """
 urlparse.urlparse("http://some.page.pl/nothing.py;someparam=some;otherparam=other?query1=val1&query2=val2#frag")
 ParseResult(scheme='http', netloc='some.page.pl', path='/nothing.py', params='someparam=some;otherparam=other', query='query1=val1&query2=val2', fragment='frag')
 """
+
+logger = logging.getLogger()
 
 
 def get_date():
@@ -115,3 +122,19 @@ def is_img_ext(file_name):
                                        'jpc','jp2','jpf','jb2','swc','aiff','wbmp','xbm',\
                                        'tif','jfif','ras','cmx','ico','cod','pnm',\
                                        'pbm','pgm','xwd','fh','wbmp','svg','aiff','webp'))
+
+
+def send_email(title, content, to_list):
+    # 三个参数：第一个为文本内容，第二个 plain 设置文本格式，第三个 utf-8 设置编码
+    message = MIMEText(content, 'plain', 'utf-8')
+    message['From'] = Header(SEND_MAIL['sender'], 'utf-8')
+    message['To'] = Header("代理池管理员", 'utf-8')
+    message['Subject'] = Header(title, 'utf-8')
+
+    try:
+        smtpObj = SMTP_SSL(SEND_MAIL['smtp_host'], SEND_MAIL['smtp_port'])
+        smtpObj.login(SEND_MAIL['smtp_user'], SEND_MAIL['smtp_psw'])
+        smtpObj.sendmail(SEND_MAIL['sender'], to_list, message.as_string())
+        logger.info("Successfully sent email")
+    except Exception as e:
+        logger.error("Error: unable to send email")

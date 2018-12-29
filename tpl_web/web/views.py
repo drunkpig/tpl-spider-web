@@ -1,7 +1,7 @@
 from django.http import Http404
 from django.shortcuts import render, redirect
 import logging,json
-
+from django.utils.translation import ugettext_lazy as _
 from web.forms import TaskForm
 from web.models import SpiderTask
 
@@ -15,15 +15,19 @@ def index(request):
     elif request.method=='POST':
         f = TaskForm(request.POST)
         if f.is_valid():
-            client_ip = __get_client_ip(request)
-            task = SpiderTask.objects.create(**{'seeds':__seeds_url_list_to_json(f.cleaned_data['seeds']),
-                                       'user_agent':f.cleaned_data['user_agent'],
-                                       'encoding': f.cleaned_data['encoding'],
-                                       'is_grab_out_link': f.cleaned_data['is_grab_out_link'],
-                                       'ip':client_ip,
-                                       'user_id_str':f.cleaned_data['email']})
-            request.session['task_id']=task.id
-            return redirect('status')
+            if __is_user_have_no_task(f.cleaned_data['email']):
+                client_ip = __get_client_ip(request)
+                task = SpiderTask.objects.create(**{'seeds':__seeds_url_list_to_json(f.cleaned_data['seeds']),
+                                           'user_agent':f.cleaned_data['user_agent'],
+                                           'encoding': f.cleaned_data['encoding'],
+                                           'is_grab_out_link': f.cleaned_data['is_grab_out_link'],
+                                           'ip':client_ip,
+                                           'user_id_str':f.cleaned_data['email']})
+                request.session['task_id']=task.id
+                return redirect('status')
+            else:
+                # 用户已经提交了一个任务
+                return render(request, "index.html", {"task_dup_error": _('您已经提交了一个任务，请等待任务完成再提交新的任务'), 'form': f, 'activate_index': 'active'})
         else:
             return render(request, "index.html", {"error": f.errors, 'form': f, 'activate_index':'active'})
     else:
@@ -61,3 +65,8 @@ def __seeds_url_list_to_json(seeds_str):
     url_list = seeds_str.split('\n')
     url_list = list(map(lambda u: u.strip(), url_list))
     return json.dumps(url_list)
+
+
+def __is_user_have_no_task(email):
+    cnt = SpiderTask.objects.filter(status__in=['I', 'P'], user_id_str=email).count()
+    return cnt==0

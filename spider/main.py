@@ -12,6 +12,8 @@ import psycopg2
 import random
 import cloghandler
 
+from utils import send_email
+
 """
 
 """
@@ -20,17 +22,7 @@ db = psycopg2.connect(database=dbconfig.db_name, user=dbconfig.db_user, password
                       host=dbconfig.db_url, port=dbconfig.db_port)
 
 
-def __get_a_task():
-    sql = """
-        update spider_task set status = 'P' where id in (
-            select id
-            from spider_task
-            where status ='I'
-            order by gmt_created DESC 
-            limit 1
-        )
-        returning id, seeds, ip, user_id_str, user_agent, status, is_grab_out_link, gmt_modified, gmt_created;
-    """
+def __get_task_by_sql(sql):
     cursor = db.cursor()
     cursor.execute(sql)
     row = cursor.fetchone()
@@ -44,14 +36,42 @@ def __get_a_task():
         'seeds': json.loads(r[1]),
         'ip': r[2],
         'user_id_str': r[3],
-        'user_agent':r[4],
+        'user_agent': r[4],
         'status': r[5],
         'is_grab_out_link': r[6],
-        'gmt_modified':r[7],
+        'gmt_modified': r[7],
         'gmt_created': r[8],
     }
 
     return task
+
+
+def __get_timeout_task():
+    sql = """
+        update spider_task set gmt_created = NOW() where id in (
+            select id
+            from spider_task
+            where status ='P' AND gmt_created + '10 minutes'::INTERVAL < NOW()
+            order by gmt_created DESC 
+            limit 1
+        )
+        returning id, seeds, ip, user_id_str, user_agent, status, is_grab_out_link, gmt_modified, gmt_created;
+    """
+    return __get_task_by_sql(sql)
+
+
+def __get_a_task():
+    sql = """
+        update spider_task set status = 'P' where id in (
+            select id
+            from spider_task
+            where status ='I'
+            order by gmt_created DESC 
+            limit 1
+        )
+        returning id, seeds, ip, user_id_str, user_agent, status, is_grab_out_link, gmt_modified, gmt_created;
+    """
+    return __get_task_by_sql(sql)
 
 
 def __update_task_finished(task_id, status='C'):
@@ -85,7 +105,9 @@ def __get_user_agent(key):
 def __process_thread():
     logger = logging.getLogger()
     while True:
-        task = __get_a_task()
+        task = __get_timeout_task()  # 优先处理超时的任务
+        if task is None:
+            task = __get_a_task()
         if not task:
             logger.info("no task, wait")
             time.sleep(10)
@@ -99,6 +121,7 @@ def __process_thread():
         template_zip_file = spider.template_crawl()
         __save_crawl_result(task['id'], template_zip_file)
         __update_task_finished(task['id'])
+        send_email("web template download link", "http://test/TODO", task['user_id_str']) #TODO
 
 
 def __create_thread(n):

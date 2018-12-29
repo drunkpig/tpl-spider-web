@@ -38,3 +38,14 @@ db_user = "postgres"
 db_psw = ""
 db_url = "dev.jscrapy.org"
 db_port = "5432"
+
+
+SEND_MAIL = {
+    'sender': 'kernel.h@qq.com',
+    'to': ['fox@jscrapy.org'],
+    'smtp_host': 'smtp.qq.com',
+    'smtp_port': 465,
+    'smtp_user': 'kernel.h@qq.com',
+    'smtp_psw': 'pkdsnbblrrnvcagd',
+
+}
