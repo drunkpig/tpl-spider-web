@@ -48,15 +48,29 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    {% if error.email.0 %}
+                                        <span>{{ error.email.0 }}</span><br/>
+                                    {% endif %}
+                                    {{ form.email }}
+                                    <small class="form-text text-muted">{% trans '用来接收爬取结果' %}
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
 
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            {% if error.email.0 %}
-                                <span>{{ error.email.0 }}</span><br/>
-                            {% endif %}
-                            {{ form.email }}
-                            <small class="form-text text-muted">{% trans '用来接收爬取结果' %}
-                            </small>
+                                    {% if error.captcha.0 %}
+                                        <span>{{ error.captcha.0 }}</span><br/>
+                                    {% endif %}
+                                    {{ form.captcha }}
+                                    <small class="form-text text-muted">{% trans '请输入验证码' %}
+                                    </small>
+                                </div>
+                            </div>
                         </div>
                         <span class="alert-warning">{{ task_dup_error }}</span><br>
                         <button type="submit" class=" btn btn-lg btn-info mr-2">{% trans '开始抓取' %}</button>
@@ -184,6 +198,7 @@
             </div>
         </div>
     </div>
+
 {% endblock %}
 
 

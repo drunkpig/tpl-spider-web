@@ -1,3 +1,4 @@
+from captcha.fields import CaptchaField
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 
@@ -47,3 +48,5 @@ class TaskForm(forms.Form):
         max_length=50,
         widget=forms.TextInput(attrs={'id': 'email', 'class': "form-control"})
     )
+
+    captcha = CaptchaField()
