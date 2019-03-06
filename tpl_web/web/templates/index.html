@@ -6,7 +6,8 @@
     </div>
     <div class="container mt-4">
         <div class="row">
-            <div class="col-lg-6 col-md-12 col-sm-12 py-5 mr-auto text-left my-5">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10 col-md-12 col-sm-12 py-5 mr-auto text-left my-5">
                 <h1 class="h5 text-secondary">
                     {% trans '网站模版爬虫' %}
                 </h1>
@@ -47,6 +48,7 @@
                                     {% endif %}
                                 </div>
                             </div>
+
                         </div>
                         <div class="form-row">
                             <div class="col">
@@ -60,6 +62,10 @@
                                     </small>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="form-row">
+
                             <div class="col">
                                 <div class="form-group">
 
@@ -72,6 +78,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <span class="alert-warning">{{ task_dup_error }}</span><br>
                         <button type="submit" class=" btn btn-lg btn-info mr-2">{% trans '开始抓取' %}</button>
 
@@ -80,9 +87,9 @@
 
             </div>
 
-            <div class="col-lg-6 col-md-12 col-sm-12"
-                 style="background: url('{% static "img/promo.jpg" %}') center bottom no-repeat; background-size: 100%;">
-            </div>
+            {#            <div class="col-lg-6 col-md-12 col-sm-12"#}
+            {#                 style="background: url('{% static "img/promo.jpg" %}') center bottom no-repeat; background-size: 100%;">#}
+            {#            </div>#}
         </div>
     </div>
     <div class="bg-white" id="post-hero-01">
@@ -101,103 +108,103 @@
     <hr class="m-0"/>
 
 
-    <div class="bg-light1" id="features-03">
-        <div class="container">
-            <div class="row" style="min-height: 100vh;">
-                <div class="col-lg-6 col-md-12"
-                     style="background: url('{% static 'img/files_regular.png' %}') center center no-repeat; background-size: 100%; min-height: 80vh;">
-                </div>
-                <div class="col-lg-4 col-md-8 col-sm-12 py-5 m-auto text-center">
-                    <h2 class="display-4 mb-3">
-                        {% trans '模版文件井井有条' %}
-                    </h2>
-                    <p class="mb-4 lead text-secondary">
-                        Most necessary inner pages
-                    </p>
-                    <hr class="my-4"/>
-                    <a class="text-warning" href="index_11.html">
-                        About
-                    </a>
-                    ,
-                    <a class="text-warning" href="index_12.html">
-                        Features
-                    </a>
-                    ,
-                    <a class="text-warning" href="index_13.html">
-                        FAQ
-                    </a>
-                    ,
-                    <a class="text-warning" href="index_14.html">
-                        Login
-                    </a>
-                    ,
-                    <a class="text-warning" href="index_15.html">
-                        Register
-                    </a>
-                    ,
-                    <a class="text-warning" href="index_16.html">
-                        404
-                    </a>
-                    ,
-                    <a class="text-warning" href="index_17.html">
-                        Coming soon
-                    </a>
-                    ,
-                    <a class="text-warning" href="index_18.html">
-                        Blog
-                    </a>
-                    ,
-                    <a class="text-warning" href="index_19.html">
-                        Blog entry
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="bg-light1" id="features-03">
-        <div class="container">
-            <div class="row" style="min-height: 80vh;">
-                <div class="col-lg-4 col-md-8 col-sm-12 py-5 m-auto text-center">
-                    <h2 class="display-4 mb-3">
-                        {% trans '所看即所得' %}
-                    </h2>
-                    <p class="mb-4 lead text-secondary">
-                        All icons are included in SVG file format and have 8 different styles. These icons are specially
-                        designed for theme
-                    </p>
-                    <hr class="my-4"/>
-                    <a class="btn-link text-warning" href="index_1.html">
-                        <i class="fa fa-angle-right mr-2">
-                        </i>
-                        See all icons
-                    </a>
-                </div>
-                <div class="col-lg-6 col-md-12"
-                     style="background: url('{% static "img/pages.jpg" %}') center center no-repeat; background-size: cover; min-height: 80vh;">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="bg-light1" id="features-03">
-        <div class="container mb-5">
-            <div class="row" style="min-height: 80vh;">
-                <div class="col-lg-6 col-md-12"
-                     style="background: url('{% static 'img/blocks.jpg' %}') center center no-repeat; background-size: 100%; min-height: 80vh;">
-                </div>
-                <div class="col-lg-4 col-md-8 col-sm-12 py-5 m-auto text-center">
-                    <h2 class="display-4 mb-3">
-                        {% trans '免费享用优美模版设计' %}
-                    </h2>
-                    <p class="mb-4 lead text-secondary">
-                        Use premade components to build websites that are code consistent and visually beautiful
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </div>
+    {#    <div class="bg-light1" id="features-03">#}
+    {#        <div class="container">#}
+    {#            <div class="row" style="min-height: 100vh;">#}
+    {#                <div class="col-lg-6 col-md-12"#}
+    {#                     style="background: url('{% static 'img/files_regular.png' %}') center center no-repeat; background-size: 100%; min-height: 80vh;">#}
+    {#                </div>#}
+    {#                <div class="col-lg-4 col-md-8 col-sm-12 py-5 m-auto text-center">#}
+    {#                    <h2 class="display-4 mb-3">#}
+    {#                        {% trans '模版文件井井有条' %}#}
+    {#                    </h2>#}
+    {#                    <p class="mb-4 lead text-secondary">#}
+    {#                        Most necessary inner pages#}
+    {#                    </p>#}
+    {#                    <hr class="my-4"/>#}
+    {#                    <a class="text-warning" href="bak/index_11.html">#}
+    {#                        About#}
+    {#                    </a>#}
+    {#                    ,#}
+    {#                    <a class="text-warning" href="bak/index_12.html">#}
+    {#                        Features#}
+    {#                    </a>#}
+    {#                    ,#}
+    {#                    <a class="text-warning" href="bak/index_13.html">#}
+    {#                        FAQ#}
+    {#                    </a>#}
+    {#                    ,#}
+    {#                    <a class="text-warning" href="bak/index_14.html">#}
+    {#                        Login#}
+    {#                    </a>#}
+    {#                    ,#}
+    {#                    <a class="text-warning" href="bak/index_15.html">#}
+    {#                        Register#}
+    {#                    </a>#}
+    {#                    ,#}
+    {#                    <a class="text-warning" href="bak/index_16.html">#}
+    {#                        404#}
+    {#                    </a>#}
+    {#                    ,#}
+    {#                    <a class="text-warning" href="bak/index_17.html">#}
+    {#                        Coming soon#}
+    {#                    </a>#}
+    {#                    ,#}
+    {#                    <a class="text-warning" href="bak/index_18.html">#}
+    {#                        Blog#}
+    {#                    </a>#}
+    {#                    ,#}
+    {#                    <a class="text-warning" href="bak/index_19.html">#}
+    {#                        Blog entry#}
+    {#                    </a>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </div>#}
+    {##}
+    {#    <div class="bg-light1" id="features-03">#}
+    {#        <div class="container">#}
+    {#            <div class="row" style="min-height: 80vh;">#}
+    {#                <div class="col-lg-4 col-md-8 col-sm-12 py-5 m-auto text-center">#}
+    {#                    <h2 class="display-4 mb-3">#}
+    {#                        {% trans '所看即所得' %}#}
+    {#                    </h2>#}
+    {#                    <p class="mb-4 lead text-secondary">#}
+    {#                        All icons are included in SVG file format and have 8 different styles. These icons are specially#}
+    {#                        designed for theme#}
+    {#                    </p>#}
+    {#                    <hr class="my-4"/>#}
+    {#                    <a class="btn-link text-warning" href="bak/index_1.html">#}
+    {#                        <i class="fa fa-angle-right mr-2">#}
+    {#                        </i>#}
+    {#                        See all icons#}
+    {#                    </a>#}
+    {#                </div>#}
+    {#                <div class="col-lg-6 col-md-12"#}
+    {#                     style="background: url('{% static "img/pages.jpg" %}') center center no-repeat; background-size: cover; min-height: 80vh;">#}
+    {#                </div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </div>#}
+    {##}
+    {#    <div class="bg-light1" id="features-03">#}
+    {#        <div class="container mb-5">#}
+    {#            <div class="row" style="min-height: 80vh;">#}
+    {#                <div class="col-lg-6 col-md-12"#}
+    {#                     style="background: url('{% static 'img/blocks.jpg' %}') center center no-repeat; background-size: 100%; min-height: 80vh;">#}
+    {#                </div>#}
+    {#                <div class="col-lg-4 col-md-8 col-sm-12 py-5 m-auto text-center">#}
+    {#                    <h2 class="display-4 mb-3">#}
+    {#                        {% trans '免费享用优美模版设计' %}#}
+    {#                    </h2>#}
+    {#                    <p class="mb-4 lead text-secondary">#}
+    {#                        Use premade components to build websites that are code consistent and visually beautiful#}
+    {#                    </p>#}
+    {#                </div>#}
+    {##}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </div>#}
 
 {% endblock %}
 

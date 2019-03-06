@@ -38,14 +38,14 @@ def market(request):
     return render(request, "market.html", {'activate_market':'active'})
 
 
-def status(request):
-    total_task = SpiderTask.objects.filter(status__in=['I', 'P']).count()
-    task_id = request.session.get("task_id")
-    if task_id is not None:
-        task_order = SpiderTask.objects.filter(id__lt=task_id, status__in=['I', 'P']).count()
-        return render(request, 'status.html', {"total_task":total_task, "task_order":task_order, 'activate_status':'active'})
-    else:
-        return render(request, 'status.html', {"total_task": total_task, 'activate_status':'active'})
+# def status(request):
+#     total_task = SpiderTask.objects.filter(status__in=['I', 'P']).count()
+#     task_id = request.session.get("task_id")
+#     if task_id is not None:
+#         task_order = SpiderTask.objects.filter(id__lt=task_id, status__in=['I', 'P']).count()
+#         return render(request, 'status.html', {"total_task":total_task, "task_order":task_order, 'activate_status':'active'})
+#     else:
+#         return render(request, 'status.html', {"total_task": total_task, 'activate_status':'active'})
 
 
 def help(request):

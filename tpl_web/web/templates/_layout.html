@@ -26,6 +26,7 @@
     <link href="{% static 'css/site-style.css' %}" rel="stylesheet"/>
     <link href="{% static 'img/favicon.png' %}" rel="icon" type="image/png"/>
     <link href="{% static 'img/favicon.svg' %}" rel="icon" type="image/svg+xml"/>
+    <link href="{% static 'css/main.css' %}" rel="stylesheet"/>
 
     <title>
         {% trans '别人设计，我借鉴' %}
@@ -36,7 +37,7 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-light">
 
 
-    <a class="navbar-brand p-0" href="index_0.html" target="_blank">
+    <a class="navbar-brand p-0" href="bak/index_0.html" target="_blank">
     <span>
     </span>
     </a>
@@ -58,11 +59,11 @@
                     {% trans '精品模版' %}
                 </a>
             </li>
-            <li class="nav-item mx-1  {{ activate_status }}">
-                <a class="nav-link" href="{% url 'status' %}">
-                    {% trans '任务状态' %}
-                </a>
-            </li>
+{#            <li class="nav-item mx-1  {{ activate_status }}">#}
+{#                <a class="nav-link" href="{% url 'status' %}">#}
+{#                    {% trans '任务状态' %}#}
+{#                </a>#}
+{#            </li>#}
             <li class="nav-item mx-1  {{ activate_help }}">
                 <a class="nav-link" href="{% url 'help' %}">
                     {% trans '使用说明' %}
@@ -131,19 +132,19 @@
             <div class="col-lg-3 py-3 text-center text-lg-right">
                 <ul class="list-inline m-0">
                     <li class="list-inline-item">
-                        <a class="btn-link btn-lg text-secondary px-1" href="index_18.html">
+                        <a class="btn-link btn-lg text-secondary px-1" href="bak/index_18.html">
                             <i class="fa fa-twitter">
                             </i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a class="btn-link btn-lg text-secondary px-1" href="index_18.html">
+                        <a class="btn-link btn-lg text-secondary px-1" href="bak/index_18.html">
                             <i class="fa fa-facebook-official">
                             </i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a class="btn-link btn-lg text-secondary px-1" href="index_18.html">
+                        <a class="btn-link btn-lg text-secondary px-1" href="bak/index_18.html">
                             <i class="fa fa-dribbble">
                             </i>
                         </a>

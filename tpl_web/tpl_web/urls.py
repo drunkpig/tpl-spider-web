@@ -26,7 +26,7 @@ urlpatterns = [
     path('index', web_views.index, name='index'),
     path('market', web_views.market, name='market'),
     path('help', web_views.help, name='help'),
-    path('status', web_views.status, name='status'),
+    # path('status', web_views.status, name='status'),
     url(r'^captcha/', include('captcha.urls')),
 ]
 
