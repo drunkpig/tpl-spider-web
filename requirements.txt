@@ -14,5 +14,5 @@ aiodns
 aiofiles
 gunicorn==19.9.0
 ConcurrentLogHandler==0.9.1
-pywin32
+#pywin32
 django-simple-captcha
