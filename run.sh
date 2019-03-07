@@ -2,9 +2,9 @@
 
 COLLECTED_STATIC_DIR='collected_static'
 DJANGO_STATIC_DIR="/var/www/${COLLECTED_STATIC_DIR}"
-NGIXN=/opt/nginx/sbin/nginx
+NGIXN=/usr/sbin/nginx
 NGINX_CONF_FILE=tpl-spider-web.conf
-NGINX_INCLUDE_CONF_DIR=/home/cxu/.nginxconf
+NGINX_INCLUDE_CONF_DIR=/home/cxu/.nginx
 
 BASEDIR=$(readlink -f $0 | xargs dirname)
 DEPLOY_PARENT_DIR="${BASEDIR}/../"
@@ -84,6 +84,8 @@ _start_core(){
     cd ${proj_dir}
     echo "start core ${proj_dir}"
     nohup python tpl-spider-core-main.py > /dev/null  &
+    rm ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/tpl-spider-core.log || true
+    ln -s ${proj_dir}/logs/tpl-spider-core.log  ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/tpl-spider-core.log
     cd ${pwdir}
 }
 
@@ -119,9 +121,12 @@ _setup_repo(){
 }
 
 _config_and_reload_nginx(){
+	
     sudo ${NGIXN} -s  stop
     rm ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE} || true
-    ln -s ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/${NGINX_CONF_FILE}  ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
+    # ln -s ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/${NGINX_CONF_FILE}  ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
+    /bin/cp -rf ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/${NGINX_CONF_FILE}  ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
+    sed -i "s:__STATIC_FILE_DIR__:${DJANGO_STATIC_DIR}:g"  ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}  
     sudo ${NGIXN}
 }
 
@@ -131,7 +136,7 @@ _set_up_py_venv
 __kill_process_by_name 'tpl_web.wsgi'
 __kill_process_by_name 'tpl-spider-core-main.py'
 
-#_start_web  ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}
+_start_web  ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}
 _start_core ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_CORE}
 _config_and_reload_nginx
 ##############################################
