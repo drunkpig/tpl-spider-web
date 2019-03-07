@@ -1,3 +1,5 @@
+import uuid
+
 from django.db import models
 
 # Create your models here.
@@ -16,6 +18,7 @@ class SpiderTask(models.Model):
     encoding = models.CharField(max_length=16, default='utf-8')
     status = models.CharField(help_text='状态：I:插进来，P：处理中', max_length=1, default='I')
     is_grab_out_link = models.BooleanField(default=False)
+    file_id = models.UUIDField(default=uuid.uuid4, editable=False)
     result = models.TextField(max_length=128)
     gmt_modified = models.DateTimeField(auto_now=True)
     gmt_created = models.DateTimeField(auto_now_add=True)
