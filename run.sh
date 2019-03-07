@@ -56,8 +56,8 @@ _set_up_py_venv(){
 __sync_db(){
     pwdir=`pwd`
     proj_dir=$1
-    cd $proj_dir
-    python manage.py makemigratons
+    cd ${proj_dir}
+    python manage.py makemigrations
     python manage.py migrate
     cd ${pwdir}
 }
@@ -81,8 +81,9 @@ _start_web(){
 _start_core(){
     pwdir=`pwd`
     proj_dir=$1
-    cd $proj_dir
-    nohup python tpl-spider-core-main.py > /dev/null 2>&1 &
+    cd ${proj_dir}
+    echo "start core ${proj_dir}"
+    nohup python tpl-spider-core-main.py > /dev/null  &
     cd ${pwdir}
 }
 
@@ -118,22 +119,19 @@ _setup_repo(){
 }
 
 _config_and_reload_nginx(){
-    sudo ${NGIXN}  stop
-    rm ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
+    sudo ${NGIXN} -s  stop
+    rm ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE} || true
     ln -s ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/${NGINX_CONF_FILE}  ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
-    sudo ${NGIXN}  start
+    sudo ${NGIXN}
 }
 
 ##############################################
 _setup_repo
 _set_up_py_venv
-__kill_process_by_name 'tpl-web.wsgi'
+__kill_process_by_name 'tpl_web.wsgi'
 __kill_process_by_name 'tpl-spider-core-main.py'
 
-start_web  ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}
+#_start_web  ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}
 _start_core ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_CORE}
 _config_and_reload_nginx
 ##############################################
-
-
-
