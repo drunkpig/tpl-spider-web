@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
+TEMPLATE_BASE_DIR="/home/cxu/temp/tpl-spider/"
 COLLECTED_STATIC_DIR='collected_static'
-DJANGO_STATIC_DIR="/var/www/${COLLECTED_STATIC_DIR}"
+
 NGIXN=/usr/sbin/nginx
 NGINX_CONF_FILE=tpl-spider-web.conf
 NGINX_INCLUDE_CONF_DIR=/home/cxu/.nginx
@@ -15,7 +16,7 @@ START_UP_PROJ_DIR="${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}"
 GIT_REPO=("git@github.com:jscrapy/tpl-spider-web.git ${PROJ_TPL_SPIDER_WEB} master"   \
           "git@github.com:jscrapy/tpl-spider-core.git ${PROJ_TPL_SPIDER_CORE} master")
 
-
+DJANGO_STATIC_DIR="${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/${COLLECTED_STATIC_DIR}"
 #=========================================================================
 # 制作venv, 安装py依赖
 # 杀原来进程
@@ -83,7 +84,7 @@ _start_core(){
     proj_dir=$1
     cd ${proj_dir}
     echo "start core ${proj_dir}"
-    nohup python tpl-spider-core-main.py > /dev/null  &
+    nohup python tpl-spider-core-main.py  ${TEMPLATE_BASE_DIR}> /dev/null  &
     rm ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/tpl-spider-core.log || true
     ln -s ${proj_dir}/logs/tpl-spider-core.log  ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/tpl-spider-core.log
     cd ${pwdir}
@@ -126,7 +127,8 @@ _config_and_reload_nginx(){
     rm ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE} || true
     # ln -s ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/${NGINX_CONF_FILE}  ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
     /bin/cp -rf ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/${NGINX_CONF_FILE}  ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
-    sed -i "s:__STATIC_FILE_DIR__:${DJANGO_STATIC_DIR}:g"  ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}  
+    sed -i "s:__STATIC_FILE_DIR__:${DJANGO_STATIC_DIR}:g"  ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
+    sed -i "s:__PORT__:${SPIDER_WEB_PORT}:g"  ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
     sudo ${NGIXN}
 }
 
