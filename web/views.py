@@ -24,7 +24,7 @@ def index(request):
                                            'ip':client_ip,
                                            'user_id_str':f.cleaned_data['email']})
                 request.session['task_id']=task.id
-                return redirect('status')
+                return redirect('index')
             else:
                 # 用户已经提交了一个任务
                 return render(request, "index.html", {"task_dup_error": _('您已经提交了一个任务，请等待任务完成再提交新的任务'), 'form': f, 'activate_index': 'active'})
