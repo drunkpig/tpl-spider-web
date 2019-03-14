@@ -124,7 +124,9 @@ _setup_repo(){
 _config_and_reload_nginx(){
 	
     sudo ${NGIXN} -s  stop
-    rm ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE} || true
+    if [ - f "${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}" ]; then
+        rm ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
+    fi
     # ln -s ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/${NGINX_CONF_FILE}  ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
     if [ ! -d "${NGINX_INCLUDE_CONF_DIR}" ];then
         mkdir ${NGINX_INCLUDE_CONF_DIR}
