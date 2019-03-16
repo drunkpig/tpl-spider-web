@@ -24,8 +24,11 @@ if t=='number' and num_queries > 0 then
     -- [{"tablename":"products","tableowner":"xx"},{"tablename":"pg_statistic","tableowner":"postgres"}}]
     -- ngx.log(ngx.ERR, "failed to connect: "， cjson.encode(rows))
     ngx.log(ngx.ERR, "raw result: ", cjson.encode(rows))
-    ngx.var.file_relative_path = rows[1]['result']
-    ngx.log(ngx.ERR, "file_relative_path=", ngx.var.file_relative_path)
+    template_file = rows[1]['result']
+    ngx.var.file_relative_path = template_file
+    file_name=template_file:match'.*/(.*)'
+    ngx.var.file_name=file_name
+    ngx.log(ngx.ERR, "file_relative_path=", ngx.var.file_relative_path, ", file_name=", file_name)
 else
     ngx.var.file_relative_path = ""
     ngx.log(ngx.ERR, "query error: ", err)
