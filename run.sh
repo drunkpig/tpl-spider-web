@@ -6,6 +6,7 @@ COLLECTED_STATIC_DIR='collected_static'
 NGIXN=/usr/sbin/nginx
 NGINX_CONF_FILE=tpl-spider-web.conf
 NGINX_INCLUDE_CONF_DIR=/home/cxu/.nginx
+NGINX_LUA_JIT_DIR=/opt/openresty-1.15.8/luajit
 
 BASEDIR=$(readlink -f $0 | xargs dirname)
 DEPLOY_PARENT_DIR="${BASEDIR}/../"
@@ -135,7 +136,12 @@ _config_and_reload_nginx(){
     sed -i "s:__STATIC_FILE_DIR__:${DJANGO_STATIC_DIR}:g"  ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
     sed -i "s:__PORT__:${SPIDER_WEB_PORT}:g"  ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
     sed -i "s:__TEMPLATE_BASE_DIR__:${TEMPLATE_BASE_DIR}:g"  ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
+    sed -i "s:__LUA_DIR__:${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/nginx/lua/:g"  ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
     sudo ${NGIXN}
+}
+
+_install_pgmoon(){
+    sudo luarocks install --tree=${NGINX_LUA_JIT_DIR}   pgmoon
 }
 
 ##############################################
@@ -143,7 +149,7 @@ _setup_repo
 _set_up_py_venv
 __kill_process_by_name 'tpl_web.wsgi'
 __kill_process_by_name 'tpl-spider-core-main.py'
-
+_install_pgmoon
 _start_web  ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}
 _start_core ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_CORE}
 _config_and_reload_nginx

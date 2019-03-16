@@ -16,7 +16,11 @@
       如果没有这个目录需要自己去建好
     - 第二步，把`tpl-spider-web`工程下的`tpl-spider-web.conf`文件软链接到`$HOME/.nginx/tpl-spider-web.conf`
 
-
+4. 安装[pgmoon](http://leafo.net/guides/using-postgres-with-openresty.html)
+    - 首先安装luarocks, 是管理lua包的。 `./configure --prefix=/opt/luarocks/  --with-lua=/opt/nginx/luajit/ --with-lua-include=/opt/nginx/luajit/include/luajit-2.1`
+    - 去https://luarocks.org/ 看看支持postgres的包， 我们选 lua-resty-postgres
+    - `sudo luarocks install --tree=/opt/openresty-1.15.8/luajit   pgmoon` 指定路径--tree别搞错，否则nginx找不到luarocks安装的库
+    
 
 
 ## openrestry 安装
