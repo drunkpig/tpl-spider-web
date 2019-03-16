@@ -24,9 +24,9 @@ if num_queries > 0 then
     -- ngx.log(ngx.ERR, "failed to connect: "， cjson.encode(rows))
     ngx.log(ngx.ERR, "raw result: ", cjson.encode(rows))
     ngx.var.file_relative_path = rows[1]['result']
-    -- ngx.var.file_relative_path = 'archive/2019-03-15/postgresguide.com_1552654739.151837.zip'
     ngx.log(ngx.ERR, "file_relative_path=", ngx.var.file_relative_path)
 else
+    ngx.var.file_relative_path = false
     ngx.log(ngx.ERR, "query error: ", err)
     ngx.var.file_relative_path = ""
     return nil
