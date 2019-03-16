@@ -16,8 +16,9 @@ end
 sql = 'SELECT result FROM spider_task WHERE file_id='..db:escape_literal(file_id)
 ngx.log(ngx.ERR, "exec sql: ", sql)
 local rows, num_queries = db:query(sql)
+local t = type(num_queries);
 
-if num_queries > 0 then
+if t=='number' and num_queries > 0 then
     -- print(cjson.encode(rows))
     -- out:
     -- [{"tablename":"products","tableowner":"xx"},{"tablename":"pg_statistic","tableowner":"postgres"}}]
@@ -26,7 +27,7 @@ if num_queries > 0 then
     ngx.var.file_relative_path = rows[1]['result']
     ngx.log(ngx.ERR, "file_relative_path=", ngx.var.file_relative_path)
 else
-    ngx.var.file_relative_path = false
+    ngx.var.file_relative_path = ""
     ngx.log(ngx.ERR, "query error: ", err)
     ngx.var.file_relative_path = ""
     return nil
