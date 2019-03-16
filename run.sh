@@ -4,7 +4,8 @@ TEMPLATE_BASE_DIR="/home/cxu/temp/tpl-spider/"
 COLLECTED_STATIC_DIR='collected_static'
 
 NGIXN=/usr/sbin/nginx
-NGINX_CONF_FILE=tpl-spider-web.conf
+NGINX_CONF_FILE=nginx/tpl-spider-web.conf
+NGINX_LUA_DIR=nginx/lua/
 NGINX_INCLUDE_CONF_DIR=/home/cxu/.nginx
 NGINX_LUA_JIT_DIR=/opt/openresty-1.15.8/luajit
 
@@ -128,7 +129,7 @@ _config_and_reload_nginx(){
     if [ -f "${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}" ]; then
         rm ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
     fi
-    # ln -s ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/${NGINX_CONF_FILE}  ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
+
     if [ ! -d "${NGINX_INCLUDE_CONF_DIR}" ];then
         mkdir ${NGINX_INCLUDE_CONF_DIR}
     fi
@@ -136,7 +137,7 @@ _config_and_reload_nginx(){
     sed -i "s:__STATIC_FILE_DIR__:${DJANGO_STATIC_DIR}:g"  ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
     sed -i "s:__PORT__:${SPIDER_WEB_PORT}:g"  ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
     sed -i "s:__TEMPLATE_BASE_DIR__:${TEMPLATE_BASE_DIR}:g"  ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
-    sed -i "s:__LUA_DIR__:${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/nginx/lua/:g"  ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
+    sed -i "s:__LUA_DIR__:${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/${NGINX_LUA_DIR}:g"  ${NGINX_INCLUDE_CONF_DIR}/${NGINX_CONF_FILE}
     sudo ${NGIXN}
 }
 
