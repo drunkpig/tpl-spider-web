@@ -27,6 +27,7 @@ if num_queries > 0 then
     -- ngx.var.file_relative_path = 'archive/2019-03-15/postgresguide.com_1552654739.151837.zip'
     ngx.log(ngx.ERR, "file_relative_path=", ngx.var.file_relative_path)
 else
+    ngx.var.file_relative_path = ""
     ngx.log(ngx.ERR, "query error: ", err)
     return nil
 end
