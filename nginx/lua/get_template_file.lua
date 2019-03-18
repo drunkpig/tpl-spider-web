@@ -26,7 +26,7 @@ if t=='number' and num_queries > 0 then
     ngx.log(ngx.ERR, "raw result: ", cjson.encode(rows))
     template_file = rows[1]['result']
     ngx.var.file_relative_path = template_file
-    file_name=template_file:match'.*/(.*)'
+    file_name=template_file:match'.*/(.*)'   -- 获取文件的名字，下载时候设置为头部
     ngx.var.file_name=file_name
     ngx.log(ngx.ERR, "file_relative_path=", ngx.var.file_relative_path, ", file_name=", file_name)
 else
