@@ -38,8 +38,8 @@ def market(request):
     return render(request, "market.html", {'activate_market':'active'})
 
 
-def get_web_template(request):
-    return render(request, "get_web_template.html", {"template_id", request.GET.get("template_id")})
+def get_web_template(request, template_id):
+    return render(request, "get_web_template.html", {"template_id": template_id})
 
 # def status(request):
 #     total_task = SpiderTask.objects.filter(status__in=['I', 'P']).count()
