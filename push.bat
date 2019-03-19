@@ -1,3 +1,4 @@
+git status -s
 git add .
 git commit -m"cm"
 git pull origin master
