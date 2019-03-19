@@ -53,3 +53,7 @@ http://wang.market/template.jsp
 https://themes.getbootstrap.com/product/falcon-admin-dashboard-webapp-template/
 
 https://themewagon.com/themes/bundle/
+
+https://colorlib.com/demo?theme=dup
+
+https://elements.envato.com/binmp-app-and-software-landing-html-template-FD8QMQ
