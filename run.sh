@@ -143,6 +143,7 @@ _config_and_reload_nginx(){
     sed -i "s:__PORT__:${SPIDER_WEB_PORT}:g"  ${dst_nginx_conf_file}
     sed -i "s:__TEMPLATE_BASE_DIR__:${TEMPLATE_BASE_DIR}:g"  ${dst_nginx_conf_file}
     sed -i "s:__LUA_DIR__:${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/${NGINX_LUA_DIR}:g"  ${dst_nginx_conf_file}
+    /bin/cp -rf  ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/web/templates   ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/collected_static
     sudo ${NGIXN}
 }
 
