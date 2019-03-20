@@ -107,105 +107,35 @@
     </div>
     <hr class="m-0"/>
 
+<!-- tip popup : submit succ  -->
+    <div class="modal fade" id="submitsucc" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">{% trans '提交成功' %}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {% trans '任务提交成功，模版下载地址会以邮件发送给您。</br>在任务完成之前您不能再次提交任务。' %}
+                </div>
+{#                <div class="modal-footer">#}
+{#                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>#}
+{#                    <button type="button" class="btn btn-primary">Save changes</button>#}
+{#                </div>#}
+            </div>
+        </div>
+    </div>
+<!-- end tip popup  -->
 
-    {#    <div class="bg-light1" id="features-03">#}
-    {#        <div class="container">#}
-    {#            <div class="row" style="min-height: 100vh;">#}
-    {#                <div class="col-lg-6 col-md-12"#}
-    {#                     style="background: url('{% static 'img/files_regular.png' %}') center center no-repeat; background-size: 100%; min-height: 80vh;">#}
-    {#                </div>#}
-    {#                <div class="col-lg-4 col-md-8 col-sm-12 py-5 m-auto text-center">#}
-    {#                    <h2 class="display-4 mb-3">#}
-    {#                        {% trans '模版文件井井有条' %}#}
-    {#                    </h2>#}
-    {#                    <p class="mb-4 lead text-secondary">#}
-    {#                        Most necessary inner pages#}
-    {#                    </p>#}
-    {#                    <hr class="my-4"/>#}
-    {#                    <a class="text-warning" href="bak/index_11.html">#}
-    {#                        About#}
-    {#                    </a>#}
-    {#                    ,#}
-    {#                    <a class="text-warning" href="bak/index_12.html">#}
-    {#                        Features#}
-    {#                    </a>#}
-    {#                    ,#}
-    {#                    <a class="text-warning" href="bak/index_13.html">#}
-    {#                        FAQ#}
-    {#                    </a>#}
-    {#                    ,#}
-    {#                    <a class="text-warning" href="bak/index_14.html">#}
-    {#                        Login#}
-    {#                    </a>#}
-    {#                    ,#}
-    {#                    <a class="text-warning" href="bak/index_15.html">#}
-    {#                        Register#}
-    {#                    </a>#}
-    {#                    ,#}
-    {#                    <a class="text-warning" href="bak/index_16.html">#}
-    {#                        404#}
-    {#                    </a>#}
-    {#                    ,#}
-    {#                    <a class="text-warning" href="bak/index_17.html">#}
-    {#                        Coming soon#}
-    {#                    </a>#}
-    {#                    ,#}
-    {#                    <a class="text-warning" href="bak/index_18.html">#}
-    {#                        Blog#}
-    {#                    </a>#}
-    {#                    ,#}
-    {#                    <a class="text-warning" href="bak/index_19.html">#}
-    {#                        Blog entry#}
-    {#                    </a>#}
-    {#                </div>#}
-    {#            </div>#}
-    {#        </div>#}
-    {#    </div>#}
-    {##}
-    {#    <div class="bg-light1" id="features-03">#}
-    {#        <div class="container">#}
-    {#            <div class="row" style="min-height: 80vh;">#}
-    {#                <div class="col-lg-4 col-md-8 col-sm-12 py-5 m-auto text-center">#}
-    {#                    <h2 class="display-4 mb-3">#}
-    {#                        {% trans '所看即所得' %}#}
-    {#                    </h2>#}
-    {#                    <p class="mb-4 lead text-secondary">#}
-    {#                        All icons are included in SVG file format and have 8 different styles. These icons are specially#}
-    {#                        designed for theme#}
-    {#                    </p>#}
-    {#                    <hr class="my-4"/>#}
-    {#                    <a class="btn-link text-warning" href="bak/index_1.html">#}
-    {#                        <i class="fa fa-angle-right mr-2">#}
-    {#                        </i>#}
-    {#                        See all icons#}
-    {#                    </a>#}
-    {#                </div>#}
-    {#                <div class="col-lg-6 col-md-12"#}
-    {#                     style="background: url('{% static "img/pages.jpg" %}') center center no-repeat; background-size: cover; min-height: 80vh;">#}
-    {#                </div>#}
-    {#            </div>#}
-    {#        </div>#}
-    {#    </div>#}
-    {##}
-    {#    <div class="bg-light1" id="features-03">#}
-    {#        <div class="container mb-5">#}
-    {#            <div class="row" style="min-height: 80vh;">#}
-    {#                <div class="col-lg-6 col-md-12"#}
-    {#                     style="background: url('{% static 'img/blocks.jpg' %}') center center no-repeat; background-size: 100%; min-height: 80vh;">#}
-    {#                </div>#}
-    {#                <div class="col-lg-4 col-md-8 col-sm-12 py-5 m-auto text-center">#}
-    {#                    <h2 class="display-4 mb-3">#}
-    {#                        {% trans '免费享用优美模版设计' %}#}
-    {#                    </h2>#}
-    {#                    <p class="mb-4 lead text-secondary">#}
-    {#                        Use premade components to build websites that are code consistent and visually beautiful#}
-    {#                    </p>#}
-    {#                </div>#}
-    {##}
-    {#            </div>#}
-    {#        </div>#}
-    {#    </div>#}
+    <script>
+    $('#submitsucc').modal({"focus": true})
+    $('#submitsucc').on('hide.bs.modal', function (e) {
+        e.preventDefault();
+        return false;
+    })
+    </script>
 
 {% endblock %}
-
-
