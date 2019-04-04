@@ -1,10 +1,21 @@
 from captcha.fields import CaptchaField
 from django import forms
 from django.utils.translation import ugettext_lazy as _
+import validators
+
+
+class UrlListField(forms.CharField):
+    """
+
+    """
+    def to_python(self, value):
+        url_list = value.split('\n')
+        url_list = list(map(lambda u: u.strip(), url_list))
+        return value.dumps(url_list)
 
 
 class TaskForm(forms.Form):
-    seeds = forms.CharField(
+    seeds = UrlListField(
         required=True,
         max_length=1000,
         widget=forms.Textarea(attrs={'id': 'seeds', 'class':"form-control", 'rows':'3'})
@@ -50,3 +61,15 @@ class TaskForm(forms.Form):
     )
 
     captcha = CaptchaField()
+
+    @staticmethod
+    def __is_url_valid(url):
+        try:
+            return validators.url(url)
+        except:
+            return False
+
+    def is_valid(self):
+        b1 = super().is_valid()
+        b2 = self.__is_url_valid()
+        return b1 and b2

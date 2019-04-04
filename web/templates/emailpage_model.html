@@ -1,0 +1,71 @@
+{% extends "_layout.html" %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+    <section class="home-banner-area">
+        <div class="container">
+            <div class="row justify-content-end fullscreen">
+                <div class="col-lg-6 col-md-12 home-banner-left d-flex fullscreen align-items-center">
+
+                    <div class="col-lg-12 col-md-12 ">
+                        <form id="accurate_craw" method="post" action="{% url 'accurate_craw' %}">
+                            <div class="mt-20">
+                                <h3 class="mb-30 title_color">Email模版抓取</h3>
+                            </div>
+                            <div class="mt-10">
+                        <textarea name="seeds" class="single-textarea" placeholder="URL，每行一个" onfocus="this.placeholder = ''"
+                                  onblur="this.placeholder = 'URL，每行一个'" required="required"></textarea>
+                            </div>
+                            <div class="mt-10">
+                                <input type="text" name="email" placeholder="Email，接收模版下载地址"
+                                       onfocus="this.placeholder = ''"
+                                       onblur="this.placeholder = 'Email，接收模版下载地址'" required="required"
+                                       class="single-input-primary">
+                            </div>
+                            <div class="mt-20 row">
+                                <div class="col-lg-6 col-md-6 switch-wrap d-flex justify-content-between">
+                                    <label for="is_grab_out_resource">&nbsp;&nbsp;抓取引用的资源</label>
+                                    <div class="confirm-switch">
+                                        <input type="checkbox" id="is_grab_out_resource" disabled checked>
+                                        <label for="is_grab_out_resource"></label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 switch-wrap d-flex justify-content-between">
+                                    <label for="is_ref_resource">是否引用外部资源</label>
+                                    <div class="confirm-switch">
+                                        <input type="checkbox" id="is_ref_resource" disabled>
+                                        <label for="is_ref_resource"></label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 switch-wrap d-flex justify-content-between">
+                                    <label for="is_full_site">&nbsp;&nbsp;是否抓全站</label>
+                                    <div class="confirm-switch">
+                                        <input type="checkbox" id="is_full_site" disabled>
+                                        <label for="is_full_site"></label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 switch-wrap d-flex justify-content-between">
+                                    <label for="is_email_template">是否压缩为Email模版</label>
+                                    <div class="confirm-switch">
+                                        <input type="checkbox" id="is_email_template" disabled checked>
+                                        <label for="is_email_template"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="mt-30 genric-btn success circle">提交</button>
+
+                        </form>
+
+                    </div>
+
+
+                </div>
+                <div class="col-lg-6 col-md-12 no-padding home-banner-right d-flex fullscreen align-items-end">
+                    <img alt="" class="img-fluid" src="{% static 'img/header-img.png' %}"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

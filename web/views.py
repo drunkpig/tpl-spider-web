@@ -23,19 +23,55 @@ def index(request):
                                            'is_grab_out_link': f.cleaned_data['is_grab_out_link'],
                                            'ip':client_ip,
                                            'user_id_str':f.cleaned_data['email']})
-                request.session['task_id']=task.id
+                request.session['task_id'] = task.id
                 return redirect('index')
             else:
                 # 用户已经提交了一个任务
-                return render(request, "index.html", {"task_dup_error": _('您已经提交了一个任务，请等待任务完成再提交新的任务'), 'form': f, 'activate_index': 'active'})
+                return render(request, "index.html", {"task_dup_error": _('您已经提交了一个任务，请等待任务完成再提交新的任务'), 'form': f, 'activate_index': 'active', "has_running_task":"true"})
         else:
             return render(request, "index.html", {"error": f.errors, 'form': f, 'activate_index':'active'})
     else:
         raise Http404("page not found")
 
 
+def accurate_model(request):
+    return render(request, "accurate_model.html")
+
+
+def accurate_craw(request):
+    return render(request, "accurate_model.html")
+
+
+def ref_model(request):
+    return render(request, "ref_model.html")
+
+
+def ref_craw(request):
+    return render(request, "ref_model.html")
+
+
+def fullsite_model(request):
+    return render(request, "fullsite_model.html")
+
+
+def fullsite_craw(request):
+    return render(request, "fullsite_model.html")
+
+
+def emailpage_model(request):
+    return render(request, "emailpage_model.html")
+
+
+def emailpage_craw(request):
+    return render(request, "emailpage_model.html")
+
+
+def contact(request):
+    return render(request, "bak/contact.html")
+
+
 def market(request):
-    return render(request, "market.html", {'activate_market':'active'})
+    return render(request, "bak/market.html", {'activate_market': 'active'})
 
 
 def get_web_template(request, template_id):

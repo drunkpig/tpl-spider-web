@@ -24,8 +24,23 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', web_views.index, name='home'),
     path('index', web_views.index, name='index'),
+
+    path('accurate-model', web_views.accurate_model, name='accurate_model'),
+    path("accurate-craw", web_views.accurate_craw, name='accurate_craw'),
+
+    path('fullsite-model', web_views.fullsite_model, name='fullsite_model'),
+    path("fullsite-craw", web_views.fullsite_craw, name='fullsite_craw'),
+
+    path('ref-model', web_views.ref_model, name='ref_model'),
+    path("ref-craw", web_views.ref_craw, name='ref_craw'),
+
+    path('emailpage-model', web_views.emailpage_model, name='emailpage_model'),
+    path("emailpage-craw", web_views.emailpage_craw, name='emailpage_craw'),
+
+
     path('market', web_views.market, name='market'),
     path('help', web_views.help, name='help'),
+    path('contact', web_views.contact, name='contact'),
     path('get-web-template/<str:template_id>', web_views.get_web_template, name='help'),
     # path('status', web_views.status, name='status'),
     url(r'^captcha/', include('captcha.urls')),

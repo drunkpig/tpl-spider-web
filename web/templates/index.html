@@ -2,140 +2,283 @@
 {% load static %}
 {% load i18n %}
 {% block content %}
-    <div class="pt-5">
+<section class="home-banner-area">
+    <div class="container">
+        <div class="row justify-content-end fullscreen">
+            <div class="col-lg-6 col-md-12 home-banner-left d-flex fullscreen align-items-center">
+                <div>
+                    <h1 class="">
+                        We Can
+                        <span>
+         Accelerate
+        </span>
+
+                        <br/>
+                        Design &amp; Development
+                        <br/>
+                        of Your
+                        <span>
+         Web
+        </span>
+                        .
+                    </h1>
+                    <p class="mx-auto mb-40">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore
+                        magna aliqua.
+                    </p>
+                    <a class="primary-btn" href="#">
+                        Learn to Use
+                    </a>
+                    <div class="d-flex align-items-center mt-60">
+                        <a class="video-play-button" href="https://www.youtube.com/watch?v=vParh5wE-tM"
+                           id="play-home-video">
+         <span>
+         </span>
+                        </a>
+                        <div class="watch_video">
+                            <h5>
+                                Watch Live Demo
+                            </h5>
+                            <p>
+                                You will love the idea
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 no-padding home-banner-right d-flex fullscreen align-items-end">
+                <img alt="" class="img-fluid" src="{% static 'img/header-img.png' %}"/>
+            </div>
+        </div>
     </div>
-    <div class="container mt-4">
+</section>
+<!--================ End banner Area =================-->
+<!--================ Start Brand Area =================-->
+
+<section class="service-area section-gap video-sec-area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 text-center">
+                <div class="section-title">
+
+                    <h1>
+                        多种模版生成模式
+                    </h1>
+                </div>
+            </div>
+{#            <img class="img-fluid video-shape" src="{% static 'img/video-bg-shape.png' %}" alt="">#}
+        </div>
         <div class="row">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-10 col-md-12 col-sm-12 py-5 mr-auto text-left my-5">
-                <h1 class="h5 text-secondary">
-                    {% trans '网站模版爬虫' %}
-                </h1>
-                <p class="display-4 mb-2 mt-4 mr-5" style="font-family: 'Montserrat', sans-serif; font-weight: 300;">
-                    {% trans '加速您的网站设计' %}
-                </p>
-
-                <div class="pt-3 pb-4 mr-5 pr-5">
-                    <form method="post" action=".">{% csrf_token %}
-                        <div class="form-group">
-                            <label for="seeds">{% trans '模版URL' %}</label>
-                            {% if error.url_list.0 %}
-                                <span>{{ error.url_list.0 }}</span><br/>
-                            {% endif %}
-                            {{ form.seeds }}
-                            <small id="emailHelp" class="form-text text-muted">{% trans '每行一个URL' %}
-                            </small>
-                        </div>
-                        <div class="form-row">
-                            <div class="col">
-                                <div class="form-group">
-                                    <label for="user_agent">User-Agent</label>
-                                    {{ form.user_agent }}
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="form-group">
-                                    <label for="encoding">{% trans '网页编码' %}</label>
-                                    {{ form.encoding }}
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="form-group">
-                                    <label for="is_grab_out_link">{% trans '抓取外链' %}</label>
-                                    {{ form.is_grab_out_link }}
-                                    {% if error.is_grab_out_link.0 %}
-                                        <span>{{ error.is_grab_out_link.0 }}</span><br/>
-                                    {% endif %}
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="form-row">
-                            <div class="col">
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    {% if error.email.0 %}
-                                        <span>{{ error.email.0 }}</span><br/>
-                                    {% endif %}
-                                    {{ form.email }}
-                                    <small class="form-text text-muted">{% trans '用来接收爬取结果' %}
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-
-                            <div class="col">
-                                <div class="form-group">
-
-                                    {% if error.captcha.0 %}
-                                        <span>{{ error.captcha.0 }}</span><br/>
-                                    {% endif %}
-                                    {{ form.captcha }}
-                                    <small class="form-text text-muted">{% trans '请输入验证码' %}
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-
-                        <span class="alert-warning">{{ task_dup_error }}</span><br>
-                        <button type="submit" class=" btn btn-lg btn-info mr-2">{% trans '开始抓取' %}</button>
-
-                    </form>
-                </div>
-
-            </div>
-
-            {#            <div class="col-lg-6 col-md-12 col-sm-12"#}
-            {#                 style="background: url('{% static "img/promo.jpg" %}') center bottom no-repeat; background-size: 100%;">#}
-            {#            </div>#}
-        </div>
-    </div>
-    <div class="bg-white" id="post-hero-01">
-        <div class="container">
-            <div class="row py-3 text-center">
-
-                <div class="col mx-auto">
-                    {#                    <span class="badge badge-pill badge-secondary mr-3">Discount</span>#}
-                    {#                    <span class="text-secondary">Hello world!&nbsp;to get –10% off use this coupone code:#}
-                    {#                            <mark class="px-2">RPLCR10</mark>#}
-                    {#                        </span>#}
+            <!-- single-features -->
+            <div class="col-lg-3 col-sm-6 col-md-6">
+                <div class="single-service">
+                    <div class="service-icon">
+                        <img alt="" src="{% static 'img/shape1.png' %}"/>
+                        <img alt="" class="s-icon" src="{% static 'img/icon1.png' %}"/>
+                        <img alt="" class="clr-icon" src="{% static 'img/clr-icon1.png' %}"/>
+                    </div>
+                    <div class="service-content">
+                        <h4>
+                            精准模版
+                        </h4>
+                        <p>
+                            只抓取你指定的URL为模版。我们将抓取页面内的css,js,图片，包括css文件内引入的其他css文件，以及字体文件和图片
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <hr class="m-0"/>
-
-<!-- tip popup : submit succ  -->
-    <div class="modal fade" id="submitsucc" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog  modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">{% trans '提交成功' %}</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+            <!-- single-features -->
+            <div class="col-lg-3  col-sm-6 col-md-6">
+                <div class="single-service">
+                    <div class="service-icon">
+                        <img alt="" src="{% static 'img/shape1.png' %}"/>
+                        <img alt="" class="s-icon" src="{% static 'img/icon2.png' %}"/>
+                        <img alt="" class="clr-icon" src="{% static 'img/clr-icon2.png' %}"/>
+                    </div>
+                    <div class="service-content">
+                        <h4>
+                            全站模版
+                        </h4>
+                        <p>
+                            您只需提供一个入口页面，我们就能将这个入口页面以及与其关联的站点内的网页变为模版
+                        </p>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    {% trans '任务提交成功，模版下载地址会以邮件发送给您。</br>在任务完成之前您不能再次提交任务。' %}
-                </div>
-{#                <div class="modal-footer">#}
-{#                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>#}
-{#                    <button type="button" class="btn btn-primary">Save changes</button>#}
-{#                </div>#}
             </div>
+            <!-- single-features -->
+            <div class="col-lg-3 col-sm-6 col-md-6">
+                <div class="single-service">
+                    <div class="service-icon">
+                        <img alt="" src="{% static 'img/shape1.png' %}"/>
+                        <img alt="" class="s-icon" src="{% static 'img/icon3.png' %}"/>
+                        <img alt="" class="clr-icon" src="{% static 'img/clr-icon3.png' %}"/>
+                    </div>
+                    <div class="service-content">
+                        <h4>
+                            电邮模版
+                        </h4>
+                        <p>
+                            提供一个URL，我们会转换这个页面为一个可以用于发送EMAIL的模版。页面中引用的图片，css,js资源会被压缩进一个HTML页面中
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- single-features -->
+            <div class="col-lg-3  col-sm-6 col-md-6">
+                <div class="single-service">
+                    <div class="service-icon">
+                        <img alt="" src="{% static 'img/shape1.png' %}"/>
+                        <img alt="" class="s-icon" src="{% static 'img/icon3.png' %}"/>
+                        <img alt="" class="clr-icon" src="{% static 'img/clr-icon3.png' %}"/>
+                    </div>
+                    <div class="service-content">
+                        <h4>
+                            引用模版
+                        </h4>
+                        <p>
+                            此模式只转换你需要的HTML页面，页面内的图片，css,js资源将会以URL的方式引入，这样页面就不会消耗您的服务器流量
+                        </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-<!-- end tip popup  -->
+</section>
 
-    <script>
-    $('#submitsucc').modal({"focus": true})
-    $('#submitsucc').on('hide.bs.modal', function (e) {
-        e.preventDefault();
-        return false;
-    })
-    </script>
+<!--================ Start CTA Area =================-->
+  <section class="cta-area">
+   <div class="container">
+    <div class="row">
+     <div class="col-lg-7 col-md-12">
+      <h2>
+       这里的模版有多强大?
+      </h2>
+      <p>
+       我们会将模版文件组织得井井有条，图片、css、js文件会被分类存放在不同的文件夹下，您无需手工整理。
+          同时我们会根据您的设置将模版自动转换为你所使用的WEB开发框架的模版格式。
+      </p>
+      <a class="primary-btn" href="#web-framework-list">
+       支持的WEB框架模版
+      </a>
+     </div>
+     <img alt="" class="cta-shape img-fluid" src="{% static 'img/cta-bg-shape.png' %}"/>
+    </div>
+   </div>
+  </section>
+  <!--================ End CTA Area =================-->
+  <!--================ Start Blog Area =================-->
+  <section class="blog-area section-gap">
+   <div class="container">
+    <div class="row align-items-end justify-content-center">
+     <div class="col-lg-9 col-md-12 text-center">
+      <div class="section-title">
+          <a name="web-framework-list"></a>
+       <h1>
+        自动转换为流行的WEB模版
+       </h1>
+       <p>
+        从其他站点下载到的模版在使用时需要手工按照WEB框架模版引擎语法进行修改。我们能在生成模版的同时对模版进行转换，使模版支持主流的WEB框架，例如Django, Jinja2, CakePHP等
+       </p>
+      </div>
+     </div>
+    </div>
+    <div class="row blog-inner justify-content-center">
+     <!-- single-blog -->
+     <div class="col-lg-4 col-md-6 col-sm-6">
+      <div class="single-blog">
+       <div class="blog-thumb">
+        <img alt="" style="width: 360px; height: 250px;" class="img-fluid" src="{% static 'img/cakephp.png' %}"/>
+       </div>
+       <div class="blog-details">
+        <div class="blog-meta text-center">
+         <span>
+          25 june, 2018 | By Mark Wiens
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- single-blog -->
+     <div class="col-lg-4 col-md-6 col-sm-6">
+      <div class="single-blog">
+       <div class="blog-thumb">
+        <img alt="" style="width: 360px; height: 250px;" class="img-fluid" src="{% static 'img/django.jpg' %}"/>
+       </div>
+       <div class="blog-details">
+        <div class="blog-meta text-center">
+         <span>
+          25 june, 2018 | By Mark Wiens
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- single-blog -->
+     <div class="col-lg-4 col-md-6 col-sm-6">
+      <div class="single-blog">
+       <div class="blog-thumb">
+        <img alt="" style="width: 360px; height: 250px;" class="img-fluid" src="{% static 'img/flask.png' %}"/>
+       </div>
+       <div class="blog-details">
+        <div class="blog-meta text-center">
+         <span>
+          25 june, 2018 | By Mark Wiens
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+       <div class="row blog-inner justify-content-center">
+     <!-- single-blog -->
+     <div class="col-lg-4 col-md-6 col-sm-6">
+      <div class="single-blog">
+       <div class="blog-thumb">
+        <img alt="" style="width: 360px; height: 250px;" class="img-fluid" src="{% static 'img/symfony.jpg' %}"/>
+       </div>
+       <div class="blog-details">
+        <div class="blog-meta text-center">
+         <span>
+          25 june, 2018 | By Mark Wiens
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- single-blog -->
+     <div class="col-lg-4 col-md-6 col-sm-6">
+      <div class="single-blog">
+       <div class="blog-thumb">
+        <img alt="" style="width: 360px; height: 250px;" class="img-fluid" src="{% static 'img/jinja2.jpg' %}"/>
+       </div>
+       <div class="blog-details">
+        <div class="blog-meta text-center">
+         <span>
+          25 june, 2018 | By Mark Wiens
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- single-blog -->
+     <div class="col-lg-4 col-md-6 col-sm-6">
+      <div class="single-blog">
+       <div class="blog-thumb">
+        <img alt="" style="width: 360px; height: 250px;" class="img-fluid" src="{% static 'img/rails.png' %}"/>
+       </div>
+       <div class="blog-details">
+        <div class="blog-meta text-center">
+         <span>
+          25 june, 2018 | By Mark Wiens
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
 
 {% endblock %}
