@@ -2,6 +2,7 @@ from captcha.fields import CaptchaField
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 import validators
+import json
 
 
 class UrlListField(forms.CharField):
@@ -11,65 +12,57 @@ class UrlListField(forms.CharField):
     def to_python(self, value):
         url_list = value.split('\n')
         url_list = list(map(lambda u: u.strip(), url_list))
-        return value.dumps(url_list)
+        return json.dumps(url_list)
 
 
 class TaskForm(forms.Form):
     seeds = UrlListField(
         required=True,
-        max_length=1000,
-        widget=forms.Textarea(attrs={'id': 'seeds', 'class':"form-control", 'rows':'3'})
-    )
-    user_agent = forms.ChoiceField(
-        choices=(('pc','PC Browser'),
-                 ('ipad', 'Ipad Browser'),
-                 ),
-        initial='pc',
-        widget=forms.Select(attrs={'id': 'user_agent', 'class':"form-control"})
-
-    )
-    encoding = forms.ChoiceField(
-        choices=(
-            ('utf-8','utf-8'),
-            ('gbk', "gbk"),
-            ('gb2312', 'gb2312'),
-        ),
-        initial='utf-8',
-        widget=forms.Select(attrs={'id': 'encoding', 'class':"form-control"})
-    )
-
-    is_grab_out_link = forms.BooleanField(
-        # choices=(
-        #     (True, _('Yes')),
-        #     (False, _("No")),
-        # ),
-        required=False,
-        initial=False,
-        widget=forms.Select(
-            choices=(
-                (True, _('Yes')),
-                (False, _("No")),
-            ),
-            attrs={'id': 'is_grab_out_link', 'class': "form-control"}
-        )
+        max_length=1000
     )
 
     email = forms.EmailField(
         required=True,
         max_length=50,
-        widget=forms.TextInput(attrs={'id': 'email', 'class': "form-control"})
+        # widget=forms.TextInput(attrs={'id': 'email', 'class': "form-control"})
     )
 
-    captcha = CaptchaField()
+    to_framework = forms.CharField(
+        required=True,
+        max_length=50,
+        # widget=forms.TextInput(attrs={'id': 'email', 'class': "form-control"})
+    )
+    #
+    # is_grab_out_link = forms.BooleanField(
+    #
+    #     required=False,
+    #     initial=False,
+    #     widget=forms.Select(
+    #         choices=(
+    #             (True, _('Yes')),
+    #             (False, _("No")),
+    #         ),
+    #         attrs={'id': 'is_grab_out_link'}
+    #     )
+    # )
 
-    @staticmethod
-    def __is_url_valid(url):
+    # captcha = CaptchaField()
+
+    def __is_url_valid(self, url_list):
+        b = True
+        lst = json.loads(url_list)
         try:
-            return validators.url(url)
+            for u in lst:
+                b = b and validators.url(u)
+                if not b:
+                    self.add_error("seeds", "URL format error")
+                    return b
+            return b
         except:
+            self.add_error("seeds", "URL format error")
             return False
 
     def is_valid(self):
         b1 = super().is_valid()
-        b2 = self.__is_url_valid()
+        b2 = self.__is_url_valid(self.cleaned_data['seeds'])
         return b1 and b2

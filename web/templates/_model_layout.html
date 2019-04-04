@@ -1,0 +1,80 @@
+{% extends "_layout.html" %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+    <section class="home-banner-area">
+        <div class="container">
+            <div class="row justify-content-end fullscreen">
+                <div class="col-lg-6 col-md-12 home-banner-left d-flex fullscreen align-items-center">
+
+                    <div class="col-lg-12 col-md-12 ">
+                        <form id="accurate_craw" method="post" action="{% block submit_url %}{% endblock %}">
+                            {% csrf_token %}
+                            <div class="mt-20">
+                                <h3 class="mb-30 title_color">
+
+                                    {% block craw_title %}
+                                        模版抓取
+                                    {% endblock %}
+                                </h3>
+                            </div>
+                            {% block urls_input_area %}
+                                <div class="mt-10">
+                                    {% for msg in messages %}
+                                        <p class="mt5 text-success">{{ msg.message }}</p>
+                                    {% endfor %}
+
+                                    {% if error.seeds.0 %}
+                                        <p class="text-danger">{{ error.seeds.0 }}</p>
+                                    {% endif %}
+                                    <textarea name="seeds" class="single-textarea" placeholder="URL，每行一个"
+                                              onfocus="this.placeholder = ''"
+                                              onblur="this.placeholder = 'URL，每行一个'" required="required"></textarea>
+                                </div>
+                            {% endblock %}
+                            <div class="mt-10">
+                                {% if error.email.0 %}
+                                    <p class="mt-5 text-danger">{{ error.email.0 }}</p>
+                                {% endif %}
+                                <input type="text" name="email" placeholder="Email，接收模版下载地址"
+                                       onfocus="this.placeholder = ''"
+                                       onblur="this.placeholder = 'Email，接收模版下载地址'" required="required"
+                                       class="single-input-primary">
+                            </div>
+                            <div class="mt-10">
+                                <div class="input-group-icon mt-10">
+                                    <div class="icon"><i class="fa fa-gear" aria-hidden="true"></i></div>
+                                    <div class="form-select">
+                                        <select name="to_framework" style="display: none;">
+                                            <option value="NONE">转化为Web框架</option>
+                                            <option value="django">Django</option>
+                                            <option value="flask">Flask</option>
+                                            <option value="symfony">Symfony</option>
+                                            <option value="rails">Rails</option>
+                                        </select>
+                                        <div class="nice-select" tabindex="0"><span class="current">转化为Web框架（可选）</span>
+                                            <ul class="list">
+                                                <li data-value="NONE" class="option selected focus">转化为Web框架（可选）</li>
+                                                <li data-value="django" class="option">django</li>
+                                                <li data-value="flask" class="option">flask</li>
+                                                <li data-value="symfony" class="option">symfony</li>
+                                                <li data-value="rails" class="option">rails</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% block craw_configuration %}
+                                TODO
+                            {% endblock %}
+                            <button class="mt-30 genric-btn success circle">提交</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 no-padding home-banner-right d-flex fullscreen align-items-end">
+                    <img alt="" class="img-fluid" src="{% static 'img/header-img.png' %}"/>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

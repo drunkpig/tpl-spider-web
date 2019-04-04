@@ -21,6 +21,7 @@ class SpiderTask(models.Model):
     is_to_single_page = models.BooleanField(default=False) # 是否压缩成单页面
     is_full_site = models.BooleanField(default=False) # 是否全站抓取
     is_ref_model = models.BooleanField(default=False) # 是否盗链模式
+    to_framework = models.CharField(max_length=16, default='utf-8')  # 转化为哪种web框架的模版
     file_id = models.UUIDField(default=uuid.uuid4, editable=False)
     result = models.TextField(max_length=128)
     error = models.TextField(max_length=256, null=True)

@@ -1,73 +1,124 @@
 from django.http import Http404
 from django.shortcuts import render, redirect
-import logging,json
+import logging, json
 from django.utils.translation import ugettext_lazy as _
 from web.forms import TaskForm
 from web.models import SpiderTask
+from django.contrib import messages
 
 logger = logging.getLogger(__name__)
 
 
 def index(request):
-    if request.method=='GET':
-        f = TaskForm()
-        return render(request, "index.html", {'form':f, 'activate_index':'active'})
-    elif request.method=='POST':
-        f = TaskForm(request.POST)
-        if f.is_valid():
-            if __is_user_have_no_task(f.cleaned_data['email']):
-                client_ip = __get_client_ip(request)
-                task = SpiderTask.objects.create(**{'seeds':__seeds_url_list_to_json(f.cleaned_data['seeds']),
-                                           'user_agent':f.cleaned_data['user_agent'],
-                                           'encoding': f.cleaned_data['encoding'],
-                                           'is_grab_out_link': f.cleaned_data['is_grab_out_link'],
-                                           'ip':client_ip,
-                                           'user_id_str':f.cleaned_data['email']})
-                request.session['task_id'] = task.id
-                return redirect('index')
-            else:
-                # 用户已经提交了一个任务
-                return render(request, "index.html", {"task_dup_error": _('您已经提交了一个任务，请等待任务完成再提交新的任务'), 'form': f, 'activate_index': 'active', "has_running_task":"true"})
-        else:
-            return render(request, "index.html", {"error": f.errors, 'form': f, 'activate_index':'active'})
-    else:
-        raise Http404("page not found")
+    return render(request, "index.html")
 
 
 def accurate_model(request):
     return render(request, "accurate_model.html")
 
 
-def accurate_craw(request):
-    return render(request, "accurate_model.html")
+def accurate_task(request):
+    f = TaskForm(request.POST)
+    if f.is_valid():
+        client_ip = __get_client_ip(request)
+        seeds = f.cleaned_data['seeds']
+        email = f.cleaned_data['email']
+        to_framework = f.cleaned_data['to_framework']
+
+        is_grab_out_link = True
+        is_ref_model = False
+        is_full_site = False
+        is_to_single_page = False
+
+        task_id = __save_task(seeds=seeds, client_ip=client_ip, email=email, user_agent='pc', encoding='utf-8',
+                              is_grab_out_link=is_grab_out_link, is_to_single_page=is_to_single_page,
+                              is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
+        messages.success(request, "提交成功")
+        return redirect("accurate_model")
+    else:
+
+        return render(request, "accurate_model.html", {"error": f.errors})
 
 
 def ref_model(request):
     return render(request, "ref_model.html")
 
 
-def ref_craw(request):
-    return render(request, "ref_model.html")
+def ref_task(request):
+    f = TaskForm(request.POST)
+    if f.is_valid():
+        client_ip = __get_client_ip(request)
+        seeds = f.cleaned_data['seeds']
+        email = f.cleaned_data['email']
+        to_framework = f.cleaned_data['to_framework']
+
+        is_grab_out_link = False
+        is_ref_model = True
+        is_full_site = False  # TODO 可选的
+        is_to_single_page = False
+
+        task_id = __save_task(seeds=seeds, client_ip=client_ip, email=email, user_agent='pc', encoding='utf-8',
+                              is_grab_out_link=is_grab_out_link, is_to_single_page=is_to_single_page,
+                              is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
+        messages.success(request, "提交成功")
+        return redirect("ref_model")
+    else:
+        return render(request, "ref_model.html", {"error": f.errors})
 
 
 def fullsite_model(request):
     return render(request, "fullsite_model.html")
 
 
-def fullsite_craw(request):
-    return render(request, "fullsite_model.html")
+def fullsite_task(request):
+    f = TaskForm(request.POST)
+    if f.is_valid():
+        client_ip = __get_client_ip(request)
+        seeds = f.cleaned_data['seeds']
+        email = f.cleaned_data['email']
+        to_framework = f.cleaned_data['to_framework']
+
+        is_grab_out_link = False  # TODO
+        is_ref_model = True  # TODO 互斥的
+        is_full_site = True
+        is_to_single_page = False
+
+        task_id = __save_task(seeds=seeds, client_ip=client_ip, email=email, user_agent='pc', encoding='utf-8',
+                              is_grab_out_link=is_grab_out_link, is_to_single_page=is_to_single_page,
+                              is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
+        messages.success(request, "提交成功")
+        return redirect("fullsite_model")
+    else:
+        return render(request, "fullsite_model.html", {"error": f.errors})
 
 
 def emailpage_model(request):
     return render(request, "emailpage_model.html")
 
 
-def emailpage_craw(request):
-    return render(request, "emailpage_model.html")
+def emailpage_task(request):
+    f = TaskForm(request.POST)
+    if f.is_valid():
+        client_ip = __get_client_ip(request)
+        seeds = f.cleaned_data['seeds']
+        email = f.cleaned_data['email']
+        to_framework = f.cleaned_data['to_framework']
+
+        is_grab_out_link = True
+        is_ref_model = False
+        is_full_site = False
+        is_to_single_page = True
+        task_id = __save_task(seeds=seeds, client_ip=client_ip, email=email, user_agent='pc', encoding='utf-8',
+                              is_grab_out_link=is_grab_out_link, is_to_single_page=is_to_single_page,
+                              is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
+        messages.success(request, "提交成功")
+        return redirect("emailpage_model")
+    else:
+        return redirect("emailpage_model", {"error": f.errors})
 
 
 def contact(request):
-    return render(request, "bak/contact.html")
+    return render(request, "contact.html")
 
 
 def market(request):
@@ -75,7 +126,8 @@ def market(request):
 
 
 def get_web_template(request, template_id):
-    return render(request, "get_web_template.html", {"template_id": template_id})
+    return render(request, "get_template.html", {"template_id": template_id})
+
 
 # def status(request):
 #     total_task = SpiderTask.objects.filter(status__in=['I', 'P']).count()
@@ -88,7 +140,7 @@ def get_web_template(request, template_id):
 
 
 def help(request):
-    return render(request, "help.html", {'activate_help':'active'})
+    return render(request, "help.html", {'activate_help': 'active'})
 
 
 def __get_client_ip(request):
@@ -100,12 +152,37 @@ def __get_client_ip(request):
     return ip
 
 
-def __seeds_url_list_to_json(seeds_str):
-    url_list = seeds_str.split('\n')
-    url_list = list(map(lambda u: u.strip(), url_list))
-    return json.dumps(url_list)
-
-
 def __is_user_have_no_task(email):
     cnt = SpiderTask.objects.filter(status__in=['I', 'P'], user_id_str=email).count()
-    return cnt==0
+    return cnt == 0
+
+
+def __save_task(seeds, client_ip, email, user_agent, encoding, is_grab_out_link, is_to_single_page, is_full_site,
+                is_ref_model, to_framework):
+    """
+
+    :param client_ip:
+    :param seeds:
+    :param email:
+    :param user_agent:
+    :param encoding:
+    :param is_grab_out_link:
+    :param is_to_single_page:
+    :param is_full_site:
+    :param is_ref_model:
+    :param to_framework:
+    :return:
+    """
+    task = SpiderTask.objects.create(
+        seeds=seeds,
+        ip=client_ip,
+        email=email,
+        user_agent=user_agent,
+        encoding=encoding,
+        is_grab_out_link=is_grab_out_link,
+        is_to_single_page=is_to_single_page,
+        is_full_site=is_full_site,
+        is_ref_model=is_ref_model,
+        to_framework=to_framework
+    )
+    return task.id

@@ -26,22 +26,18 @@ urlpatterns = [
     path('index', web_views.index, name='index'),
 
     path('accurate-model', web_views.accurate_model, name='accurate_model'),
-    path("accurate-craw", web_views.accurate_craw, name='accurate_craw'),
-
+    path('accurate-task', web_views.accurate_task, name='accurate_task'),
     path('fullsite-model', web_views.fullsite_model, name='fullsite_model'),
-    path("fullsite-craw", web_views.fullsite_craw, name='fullsite_craw'),
-
+    path('fullsite-task', web_views.fullsite_task, name='fullsite_task'),
     path('ref-model', web_views.ref_model, name='ref_model'),
-    path("ref-craw", web_views.ref_craw, name='ref_craw'),
-
+    path('ref-task', web_views.ref_task, name='ref_task'),
     path('emailpage-model', web_views.emailpage_model, name='emailpage_model'),
-    path("emailpage-craw", web_views.emailpage_craw, name='emailpage_craw'),
-
+    path('emailpage-task', web_views.emailpage_task, name='emailpage_task'),
 
     path('market', web_views.market, name='market'),
     path('help', web_views.help, name='help'),
     path('contact', web_views.contact, name='contact'),
-    path('get-web-template/<str:template_id>', web_views.get_web_template, name='help'),
+    path('get-template/<str:template_id>', web_views.get_web_template, name='get_template'),
     # path('status', web_views.status, name='status'),
     url(r'^captcha/', include('captcha.urls')),
 ]

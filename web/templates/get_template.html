@@ -1,0 +1,33 @@
+{% extends "_layout.html" %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+    <section class="banner_area ">
+        <div class="banner_inner overlay d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content text-left">
+                    <div class="page_link">
+                        <a href="{% url 'index' %}">
+                            Home
+                        </a>
+                        <a href="#download">
+                            download
+                        </a>
+                    </div>
+                    <a name="download"></a>
+                    <h2>
+                        Download Template
+                    </h2>
+
+                </div>
+                <div class="mt-30">
+                    <a href="http://template-spider.com/download-web-template/{{ template_id }}" class="genric-btn success circle arrow">download<span class="lnr lnr-arrow-right"></span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact_area section-gap">
+
+    </section>
+{% endblock %}
