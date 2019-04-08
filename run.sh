@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PYTHON=/use/bin/python3.7
+PYTHON="/usr/bin/python3.7"
 TEMPLATE_BASE_DIR="/home/cxu/temp/tpl-spider/"
 COLLECTED_STATIC_DIR='collected_static'
 
