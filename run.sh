@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+PYTHON=/use/bin/python3.7
 TEMPLATE_BASE_DIR="/home/cxu/temp/tpl-spider/"
 COLLECTED_STATIC_DIR='collected_static'
 
@@ -41,7 +42,7 @@ __pip_install_deps(){
 _set_up_py_venv(){
 	venv_dir=${START_UP_PROJ_DIR}/venv
 	if [ ! -d ${venv_dir} ];then
-		virtualenv -p /usr/bin/python3 ${venv_dir}
+		virtualenv -p ${PYTHON} ${venv_dir}
 	fi
 	source ${venv_dir}/bin/activate
 
