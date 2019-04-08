@@ -54,7 +54,7 @@ def ref_task(request):
 
         is_grab_out_link = False
         is_ref_model = True
-        is_full_site = f.cleaned_data['is_full_site']  # TODO 可选的
+        is_full_site = f.cleaned_data['is_full_site']
         is_to_single_page = False
 
         task_id = __save_task(seeds=seeds, client_ip=client_ip, email=email, user_agent='pc', encoding='utf-8',
@@ -78,8 +78,8 @@ def fullsite_task(request):
         email = f.cleaned_data['email']
         to_framework = f.cleaned_data['to_framework']
 
-        is_grab_out_link = f.cleaned_data['is_grab_out_link']  # TODO
-        is_ref_model = f.cleaned_data['is_ref_model']  # TODO 互斥的
+        is_grab_out_link = f.cleaned_data['is_grab_out_link']
+        is_ref_model = f.cleaned_data['is_ref_model']
         is_full_site = True
         is_to_single_page = False
 
