@@ -66,12 +66,12 @@
                 引用模版
             </a>
         </li>
-                <li>
+        <li>
             <a href="{% url 'help' %}">
                 帮助手册
             </a>
         </li>
-                <li>
+        <li>
             <a href="{% url 'contact' %}">
                 联系我们
             </a>
@@ -270,6 +270,16 @@
 <script src="{% static 'js/waypoints.min.js' %}">
 </script>
 <script src="{% static 'js/main.js' %}">
+</script>
+
+<script type="text/javascript">
+    $("#is_grab_out_resource").click(function (e) {
+        $("#is_ref_resource").click()
+    });
+
+    $("#is_ref_resource").click(function (e) {
+        $("#is_grab_out_resource").click()
+    });
 </script>
 </body>
 </html>

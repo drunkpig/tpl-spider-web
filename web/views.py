@@ -54,7 +54,7 @@ def ref_task(request):
 
         is_grab_out_link = False
         is_ref_model = True
-        is_full_site = False  # TODO 可选的
+        is_full_site = f.cleaned_data['is_full_site']  # TODO 可选的
         is_to_single_page = False
 
         task_id = __save_task(seeds=seeds, client_ip=client_ip, email=email, user_agent='pc', encoding='utf-8',
@@ -72,14 +72,14 @@ def fullsite_model(request):
 
 def fullsite_task(request):
     f = TaskForm(request.POST)
-    if f.is_valid():
+    if f.is_valid('fullsite'):
         client_ip = __get_client_ip(request)
         seeds = f.cleaned_data['seeds']
         email = f.cleaned_data['email']
         to_framework = f.cleaned_data['to_framework']
 
-        is_grab_out_link = False  # TODO
-        is_ref_model = True  # TODO 互斥的
+        is_grab_out_link = f.cleaned_data['is_grab_out_link']  # TODO
+        is_ref_model = f.cleaned_data['is_ref_model']  # TODO 互斥的
         is_full_site = True
         is_to_single_page = False
 
@@ -114,7 +114,7 @@ def emailpage_task(request):
         messages.success(request, "提交成功")
         return redirect("emailpage_model")
     else:
-        return redirect("emailpage_model", {"error": f.errors})
+        return render(request, "emailpage_model.html", {"error": f.errors})
 
 
 def contact(request):
