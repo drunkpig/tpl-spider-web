@@ -1,0 +1,35 @@
+
+
+
+{% extends "_layout.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}任务状态{% endblock %}
+{% block content %}
+    <section class="banner_area ">
+        <div class="banner_inner overlay d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content text-left">
+
+                    <h2>
+                        一共有{{ total_task }}个任务
+                    </h2>
+<br/>
+                    {% if task_order %}
+                        <h2>您前面还有{{ task_order }}个任务</h2>
+                        {% else %}
+                        <h2>您没有运行的任务</h2>
+                    {% endif %}
+                </div>
+                <div class="mt-30">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact_area section-gap">
+
+    </section>
+{% endblock %}

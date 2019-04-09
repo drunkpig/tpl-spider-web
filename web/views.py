@@ -1,10 +1,11 @@
 from django.http import Http404
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, render_to_response
 import logging, json
 from django.utils.translation import ugettext_lazy as _
 from web.forms import TaskForm
 from web.models import SpiderTask
 from django.contrib import messages
+from django.core.cache import cache
 
 logger = logging.getLogger(__name__)
 
@@ -30,13 +31,15 @@ def accurate_task(request):
         is_full_site = False
         is_to_single_page = False
 
-        task_id = __save_task(seeds=seeds, client_ip=client_ip, email=email, user_agent='pc', encoding='utf-8',
-                              is_grab_out_link=is_grab_out_link, is_to_single_page=is_to_single_page,
-                              is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
-        messages.success(request, "提交成功")
-        return redirect("accurate_model")
-    else:
+        task_id, file_id = __save_task(seeds=seeds, client_ip=client_ip, email=email, user_agent='pc', encoding='utf-8',
+                                       is_grab_out_link=is_grab_out_link, is_to_single_page=is_to_single_page,
+                                       is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
 
+        messages.success(request, "提交成功")
+        resp = redirect("accurate_model")
+        resp.set_cookie("fuuid", file_id)
+        return resp
+    else:
         return render(request, "accurate_model.html", {"error": f.errors})
 
 
@@ -57,11 +60,13 @@ def ref_task(request):
         is_full_site = f.cleaned_data['is_full_site']
         is_to_single_page = False
 
-        task_id = __save_task(seeds=seeds, client_ip=client_ip, email=email, user_agent='pc', encoding='utf-8',
-                              is_grab_out_link=is_grab_out_link, is_to_single_page=is_to_single_page,
-                              is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
+        task_id, file_id = __save_task(seeds=seeds, client_ip=client_ip, email=email, user_agent='pc', encoding='utf-8',
+                                       is_grab_out_link=is_grab_out_link, is_to_single_page=is_to_single_page,
+                                       is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
         messages.success(request, "提交成功")
-        return redirect("ref_model")
+        resp = redirect("ref_model")
+        resp.set_cookie("fuuid", file_id)
+        return resp
     else:
         return render(request, "ref_model.html", {"error": f.errors})
 
@@ -83,11 +88,14 @@ def fullsite_task(request):
         is_full_site = True
         is_to_single_page = False
 
-        task_id = __save_task(seeds=seeds, client_ip=client_ip, email=email, user_agent='pc', encoding='utf-8',
-                              is_grab_out_link=is_grab_out_link, is_to_single_page=is_to_single_page,
-                              is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
+        task_id, file_id = __save_task(seeds=seeds, client_ip=client_ip, email=email, user_agent='pc', encoding='utf-8',
+                                       is_grab_out_link=is_grab_out_link, is_to_single_page=is_to_single_page,
+                                       is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
+
         messages.success(request, "提交成功")
-        return redirect("fullsite_model")
+        resp = redirect("fullsite_model")
+        resp.set_cookie("fuuid", file_id)
+        return resp
     else:
         return render(request, "fullsite_model.html", {"error": f.errors})
 
@@ -108,11 +116,13 @@ def emailpage_task(request):
         is_ref_model = False
         is_full_site = False
         is_to_single_page = True
-        task_id = __save_task(seeds=seeds, client_ip=client_ip, email=email, user_agent='pc', encoding='utf-8',
-                              is_grab_out_link=is_grab_out_link, is_to_single_page=is_to_single_page,
-                              is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
+        task_id, file_id = __save_task(seeds=seeds, client_ip=client_ip, email=email, user_agent='pc', encoding='utf-8',
+                                       is_grab_out_link=is_grab_out_link, is_to_single_page=is_to_single_page,
+                                       is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
         messages.success(request, "提交成功")
-        return redirect("emailpage_model")
+        resp = redirect("emailpage_model")
+        resp.set_cookie("fuuid", file_id)
+        return resp
     else:
         return render(request, "emailpage_model.html", {"error": f.errors})
 
@@ -129,14 +139,18 @@ def get_web_template(request, template_id):
     return render(request, "get_template.html", {"template_id": template_id})
 
 
-# def status(request):
-#     total_task = SpiderTask.objects.filter(status__in=['I', 'P']).count()
-#     task_id = request.session.get("task_id")
-#     if task_id is not None:
-#         task_order = SpiderTask.objects.filter(id__lt=task_id, status__in=['I', 'P']).count()
-#         return render(request, 'status.html', {"total_task":total_task, "task_order":task_order, 'activate_status':'active'})
-#     else:
-#         return render(request, 'status.html', {"total_task": total_task, 'activate_status':'active'})
+def status(request):
+    max_task_id = __get_taskid_from_cache("max_task_id")
+    min_task_id = __get_min_task_id_from_cache()
+    cur_file_id = request.COOKIES.get("fuuid")  # file_id
+    if cur_file_id is None:
+        cur_file_id = 0
+    cur_task_id = __get_taskid_from_cache(cur_file_id)
+    total_task_cnt = max_task_id - min_task_id
+    cur_task_order = cur_task_id - min_task_id
+
+    return render(request, 'status.html',
+                  {"total_task": max(0, total_task_cnt), "task_order": max(0, cur_task_order)})
 
 
 def help(request):
@@ -185,4 +199,32 @@ def __save_task(seeds, client_ip, email, user_agent, encoding, is_grab_out_link,
         is_ref_model=is_ref_model,
         to_framework=to_framework
     )
-    return task.id
+    task_id = task.id
+    file_id = task.file_id
+    cache.set(file_id, task_id)
+    cache.set('max_task_id', task_id)  # 每当插入一个，就把这个当成最大的id
+    return task_id, file_id
+
+
+def __get_taskid_from_cache(key):
+    val = cache.get(key)
+    if val is None:
+        val = 0
+
+    return val
+
+
+def __get_min_task_id_from_cache():
+    """
+    获取当前处理完成的最新（大）一个task_id
+    如果缓存里不存在就从数据库里取，并设置超时时间为1分钟
+    select id, file_id,  from spider_task where status='C' order by gmt_modified desc limit 1;
+    :return:
+    """
+    task = SpiderTask.objects.filter(status='C').only("file_id").order_by("-gmt_modified")[0]
+    if task:
+        min_task_id = task.id
+        cache.set("min_task_id", min_task_id, timeout=60)
+    else:
+        min_task_id = 0
+    return min_task_id

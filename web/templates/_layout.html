@@ -16,7 +16,7 @@
     <meta charset="utf-8"/>
     <!-- Site Title -->
     <title>
-        Crafted Creative Agency
+        {% block title %}别人设计，我借鉴{% endblock %}
     </title>
     <link href="{% static 'css/css.css' %}" rel="stylesheet"/>
 
@@ -64,6 +64,11 @@
         <li>
             <a href="{% url 'ref_model' %}">
                 引用模版
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'status' %}">
+                任务状态
             </a>
         </li>
         <li>

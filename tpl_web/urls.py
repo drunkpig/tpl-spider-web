@@ -38,7 +38,7 @@ urlpatterns = [
     path('help', web_views.help, name='help'),
     path('contact', web_views.contact, name='contact'),
     path('get-web-template/<str:template_id>', web_views.get_web_template, name='get_template'),
-    # path('status', web_views.status, name='status'),
+    path('status', web_views.status, name='status'),
     url(r'^captcha/', include('captcha.urls')),
 ]
 
