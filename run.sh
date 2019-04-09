@@ -90,7 +90,7 @@ _start_core(){
     cd ${proj_dir}
     echo "start core ${proj_dir}"
     nohup python tpl-spider-core-main.py  ${TEMPLATE_BASE_DIR}> /dev/null  &
-    rm ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/tpl-spider-core-main.log || true
+    rm ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/tpl-spider-core.log || true
     ln -s ${proj_dir}/logs/tpl-spider-core.log  ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/tpl-spider-core.log
     cd ${pwdir}
 }
