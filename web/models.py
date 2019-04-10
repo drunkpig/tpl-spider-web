@@ -23,7 +23,7 @@ class SpiderTask(models.Model):
     is_ref_model = models.BooleanField(default=False) # 是否盗链模式
     to_framework = models.CharField(max_length=16, default='utf-8')  # 转化为哪种web框架的模版
     file_id = models.UUIDField(default=uuid.uuid4, editable=False)
-    result = models.TextField(max_length=128)
+    result = models.TextField(max_length=128, null=True)
     error = models.TextField(max_length=256, null=True)
     gmt_modified = models.DateTimeField(auto_now=True)
     gmt_created = models.DateTimeField(auto_now_add=True)

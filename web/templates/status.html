@@ -1,6 +1,3 @@
-
-
-
 {% extends "_layout.html" %}
 {% load static %}
 {% load i18n %}
@@ -15,10 +12,10 @@
                     <h2>
                         一共有{{ total_task }}个任务
                     </h2>
-<br/>
+                    <br/>
                     {% if task_order %}
                         <h2>您前面还有{{ task_order }}个任务</h2>
-                        {% else %}
+                    {% else %}
                         <h2>您没有运行的任务</h2>
                     {% endif %}
                 </div>
