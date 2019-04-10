@@ -36,7 +36,7 @@
 <!--================ Offcanvus Menu Area =================-->
 <div class="side_menu">
     <div class="logo">
-        <a href="index_0.html">
+        <a href="{% url 'index' %}">
             <img alt="" src="{% static 'img/logo.png' %}"/>
         </a>
     </div>
@@ -47,22 +47,22 @@
             </a>
         </li>
         <li>
-            <a href="{% url 'accurate_model' %}">
+            <a href="{% url 'accurate_template' %}">
                 精准模版
             </a>
         </li>
         <li>
-            <a href="{% url 'fullsite_model' %}">
+            <a href="{% url 'fullsite_template' %}">
                 全站模版
             </a>
         </li>
         <li>
-            <a href="{% url 'emailpage_model' %}">
+            <a href="{% url 'email_template' %}">
                 电邮模版
             </a>
         </li>
         <li>
-            <a href="{% url 'ref_model' %}">
+            <a href="{% url 'ref_template' %}">
                 引用模版
             </a>
         </li>
@@ -119,23 +119,23 @@
                     <div class="row">
                         <ul class="col footer-nav">
                             <li>
-                                <a href="{% url 'accurate_model' %}">
+                                <a href="{% url 'accurate_template' %}">
                                     精准模版
                                 </a>
                             </li>
 
                             <li>
-                                <a href="{% url 'fullsite_model' %}">
+                                <a href="{% url 'fullsite_template' %}">
                                     全站模版
                                 </a>
                             </li>
                             <li>
-                                <a href="{% url 'emailpage_model' %}">
+                                <a href="{% url 'email_template' %}">
                                     Email 模版
                                 </a>
                             </li>
                             <li>
-                                <a href="{% url 'ref_model' %}">
+                                <a href="{% url 'ref_template' %}">
                                     引用模版
                                 </a>
                             </li>

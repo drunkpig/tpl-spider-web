@@ -14,8 +14,8 @@ def index(request):
     return render(request, "index.html")
 
 
-def accurate_model(request):
-    return render(request, "accurate_model.html")
+def accurate_template(request):
+    return render(request, "accurate_template.html")
 
 
 def accurate_task(request):
@@ -36,15 +36,15 @@ def accurate_task(request):
                                        is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
 
         messages.success(request, "提交成功")
-        resp = redirect("accurate_model")
+        resp = redirect("accurate_template")
         resp.set_cookie("fuuid", file_id)
         return resp
     else:
-        return render(request, "accurate_model.html", {"error": f.errors})
+        return render(request, "accurate_template.html", {"error": f.errors})
 
 
-def ref_model(request):
-    return render(request, "ref_model.html")
+def ref_template(request):
+    return render(request, "ref_template.html")
 
 
 def ref_task(request):
@@ -64,15 +64,15 @@ def ref_task(request):
                                        is_grab_out_link=is_grab_out_link, is_to_single_page=is_to_single_page,
                                        is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
         messages.success(request, "提交成功")
-        resp = redirect("ref_model")
+        resp = redirect("ref_template")
         resp.set_cookie("fuuid", file_id)
         return resp
     else:
-        return render(request, "ref_model.html", {"error": f.errors})
+        return render(request, "ref_template.html", {"error": f.errors})
 
 
-def fullsite_model(request):
-    return render(request, "fullsite_model.html")
+def fullsite_template(request):
+    return render(request, "fullsite_template.html")
 
 
 def fullsite_task(request):
@@ -93,18 +93,18 @@ def fullsite_task(request):
                                        is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
 
         messages.success(request, "提交成功")
-        resp = redirect("fullsite_model")
+        resp = redirect("fullsite_template")
         resp.set_cookie("fuuid", file_id)
         return resp
     else:
-        return render(request, "fullsite_model.html", {"error": f.errors})
+        return render(request, "fullsite_template.html", {"error": f.errors})
 
 
-def emailpage_model(request):
-    return render(request, "emailpage_model.html")
+def email_template(request):
+    return render(request, "email_template.html")
 
 
-def emailpage_task(request):
+def email_task(request):
     f = TaskForm(request.POST)
     if f.is_valid():
         client_ip = __get_client_ip(request)
@@ -120,11 +120,11 @@ def emailpage_task(request):
                                        is_grab_out_link=is_grab_out_link, is_to_single_page=is_to_single_page,
                                        is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
         messages.success(request, "提交成功")
-        resp = redirect("emailpage_model")
+        resp = redirect("email_template")
         resp.set_cookie("fuuid", file_id)
         return resp
     else:
-        return render(request, "emailpage_model.html", {"error": f.errors})
+        return render(request, "email_template.html", {"error": f.errors})
 
 
 def contact(request):
