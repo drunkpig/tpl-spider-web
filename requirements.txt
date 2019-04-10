@@ -15,5 +15,6 @@ aiofiles
 gunicorn==19.9.0
 #ConcurrentLogHandler==0.9.1
 #pywin32
-django-simple-captcha
+#django-simple-captcha
 validators
+django-recaptcha==2.0.2

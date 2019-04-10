@@ -15,7 +15,7 @@ def index(request):
 
 
 def accurate_template(request):
-    return render(request, "accurate_template.html")
+    return render(request, "accurate_template.html", {"form": TaskForm()})
 
 
 def accurate_task(request):
@@ -40,11 +40,14 @@ def accurate_task(request):
         resp.set_cookie("fuuid", file_id)
         return resp
     else:
+        # messages.error(request, f.errors)
+        # resp = redirect("accurate_template.html")
+        # return resp
         return render(request, "accurate_template.html", {"error": f.errors})
 
 
 def ref_template(request):
-    return render(request, "ref_template.html")
+    return render(request, "ref_template.html", {"form": TaskForm()})
 
 
 def ref_task(request):
@@ -72,7 +75,7 @@ def ref_task(request):
 
 
 def fullsite_template(request):
-    return render(request, "fullsite_template.html")
+    return render(request, "fullsite_template.html", {"form": TaskForm()})
 
 
 def fullsite_task(request):
@@ -101,7 +104,7 @@ def fullsite_task(request):
 
 
 def email_template(request):
-    return render(request, "email_template.html")
+    return render(request, "email_template.html", {"form": TaskForm()})
 
 
 def email_task(request):

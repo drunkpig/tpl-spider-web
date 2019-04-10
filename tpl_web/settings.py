@@ -27,7 +27,9 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 # Application definition
-
+RECAPTCHA_PUBLIC_KEY = '6LcLhYUUAAAAAMUg4dhDzGWhp1_U8P6vE8uqZR2W'
+RECAPTCHA_PRIVATE_KEY = '6LcLhYUUAAAAAATpyYYv2u-PLyjhMnPyoz4D6kgi'
+RECAPTCHA_DOMAIN = 'www.recaptcha.net'
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -35,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'web',
     'captcha',
+    'web',
 ]
 
 MIDDLEWARE = [

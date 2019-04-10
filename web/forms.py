@@ -1,9 +1,10 @@
-from captcha.fields import CaptchaField
+#from captcha.fields import CaptchaField
+from captcha.widgets import ReCaptchaV3
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 import validators
 import json
-
+from captcha.fields import ReCaptchaField
 
 class UrlListField(forms.CharField):
     """
@@ -49,6 +50,8 @@ class TaskForm(forms.Form):
     is_to_single_page = forms.BooleanField(
         required=False,
     )
+
+    captcha = ReCaptchaField(widget=ReCaptchaV3)
 
     #
     # is_grab_out_link = forms.BooleanField(
