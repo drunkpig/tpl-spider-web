@@ -13,13 +13,6 @@
 
 {% block urls_input_area %}
     <div class="mt-10">
-        {% for msg in messages %}
-            <p class="mt5 text-success">{{ msg.message }}</p>
-        {% endfor %}
-
-        {% if error.seeds.0 %}
-            <p class="mt5 text-danger">{{ error.seeds.0 }}</p>
-        {% endif %}
         <input name="seeds" class="single-input-primary" type="text" placeholder="一个URL"
                onfocus="this.placeholder = ''"
                onblur="this.placeholder = '一个URL'" required="required"/>
@@ -29,28 +22,28 @@
 {% block craw_configuration %}
     <div class="mt-20 row">
         <div class="col-lg-6 col-md-6 switch-wrap d-flex justify-content-between">
-            <label for="is_grab_out_resource">&nbsp;&nbsp;抓取引用的资源</label>
+            <label class="ml-20" for="is_grab_out_resource">抓取引用的资源</label>
             <div class="confirm-switch">
                 <input name="is_grab_out_link" type="checkbox" id="is_grab_out_resource" disabled checked>
                 <label for="is_grab_out_resource"></label>
             </div>
         </div>
         <div class="col-lg-6 col-md-6 switch-wrap d-flex justify-content-between">
-            <label for="is_ref_resource">引用模式</label>
+            <label class="ml-20" for="is_ref_resource">引用模式</label>
             <div class="confirm-switch">
                 <input name="is_ref_model" type="checkbox" id="is_ref_resource" disabled>
                 <label for="is_ref_resource"></label>
             </div>
         </div>
         <div class="col-lg-6 col-md-6 switch-wrap d-flex justify-content-between">
-            <label for="is_full_site">&nbsp;&nbsp;是否抓全站</label>
+            <label class="ml-20" for="is_full_site">是否抓全站</label>
             <div class="confirm-switch">
                 <input name="is_full_site" type="checkbox" id="is_full_site" disabled>
                 <label for="is_full_site"></label>
             </div>
         </div>
         <div class="col-lg-6 col-md-6 switch-wrap d-flex justify-content-between">
-            <label for="is_email_template">是否压缩为Email模版</label>
+            <label class="ml-20" for="is_email_template">是否压缩为Email模版</label>
             <div class="confirm-switch">
                 <input name="is_to_single_page" type="checkbox" id="is_email_template" disabled checked>
                 <label for="is_email_template"></label>

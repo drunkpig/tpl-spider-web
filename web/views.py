@@ -15,119 +15,59 @@ def index(request):
 
 
 def accurate_template(request):
-    return render(request, "accurate_template.html", {"form": TaskForm()})
+    err = __get_error_message_from_session(request)
+    return render(request, "accurate_template.html", {"form": TaskForm(), "error":err})
 
 
 def accurate_task(request):
-    f = TaskForm(request.POST)
-    if f.is_valid():
-        client_ip = __get_client_ip(request)
-        seeds = f.cleaned_data['seeds']
-        email = f.cleaned_data['email']
-        to_framework = f.cleaned_data['to_framework']
-
-        is_grab_out_link = True
-        is_ref_model = False
-        is_full_site = False
-        is_to_single_page = False
-
-        task_id, file_id = __save_task(seeds=seeds, client_ip=client_ip, email=email, user_agent='pc', encoding='utf-8',
-                                       is_grab_out_link=is_grab_out_link, is_to_single_page=is_to_single_page,
-                                       is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
-
-        messages.success(request, "提交成功")
-        resp = redirect("accurate_template")
-        resp.set_cookie("fuuid", file_id)
-        return resp
-    else:
-        # messages.error(request, f.errors)
-        # resp = redirect("accurate_template.html")
-        # return resp
-        return render(request, "accurate_template.html", {"error": f.errors})
+    is_grab_out_link = True
+    is_ref_model = False
+    is_full_site = False
+    is_to_single_page = False
+    return __process_task(request, "accurate_template", is_grab_out_link=is_grab_out_link, is_ref_model=is_ref_model,
+                   is_full_site=is_full_site, is_to_single_page=is_to_single_page)
 
 
 def ref_template(request):
-    return render(request, "ref_template.html", {"form": TaskForm()})
+    err = __get_error_message_from_session(request)
+    return render(request, "ref_template.html", {"form": TaskForm(), "error":err})
 
 
 def ref_task(request):
-    f = TaskForm(request.POST)
-    if f.is_valid():
-        client_ip = __get_client_ip(request)
-        seeds = f.cleaned_data['seeds']
-        email = f.cleaned_data['email']
-        to_framework = f.cleaned_data['to_framework']
-
-        is_grab_out_link = False
-        is_ref_model = True
-        is_full_site = f.cleaned_data['is_full_site']
-        is_to_single_page = False
-
-        task_id, file_id = __save_task(seeds=seeds, client_ip=client_ip, email=email, user_agent='pc', encoding='utf-8',
-                                       is_grab_out_link=is_grab_out_link, is_to_single_page=is_to_single_page,
-                                       is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
-        messages.success(request, "提交成功")
-        resp = redirect("ref_template")
-        resp.set_cookie("fuuid", file_id)
-        return resp
-    else:
-        return render(request, "ref_template.html", {"error": f.errors})
+    is_grab_out_link = False
+    is_ref_model = True
+    is_full_site = None  # f.cleaned_data['is_full_site']
+    is_to_single_page = False
+    return __process_task(request, "ref_template", is_grab_out_link=is_grab_out_link, is_ref_model=is_ref_model,
+                   is_full_site=is_full_site, is_to_single_page=is_to_single_page)
 
 
 def fullsite_template(request):
-    return render(request, "fullsite_template.html", {"form": TaskForm()})
+    err = __get_error_message_from_session(request)
+    return render(request, "fullsite_template.html", {"form": TaskForm(), "error":err})
 
 
 def fullsite_task(request):
-    f = TaskForm(request.POST)
-    if f.is_valid('fullsite'):
-        client_ip = __get_client_ip(request)
-        seeds = f.cleaned_data['seeds']
-        email = f.cleaned_data['email']
-        to_framework = f.cleaned_data['to_framework']
-
-        is_grab_out_link = f.cleaned_data['is_grab_out_link']
-        is_ref_model = f.cleaned_data['is_ref_model']
-        is_full_site = True
-        is_to_single_page = False
-
-        task_id, file_id = __save_task(seeds=seeds, client_ip=client_ip, email=email, user_agent='pc', encoding='utf-8',
-                                       is_grab_out_link=is_grab_out_link, is_to_single_page=is_to_single_page,
-                                       is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
-
-        messages.success(request, "提交成功")
-        resp = redirect("fullsite_template")
-        resp.set_cookie("fuuid", file_id)
-        return resp
-    else:
-        return render(request, "fullsite_template.html", {"error": f.errors})
+    is_grab_out_link = None  # f.cleaned_data['is_grab_out_link']
+    is_ref_model = None  # f.cleaned_data['is_ref_model']
+    is_full_site = True
+    is_to_single_page = False
+    return __process_task(request, "fullsite_template", is_grab_out_link=is_grab_out_link, is_ref_model=is_ref_model,
+                          is_full_site=is_full_site, is_to_single_page=is_to_single_page)
 
 
 def email_template(request):
-    return render(request, "email_template.html", {"form": TaskForm()})
+    err = __get_error_message_from_session(request)
+    return render(request, "email_template.html", {"form": TaskForm(), "error":err})
 
 
 def email_task(request):
-    f = TaskForm(request.POST)
-    if f.is_valid():
-        client_ip = __get_client_ip(request)
-        seeds = f.cleaned_data['seeds']
-        email = f.cleaned_data['email']
-        to_framework = f.cleaned_data['to_framework']
-
-        is_grab_out_link = True
-        is_ref_model = False
-        is_full_site = False
-        is_to_single_page = True
-        task_id, file_id = __save_task(seeds=seeds, client_ip=client_ip, email=email, user_agent='pc', encoding='utf-8',
-                                       is_grab_out_link=is_grab_out_link, is_to_single_page=is_to_single_page,
-                                       is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
-        messages.success(request, "提交成功")
-        resp = redirect("email_template")
-        resp.set_cookie("fuuid", file_id)
-        return resp
-    else:
-        return render(request, "email_template.html", {"error": f.errors})
+    is_grab_out_link = True
+    is_ref_model = False
+    is_full_site = False
+    is_to_single_page = True
+    return __process_task(request, "email_template", is_grab_out_link=is_grab_out_link, is_ref_model=is_ref_model,
+                          is_full_site=is_full_site, is_to_single_page=is_to_single_page)
 
 
 def contact(request):
@@ -231,3 +171,49 @@ def __get_min_task_id_from_cache():
     else:
         min_task_id = 0
     return min_task_id
+
+
+def __process_task(request, template_name, **kwargs):
+    f = TaskForm(request.POST)
+    if f.is_valid():
+        client_ip = __get_client_ip(request)
+        seeds = f.cleaned_data['seeds']
+        email = f.cleaned_data['email']
+        to_framework = f.cleaned_data['to_framework']
+
+        is_grab_out_link = kwargs['is_grab_out_link']
+        if is_grab_out_link is None:
+            is_grab_out_link = f.cleaned_data['is_grab_out_link']
+        is_ref_model = kwargs['is_ref_model']
+        if is_ref_model is None:
+            is_ref_model = f.cleaned_data['is_ref_model']
+        is_full_site = kwargs['is_full_site']
+        if is_full_site is None:
+            is_full_site = f.cleaned_data['is_full_site']
+        is_to_single_page = kwargs['is_to_single_page']
+        if is_to_single_page is None:
+            is_to_single_page = f.cleaned_data['is_to_single_page']
+
+        task_id, file_id = __save_task(seeds=seeds, client_ip=client_ip, email=email, user_agent='pc', encoding='utf-8',
+                                       is_grab_out_link=is_grab_out_link, is_to_single_page=is_to_single_page,
+                                       is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
+
+        messages.success(request, "提交成功")
+        resp = redirect(template_name)
+        resp.set_cookie("fuuid", file_id)
+        return resp
+    else:
+        __set_error_message_form_session(request, f.errors)
+        resp = redirect(template_name)
+        return resp
+
+
+def __get_error_message_from_session(request):
+    err = request.session.get("_error")
+    if err:
+        del request.session['_error']
+    return err
+
+
+def __set_error_message_form_session(request, err):
+    request.session['_error'] = err

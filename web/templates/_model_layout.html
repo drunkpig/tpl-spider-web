@@ -1,4 +1,5 @@
 {% extends "_layout.html" %}
+{% debug %}
 {% load static %}
 {% load i18n %}
 {% block content %}
@@ -12,30 +13,34 @@
                             {% csrf_token %}
                             <div class="mt-20">
                                 <h3 class="mb-30 title_color">
-
                                     {% block craw_title %}
                                         模版抓取
                                     {% endblock %}
                                 </h3>
+                                {% for msg in messages %}
+                                    {% if msg.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                                        <p class="ml-20 mt5 text-success">{{ msg.message }}</p>
+                                    {% endif %}
+                                {% endfor %}
+
+                                {% if error.seeds.0 %}
+                                    <p class="ml-20 text-danger">{{ error.seeds.0 }}</p>
+                                {% endif %}
+                                {% if error.email.0 %}
+                                    <p class="ml-20 text-danger">{{ error.email.0 }}</p>
+                                {% endif %}
+
                             </div>
                             {% block urls_input_area %}
                                 <div class="mt-10">
-                                    {% for msg in messages %}
-                                        <p class="mt5 text-success">{{ msg.message }}</p>
-                                    {% endfor %}
 
-                                    {% if error.seeds.0 %}
-                                        <p class="text-danger">{{ error.seeds.0 }}</p>
-                                    {% endif %}
                                     <textarea name="seeds" class="single-textarea" placeholder="URL，每行一个"
                                               onfocus="this.placeholder = ''"
                                               onblur="this.placeholder = 'URL，每行一个'" required="required"></textarea>
                                 </div>
                             {% endblock %}
                             <div class="mt-10">
-                                {% if error.email.0 %}
-                                    <p class="mt-5 text-danger">{{ error.email.0 }}</p>
-                                {% endif %}
+
                                 <input type="text" name="email" placeholder="Email，接收模版下载地址"
                                        onfocus="this.placeholder = ''"
                                        onblur="this.placeholder = 'Email，接收模版下载地址'" required="required"
