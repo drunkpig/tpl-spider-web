@@ -1,107 +1,449 @@
-{% extends "bak/_layout.html" %}
+{% extends "_layout.html" %}
 {% load static %}
 {% load i18n %}
+
+{% block title %}帮助文档{% endblock %}
 {% block content %}
+    <!--================Home Banner Area =================-->
+    <section class="banner_area ">
+        <div class="banner_inner overlay d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content text-left">
+                    <div class="page_link">
+                        <a href="{% url 'index' %}">
+                            主页
+                        </a>
+                        <a href="{% url 'help' %}">
+                            帮助
+                        </a>
 
-
-<div class="bg-warning1 pt-3 bg-light" id="inner-2">
-    <div class="container d-flex flex-column pt-5">
-        <div class="row my-auto my-5 pt-5 pb-4">
-            <div class="col-lg-8 col-md-8 col-sm-12 mx-auto">
-                <h1 class="mb-2 font-weight-bold">
-                    {% trans '如何使用' %}
-                </h1>
-                <p class="lead text-secondary">
-                    {% trans '加速您的网站设计和开发' %}
-                </p>
+                    </div>
+                    <h2>
+                        帮助手册
+                    </h2>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="pt-5 pb-5 mb-2" id="content-14">
-    <div class="container pt-3">
-        <div class="row">
-            <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
-                <h2 class="display-4 mb-2">
-                    {% trans 'Template-spider的功能' %}
-                </h2>
-                <div class="mb-4" id="faq-collapse-1">
-                    <ul>
-                        <li>
-                            {% trans '借鉴别人的网站设计样式' %}
-                        </li>
-                        <li>
-                            {% trans '复用别人的网站模版加速开发' %}
-                        </li>
-                        <li>
-                            {% trans '收集漂亮的网站模版学习' %}
-                        </li>
-                    </ul>
+    </section>
+    <!--================End Home Banner Area =================-->
+    <!--================Blog Area =================-->
+    <section class="blog_area single-post-area section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 posts-list">
+                    <div class="single-post row">
+                        <div class="col-lg-12">
+                            <div class="feature-img">
+                                <img alt="" class="img-fluid" src="{% static 'img/feature-img1.jpg' %}"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                            <div class="blog_info text-right">
+                                <div class="post_tag">
+                                    <a href="#">
+                                        Food,
+                                    </a>
+                                    <a class="active" href="#">
+                                        Technology,
+                                    </a>
+                                    <a href="#">
+                                        Politics,
+                                    </a>
+                                    <a href="#">
+                                        Lifestyle
+                                    </a>
+                                </div>
+                                <ul class="blog_meta list">
+                                    <li>
+                                        <a href="#">
+                                            Mark wiens
+                                            <i class="lnr lnr-user">
+                                            </i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            12 Dec, 2017
+                                            <i class="lnr lnr-calendar-full">
+                                            </i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            1.2M Views
+                                            <i class="lnr lnr-eye">
+                                            </i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            06 Comments
+                                            <i class="lnr lnr-bubble">
+                                            </i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="social-links">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-facebook">
+                                            </i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter">
+                                            </i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-github">
+                                            </i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-behance">
+                                            </i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-9 blog_details">
+                            <h2>
+                                Astronomy Binoculars A Great Alternative
+                            </h2>
+                            <p class="excert">
+                                MCSE boot camps have its supporters and its detractors. Some people do not understand
+                                why you should have to spend money
+                                on boot camp when you can get the MCSE study materials yourself at a fraction.
+                            </p>
+                            <p>
+                                Boot camps have its supporters and its detractors. Some people do not understand why
+                                you should have to spend money on boot
+                                camp when you can get the MCSE study materials yourself at a fraction of the camp
+                                price.
+                                However, who has the willpower to actually sit through a self-imposed MCSE training.
+                                who
+                                has the willpower to actually sit through a self-imposed
+                            </p>
+                            <p>
+                                Boot camps have its supporters and its detractors. Some people do not understand why
+                                you should have to spend money on boot
+                                camp when you can get the MCSE study materials yourself at a fraction of the camp
+                                price.
+                                However, who has the willpower to actually sit through a self-imposed MCSE training.
+                                who
+                                has the willpower to actually sit through a self-imposed
+                            </p>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="quotes">
+                                MCSE boot camps have its supporters and its detractors. Some people do not understand
+                                why you should have to spend money
+                                on boot camp when you can get the MCSE study materials yourself at a fraction of the
+                                camp
+                                price. However, who has the willpower to actually sit through a self-imposed MCSE
+                                training.
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <img alt="" class="img-fluid" src="{% static 'img/post-img1.jpg' %}"/>
+                                </div>
+                                <div class="col-6">
+                                    <img alt="" class="img-fluid" src="{% static 'img/post-img2.jpg' %}"/>
+                                </div>
+                                <div class="col-lg-12 mt-25">
+                                    <p>
+                                        MCSE boot camps have its supporters and its detractors. Some people do not
+                                        understand why you should have to spend money
+                                        on boot camp when you can get the MCSE study materials yourself at a fraction
+                                        of
+                                        the camp price. However, who has the willpower.
+                                    </p>
+                                    <p>
+                                        MCSE boot camps have its supporters and its detractors. Some people do not
+                                        understand why you should have to spend money
+                                        on boot camp when you can get the MCSE study materials yourself at a fraction
+                                        of
+                                        the camp price. However, who has the willpower.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comments-area">
+                        <h4>
+                            05 Comments
+                        </h4>
+                        <div class="comment-list">
+                            <div class="single-comment justify-content-between d-flex">
+                                <div class="user justify-content-between d-flex">
+                                    <div class="thumb">
+                                        <img alt="" src="{% static 'img/c1.jpg' %}"/>
+                                    </div>
+                                    <div class="desc">
+                                        <h5>
+                                            <a href="#">
+                                                Emilly Blunt
+                                            </a>
+                                        </h5>
+                                        <p class="date">
+                                            December 4, 2017 at 3:12 pm
+                                        </p>
+                                        <p class="comment">
+                                            Never say goodbye till the end comes!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="reply-btn">
+                                    <a class="btn-reply text-uppercase" href="">
+                                        reply
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comment-list left-padding">
+                            <div class="single-comment justify-content-between d-flex">
+                                <div class="user justify-content-between d-flex">
+                                    <div class="thumb">
+                                        <img alt="" src="{% static 'img/c3.jpg' %}"/>
+                                    </div>
+                                    <div class="desc">
+                                        <h5>
+                                            <a href="#">
+                                                Annie Stephens
+                                            </a>
+                                        </h5>
+                                        <p class="date">
+                                            December 4, 2017 at 3:12 pm
+                                        </p>
+                                        <p class="comment">
+                                            Never say goodbye till the end comes!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="reply-btn">
+                                    <a class="btn-reply text-uppercase" href="">
+                                        reply
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-list">
+                            <div class="single-comment justify-content-between d-flex">
+                                <div class="user justify-content-between d-flex">
+                                    <div class="thumb">
+                                        <img alt="" src="{% static 'img/c4.jpg' %}"/>
+                                    </div>
+                                    <div class="desc">
+                                        <h5>
+                                            <a href="#">
+                                                Maria Luna
+                                            </a>
+                                        </h5>
+                                        <p class="date">
+                                            December 4, 2017 at 3:12 pm
+                                        </p>
+                                        <p class="comment">
+                                            Never say goodbye till the end comes!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="reply-btn">
+                                    <a class="btn-reply text-uppercase" href="">
+                                        reply
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-list">
+                            <div class="single-comment justify-content-between d-flex">
+                                <div class="user justify-content-between d-flex">
+                                    <div class="thumb">
+                                        <img alt="" src="{% static 'img/c5.jpg' %}"/>
+                                    </div>
+                                    <div class="desc">
+                                        <h5>
+                                            <a href="#">
+                                                Ina Hayes
+                                            </a>
+                                        </h5>
+                                        <p class="date">
+                                            December 4, 2017 at 3:12 pm
+                                        </p>
+                                        <p class="comment">
+                                            Never say goodbye till the end comes!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="reply-btn">
+                                    <a class="btn-reply text-uppercase" href="">
+                                        reply
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-form">
+                        <h4>
+                            Leave a Reply
+                        </h4>
+                        <form>
+                            <div class="form-group form-inline">
+                                <div class="form-group col-lg-6 col-md-6 name">
+                                    <input disabled class="form-control" id="name" onblur="this.placeholder = 'Enter Name'"
+                                           onfocus="this.placeholder = ''" placeholder="Enter Name" type="text"/>
+                                </div>
+                                <div class="form-group col-lg-6 col-md-6 email">
+                                    <input disabled class="form-control" id="email"
+                                           onblur="this.placeholder = 'Enter email address'"
+                                           onfocus="this.placeholder = ''" placeholder="Enter email address"
+                                           type="email"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input disabled class="form-control" id="subject" onblur="this.placeholder = 'Subject'"
+                                       onfocus="this.placeholder = ''" placeholder="Subject" type="text"/>
+                            </div>
+                            <div class="form-group">
+                                <textarea disabled class="form-control mb-10" name="message"
+                                          onblur="this.placeholder = 'Messege'" onfocus="this.placeholder = ''"
+                                          placeholder="Messege" required="" rows="5"></textarea>
+                            </div>
+                            <a disabled class="primary-btn submit_btn" href="#">
+                                Post Comment
+                            </a>
+                        </form>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
-                <h2 class="display-4 mb-2">
-                    {% trans '使用教程' %}
-                </h2>
-                <hr class="mt-3 mb-4"/>
-                <div class="mb-4" id="faq-collapse-1">
-                    <h5>
-                        <a aria-controls="collapse-1" aria-expanded="true" class="text-dark"
-                           data-toggle="collapse"
-                           href="bak/index_13.html">
-                            {% trans '第一步：找到一个喜欢的网站' %}
-                        </a>
-                    </h5>
-                    <p class="collapse m-3 p-0 mr-5 show" id="collapse-1">
-                        {% blocktrans %}
-                        在开发初试阶段您一定有一个漂亮的网站需要参考，比如 http://www.bootcss.com/p/lesscss/。
-                            您只需要把这个URL输入到网站的模版URL输入框里：
-                        {% endblocktrans %}
-                    <br>
-                        <img class="rounded  img-fluid" src="{% static 'img/tutorial/find_a_beautiful_web_site.png' %}"/>
-                    </p>
+                <div class="col-lg-4">
+                    <div class="blog_right_sidebar">
+                        <aside class="single_sidebar_widget search_widget">
+                            <div class="input-group">
+                                <input class="form-control" placeholder="Search Posts" type="text"/>
+                                <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+           <i class="lnr lnr-magnifier">
+           </i>
+          </button>
+         </span>
+                            </div>
+                            <!-- /input-group -->
+                            <div class="br">
+                            </div>
+                        </aside>
+                        <aside class="single_sidebar_widget author_widget">
+                            <img alt="" class="author_img rounded-circle" src="{% static 'img/author.png' %}"/>
+                            <h4>
+                                Charlie Barber
+                            </h4>
+                            <p>
+                                Senior blog writer
+                            </p>
+                            <div class="social_icon">
+                                <a href="#">
+                                    <i class="fa fa-facebook">
+                                    </i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-twitter">
+                                    </i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-github">
+                                    </i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-behance">
+                                    </i>
+                                </a>
+                            </div>
+                            <p>
+                                Boot camps have its supporters andit sdetractors. Some people do not understand why you
+                                should
+                                have to spend money on boot camp when you can get. Boot camps have itssuppor ters
+                                andits
+                                detractors.
+                            </p>
+                            <div class="br">
+                            </div>
+                        </aside>
+                        <aside class="single_sidebar_widget popular_post_widget">
+                            <h3 class="widget_title">
+                                Popular Posts
+                            </h3>
+                            <div class="media post_item">
+                                <img alt="post" src="{% static 'img/post1.jpg' %}"/>
+                                <div class="media-body">
+                                    <a href="https://technext.github.io/crafted/blog-details.html">
+                                        <h3>
+                                            Space The Final Frontier
+                                        </h3>
+                                    </a>
+                                    <p>
+                                        02 Hours ago
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="media post_item">
+                                <img alt="post" src="{% static 'img/post2.jpg' %}"/>
+                                <div class="media-body">
+                                    <a href="https://technext.github.io/crafted/blog-details.html">
+                                        <h3>
+                                            The Amazing Hubble
+                                        </h3>
+                                    </a>
+                                    <p>
+                                        02 Hours ago
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="media post_item">
+                                <img alt="post" src="{% static 'img/post3.jpg' %}"/>
+                                <div class="media-body">
+                                    <a href="https://technext.github.io/crafted/blog-details.html">
+                                        <h3>
+                                            Astronomy Or Astrology
+                                        </h3>
+                                    </a>
+                                    <p>
+                                        03 Hours ago
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="media post_item">
+                                <img alt="post" src="{% static 'img/post4.jpg' %}"/>
+                                <div class="media-body">
+                                    <a href="https://technext.github.io/crafted/blog-details.html">
+                                        <h3>
+                                            Asteroids telescope
+                                        </h3>
+                                    </a>
+                                    <p>
+                                        01 Hours ago
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="br">
+                            </div>
+                        </aside>
+                        <aside class="single_sidebar_widget ads_widget">
+                            <a href="#">
+                                <img alt="" class="img-fluid" src="{% static 'img/add.jpg' %}"/>
+                            </a>
+                            <div class="br">
+                            </div>
+                        </aside>
+
+                    </div>
                 </div>
-
-                <div class="mb-4" id="faq-collapse-1">
-                    <h5>
-                        <a aria-controls="collapse-1" aria-expanded="true" class="text-dark"
-                           data-toggle="collapse"
-                           href="bak/index_13.html">
-                            {% trans '第二步：输入接收邮箱地址并提交任务' %}
-
-                        </a>
-                    </h5>
-                    <p class="collapse m-3 p-0 mr-5 show" id="collapse-1">
-                        {% blocktrans %}
-                        模版的爬取和解析过程会比较慢，很多网站限制了访问的速度，因此如果您的模版包含的文件数目比较多，这会
-                            消耗比较多的时间。您需要输入你的Email地址，在模版准备好之后通过邮件通知您。
-                            <br>
-                            为了服务更多的人，我们规定每次您不能提交多于10个的模版URL，以免影响他人使用。
-                        {% endblocktrans %}
-                    </p>
-                </div>
-
-            <div class="mb-4" id="faq-collapse-1">
-                    <h5>
-                        <a aria-controls="collapse-1" aria-expanded="true" class="text-dark"
-                           data-toggle="collapse"
-                           href="bak/index_13.html">
-                            {% trans '捐献我们' %}
-
-                        </a>
-                    </h5>
-                    <p class="collapse m-3 p-0 mr-5 show" id="collapse-1">
-                        {% blocktrans %}
-                        如果您感觉本网站对您有用，请通过以下几种方式给我们捐献。您捐献的钱将会用于更强大的服务器和域名的购买。
-                        {% endblocktrans %}<br/>
-                    <img style="width: 200px;" class="rounded img-thumbnail  img-fluid" src="{% static 'img/alipay_donate.jpg' %}"/>
-                    <img style="width: 200px;" class="rounded img-thumbnail img-fluid" src="{% static 'img/wechatpay_donate.jpg' %}"/>
-                    </p>
-                </div>
-
             </div>
         </div>
-    </div>
-</div>
+    </section>
+    <!--================Blog Area =================-->
 {% endblock %}
-
