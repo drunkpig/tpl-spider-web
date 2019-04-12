@@ -24,10 +24,10 @@
                                 {% if error %}
                                     <div class="alert alert-danger" role="alert">
                                         {% if error.seeds.0 %}
-                                            <p>{{ error.seeds.0 }}</p>
+                                            <span>{{ error.seeds.0 }}</span><br>
                                         {% endif %}
                                         {% if error.email.0 %}
-                                            <p>{{ error.email.0 }}</p>
+                                            <span>{{ error.email.0 }}</span>
                                         {% endif %}</div>
                                 {% endif %}
 
