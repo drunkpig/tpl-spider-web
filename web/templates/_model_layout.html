@@ -18,15 +18,15 @@
                                 </h3>
                                 {% for msg in messages %}
                                     {% if msg.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
-                                        <p class="ml-20 mt5 text-success">{{ msg.message }}</p>
+                                        <div class="ml-20 mt5 alert alert-success" role="alert">{{ msg.message }}</div>
                                     {% endif %}
                                 {% endfor %}
 
                                 {% if error.seeds.0 %}
-                                    <p class="ml-20 text-danger">{{ error.seeds.0 }}</p>
+                                    <div class="ml-20 alert alert-danger" role="alert">{{ error.seeds.0 }}</div>
                                 {% endif %}
                                 {% if error.email.0 %}
-                                    <p class="ml-20 text-danger">{{ error.email.0 }}</p>
+                                    <div class="ml-20 alert alert-danger" role="alert">{{ error.email.0 }}</div>
                                 {% endif %}
 
                             </div>

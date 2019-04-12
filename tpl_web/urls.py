@@ -14,12 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf.urls import url
+from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.urls import path, include
 from web import views as web_views
 from web.error_views import page_not_found, page_error
 
-urlpatterns = [
+urlpatterns = i18n_patterns(
     path('i18n/', include('django.conf.urls.i18n')),
     path('admin/', admin.site.urls),
     path('', web_views.index, name='home'),
@@ -39,8 +40,8 @@ urlpatterns = [
     path('contact', web_views.contact, name='contact'),
     path('get-web-template/<str:template_id>', web_views.get_web_template, name='get_template'),
     path('status', web_views.status, name='status'),
-    # url(r'^captcha/', include('captcha.urls')),
-]
+    path('test', web_views.test, name="test"),
+)
 
 handler404 = page_not_found
 handler500 = page_error

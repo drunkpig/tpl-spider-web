@@ -37,11 +37,18 @@
 <body>
 <!--================ Offcanvus Menu Area =================-->
 <div class="side_menu">
-    <div class="logo">
+    <div class="row">
+        <div class="logo col-lg-6">
         <a href="{% url 'index' %}">
             <img alt="" src="{% static 'img/logo.png' %}"/>
         </a>
     </div>
+
+    <div class="col-lg-6">
+        {% include '_i18selector.html' %}
+    </div>
+    </div>
+
     <ul class="list menu-left">
         <li>
             <a href="{% url 'index' %}">
