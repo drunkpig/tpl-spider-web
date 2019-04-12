@@ -27,8 +27,12 @@
                                             <span>{{ error.seeds.0 }}</span><br>
                                         {% endif %}
                                         {% if error.email.0 %}
-                                            <span>{{ error.email.0 }}</span>
-                                        {% endif %}</div>
+                                            <span>{{ error.email.0 }}</span><br>
+                                        {% endif %}
+                                        {% if error.captcha.0 %}
+                                            <span>{{ error.captcha.0 }}</span>
+                                        {% endif %}
+                                    </div>
                                 {% endif %}
 
 
