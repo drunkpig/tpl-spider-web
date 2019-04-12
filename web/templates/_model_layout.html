@@ -21,13 +21,16 @@
                                         <div class="mt5 alert alert-success" role="alert">{{ msg.message }}</div>
                                     {% endif %}
                                 {% endfor %}
+                                {% if error %}
+                                    <div class="alert alert-danger" role="alert">
+                                        {% if error.seeds.0 %}
+                                            <p>{{ error.seeds.0 }}</p>
+                                        {% endif %}
+                                        {% if error.email.0 %}
+                                            <p>{{ error.email.0 }}</p>
+                                        {% endif %}</div>
+                                {% endif %}
 
-                                {% if error.seeds.0 %}
-                                    <div class="alert alert-danger" role="alert">{{ error.seeds.0 }}</div>
-                                {% endif %}
-                                {% if error.email.0 %}
-                                    <div class="alert alert-danger" role="alert">{{ error.email.0 }}</div>
-                                {% endif %}
 
                             </div>
                             {% block urls_input_area %}
