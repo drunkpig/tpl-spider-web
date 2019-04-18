@@ -41,6 +41,7 @@ urlpatterns = i18n_patterns(
     path('get-web-template/<str:template_id>', web_views.get_web_template, name='get_template'),
     path('status', web_views.status, name='status'),
     path('test', web_views.test, name="test"),
+    prefix_default_language=False,
 )
 
 handler404 = page_not_found

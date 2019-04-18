@@ -124,7 +124,7 @@ LANGUAGE_CODE = 'zh-hans'
 LANGUAGES = (
     ('en', ('English')),
     ('zh-hans', ('中文简体')),
-    ('zh-hant', ('中文繁體')),
+    # ('zh-hant', ('中文繁體')),
     ("de", ("德国")),
 )
 

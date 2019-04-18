@@ -1,11 +1,11 @@
 {% load i18n %}
-
+{% load mytags %}
 <div class="default-select" id="default-select">
     <div class="nice-select" tabindex="0">
         {% get_current_language as LANGUAGE_CODE %}
         {% get_language_info for LANGUAGE_CODE as lang %}
         <img class="niceCountryInputMenuCountryFlag"
-             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAUCAYAAAB8gkaAAAABSklEQVR4XmNgYGC4D8T/8eH9RGCGmQRwB8NvhlHLCGEMw9HxqGUwAw8LCPw/a2n5/5yNzf8Ljo7/T6qp0cgyZYb/R0xE/h8QYP5/wdvx/2Fp/v8nHJTB4tS1jJ3h/7lU6/8Hzdn+Xwh3+v9s+XQwDeKDxEHyGIajY6It02D4f77a9f+ZWNP/VxID/5/3dfh/JSH4/9lYM7A4SB7DcHRMrGVH3IT/n842+H/KS/v/jYbU/3emFPy/kh8K5oPEQfIYhqNjYi3brwRMHFFc/49Y8/y/WZ0OtCjo/7XyGDAfJA6SxzAcHRNtGRAfD1QABpvR/+Mmcv/PWVn9P2GuCOEDxUHyGIajY1Is2y/M8P+Ui87/t/t3/X+9cc3/t7s3/z9uJQ8Wp75lUHxUQgJMH+TgQBHHMBwdk2MZLoxhODoetQzdYGwYw3B0TG/LAEl+KaleNp9nAAAAAElFTkSuQmCC"/>
+             src="{% cache_get LANGUAGE_CODE %}"/>
         <span>{{ lang.name_local }} </span>
         <ul class="list">
             {% get_available_languages as LANGUAGES %}
@@ -15,7 +15,7 @@
                     {% language language.code %}
                         <a href="{% url ''|add:request.resolver_match.view_name %}">
                             <img class="niceCountryInputMenuCountryFlag"
-                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAUCAYAAAB8gkaAAAABSklEQVR4XmNgYGC4D8T/8eH9RGCGmQRwB8NvhlHLCGEMw9HxqGUwAw8LCPw/a2n5/5yNzf8Ljo7/T6qp0cgyZYb/R0xE/h8QYP5/wdvx/2Fp/v8nHJTB4tS1jJ3h/7lU6/8Hzdn+Xwh3+v9s+XQwDeKDxEHyGIajY6It02D4f77a9f+ZWNP/VxID/5/3dfh/JSH4/9lYM7A4SB7DcHRMrGVH3IT/n842+H/KS/v/jYbU/3emFPy/kh8K5oPEQfIYhqNjYi3brwRMHFFc/49Y8/y/WZ0OtCjo/7XyGDAfJA6SxzAcHRNtGRAfD1QABpvR/+Mmcv/PWVn9P2GuCOEDxUHyGIajY1Is2y/M8P+Ui87/t/t3/X+9cc3/t7s3/z9uJQ8Wp75lUHxUQgJMH+TgQBHHMBwdk2MZLoxhODoetQzdYGwYw3B0TG/LAEl+KaleNp9nAAAAAElFTkSuQmCC"/>
+                                 src="{% cache_get language.code %}"/>
                             <span>{{ language.name_local }} ({{ language.code }})</span>
                         </a>
                     {% endlanguage %}

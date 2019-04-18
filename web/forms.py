@@ -108,7 +108,5 @@ class TaskForm(forms.Form):
         b2 = self.__is_url_valid()
         b3 = True
         if check_model=='fullsite':
-
             b3 = self.__fullsite_model_option_verify()
-
         return b1 and b2 and b3
