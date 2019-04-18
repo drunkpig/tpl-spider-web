@@ -120,12 +120,18 @@ CACHES = {
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'zh-hans'
+LANGUAGE_CODE = 'en'
 LANGUAGES = (
-    ('en', ('English')),
+    ('en', ('英语')),
     ('zh-hans', ('中文简体')),
-    # ('zh-hant', ('中文繁體')),
+    ("fr", ("法语")),
+    ("es", ("西班牙")),
+    ("pt", ("葡萄牙")),
+    ("ru", ("俄罗斯")),
+    ("ar",("沙特阿拉伯")),
     ("de", ("德国")),
+    ("ja",("日本"))
+
 )
 
 # 翻译文件所在目录，需要手工创建

@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-11 20:17+0800\n"
+"POT-Creation-Date: 2019-04-18 19:50+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,136 +16,163 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: .\web\forms.py:37
-msgid "Yes"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: .\web\templates\404.html:22
+msgid "返回主页"
 msgstr ""
 
-#: .\web\forms.py:38
-msgid "No"
+#: .\web\templates\bak\_layout.html:38
+msgid "别人设计，我借鉴"
 msgstr ""
 
-#: .\web\templates\_layout.html:31
-msgid "others invent, we copy"
+#: .\web\templates\bak\_layout.html:62 .\web\templates\bak\_layout.html:126
+msgid "主页"
 msgstr ""
 
-#: .\web\templates\_layout.html:52 .\web\templates\_layout.html:111
-msgid "Home"
+#: .\web\templates\bak\_layout.html:68 .\web\templates\bak\_layout.html:131
+msgid "精品模版"
 msgstr ""
 
-#: .\web\templates\_layout.html:58
-msgid "Market"
+#: .\web\templates\bak\_layout.html:78 .\web\templates\bak\_layout.html:136
+msgid "使用说明"
 msgstr ""
 
-#: .\web\templates\_layout.html:63
-msgid "Help"
-msgstr ""
-
-#: .\web\templates\_layout.html:116
-msgid "market"
-msgstr ""
-
-#: .\web\templates\_layout.html:121
-msgid "help"
-msgstr ""
-
-#: .\web\templates\help.html:12
+#: .\web\templates\bak\help1.html:12
 msgid "如何使用"
 msgstr ""
 
-#: .\web\templates\help.html:15
+#: .\web\templates\bak\help1.html:15
 msgid "加速您的网站设计和开发"
 msgstr ""
 
-#: .\web\templates\help.html:26
+#: .\web\templates\bak\help1.html:26
 msgid "Template-spider的功能"
 msgstr ""
 
-#: .\web\templates\help.html:31
+#: .\web\templates\bak\help1.html:31
 msgid "借鉴别人的网站设计样式"
 msgstr ""
 
-#: .\web\templates\help.html:34
+#: .\web\templates\bak\help1.html:34
 msgid "复用别人的网站模版加速开发"
 msgstr ""
 
-#: .\web\templates\help.html:37
+#: .\web\templates\bak\help1.html:37
 msgid "收集漂亮的网站模版学习"
 msgstr ""
 
-#: .\web\templates\help.html:44
+#: .\web\templates\bak\help1.html:44
 msgid "使用教程"
 msgstr ""
 
-#: .\web\templates\help.html:52
+#: .\web\templates\bak\help1.html:52
 msgid "第一步：找到一个喜欢的网站"
 msgstr ""
 
-#: .\web\templates\help.html:56 .\web\templates\help.html:82
-#: .\web\templates\help.html:108
+#: .\web\templates\bak\help1.html:56
 msgid ""
 "\n"
-"                        Replacer is a library of 9 amazing HTML templates "
-"and 8 web pages made without any\n"
-"                        third-party\n"
-"                        plugins making it super easy to create and customize "
-"your own working websites in\n"
-"                        minutes.\n"
-"                        Replacer is suitable for all kind of modern web "
-"projects: landing and product pages,\n"
-"                        blogs,\n"
-"                        portfolios, eCommerce, business and corporate "
-"websites, marketing and advertising\n"
-"                        campaigns. Use\n"
-"                        Replacer as a starting point in your next project or "
-"choose predesigned elements to\n"
-"                        customize\n"
-"                        and shape it at your own will.\n"
+"                        在开发初试阶段您一定有一个漂亮的网站需要参考，比如 "
+"http://www.bootcss.com/p/lesscss/。\n"
+"                            您只需要把这个URL输入到网站的模版URL输入框里：\n"
 "                        "
 msgstr ""
 
-#: .\web\templates\help.html:77
-msgid "第二步：粘贴模版URL到 template-spider输入框"
+#: .\web\templates\bak\help1.html:70
+msgid "第二步：输入接收邮箱地址并提交任务"
 msgstr ""
 
-#: .\web\templates\help.html:103
-msgid "第三步：输入接收邮箱地址并提交任务"
+#: .\web\templates\bak\help1.html:75
+msgid ""
+"\n"
+"                        模版的爬取和解析过程会比较慢，很多网站限制了访问的速"
+"度，因此如果您的模版包含的文件数目比较多，这会\n"
+"                            消耗比较多的时间。您需要输入你的Email地址，在模版"
+"准备好之后通过邮件通知您。\n"
+"                            <br>\n"
+"                            为了服务更多的人，我们规定每次您不能提交多于10个"
+"的模版URL，以免影响他人使用。\n"
+"                        "
 msgstr ""
 
-#: .\web\templates\index-bak.html:33
+#: .\web\templates\bak\help1.html:89
+msgid "捐献我们"
+msgstr ""
+
+#: .\web\templates\bak\help1.html:94
+msgid ""
+"\n"
+"                        如果您感觉本网站对您有用，请通过以下几种方式给我们捐"
+"献。您捐献的钱将会用于更强大的服务器和域名的购买。\n"
+"                        "
+msgstr ""
+
+#: .\web\templates\bak\index-bak.html:33
 msgid "url list"
-msgstr "模版页面url"
+msgstr ""
 
-#: .\web\templates\index-bak.html:48
+#: .\web\templates\bak\index-bak.html:48
 msgid "encoding"
-msgstr "页面编码"
+msgstr ""
 
-#: .\web\templates\index-bak.html:54
+#: .\web\templates\bak\index-bak.html:54
 msgid "is grab outsite link"
 msgstr ""
 
-#: .\web\templates\index-bak.html:64 .\web\templates\index.html:51
+#: .\web\templates\bak\index-bak.html:64
 msgid "submit"
-msgstr "开始抓取"
-
-#: .\web\templates\index.html:14
-msgid "Accelerate your web design"
 msgstr ""
 
-#: .\web\templates\index.html:20
-msgid "Template URL list"
+#: .\web\templates\bak\index1.html:12
+msgid "网站模版爬虫"
 msgstr ""
 
-#: .\web\templates\index.html:25
-msgid "One  URL per line"
+#: .\web\templates\bak\index1.html:15
+msgid "加速您的网站设计"
 msgstr ""
 
-#: .\web\templates\index.html:37
-#, fuzzy
-#| msgid "encoding"
-msgid "Page encoding"
-msgstr "页面编码"
+#: .\web\templates\bak\index1.html:21
+msgid "模版URL"
+msgstr ""
 
-#: .\web\templates\index.html:43
-msgid "Grab external links"
+#: .\web\templates\bak\index1.html:26
+msgid "每行一个URL"
+msgstr ""
+
+#: .\web\templates\bak\index1.html:38
+msgid "网页编码"
+msgstr ""
+
+#: .\web\templates\bak\index1.html:44
+msgid "抓取外链"
+msgstr ""
+
+#: .\web\templates\bak\index1.html:61
+msgid "用来接收爬取结果"
+msgstr ""
+
+#: .\web\templates\bak\index1.html:76
+msgid "请输入验证码"
+msgstr ""
+
+#: .\web\templates\bak\index1.html:83
+msgid "开始抓取"
+msgstr ""
+
+#: .\web\templates\bak\index1.html:116
+msgid "提交成功"
+msgstr ""
+
+#: .\web\templates\bak\index1.html:122
+msgid ""
+"任务提交成功，模版下载地址会以邮件发送给您。</br>在任务完成之前您不能再次提交"
+"任务。"
+msgstr ""
+
+#: .\web\templates\bak\status.html:17
+msgid "任务状态"
+msgstr ""
+
+#: .\web\templates\bak\status.html:26
+msgid "您没有任务"
 msgstr ""
