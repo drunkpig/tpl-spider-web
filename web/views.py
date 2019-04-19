@@ -1,6 +1,6 @@
 from django.http import Http404
-from django.shortcuts import render, redirect, render_to_response
-import logging, json
+from django.shortcuts import render, redirect
+import logging
 from django.utils.translation import ugettext_lazy as _
 from web.forms import TaskForm
 from web.models import SpiderTask
@@ -203,7 +203,7 @@ def __process_task(request, template_name, **kwargs):
                                        is_grab_out_link=is_grab_out_link, is_to_single_page=is_to_single_page,
                                        is_full_site=is_full_site, is_ref_model=is_ref_model, to_framework=to_framework)
 
-        messages.success(request, "提交成功")
+        messages.success(request, _("提交成功"))
         resp = redirect(template_name)
         resp.set_cookie("fuuid", file_id)
         return resp

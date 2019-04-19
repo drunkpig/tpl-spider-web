@@ -40,17 +40,21 @@
                         <div class="col-lg-3 col-md-3">
                             <div class="blog_info text-right">
                                 <div class="post_tag">
+
                                     <a href="#">
-                                        Food,
-                                    </a>
-                                    <a class="active" href="#">
-                                        Technology,
+                                        网站模版
                                     </a>
                                     <a href="#">
-                                        Politics,
+                                        自适应
                                     </a>
                                     <a href="#">
-                                        Lifestyle
+                                        邮件模版
+                                    </a>
+                                    <a href="#">
+                                        免费模版
+                                    </a>
+                                    <a href="#">
+                                        网站模版
                                     </a>
                                 </div>
                                 <ul class="blog_meta list">
@@ -83,70 +87,44 @@
                                         </a>
                                     </li>
                                 </ul>
-                                <ul class="social-links">
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-facebook">
-                                            </i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-twitter">
-                                            </i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-github">
-                                            </i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-behance">
-                                            </i>
-                                        </a>
-                                    </li>
-                                </ul>
+
                             </div>
                         </div>
                         <div class="col-lg-9 col-md-9 blog_details">
                             <h2>
-                                Astronomy Binoculars A Great Alternative
+                                我们让制作网站模版从未如此快速
                             </h2>
                             <p class="excert">
-                                MCSE boot camps have its supporters and its detractors. Some people do not understand
-                                why you should have to spend money
-                                on boot camp when you can get the MCSE study materials yourself at a fraction.
+                                有没有想过，全球上千万个网站，是百万设计师花费时间精心设计才展现在你眼前的。
+                                太阳底下没有新鲜事，如果你有一个需求，那么借鉴和复用是最快的实现方法。为此 <a
+                                    href="{% url 'index' %}">template-spider.com</a>
+                                专门设计了变网页为网站模版的工具。
                             </p>
                             <p>
-                                Boot camps have its supporters and its detractors. Some people do not understand why
-                                you should have to spend money on boot
-                                camp when you can get the MCSE study materials yourself at a fraction of the camp
-                                price.
-                                However, who has the willpower to actually sit through a self-imposed MCSE training.
-                                who
-                                has the willpower to actually sit through a self-imposed
+                                我们为4种常见场景设计了不同的模版生成方法：
+                            <ul>
+                            <li><b>精准抓取</b>&nbsp;&nbsp;在使用精准模版抓取的时候，<a href="{% url 'accurate_template' %}">精准模版抓取</a>服务只会抓您提供的URL，以及和URL相关的图片，css,js，字体文件等。
+                                这些资源被抓取到本地并放入到不同的文件夹下进行归类。</li>
+                            <li><b>全站模版</b>&nbsp;&nbsp;对于<a href="{% url 'fullsite_template' %}">全站模版</a>来说您只需要输入一个URL，那么这个URL以及这个URL层级以下的html都会被制作成模版。
+                                图片，css,js您可以选择下载或者使用网络位置进行引用。</li>
+                            <li><b>电邮模版</b>&nbsp;&nbsp;对于<a href="{% url 'email_template' %}">电子邮件模版</a>，服务会直接把页面包含的图片，css,js，字体文件压缩在一个html页面内。
+                                这样在用户收到您的邮件时候不至于会被屏蔽图片等，格式更加精美。</li>
+                            <li><b>引用模版</b>&nbsp;&nbsp;如果您的服务器带宽较小，您可以使用这种<a href="{% url 'ref_template' %}">引用模式</a>。引用模式会把css,js，字体文件等使用网络地址，
+                                这样您不需要花费额外的带宽费用。</li>
+                            </ul>
                             </p>
                             <p>
-                                Boot camps have its supporters and its detractors. Some people do not understand why
-                                you should have to spend money on boot
-                                camp when you can get the MCSE study materials yourself at a fraction of the camp
-                                price.
-                                However, who has the willpower to actually sit through a self-imposed MCSE training.
-                                who
-                                has the willpower to actually sit through a self-imposed
+                                <a href="{% url 'index' %}">template-spider.com</a> 提供的远不止如此。一般的模版网站提供的模版
+                                需要程序员画大量精力针对自己所使用的web开发框架进行修改，浪费时间。
+                                我们提供的模版生成工具可以直接自动把模版转化为你需要支持的web框架格式。例如django，cakePHP等。
                             </p>
                         </div>
                         <div class="col-lg-12">
                             <div class="quotes">
-                                MCSE boot camps have its supporters and its detractors. Some people do not understand
-                                why you should have to spend money
-                                on boot camp when you can get the MCSE study materials yourself at a fraction of the
-                                camp
-                                price. However, who has the willpower to actually sit through a self-imposed MCSE
-                                training.
+                                使用方法很简单，根据您的需求选择哪种模版抓取方式。然后输入您看中的网站的URL、和电子邮件。
+                                然后稍等5分钟，我们会把结果发送到您的Email。<br>
+                                填写email的目的是因为模版的抓取会排队（有许多其他的人也在使用这个服务）和消耗几分钟时间，在次期间您可以关闭网页离开网站。
+                                您可以在 <a href="{% url 'status' %}">任务状态</a>页面看到当前排队的模版抓取任务数量和您的排号。
                             </div>
                             <div class="row">
                                 <div class="col-6">
@@ -157,19 +135,9 @@
                                 </div>
                                 <div class="col-lg-12 mt-25">
                                     <p>
-                                        MCSE boot camps have its supporters and its detractors. Some people do not
-                                        understand why you should have to spend money
-                                        on boot camp when you can get the MCSE study materials yourself at a fraction
-                                        of
-                                        the camp price. However, who has the willpower.
+                                        HTML技术处于飞速发展中，我们的服务会存在各种未知的BUG。
                                     </p>
-                                    <p>
-                                        MCSE boot camps have its supporters and its detractors. Some people do not
-                                        understand why you should have to spend money
-                                        on boot camp when you can get the MCSE study materials yourself at a fraction
-                                        of
-                                        the camp price. However, who has the willpower.
-                                    </p>
+
                                 </div>
                             </div>
                         </div>
@@ -177,7 +145,7 @@
 
                     <div class="comments-area">
                         <h4>
-                            05 Comments
+                            评论区
                         </h4>
                         <div class="comment-list">
                             <div class="single-comment justify-content-between d-flex">
@@ -195,7 +163,7 @@
                                             December 4, 2017 at 3:12 pm
                                         </p>
                                         <p class="comment">
-                                            Never say goodbye till the end comes!
+                                            非常棒的免费模版，输入URL我就得到了模版素材。
                                         </p>
                                     </div>
                                 </div>
@@ -223,7 +191,7 @@
                                             December 4, 2017 at 3:12 pm
                                         </p>
                                         <p class="comment">
-                                            Never say goodbye till the end comes!
+                                            自动把css,js,集中到了一个模版中，这样我发送email时候可以在邮箱里显示了，最棒的是图片也被压缩为base64!真的厉害。
                                         </p>
                                     </div>
                                 </div>
@@ -250,7 +218,7 @@
                                             December 4, 2017 at 3:12 pm
                                         </p>
                                         <p class="comment">
-                                            Never say goodbye till the end comes!
+                                            图片，js, css被放入在不同目录里，井井有条，稍加修改就可以使用了。完全免费。
                                         </p>
                                     </div>
                                 </div>
@@ -277,7 +245,7 @@
                                             December 4, 2017 at 3:12 pm
                                         </p>
                                         <p class="comment">
-                                            Never say goodbye till the end comes!
+                                            模版可以被转换为支持django, symfony, cakephp等模版，这个简直是独创。
                                         </p>
                                     </div>
                                 </div>
@@ -291,12 +259,13 @@
                     </div>
                     <div class="comment-form">
                         <h4>
-                            Leave a Reply
+                            留言
                         </h4>
                         <form>
                             <div class="form-group form-inline">
                                 <div class="form-group col-lg-6 col-md-6 name">
-                                    <input disabled class="form-control" id="name" onblur="this.placeholder = 'Enter Name'"
+                                    <input disabled class="form-control" id="name"
+                                           onblur="this.placeholder = 'Enter Name'"
                                            onfocus="this.placeholder = ''" placeholder="Enter Name" type="text"/>
                                 </div>
                                 <div class="form-group col-lg-6 col-md-6 email">
@@ -323,114 +292,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="blog_right_sidebar">
-                        <aside class="single_sidebar_widget search_widget">
-                            <div class="input-group">
-                                <input class="form-control" placeholder="Search Posts" type="text"/>
-                                <span class="input-group-btn">
-           <i class="lnr lnr-magnifier">
-           </i>
-          </button>
-         </span>
-                            </div>
-                            <!-- /input-group -->
-                            <div class="br">
-                            </div>
-                        </aside>
-                        <aside class="single_sidebar_widget author_widget">
-                            <img alt="" class="author_img rounded-circle" src="{% static 'img/author.png' %}"/>
-                            <h4>
-                                Charlie Barber
-                            </h4>
-                            <p>
-                                Senior blog writer
-                            </p>
-                            <div class="social_icon">
-                                <a href="#">
-                                    <i class="fa fa-facebook">
-                                    </i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-twitter">
-                                    </i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-github">
-                                    </i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-behance">
-                                    </i>
-                                </a>
-                            </div>
-                            <p>
-                                Boot camps have its supporters andit sdetractors. Some people do not understand why you
-                                should
-                                have to spend money on boot camp when you can get. Boot camps have itssuppor ters
-                                andits
-                                detractors.
-                            </p>
-                            <div class="br">
-                            </div>
-                        </aside>
-                        <aside class="single_sidebar_widget popular_post_widget">
-                            <h3 class="widget_title">
-                                Popular Posts
-                            </h3>
-                            <div class="media post_item">
-                                <img alt="post" src="{% static 'img/post1.jpg' %}"/>
-                                <div class="media-body">
-                                    <a href="https://technext.github.io/crafted/blog-details.html">
-                                        <h3>
-                                            Space The Final Frontier
-                                        </h3>
-                                    </a>
-                                    <p>
-                                        02 Hours ago
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img alt="post" src="{% static 'img/post2.jpg' %}"/>
-                                <div class="media-body">
-                                    <a href="https://technext.github.io/crafted/blog-details.html">
-                                        <h3>
-                                            The Amazing Hubble
-                                        </h3>
-                                    </a>
-                                    <p>
-                                        02 Hours ago
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img alt="post" src="{% static 'img/post3.jpg' %}"/>
-                                <div class="media-body">
-                                    <a href="https://technext.github.io/crafted/blog-details.html">
-                                        <h3>
-                                            Astronomy Or Astrology
-                                        </h3>
-                                    </a>
-                                    <p>
-                                        03 Hours ago
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img alt="post" src="{% static 'img/post4.jpg' %}"/>
-                                <div class="media-body">
-                                    <a href="https://technext.github.io/crafted/blog-details.html">
-                                        <h3>
-                                            Asteroids telescope
-                                        </h3>
-                                    </a>
-                                    <p>
-                                        01 Hours ago
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="br">
-                            </div>
-                        </aside>
+
                         <aside class="single_sidebar_widget ads_widget">
                             <a href="#">
                                 <img alt="" class="img-fluid" src="{% static 'img/add.jpg' %}"/>

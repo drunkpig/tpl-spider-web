@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,8 +17,23 @@
     <meta charset="utf-8"/>
     <!-- Site Title -->
     <title>
-        {% block title %}别人设计，我借鉴{% endblock %}
+        {% block title %}
+            {% trans '别人设计，我借鉴' %}
+        {% endblock %}
     </title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138680237-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138680237-1');
+    </script>
     <link href="{% static 'css/css.css' %}" rel="stylesheet"/>
 
     <link href="{% static 'css/linearicons.css' %}" rel="stylesheet"/>
@@ -35,59 +51,63 @@
     </style>
 </head>
 <body>
+
 <!--================ Offcanvus Menu Area =================-->
 <div class="side_menu">
     <div class="row">
         <div class="logo col-lg-6">
-        <a href="{% url 'index' %}">
-            <img alt="" src="{% static 'img/logo.png' %}"/>
-        </a>
-    </div>
+            <a href="{% url 'index' %}">
+                <img alt="" src="{% static 'img/logo.png' %}"/>
+            </a>
+        </div>
 
-    <div class="col-lg-6">
-        {% include '_i18selector.html' %}
-    </div>
+        <div class="col-lg-6">
+            {% include '_i18selector.html' %}
+        </div>
     </div>
 
     <ul class="list menu-left">
         <li>
             <a href="{% url 'index' %}">
-                主&nbsp;&nbsp;&nbsp;&nbsp;页
+                {% trans '主&nbsp;&nbsp;&nbsp;&nbsp;页' %}
+
             </a>
         </li>
         <li>
             <a href="{% url 'accurate_template' %}">
-                精准模版
+                {% trans '精准模版' %}
             </a>
         </li>
         <li>
             <a href="{% url 'fullsite_template' %}">
-                全站模版
+
+                {% trans '全站模版' %}
             </a>
         </li>
         <li>
             <a href="{% url 'email_template' %}">
-                电邮模版
+                {% trans '电邮模版' %}
             </a>
         </li>
         <li>
             <a href="{% url 'ref_template' %}">
-                引用模版
+                {% trans '引用模版' %}
             </a>
         </li>
         <li>
             <a href="{% url 'status' %}">
-                任务状态
+                {% trans '任务状态' %}
             </a>
         </li>
         <li>
             <a href="{% url 'help' %}">
-                帮助手册
+                {% trans '帮助手册' %}
+
             </a>
         </li>
         <li>
             <a href="{% url 'contact' %}">
-                联系我们
+                {% trans '联系我们' %}
             </a>
         </li>
     </ul>
@@ -116,36 +136,40 @@
                         About Us
                     </h6>
                     <p>
-                        有一天我突发奇想，全世界那么多网站，费尽那么多设计师的打磨，不就是最宝贵的的资源吗？
+                        {% trans '有一天我突发奇想，全世界那么多网站，费尽那么多设计师的打磨，不就是最宝贵的的资源吗？' %}
+
                     </p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-footer-widget">
                     <h6>
-                        站点导航
+                        {% trans '站点导航' %}
+
                     </h6>
                     <div class="row">
                         <ul class="col footer-nav">
                             <li>
                                 <a href="{% url 'accurate_template' %}">
-                                    精准模版
+                                    {% trans '精准模版' %}
+
                                 </a>
                             </li>
 
                             <li>
                                 <a href="{% url 'fullsite_template' %}">
-                                    全站模版
+                                    {% trans '全站模版' %}
                                 </a>
                             </li>
                             <li>
                                 <a href="{% url 'email_template' %}">
-                                    Email 模版
+                                    {% trans 'Email 模版' %}
                                 </a>
                             </li>
                             <li>
                                 <a href="{% url 'ref_template' %}">
-                                    引用模版
+                                    {% trans '引用模版' %}
+
                                 </a>
                             </li>
                         </ul>
@@ -153,12 +177,14 @@
 
                             <li>
                                 <a href="{% url 'help' %}">
-                                    在线帮助
+                                    {% trans '在线帮助' %}
+
                                 </a>
                             </li>
                             <li>
                                 <a href="{% url 'contact' %}">
-                                    联系我们
+                                    {% trans '联系我们' %}
+
                                 </a>
                             </li>
                         </ul>

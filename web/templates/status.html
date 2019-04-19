@@ -2,7 +2,7 @@
 {% load static %}
 {% load i18n %}
 
-{% block title %}任务状态{% endblock %}
+{% block title %}{% trans '任务状态' %}{% endblock %}
 {% block content %}
     <section class="banner_area ">
         <div class="banner_inner overlay d-flex align-items-center">
@@ -10,13 +10,13 @@
                 <div class="banner_content text-left">
 
                     <h2>
-                        一共有{{ total_task }}个任务
+                        {% trans '全部任务数量' %}{{ total_task }}
                     </h2>
                     <br/>
                     {% if task_order %}
-                        <h2>您前面还有{{ task_order }}个任务</h2>
+                        <h2>{% trans '您前面的任务数量' %}{{ task_order }}</h2>
                     {% else %}
-                        <h2>您没有运行的任务</h2>
+                        <h2>{% trans '您没有运行的任务' %}</h2>
                     {% endif %}
                 </div>
                 <div class="mt-30">

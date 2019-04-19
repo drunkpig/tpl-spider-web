@@ -13,7 +13,7 @@
                             <div class="mt-20">
                                 <h3 class="mb-30 title_color">
                                     {% block craw_title %}
-                                        模版抓取
+                                        {% trans '模版抓取' %}
                                     {% endblock %}
                                 </h3>
                                 {% for msg in messages %}
@@ -39,18 +39,17 @@
                             </div>
                             {% block urls_input_area %}
                                 <div class="mt-10">
-
-                                    <textarea name="seeds" class="single-textarea" placeholder="URL，每行一个"
+                                    <textarea name="seeds" class="single-textarea" placeholder=""
                                               onfocus="this.placeholder = ''"
-                                              onblur="this.placeholder = 'URL，每行一个'" required="required"></textarea>
+                                              onblur="this.placeholder = '{% trans 'URL，每行一个' %}'" required="required"></textarea>
                                 </div>
                             {% endblock %}
                             <div class="mt-10">
 
-                                <input type="text" name="email" placeholder="Email，接收模版下载地址" autocomplete="off"
+                                <input type="text" name="email" placeholder="{% trans 'Email，接收模版下载地址' %}" autocomplete="off"
                                        autocomplete="nope"
                                        onfocus="this.placeholder = ''"
-                                       onblur="this.placeholder = 'Email，接收模版下载地址'" required="required"
+                                       onblur="this.placeholder = '{% trans 'Email，接收模版下载地址' %}'" required="required"
                                        class="single-input-primary">
                             </div>
                             <div class="mt-10">
@@ -58,15 +57,15 @@
                                     <div class="icon"><i class="fa fa-gear" aria-hidden="true"></i></div>
                                     <div class="form-select">
                                         <select name="to_framework" style="display: none;">
-                                            <option value="NONE">转化为Web框架</option>
+                                            <option value="NONE">{% trans '转化为Web框架（可选）' %}</option>
                                             <option value="django">Django</option>
                                             <option value="flask">Flask</option>
                                             <option value="symfony">Symfony</option>
                                             <option value="rails">Rails</option>
                                         </select>
-                                        <div class="nice-select" tabindex="0"><span class="current">转化为Web框架（可选）</span>
+                                        <div class="nice-select" tabindex="0"><span class="current">{% trans '转化为Web框架（可选）' %}</span>
                                             <ul class="list">
-                                                <li data-value="NONE" class="option selected focus">转化为Web框架（可选）</li>
+                                                <li data-value="NONE" class="option selected focus">{% trans '转化为Web框架（可选）' %}</li>
                                                 <li data-value="django" class="option">django</li>
                                                 <li data-value="flask" class="option">flask</li>
                                                 <li data-value="symfony" class="option">symfony</li>

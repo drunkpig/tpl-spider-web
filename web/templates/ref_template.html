@@ -3,7 +3,7 @@
 {% load i18n %}
 
 {% block craw_title %}
-    引用模版抓取
+    {% trans '引用模版抓取' %}
 {% endblock %}
 
 {% block submit_url %}
@@ -13,28 +13,28 @@
 {% block craw_configuration %}
     <div class="mt-20 row">
         <div class="col-lg-6 col-md-6 switch-wrap d-flex justify-content-between">
-            <label class="ml-20" for="is_grab_out_resource">抓取引用的资源</label>
+            <label class="ml-20" for="is_grab_out_resource">{% trans '抓取引用的资源' %}</label>
             <div class="confirm-switch">
                 <input name="is_grab_out_link" type="checkbox" id="is_grab_out_resource" disabled>
                 <label for="is_grab_out_resource"></label>
             </div>
         </div>
         <div class="col-lg-6 col-md-6 switch-wrap d-flex justify-content-between">
-            <label class="ml-20" for="is_ref_resource">引用模式</label>
+            <label class="ml-20" for="is_ref_resource">{% trans '引用模式' %}</label>
             <div class="confirm-switch">
                 <input name="is_ref_model" type="checkbox" id="is_ref_resource" disabled checked>
                 <label for="is_ref_resource"></label>
             </div>
         </div>
         <div class="col-lg-6 col-md-6 switch-wrap d-flex justify-content-between">
-            <label class="ml-20" for="is_full_site"><b>是否抓全站</b></label>
+            <label class="ml-20" for="is_full_site"><b>{% trans '是否抓全站' %}</b></label>
             <div class="confirm-switch">
                 <input name="is_full_site" type="checkbox" id="is_full_site">
                 <label for="is_full_site"></label>
             </div>
         </div>
         <div class="col-lg-6 col-md-6 switch-wrap d-flex justify-content-between">
-            <label class="ml-20" for="is_email_template">是否压缩为Email模版</label>
+            <label class="ml-20" for="is_email_template">{% trans '是否压缩为Email模版' %}</label>
             <div class="confirm-switch">
                 <input name="is_to_single_page" type="checkbox" id="is_email_template" disabled>
                 <label for="is_email_template"></label>

@@ -10,4 +10,4 @@ def page_error(request): # 500
 
 
 def permission_denied(request):
-    return render(request, '403.html')
+    return render(request, '404.html')
