@@ -82,3 +82,7 @@ https://elements.envato.com/binmp-app-and-software-landing-html-template-FD8QMQ
 
 https://themeforest.net/
 https://onepagelove.com/fusion-lite
+
+
+## 参考
+- i18n https://juejin.im/post/5b3efc36e51d45197136eb09

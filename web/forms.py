@@ -78,11 +78,11 @@ class TaskForm(forms.Form):
             for u in lst:
                 b = b and validators.url(u)
                 if not b:
-                    self.add_error("seeds", _("URL format error"))
+                    self.add_error("seeds", _("URL 格式错误"))
                     return b
             return b
         except:
-            self.add_error("seeds", _("URL format error"))
+            self.add_error("seeds", _("URL 格式错误"))
             return False
 
     def __fullsite_model_option_verify(self):
@@ -95,10 +95,10 @@ class TaskForm(forms.Form):
         is_ref_model = self.cleaned_data['is_ref_model']
 
         if is_grab_out_link is None and is_ref_model is None:
-            self.add_error("is_grab_out_link", _("抓取引用的资源]和[是否引用外部资源]需要互斥"))
+            self.add_error("is_grab_out_link", _("[抓取引用的资源]和[是否引用外部资源]需要互斥"))
             return False
         elif is_grab_out_link == is_ref_model:
-            self.add_error("is_grab_out_link", _("抓取引用的资源]和[是否引用外部资源]需要互斥"))
+            self.add_error("is_grab_out_link", _("[抓取引用的资源]和[是否引用外部资源]需要互斥"))
             return False
 
         return True
