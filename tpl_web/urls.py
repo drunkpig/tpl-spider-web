@@ -21,7 +21,7 @@ from web import views as web_views
 from web.error_views import page_not_found, page_error
 
 urlpatterns = i18n_patterns(
-    path('i18n/', include('django.conf.urls.i18n')),
+    #path('i18n/', include('django.conf.urls.i18n')),
     path('admin/', admin.site.urls),
     path('', web_views.index, name='home'),
     path('index', web_views.index, name='index'),

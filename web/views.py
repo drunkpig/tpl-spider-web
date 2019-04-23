@@ -169,7 +169,7 @@ def __get_min_task_id_from_cache():
     select id, file_id,  from spider_task where status='C' order by gmt_modified desc limit 1;
     :return:
     """
-    task = SpiderTask.objects.filter(status='C').only("file_id").order_by("-gmt_modified")[0]
+    task = SpiderTask.objects.filter(status='C').only("file_id").order_by("-gmt_modified").first()
     if task:
         min_task_id = task.id
         cache.set("min_task_id", min_task_id, timeout=60)

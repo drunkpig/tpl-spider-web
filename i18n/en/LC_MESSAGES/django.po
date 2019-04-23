@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-23 19:14+0800\n"
+"POT-Creation-Date: 2019-04-23 20:20+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,24 +42,28 @@ msgid "精准模版"
 msgstr "standard web template"
 
 #: web/templates/_layout.html:84 web/templates/_layout.html:161
-#: web/templates/fullsite_template.html:6 web/templates/index.html:99
+#: web/templates/fullsite_template.html:6 web/templates/help.html:112
+#: web/templates/index.html:99
 msgid "全站模版"
 msgstr "full site web template"
 
-#: web/templates/_layout.html:89 web/templates/index.html:117
+#: web/templates/_layout.html:89 web/templates/help.html:114
+#: web/templates/index.html:117
 msgid "电邮模版"
 msgstr "email template"
 
 #: web/templates/_layout.html:94 web/templates/_layout.html:171
-#: web/templates/index.html:135
+#: web/templates/help.html:116 web/templates/index.html:135
 msgid "引用模版"
 msgstr "reference template"
 
-#: web/templates/_layout.html:99 web/templates/status.html:5
+#: web/templates/_layout.html:99 web/templates/help.html:138
+#: web/templates/status.html:5
 msgid "任务状态"
 msgstr "task status"
 
-#: web/templates/_layout.html:104 web/templates/index.html:29
+#: web/templates/_layout.html:104 web/templates/help.html:22
+#: web/templates/index.html:29
 msgid "帮助手册"
 msgstr "online help"
 
@@ -110,7 +114,13 @@ msgstr "email, accept web template download link"
 msgid "转化为Web框架（可选）"
 msgstr "support web framework(optional)"
 
-#: web/templates/accurate_template.html:5
+#: web/templates/_model_layout.html:83
+#, fuzzy
+#| msgid "提交成功"
+msgid "提交"
+msgstr "Submit "
+
+#: web/templates/accurate_template.html:5 web/templates/help.html:110
 msgid "精准模版抓取"
 msgstr "standard web template crawl"
 
@@ -141,6 +151,107 @@ msgstr "email template"
 #: web/templates/get_template.html:19
 msgid "下载模版"
 msgstr "download"
+
+#: web/templates/help.html:5
+msgid "帮助文档"
+msgstr ""
+
+#: web/templates/help.html:14
+msgid "主页"
+msgstr ""
+
+#: web/templates/help.html:17
+#, fuzzy
+#| msgid "帮助手册"
+msgid "帮助"
+msgstr "online help"
+
+#: web/templates/help.html:45 web/templates/help.html:57
+msgid "网站模版"
+msgstr ""
+
+#: web/templates/help.html:48
+msgid "自适应"
+msgstr ""
+
+#: web/templates/help.html:51
+msgid "邮件模版"
+msgstr ""
+
+#: web/templates/help.html:54
+msgid "免费模版"
+msgstr ""
+
+#: web/templates/help.html:95
+msgid "我们让制作网站模版从未如此快速"
+msgstr ""
+
+#: web/templates/help.html:103
+msgid "专门设计了变网页为网站模版的工具。"
+msgstr ""
+
+#: web/templates/help.html:107
+msgid "我们为4种常见场景设计了不同的模版生成方法："
+msgstr ""
+
+#: web/templates/help.html:110
+msgid "精准抓取"
+msgstr ""
+
+#: web/templates/help.html:110
+#, fuzzy
+#| msgid "精准模版抓取"
+msgid "在使用精准模版抓取的时候，"
+msgstr "standard web template crawl"
+
+#: web/templates/help.html:114
+msgid "电子邮件模版"
+msgstr ""
+
+#: web/templates/help.html:116
+msgid "如果您的服务器带宽较小，您可以使用"
+msgstr ""
+
+#: web/templates/help.html:116
+#, fuzzy
+#| msgid "引用模式"
+msgid "引用模式。"
+msgstr "reference model"
+
+#: web/templates/help.html:138
+msgid "页面看到当前排队的模版抓取任务数量和您的排号。"
+msgstr ""
+
+#: web/templates/help.html:150
+msgid "HTML技术处于飞速发展中，我们的服务会存在各种未知的BUG。"
+msgstr ""
+
+#: web/templates/help.html:160
+msgid "评论区"
+msgstr ""
+
+#: web/templates/help.html:179
+msgid "非常棒的免费模版，输入URL我就得到了模版素材。"
+msgstr ""
+
+#: web/templates/help.html:208
+msgid ""
+"自动把css,js,集中到了一个模版中，这样我发送email时候可以在邮箱里显示了，最棒"
+"的是图片也被压缩为base64!真的厉害。"
+msgstr ""
+
+#: web/templates/help.html:236
+msgid ""
+"图片，js, css被放入在不同目录里，井井有条，稍加修改就可以使用了。完全免费。"
+msgstr ""
+
+#: web/templates/help.html:263
+msgid "模版可以被转换为支持django, symfony, cakephp等模版，这个简直是独创。"
+msgstr ""
+
+#: web/templates/help.html:277
+msgid "留言"
+msgstr ""
 
 #: web/templates/index.html:26
 msgid "拒绝996，让你有更多时间陪伴家人和朋友"
@@ -224,7 +335,9 @@ msgid ""
 "                            "
 msgstr ""
 "\n"
-"Templates get from other sites need to be modified manually according to the WEB Framework grammar. We can transform templates while generating templates to support popular WEB frameworks, such as Django, Jinja2, CakePHP, etc."
+"Templates get from other sites need to be modified manually according to the "
+"WEB Framework grammar. We can transform templates while generating templates "
+"to support popular WEB frameworks, such as Django, Jinja2, CakePHP, etc."
 
 #: web/templates/ref_template.html:6
 msgid "引用模版抓取"

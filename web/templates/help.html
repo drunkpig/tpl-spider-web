@@ -2,7 +2,7 @@
 {% load static %}
 {% load i18n %}
 
-{% block title %}帮助文档{% endblock %}
+{% block title %}{% trans '帮助文档' %}{% endblock %}
 {% block content %}
     <!--================Home Banner Area =================-->
     <section class="banner_area ">
@@ -11,15 +11,15 @@
                 <div class="banner_content text-left">
                     <div class="page_link">
                         <a href="{% url 'index' %}">
-                            主页
+                            {% trans '主页' %}
                         </a>
                         <a href="{% url 'help' %}">
-                            帮助
+                            {% trans '帮助' %}
                         </a>
 
                     </div>
                     <h2>
-                        帮助手册
+                        {% trans '帮助手册' %}
                     </h2>
                 </div>
             </div>
@@ -42,19 +42,19 @@
                                 <div class="post_tag">
 
                                     <a href="#">
-                                        网站模版
+                                        {% trans '网站模版' %}
                                     </a>
                                     <a href="#">
-                                        自适应
+                                        {% trans '自适应' %}
                                     </a>
                                     <a href="#">
-                                        邮件模版
+                                        {% trans '邮件模版' %}
                                     </a>
                                     <a href="#">
-                                        免费模版
+                                        {% trans '免费模版' %}
                                     </a>
                                     <a href="#">
-                                        网站模版
+                                       {% trans '网站模版' %}
                                     </a>
                                 </div>
                                 <ul class="blog_meta list">
@@ -92,39 +92,51 @@
                         </div>
                         <div class="col-lg-9 col-md-9 blog_details">
                             <h2>
-                                我们让制作网站模版从未如此快速
+                                {% trans '我们让制作网站模版从未如此快速' %}
                             </h2>
                             <p class="excert">
-                                有没有想过，全球上千万个网站，是百万设计师花费时间精心设计才展现在你眼前的。
-                                太阳底下没有新鲜事，如果你有一个需求，那么借鉴和复用是最快的实现方法。为此 <a
+
+                                    {% trans '有没有想过，全球上千万个网站，是百万设计师花费时间精心设计才展现在你眼前的。
+                                太阳底下没有新鲜事，如果你有一个需求，那么借鉴和复用是最快的实现方法。为此' %}
+                                 <a
                                     href="{% url 'index' %}">template-spider.com</a>
-                                专门设计了变网页为网站模版的工具。
+                                {% trans '专门设计了变网页为网站模版的工具。' %}
+
                             </p>
                             <p>
-                                我们为4种常见场景设计了不同的模版生成方法：
+                                {% trans '我们为4种常见场景设计了不同的模版生成方法：' %}
                             <ul>
-                            <li><b>精准抓取</b>&nbsp;&nbsp;在使用精准模版抓取的时候，<a href="{% url 'accurate_template' %}">精准模版抓取</a>服务只会抓您提供的URL，以及和URL相关的图片，css,js，字体文件等。
-                                这些资源被抓取到本地并放入到不同的文件夹下进行归类。</li>
-                            <li><b>全站模版</b>&nbsp;&nbsp;对于<a href="{% url 'fullsite_template' %}">全站模版</a>来说您只需要输入一个URL，那么这个URL以及这个URL层级以下的html都会被制作成模版。
-                                图片，css,js您可以选择下载或者使用网络位置进行引用。</li>
-                            <li><b>电邮模版</b>&nbsp;&nbsp;对于<a href="{% url 'email_template' %}">电子邮件模版</a>，服务会直接把页面包含的图片，css,js，字体文件压缩在一个html页面内。
-                                这样在用户收到您的邮件时候不至于会被屏蔽图片等，格式更加精美。</li>
-                            <li><b>引用模版</b>&nbsp;&nbsp;如果您的服务器带宽较小，您可以使用这种<a href="{% url 'ref_template' %}">引用模式</a>。引用模式会把css,js，字体文件等使用网络地址，
-                                这样您不需要花费额外的带宽费用。</li>
+
+                            <li><b>{% trans '精准抓取' %}</b>&nbsp;&nbsp;{% trans '在使用精准模版抓取的时候，' %}<a href="{% url 'accurate_template' %}">{% trans '精准模版抓取' %}</a>{% trans '服务只会抓您提供的URL，以及和URL相关的图片，css,js，字体文件等。
+                                这些资源被抓取到本地并放入到不同的文件夹下进行归类。' %}</li>
+                            <li><b>{% trans '全站模版' %}</b>&nbsp;&nbsp;对于<a href="{% url 'fullsite_template' %}">{% trans '全站模版' %}</a>{% trans '来说您只需要输入一个URL，那么这个URL以及这个URL层级以下的html都会被制作成模版。
+                                图片，css,js您可以选择下载或者使用网络位置进行引用。' %}</li>
+                            <li><b>{% trans '电邮模版' %}</b>&nbsp;&nbsp;对于<a href="{% url 'email_template' %}">{% trans '电子邮件模版' %}</a>{% trans '，服务会直接把页面包含的图片，css,js，字体文件压缩在一个html页面内。
+                                这样在用户收到您的邮件时候不至于会被屏蔽图片等，格式更加精美。' %}</li>
+                            <li><b>{% trans '引用模版' %}</b>&nbsp;&nbsp;{% trans '如果您的服务器带宽较小，您可以使用' %}<a href="{% url 'ref_template' %}">{% trans '引用模式。' %}</a>{% trans '引用模式会把css,js，字体文件等使用网络地址，
+                                这样您不需要花费额外的带宽费用。' %}</li>
+
                             </ul>
                             </p>
                             <p>
-                                <a href="{% url 'index' %}">template-spider.com</a> 提供的远不止如此。一般的模版网站提供的模版
+
+                                <a href="{% url 'index' %}">template-spider.com</a>
+                                    {% trans '提供的远不止如此。一般的模版网站提供的模版
                                 需要程序员画大量精力针对自己所使用的web开发框架进行修改，浪费时间。
-                                我们提供的模版生成工具可以直接自动把模版转化为你需要支持的web框架格式。例如django，cakePHP等。
+                                我们提供的模版生成工具可以直接自动把模版转化为你需要支持的web框架格式。例如django，cakePHP等。' %}
+
+
                             </p>
                         </div>
                         <div class="col-lg-12">
                             <div class="quotes">
-                                使用方法很简单，根据您的需求选择哪种模版抓取方式。然后输入您看中的网站的URL、和电子邮件。
-                                然后稍等5分钟，我们会把结果发送到您的Email。<br>
-                                填写email的目的是因为模版的抓取会排队（有许多其他的人也在使用这个服务）和消耗几分钟时间，在次期间您可以关闭网页离开网站。
-                                您可以在 <a href="{% url 'status' %}">任务状态</a>页面看到当前排队的模版抓取任务数量和您的排号。
+                                {% trans '使用方法很简单，根据您的需求选择哪种模版抓取方式。然后输入您看中的网站的URL、和电子邮件。
+                                然后稍等5分钟，我们会把结果发送到您的Email。' %}
+                                <br>
+                                {% trans '填写email的目的是因为模版的抓取会排队（有许多其他的人也在使用这个服务）和消耗几分钟时间，在次期间您可以关闭网页离开网站。
+                                您可以在 ' %}
+                                <a href="{% url 'status' %}">{% trans '任务状态' %}</a>{% trans '页面看到当前排队的模版抓取任务数量和您的排号。' %}
+
                             </div>
                             <div class="row">
                                 <div class="col-6">
@@ -135,7 +147,7 @@
                                 </div>
                                 <div class="col-lg-12 mt-25">
                                     <p>
-                                        HTML技术处于飞速发展中，我们的服务会存在各种未知的BUG。
+                                        {% trans 'HTML技术处于飞速发展中，我们的服务会存在各种未知的BUG。' %}
                                     </p>
 
                                 </div>
@@ -145,7 +157,7 @@
 
                     <div class="comments-area">
                         <h4>
-                            评论区
+                            {% trans '评论区' %}
                         </h4>
                         <div class="comment-list">
                             <div class="single-comment justify-content-between d-flex">
@@ -163,7 +175,8 @@
                                             December 4, 2017 at 3:12 pm
                                         </p>
                                         <p class="comment">
-                                            非常棒的免费模版，输入URL我就得到了模版素材。
+
+                                            {% trans '非常棒的免费模版，输入URL我就得到了模版素材。' %}
                                         </p>
                                     </div>
                                 </div>
@@ -191,7 +204,8 @@
                                             December 4, 2017 at 3:12 pm
                                         </p>
                                         <p class="comment">
-                                            自动把css,js,集中到了一个模版中，这样我发送email时候可以在邮箱里显示了，最棒的是图片也被压缩为base64!真的厉害。
+
+                                            {% trans '自动把css,js,集中到了一个模版中，这样我发送email时候可以在邮箱里显示了，最棒的是图片也被压缩为base64!真的厉害。' %}
                                         </p>
                                     </div>
                                 </div>
@@ -218,7 +232,8 @@
                                             December 4, 2017 at 3:12 pm
                                         </p>
                                         <p class="comment">
-                                            图片，js, css被放入在不同目录里，井井有条，稍加修改就可以使用了。完全免费。
+
+                                            {% trans '图片，js, css被放入在不同目录里，井井有条，稍加修改就可以使用了。完全免费。' %}
                                         </p>
                                     </div>
                                 </div>
@@ -245,7 +260,7 @@
                                             December 4, 2017 at 3:12 pm
                                         </p>
                                         <p class="comment">
-                                            模版可以被转换为支持django, symfony, cakephp等模版，这个简直是独创。
+                                            {% trans '模版可以被转换为支持django, symfony, cakephp等模版，这个简直是独创。' %}
                                         </p>
                                     </div>
                                 </div>
@@ -259,7 +274,7 @@
                     </div>
                     <div class="comment-form">
                         <h4>
-                            留言
+                            {% trans '留言' %}
                         </h4>
                         <form>
                             <div class="form-group form-inline">
