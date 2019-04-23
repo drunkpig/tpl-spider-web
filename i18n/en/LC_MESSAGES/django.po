@@ -16,165 +16,168 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: .\web\forms.py:81 .\web\forms.py:85
 msgid "URL 格式错误"
-msgstr ""
+msgstr "URL format error"
 
 #: .\web\forms.py:98 .\web\forms.py:101
 msgid "[抓取引用的资源]和[是否引用外部资源]需要互斥"
 msgstr ""
+"[grab reference resource] and [reference out site resources] need to be "
+"mutually exclusive "
 
 #: .\web\templates\_layout.html:21
 msgid "别人设计，我借鉴"
-msgstr ""
+msgstr "others design, we reuse"
 
 #: .\web\templates\_layout.html:72
 msgid "主&nbsp;&nbsp;&nbsp;&nbsp;页"
-msgstr ""
+msgstr "Home"
 
 #: .\web\templates\_layout.html:78 .\web\templates\_layout.html:154
 #: .\web\templates\index.html:81
 msgid "精准模版"
-msgstr ""
+msgstr "standard web template"
 
 #: .\web\templates\_layout.html:84 .\web\templates\_layout.html:161
 #: .\web\templates\fullsite_template.html:6 .\web\templates\index.html:99
 msgid "全站模版"
-msgstr ""
+msgstr "full site web template"
 
 #: .\web\templates\_layout.html:89 .\web\templates\index.html:117
 msgid "电邮模版"
-msgstr ""
+msgstr "email template"
 
 #: .\web\templates\_layout.html:94 .\web\templates\_layout.html:171
 #: .\web\templates\index.html:135
 msgid "引用模版"
-msgstr ""
+msgstr "reference template"
 
 #: .\web\templates\_layout.html:99 .\web\templates\status.html:5
 msgid "任务状态"
-msgstr ""
+msgstr "task status"
 
 #: .\web\templates\_layout.html:104 .\web\templates\index.html:29
 msgid "帮助手册"
-msgstr ""
+msgstr "online help"
 
 #: .\web\templates\_layout.html:110 .\web\templates\_layout.html:186
 msgid "联系我们"
-msgstr ""
+msgstr "contact us"
 
 #: .\web\templates\_layout.html:139
 msgid ""
 "有一天我突发奇想，全世界那么多网站，费尽那么多设计师的打磨，不就是最宝贵的的"
 "资源吗？"
-msgstr ""
+msgstr "One day it occurred to me that with all the websites, all the efforts of designers in the world, they are the most valuable treasure, don't they?"
 
 #: .\web\templates\_layout.html:147
 msgid "站点导航"
-msgstr ""
+msgstr "Site navigation"
 
 #: .\web\templates\_layout.html:166
 msgid "Email 模版"
-msgstr ""
+msgstr "Email template"
 
 #: .\web\templates\_layout.html:180
 msgid "在线帮助"
-msgstr ""
+msgstr "Online help"
 
 #: .\web\templates\_model_layout.html:16
 msgid "模版抓取"
-msgstr ""
+msgstr "template craw"
 
 #: .\web\templates\_model_layout.html:44
-msgid "URL，每行一个"
-msgstr ""
+msgid "url，每行一个"
+msgstr "url, one per line"
 
 #: .\web\templates\_model_layout.html:49 .\web\templates\_model_layout.html:52
-msgid "Email，接收模版下载地址"
-msgstr ""
+msgid "email，接收模版下载地址"
+msgstr "email, accept web template download link"
 
 #: .\web\templates\_model_layout.html:60 .\web\templates\_model_layout.html:66
 #: .\web\templates\_model_layout.html:68
 msgid "转化为Web框架（可选）"
-msgstr ""
+msgstr "support web framework(optional)"
 
 #: .\web\templates\accurate_template.html:5
 msgid "精准模版抓取"
-msgstr ""
+msgstr "standard web template crawl"
 
 #: .\web\templates\accurate_template.html:15
 #: .\web\templates\email_template.html:25
 #: .\web\templates\fullsite_template.html:16
 #: .\web\templates\ref_template.html:16
 msgid "抓取引用的资源"
-msgstr ""
+msgstr "grab referenced resources"
 
 #: .\web\templates\accurate_template.html:22
 #: .\web\templates\email_template.html:32
 #: .\web\templates\fullsite_template.html:23
 #: .\web\templates\ref_template.html:23
 msgid "引用模式"
-msgstr ""
+msgstr "reference model"
 
 #: .\web\templates\accurate_template.html:29
 #: .\web\templates\email_template.html:39
 #: .\web\templates\fullsite_template.html:30
 #: .\web\templates\ref_template.html:30
 msgid "是否抓全站"
-msgstr ""
+msgstr "grab full site"
 
 #: .\web\templates\accurate_template.html:36
 #: .\web\templates\email_template.html:46
 #: .\web\templates\fullsite_template.html:37
 #: .\web\templates\ref_template.html:37
 msgid "是否压缩为Email模版"
-msgstr ""
+msgstr "compress to email template"
 
 #: .\web\templates\email_template.html:7
 msgid "Email模版"
-msgstr ""
+msgstr "email template"
 
 #: .\web\templates\get_template.html:19
 msgid "下载模版"
-msgstr ""
+msgstr "download"
 
 #: .\web\templates\index.html:26
 msgid "拒绝996，让你有更多时间陪伴家人和朋友"
-msgstr ""
+msgstr "Anti 996, enjoy more time with your family and friends"
 
 #: .\web\templates\index.html:64
 msgid "多种模版生成模式"
-msgstr ""
+msgstr "Multiple template generation modes"
 
 #: .\web\templates\index.html:84
 msgid ""
 "只抓取你指定的URL为模版。我们将抓取页面内的css,js,图片，包括css文件内引入的其"
 "他css文件，以及字体文件和图片"
-msgstr ""
+msgstr "Only grab the URL you specify as the template.We will grab CSS,js, images within the page, including other CSS files introduced within the CSS file, as well as font files and images"
+
 
 #: .\web\templates\index.html:102
 msgid ""
 "您只需提供一个入口页面，我们就能将这个入口页面以及与其关联的站点内的网页变为"
 "模版"
-msgstr ""
+msgstr "All you need to do is provide an entry page, and we can turn that entry page and the pages within its associated site into templates"
 
 #: .\web\templates\index.html:120
 msgid ""
 "提供一个URL，我们会转换这个页面为一个可以用于发送EMAIL的模版。页面中引用的图"
 "片，css,js资源会被压缩进一个HTML页面中"
-msgstr ""
+msgstr "You only need to provide us a URL and we will convert this page into a template that we can use to send EMAIL.The images, CSS, and js resources referenced in the page are compressed into an HTML page"
 
 #: .\web\templates\index.html:138
 msgid ""
 "此模式只转换你需要的HTML页面，页面内的图片，css,js资源将会以URL的方式引入，这"
 "样页面就不会消耗您的服务器流量"
-msgstr ""
+msgstr "This mode only converts the HTML pages you need. The images, CSS and js resources in the page will be introduced in the form of URL, so that the page will not consume your server traffic"
 
 #: .\web\templates\index.html:154
 msgid "这里的模版有多强大?"
-msgstr ""
+msgstr "How strong our web template spider?"
 
 #: .\web\templates\index.html:157
 msgid ""
@@ -185,14 +188,18 @@ msgid ""
 "发框架的模版格式。\n"
 "                        "
 msgstr ""
+"\n"
+" We will organize the template files in good order, the pictures, CSS, js files will be classified in different folders, you do not need to organize manually.\n"
+"At the same time, we will automatically convert the template to the template format of the WEB development framework you use according to your Settings.\n"
+"  "
 
 #: .\web\templates\index.html:163
 msgid "支持的WEB框架模版"
-msgstr ""
+msgstr "Web frameworks supported"
 
 #: .\web\templates\index.html:180
 msgid "自动转换为流行的WEB模版"
-msgstr ""
+msgstr "Automatically convert to popular WEB templates"
 
 #: .\web\templates\index.html:184
 msgid ""
@@ -203,23 +210,25 @@ msgid ""
 "                            CakePHP等\n"
 "                            "
 msgstr ""
+"\n"
+"从其他站点下载到的模版在使用时需要手工按照WEB框架模版引擎语法进行修改。我们能在生成模版的同时对模版进行转换，使模版支持主流的WEB框架，例如Django, Jinja2, CakePHP等。"
 
 #: .\web\templates\ref_template.html:6
 msgid "引用模版抓取"
-msgstr ""
+msgstr "Reference template crawl"
 
 #: .\web\templates\status.html:13
 msgid "全部任务数量"
-msgstr ""
+msgstr "Total number of tasks"
 
 #: .\web\templates\status.html:17
 msgid "您前面的任务数量"
-msgstr ""
+msgstr "The number of tasks before you"
 
 #: .\web\templates\status.html:19
 msgid "您没有运行的任务"
-msgstr ""
+msgstr "You have no task"
 
 #: .\web\views.py:206
 msgid "提交成功"
-msgstr ""
+msgstr "Submit successful "
