@@ -11,23 +11,31 @@
     位置会存储下载过程中的临时目录和压缩后的zip文件。这个路径被配置在`run.sh`里。在启动的时候
     传送给 `tpl-spider-core`。
 
-3. nginx(openresty) 配置
+3. nginx(openrestry) 配置
+    - 先安装openrestry,参考下一节openrestry安装
     - 首先需要root用户配置下nginx的自带配置文件`nginx.conf`， include 进去`$HOME/.nginx/*.conf`
-      如果没有这个目录需要自己去建好
-    - 第二步，把`tpl-spider-web`工程下的`tpl-spider-web.conf`文件软链接到`$HOME/.nginx/tpl-spider-web.conf`
+      如果没有这个目录需要自己去建好,run.sh中会自动创建
+    - 第二步，把`tpl-spider-web`工程下的`tpl-spider-web.conf`文件软链接到`$HOME/.nginx/tpl-spider-web.conf`。ｒｕｎ.sh脚本中已经做了
 
 4. 安装[pgmoon](http://leafo.net/guides/using-postgres-with-openresty.html)
-    - 首先安装luarocks, 是管理lua包的。 `./configure --prefix=/opt/luarocks/  --with-lua=/opt/nginx/luajit/ --with-lua-include=/opt/nginx/luajit/include/luajit-2.1`, 随后，`make & make install`
+    - 首先安装[luarocks](http://luarocks.github.io/luarocks/releases/luarocks-3.0.4-linux-x86_64.zip), 是管理lua包的。 `./configure --prefix=/opt/luarocks/  --with-lua=/opt/nginx/luajit/ --with-lua-include=/opt/nginx/luajit/include/luajit-2.1`, 随后，`make & make install`
     - 去https://luarocks.org/ 看看支持postgres的包， 我们选 [pgmoon](http://leafo.net/guides/using-postgres-with-openresty.html)
     - `sudo luarocks install --tree=/opt/openresty-1.15.8/luajit   pgmoon` 指定路径--tree别搞错，否则nginx找不到luarocks安装的库
-    
 
+5. 安装postgresql
+   - ａｐt-get install postgresql postgresql-contrib
+   - 配置 /etc/postgresql/10/main/pg_hba.conf, 在host开始的行最前面添加一行
+     `host    all             postgres             127.0.0.1/32       trust`
+   - 重启/etc/init.d/postgresql restart
+   - 用ｐsql 创建数据库 `ｃreate database tpl_spider`
+   
 
 ## openrestry 安装
 
 1. 下载源码   https://openresty.org/cn/ann-1015008001rc1.html 
 2. 解压后进入源码根目录
 3. 安装ngx_postgres模块需要自己编译时候加上，编译这个模块需要Libpq-dev。于是执行 `apt-get install libpq-dev` 
+4. 安装 `ａｐt-get install libssl-dev`
 4. `./configure --prefix=/opt/openrestry --with-http_postgres_module`  
 5. `make`
 6. `make install`

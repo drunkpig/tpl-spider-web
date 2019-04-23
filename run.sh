@@ -9,8 +9,9 @@ NGINX_CONF_SRC_DIR=nginx/
 NGINX_CONF_FILE=tpl-spider-web.conf
 NGINX_LUA_DIR=nginx/lua/
 
+LUA_ROCKS=/opt/luarocks/bin/luarocks
 NGINX_INCLUDE_CONF_DIR=/home/cxu/.nginx
-NGINX_LUA_JIT_DIR=/opt/openresty-1.15.8/luajit
+NGINX_LUA_JIT_DIR=/opt/openresty/luajit
 
 BASEDIR=$(readlink -f $0 | xargs dirname)
 DEPLOY_PARENT_DIR="${BASEDIR}/../"
@@ -42,7 +43,7 @@ __pip_install_deps(){
 _set_up_py_venv(){
 	venv_dir=${START_UP_PROJ_DIR}/venv
 	if [ ! -d ${venv_dir} ];then
-		virtualenv -p ${PYTHON} ${venv_dir}
+		${PYTHON} -m virtualenv -p ${PYTHON} ${venv_dir}
 	fi
 	source ${venv_dir}/bin/activate
 
@@ -149,7 +150,7 @@ _config_and_reload_nginx(){
 }
 
 _install_pgmoon(){
-    sudo luarocks install --tree=${NGINX_LUA_JIT_DIR}   pgmoon
+    sudo ${LUA_ROCKS} install --tree=${NGINX_LUA_JIT_DIR}   pgmoon
 }
 
 ##############################################
