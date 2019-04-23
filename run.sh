@@ -1,17 +1,23 @@
 #!/usr/bin/env bash
 
 PYTHON="/usr/bin/python3.7"
-TEMPLATE_BASE_DIR="/home/cxu/temp/tpl-spider/"
-COLLECTED_STATIC_DIR='collected_static'
+user_home=$HOME
 
-NGIXN=/usr/sbin/nginx
+TEMPLATE_BASE_DIR="${user_home}/web-templates/"
+NGINX_INCLUDE_CONF_DIR=${user_home}/.nginx
+
+COLLECTED_STATIC_DIR='collected_static'
+OPENRESTRY_DIR=/opt/openrestry
+
+
+NGIXN=${OPENRESTRY_DIR}/nginx/sbin/nginx
 NGINX_CONF_SRC_DIR=nginx/
 NGINX_CONF_FILE=tpl-spider-web.conf
 NGINX_LUA_DIR=nginx/lua/
 
 LUA_ROCKS=/opt/luarocks/bin/luarocks
-NGINX_INCLUDE_CONF_DIR=/home/cxu/.nginx
-NGINX_LUA_JIT_DIR=/opt/openresty/luajit
+
+NGINX_LUA_JIT_DIR=${OPENRESTRY_DIR}/luajit
 
 BASEDIR=$(readlink -f $0 | xargs dirname)
 DEPLOY_PARENT_DIR="${BASEDIR}/../"
@@ -41,7 +47,8 @@ __pip_install_deps(){
 }
 
 _set_up_py_venv(){
-	venv_dir=${START_UP_PROJ_DIR}/venv
+    ${PYTHON} -m pip install virtualenv
+	venv_dir=${user_home}/venv
 	if [ ! -d ${venv_dir} ];then
 		${PYTHON} -m virtualenv -p ${PYTHON} ${venv_dir}
 	fi
