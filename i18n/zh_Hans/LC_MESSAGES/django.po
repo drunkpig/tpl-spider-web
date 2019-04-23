@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-23 19:14+0800\n"
+"POT-Creation-Date: 2019-04-23 19:52+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -105,6 +105,12 @@ msgstr "ｅmail，接收模版下载地址"
 #: web/templates/_model_layout.html:68
 msgid "转化为Web框架（可选）"
 msgstr "转化为Web框架（可选）"
+
+#: web/templates/_model_layout.html:83
+#, fuzzy
+#| msgid "提交成功"
+msgid "提交"
+msgstr "提交"
 
 #: web/templates/accurate_template.html:5
 msgid "精准模版抓取"
