@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
-
+# 程序可以部署在任何地方，但是可读的内容必须在 deploy_home下,这是权限的问题
+# 需要在deploy_home的1) nginx.conf, 2)static file, 3)lua
 PYTHON="/usr/bin/python3.7"
-user_home=$HOME
+deploy_home="/var/template-spider.com"
+mkdir -p ${deploy_home}
 
-TEMPLATE_BASE_DIR="${user_home}/web-templates/"
-NGINX_INCLUDE_CONF_DIR=${user_home}/.nginx
+TEMPLATE_BASE_DIR="${deploy_home}/web-templates/"
+NGINX_INCLUDE_CONF_DIR=${deploy_home}/.nginx
 
 COLLECTED_STATIC_DIR='collected_static'
 OPENRESTRY_DIR=/opt/openresty
@@ -29,7 +31,7 @@ GIT_REPO=("git@github.com:jscrapy/tpl-spider-web.git ${PROJ_TPL_SPIDER_WEB} mast
           "git@github.com:jscrapy/tpl-spider-core.git ${PROJ_TPL_SPIDER_CORE} master")
 
 DJANGO_STATIC_DIR="${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/${COLLECTED_STATIC_DIR}"
-DJANGO_DEPLOY_STATIC_DIR="/var/tpl-spider/"
+DJANGO_DEPLOY_STATIC_DIR="${deploy_home}/"
 #=========================================================================
 # 制作venv, 安装py依赖
 # 杀原来进程
@@ -155,7 +157,10 @@ _config_and_reload_nginx(){
     sed -i "s:__STATIC_FILE_DIR__:${DJANGO_DEPLOY_STATIC_DIR}/${COLLECTED_STATIC_DIR}:g" ${dst_nginx_conf_file}
     sed -i "s:__PORT__:${SPIDER_WEB_PORT}:g"  ${dst_nginx_conf_file}
     sed -i "s:__TEMPLATE_BASE_DIR__:${TEMPLATE_BASE_DIR}:g"  ${dst_nginx_conf_file}
-    sed -i "s:__LUA_DIR__:${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/${NGINX_LUA_DIR}:g"  ${dst_nginx_conf_file}
+
+    cp ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/${NGINX_LUA_DIR}/*.lua  ${NGINX_INCLUDE_CONF_DIR}/
+    sed -i "s:__LUA_DIR__:${NGINX_INCLUDE_CONF_DIR}:g"  ${dst_nginx_conf_file}
+
     # /bin/cp -rf  ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/web/templates/   ${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/collected_static
     sudo ${NGIXN}
 }
