@@ -7,7 +7,7 @@ TEMPLATE_BASE_DIR="${user_home}/web-templates/"
 NGINX_INCLUDE_CONF_DIR=${user_home}/.nginx
 
 COLLECTED_STATIC_DIR='collected_static'
-OPENRESTRY_DIR=/opt/openrestry
+OPENRESTRY_DIR=/opt/openresty
 
 
 NGIXN=${OPENRESTRY_DIR}/nginx/sbin/nginx
