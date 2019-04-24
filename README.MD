@@ -18,7 +18,7 @@
     - 第二步，把`tpl-spider-web`工程下的`tpl-spider-web.conf`文件软链接到`$HOME/.nginx/tpl-spider-web.conf`。ｒｕｎ.sh脚本中已经做了
 
 4. 安装[pgmoon](http://leafo.net/guides/using-postgres-with-openresty.html)
-    - 首先安装[luarocks](http://luarocks.github.io/luarocks/releases/luarocks-3.0.4-linux-x86_64.zip), 是管理lua包的。 `./configure --prefix=/opt/luarocks/  --with-lua=/opt/nginx/luajit/ --with-lua-include=/opt/nginx/luajit/include/luajit-2.1`, 随后，`make & make install`
+    - 首先安装[luarocks](http://luarocks.github.io/luarocks/releases/luarocks-3.0.4.tar.gz), 是管理lua包的。 `./configure --prefix=/opt/luarocks/  --with-lua=/opt/nginx/luajit/ --with-lua-include=/opt/nginx/luajit/include/luajit-2.1`, 随后，`make & make install`
     - 去https://luarocks.org/ 看看支持postgres的包， 我们选 [pgmoon](http://leafo.net/guides/using-postgres-with-openresty.html)
     - `sudo luarocks install --tree=/opt/openresty-1.15.8/luajit   pgmoon` 指定路径--tree别搞错，否则nginx找不到luarocks安装的库
 

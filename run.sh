@@ -29,6 +29,7 @@ GIT_REPO=("git@github.com:jscrapy/tpl-spider-web.git ${PROJ_TPL_SPIDER_WEB} mast
           "git@github.com:jscrapy/tpl-spider-core.git ${PROJ_TPL_SPIDER_CORE} master")
 
 DJANGO_STATIC_DIR="${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/${COLLECTED_STATIC_DIR}"
+DJANGO_DEPLOY_STATIC_DIR="/var/tpl-spider/${COLLECTED_STATIC_DIR}"
 #=========================================================================
 # 制作venv, 安装py依赖
 # 杀原来进程
@@ -148,7 +149,7 @@ _config_and_reload_nginx(){
     fi
 
     /bin/cp -rf ${src_nginx_conf_file}  ${dst_nginx_conf_file}
-    sed -i "s:__STATIC_FILE_DIR__:${DJANGO_STATIC_DIR}:g" ${dst_nginx_conf_file}
+    sed -i "s:__STATIC_FILE_DIR__:${DJANGO_DEPLOY_STATIC_DIR}:g" ${dst_nginx_conf_file}
     sed -i "s:__PORT__:${SPIDER_WEB_PORT}:g"  ${dst_nginx_conf_file}
     sed -i "s:__TEMPLATE_BASE_DIR__:${TEMPLATE_BASE_DIR}:g"  ${dst_nginx_conf_file}
     sed -i "s:__LUA_DIR__:${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/${NGINX_LUA_DIR}:g"  ${dst_nginx_conf_file}
