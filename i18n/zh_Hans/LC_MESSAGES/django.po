@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-23 20:20+0800\n"
+"POT-Creation-Date: 2019-04-24 14:52+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,21 +41,21 @@ msgstr "精准模版"
 
 #: web/templates/_layout.html:84 web/templates/_layout.html:161
 #: web/templates/fullsite_template.html:6 web/templates/help.html:112
-#: web/templates/index.html:99
+#: web/templates/help.html:113 web/templates/index.html:99
 msgid "全站模版"
 msgstr "全站模版"
 
-#: web/templates/_layout.html:89 web/templates/help.html:114
+#: web/templates/_layout.html:89 web/templates/help.html:115
 #: web/templates/index.html:117
 msgid "电邮模版"
 msgstr "电邮模版"
 
 #: web/templates/_layout.html:94 web/templates/_layout.html:171
-#: web/templates/help.html:116 web/templates/index.html:135
+#: web/templates/help.html:118 web/templates/index.html:135
 msgid "引用模版"
 msgstr "引用模版"
 
-#: web/templates/_layout.html:99 web/templates/help.html:138
+#: web/templates/_layout.html:99 web/templates/help.html:137
 #: web/templates/status.html:5
 msgid "任务状态"
 msgstr "任务状态"
@@ -182,55 +182,123 @@ msgstr "免费模版"
 msgid "我们让制作网站模版从未如此快速"
 msgstr "我们让制作网站模版从未如此快速"
 
-#: web/templates/help.html:103
+#: web/templates/help.html:99
+msgid ""
+"有没有想过，全球上千万个网站，是百万设计师花费时间精心设计才展现在你眼前的。"
+"太阳底下没有新鲜事，如果你有一个需求，那么借鉴和复用是最快的实现方法。为此"
+msgstr ""
+"有没有想过，全球上千万个网站，是百万设计师花费时间精心设计才展现在你眼前的。"
+"太阳底下没有新鲜事，如果你有一个需求，那么借鉴和复用是最快的实现方法。为此"
+
+#: web/templates/help.html:102
 msgid "专门设计了变网页为网站模版的工具。"
 msgstr "专门设计了变网页为网站模版的工具。"
 
-#: web/templates/help.html:107
+#: web/templates/help.html:106
 msgid "我们为4种常见场景设计了不同的模版生成方法："
 msgstr "我们为4种常见场景设计了不同的模版生成方法："
 
-#: web/templates/help.html:110
+#: web/templates/help.html:109
 msgid "精准抓取"
 msgstr "精准抓取"
 
-#: web/templates/help.html:110
+#: web/templates/help.html:109
 #, fuzzy
 #| msgid "精准模版抓取"
 msgid "在使用精准模版抓取的时候，"
-msgstr "精准模版抓取"
+msgstr "在使用精准模版抓取的时候，"
+
+#: web/templates/help.html:111
+msgid ""
+"服务只会抓您提供的URL，以及和URL相关的图片，css,js，字体文件等。这些资源被抓"
+"取到本地并放入到不同的文件夹下进行归类。"
+msgstr ""
+"服务只会抓您提供的URL，以及和URL相关的图片，css,js，字体文件等。这些资源被抓"
+"取到本地并放入到不同的文件夹下进行归类。"
+
+#: web/templates/help.html:112 web/templates/help.html:115
+msgid "对于"
+msgstr "对于"
 
 #: web/templates/help.html:114
+msgid ""
+"来说您只需要输入一个URL，那么这个URL以及这个URL层级以下的html都会被制作成模"
+"版。图片，css,js您可以选择下载或者使用网络位置进行引用。"
+msgstr ""
+"来说您只需要输入一个URL，那么这个URL以及这个URL层级以下的html都会被制作成模"
+"版。图片，css,js您可以选择下载或者使用网络位置进行引用。"
+
+#: web/templates/help.html:116
 msgid "电子邮件模版"
 msgstr "电子邮件模版"
 
-#: web/templates/help.html:116
+#: web/templates/help.html:117
+msgid ""
+"，服务会直接把页面包含的图片，css,js，字体文件压缩在一个html页面内。这样在用"
+"户收到您的邮件时候不至于会被屏蔽图片等，格式更加精美。"
+msgstr ""
+"，服务会直接把页面包含的图片，css,js，字体文件压缩在一个html页面内。这样在用"
+"户收到您的邮件时候不至于会被屏蔽图片等，格式更加精美。"
+
+#: web/templates/help.html:118
 msgid "如果您的服务器带宽较小，您可以使用"
 msgstr "如果您的服务器带宽较小，您可以使用"
 
-#: web/templates/help.html:116
+#: web/templates/help.html:119
 #, fuzzy
 #| msgid "引用模式"
 msgid "引用模式。"
 msgstr "引用模式"
 
-#: web/templates/help.html:138
+#: web/templates/help.html:120
+msgid ""
+"引用模式会把css,js，字体文件等使用网络地址，这样您不需要花费额外的带宽费用。"
+msgstr ""
+"引用模式会把css,js，字体文件等使用网络地址，这样您不需要花费额外的带宽费用。"
+
+#: web/templates/help.html:127
+msgid ""
+"提供的远不止如此。一般的模版网站提供的模版需要程序员画大量精力针对自己所使用"
+"的web开发框架进行修改，浪费时间。我们提供的模版生成工具可以直接自动把模版转化"
+"为你需要支持的web框架格式。例如django，cakePHP等。"
+msgstr ""
+"提供的远不止如此。一般的模版网站提供的模版需要程序员画大量精力针对自己所使用"
+"的web开发框架进行修改，浪费时间。我们提供的模版生成工具可以直接自动把模版转化"
+"为你需要支持的web框架格式。例如django，cakePHP等。"
+
+#: web/templates/help.html:134
+msgid ""
+"使用方法很简单，根据您的需求选择哪种模版抓取方式。然后输入您看中的网站的URL、"
+"和电子邮件。然后稍等5分钟，我们会把结果发送到您的Email。"
+msgstr ""
+"使用方法很简单，根据您的需求选择哪种模版抓取方式。然后输入您看中的网站的URL、"
+"和电子邮件。然后稍等5分钟，我们会把结果发送到您的Email。"
+
+#: web/templates/help.html:136
+msgid ""
+"填写email的目的是因为模版的抓取会排队（有许多其他的人也在使用这个服务）和消耗"
+"几分钟时间，在次期间您可以关闭网页离开网站。您可以在 "
+msgstr ""
+"填写email的目的是因为模版的抓取会排队（有许多其他的人也在使用这个服务）和消耗"
+"几分钟时间，在次期间您可以关闭网页离开网站。您可以在 "
+
+#: web/templates/help.html:137
 msgid "页面看到当前排队的模版抓取任务数量和您的排号。"
 msgstr "页面看到当前排队的模版抓取任务数量和您的排号。"
 
-#: web/templates/help.html:150
+#: web/templates/help.html:149
 msgid "HTML技术处于飞速发展中，我们的服务会存在各种未知的BUG。"
 msgstr "HTML技术处于飞速发展中，我们的服务会存在各种未知的BUG。"
 
-#: web/templates/help.html:160
+#: web/templates/help.html:159
 msgid "评论区"
 msgstr "评论区"
 
-#: web/templates/help.html:179
+#: web/templates/help.html:178
 msgid "非常棒的免费模版，输入URL我就得到了模版素材。"
 msgstr "非常棒的免费模版，输入URL我就得到了模版素材。"
 
-#: web/templates/help.html:208
+#: web/templates/help.html:207
 msgid ""
 "自动把css,js,集中到了一个模版中，这样我发送email时候可以在邮箱里显示了，最棒"
 "的是图片也被压缩为base64!真的厉害。"
@@ -238,17 +306,17 @@ msgstr ""
 "自动把css,js,集中到了一个模版中，这样我发送email时候可以在邮箱里显示了，最棒"
 "的是图片也被压缩为base64!真的厉害。"
 
-#: web/templates/help.html:236
+#: web/templates/help.html:235
 msgid ""
 "图片，js, css被放入在不同目录里，井井有条，稍加修改就可以使用了。完全免费。"
 msgstr ""
 "图片，js, css被放入在不同目录里，井井有条，稍加修改就可以使用了。完全免费。"
 
-#: web/templates/help.html:263
+#: web/templates/help.html:262
 msgid "模版可以被转换为支持django, symfony, cakephp等模版，这个简直是独创。"
 msgstr "模版可以被转换为支持django, symfony, cakephp等模版，这个简直是独创。"
 
-#: web/templates/help.html:277
+#: web/templates/help.html:276
 msgid "留言"
 msgstr "留言"
 

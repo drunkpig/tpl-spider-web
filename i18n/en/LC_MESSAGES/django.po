@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-23 20:20+0800\n"
+"POT-Creation-Date: 2019-04-24 14:52+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,21 +43,21 @@ msgstr "standard web template"
 
 #: web/templates/_layout.html:84 web/templates/_layout.html:161
 #: web/templates/fullsite_template.html:6 web/templates/help.html:112
-#: web/templates/index.html:99
+#: web/templates/help.html:113 web/templates/index.html:99
 msgid "全站模版"
 msgstr "full site web template"
 
-#: web/templates/_layout.html:89 web/templates/help.html:114
+#: web/templates/_layout.html:89 web/templates/help.html:115
 #: web/templates/index.html:117
 msgid "电邮模版"
 msgstr "email template"
 
 #: web/templates/_layout.html:94 web/templates/_layout.html:171
-#: web/templates/help.html:116 web/templates/index.html:135
+#: web/templates/help.html:118 web/templates/index.html:135
 msgid "引用模版"
 msgstr "reference template"
 
-#: web/templates/_layout.html:99 web/templates/help.html:138
+#: web/templates/_layout.html:99 web/templates/help.html:137
 #: web/templates/status.html:5
 msgid "任务状态"
 msgstr "task status"
@@ -104,8 +104,6 @@ msgid "email，接收模版下载地址"
 msgstr "email, accept web template download link"
 
 #: web/templates/_model_layout.html:52
-#, fuzzy
-#| msgid "email，接收模版下载地址"
 msgid "ｅmail，接收模版下载地址"
 msgstr "email, accept web template download link"
 
@@ -115,8 +113,6 @@ msgid "转化为Web框架（可选）"
 msgstr "support web framework(optional)"
 
 #: web/templates/_model_layout.html:83
-#, fuzzy
-#| msgid "提交成功"
 msgid "提交"
 msgstr "Submit "
 
@@ -154,104 +150,183 @@ msgstr "download"
 
 #: web/templates/help.html:5
 msgid "帮助文档"
-msgstr ""
+msgstr "help document"
 
 #: web/templates/help.html:14
 msgid "主页"
-msgstr ""
+msgstr "Home page"
 
 #: web/templates/help.html:17
-#, fuzzy
-#| msgid "帮助手册"
 msgid "帮助"
 msgstr "online help"
 
 #: web/templates/help.html:45 web/templates/help.html:57
 msgid "网站模版"
-msgstr ""
+msgstr "web template"
 
 #: web/templates/help.html:48
 msgid "自适应"
-msgstr ""
+msgstr "adaptive template"
 
 #: web/templates/help.html:51
 msgid "邮件模版"
-msgstr ""
+msgstr "email template"
 
 #: web/templates/help.html:54
 msgid "免费模版"
-msgstr ""
+msgstr "free template"
 
 #: web/templates/help.html:95
 msgid "我们让制作网站模版从未如此快速"
-msgstr ""
+msgstr "We've never made web templates that fast."
 
-#: web/templates/help.html:103
+#: web/templates/help.html:99
+msgid ""
+"有没有想过，全球上千万个网站，是百万设计师花费时间精心设计才展现在你眼前的。"
+"太阳底下没有新鲜事，如果你有一个需求，那么借鉴和复用是最快的实现方法。为此"
+msgstr ""
+"Have you ever thought that millions of websites around the world are "
+"designed by millions of designers who take time to show you. There's nothing "
+"new under the sun. If you have a need, learning and reuse are the fastest "
+"ways to achieve it. To achieve this goal "
+
+#: web/templates/help.html:102
 msgid "专门设计了变网页为网站模版的工具。"
 msgstr ""
+"We have specially designed a tool for transfer web pages into website "
+"templates."
 
-#: web/templates/help.html:107
+#: web/templates/help.html:106
 msgid "我们为4种常见场景设计了不同的模版生成方法："
 msgstr ""
+"We designed different template generation methods for four common scenarios"
 
-#: web/templates/help.html:110
+#: web/templates/help.html:109
 msgid "精准抓取"
-msgstr ""
-
-#: web/templates/help.html:110
-#, fuzzy
-#| msgid "精准模版抓取"
-msgid "在使用精准模版抓取的时候，"
 msgstr "standard web template crawl"
 
+#: web/templates/help.html:109
+msgid "在使用精准模版抓取的时候，"
+msgstr "when use standard web template crawl"
+
+#: web/templates/help.html:111
+msgid ""
+"服务只会抓您提供的URL，以及和URL相关的图片，css,js，字体文件等。这些资源被抓"
+"取到本地并放入到不同的文件夹下进行归类。"
+msgstr ""
+"The service only grabs the URLs you provide, as well as the URLs related "
+"pictures, css, js, font files, etc. These resources are captured locally and "
+"classified in different folders."
+
+#: web/templates/help.html:112 web/templates/help.html:115
+msgid "对于"
+msgstr "for the model "
+
 #: web/templates/help.html:114
+msgid ""
+"来说您只需要输入一个URL，那么这个URL以及这个URL层级以下的html都会被制作成模"
+"版。图片，css,js您可以选择下载或者使用网络位置进行引用。"
+msgstr ""
+"f you only need to enter a URL, the URL and the HTML below the level of the "
+"URL will be templated. Pictures, css, JS can be downloaded or referenced "
+"using a network location."
+
+#: web/templates/help.html:116
 msgid "电子邮件模版"
-msgstr ""
+msgstr "email template"
 
-#: web/templates/help.html:116
+#: web/templates/help.html:117
+msgid ""
+"，服务会直接把页面包含的图片，css,js，字体文件压缩在一个html页面内。这样在用"
+"户收到您的邮件时候不至于会被屏蔽图片等，格式更加精美。"
+msgstr ""
+",The service will directly compress the images, css, JS and font files "
+"contained in the page into an HTML page. In this way, when users receive "
+"your mail, they will not be blocked pictures, etc., and the format is more "
+"exquisite."
+
+#: web/templates/help.html:118
 msgid "如果您的服务器带宽较小，您可以使用"
-msgstr ""
+msgstr "if you have narrow band width, you can use "
 
-#: web/templates/help.html:116
-#, fuzzy
-#| msgid "引用模式"
+#: web/templates/help.html:119
 msgid "引用模式。"
 msgstr "reference model"
 
-#: web/templates/help.html:138
+#: web/templates/help.html:120
+msgid ""
+"引用模式会把css,js，字体文件等使用网络地址，这样您不需要花费额外的带宽费用。"
+msgstr ""
+"Reference modes use network addresses for css, js, font files, etc., so you "
+"don't need to spend extra bandwidth costs."
+
+#: web/templates/help.html:127
+msgid ""
+"提供的远不止如此。一般的模版网站提供的模版需要程序员画大量精力针对自己所使用"
+"的web开发框架进行修改，浪费时间。我们提供的模版生成工具可以直接自动把模版转化"
+"为你需要支持的web框架格式。例如django，cakePHP等。"
+msgstr "We offer much more than that. The template provided by the general template website requires programmers to draw a lot of energy to modify the web development framework they use, which is a waste of time. The template generation tools we provide can directly and automatically convert templates into web framework formats that you need to support. For example, django, cakePHP, etc."
+
+#: web/templates/help.html:134
+msgid ""
+"使用方法很简单，根据您的需求选择哪种模版抓取方式。然后输入您看中的网站的URL、"
+"和电子邮件。然后稍等5分钟，我们会把结果发送到您的Email。"
+msgstr "The way to use it is very simple. According to your needs, choose which mode of template grabbing. Then enter the good look URL, and your email. Then wait for five minutes and we'll send the results to your email."
+
+#: web/templates/help.html:136
+msgid ""
+"填写email的目的是因为模版的抓取会排队（有许多其他的人也在使用这个服务）和消耗"
+"几分钟时间，在次期间您可以关闭网页离开网站。您可以在 "
+msgstr ""
+"The purpose of filling in the email is because template grabbing queues "
+"(many others are using the service) and takes a few minutes, during which "
+"time you can close the page and leave the site. You can be in"
+
+#: web/templates/help.html:137
 msgid "页面看到当前排队的模版抓取任务数量和您的排号。"
 msgstr ""
+"the page shows the number of template crawling tasks currently queued and "
+"your number."
 
-#: web/templates/help.html:150
+#: web/templates/help.html:149
 msgid "HTML技术处于飞速发展中，我们的服务会存在各种未知的BUG。"
 msgstr ""
+"HTML technology is developing rapidly, and there will be various unknown "
+"BUGs in our services."
 
-#: web/templates/help.html:160
+#: web/templates/help.html:159
 msgid "评论区"
-msgstr ""
+msgstr "comment area"
 
-#: web/templates/help.html:179
+#: web/templates/help.html:178
 msgid "非常棒的免费模版，输入URL我就得到了模版素材。"
-msgstr ""
+msgstr "Very good free template. I get the template only by typing in one URL."
 
-#: web/templates/help.html:208
+#: web/templates/help.html:207
 msgid ""
 "自动把css,js,集中到了一个模版中，这样我发送email时候可以在邮箱里显示了，最棒"
 "的是图片也被压缩为base64!真的厉害。"
 msgstr ""
+"Automatically centralize css, JS into a template, so that when I send email, "
+"it can be displayed in the mailbox. The best thing is that the picture is "
+"compressed into base64! It's really awesome."
 
-#: web/templates/help.html:236
+#: web/templates/help.html:235
 msgid ""
 "图片，js, css被放入在不同目录里，井井有条，稍加修改就可以使用了。完全免费。"
 msgstr ""
+"Pictures, js, CSS are placed in different directories, well organized, a "
+"little modification can be used. It's completely free."
 
-#: web/templates/help.html:263
+#: web/templates/help.html:262
 msgid "模版可以被转换为支持django, symfony, cakephp等模版，这个简直是独创。"
 msgstr ""
+"Template can be converted to support django, symfony, CakePHP and other web "
+"framework, This is a great innovation."
 
-#: web/templates/help.html:277
+#: web/templates/help.html:276
 msgid "留言"
-msgstr ""
+msgstr "leave a message"
 
 #: web/templates/index.html:26
 msgid "拒绝996，让你有更多时间陪伴家人和朋友"
