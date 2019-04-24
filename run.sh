@@ -81,6 +81,7 @@ __collect_static_files(){
     rm -rf ${DJANGO_STATIC_DIR}
     python manage.py collectstatic
     rm -rf ${DJANGO_DEPLOY_STATIC_DIR}
+    mkdir -p ${DJANGO_DEPLOY_STATIC_DIR}
     cp -rf ${DJANGO_STATIC_DIR}  ${DJANGO_DEPLOY_STATIC_DIR}
 }
 
