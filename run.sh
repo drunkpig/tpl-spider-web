@@ -2,7 +2,12 @@
 # 程序可以部署在任何地方，但是可读的内容必须在 deploy_home下,这是权限的问题
 # 需要在deploy_home的1) nginx.conf, 2)static file, 3)lua
 PYTHON="/usr/bin/python3.7"
-deploy_home="/var/template-spider.com"
+if [[ $UID -eq 0 ]]; then
+    deploy_home="/var/template-spider.com/"
+else
+    deploy_home=$HOME/template-spider.com/
+fi
+
 mkdir -p ${deploy_home}
 
 TEMPLATE_BASE_DIR="${deploy_home}/web-templates/"
@@ -53,7 +58,7 @@ __pip_install_deps(){
 
 _set_up_py_venv(){
     ${PYTHON} -m pip install virtualenv
-	venv_dir=${user_home}/venv
+	venv_dir=${deploy_home}/venv
 	if [ ! -d ${venv_dir} ];then
 		${PYTHON} -m virtualenv -p ${PYTHON} ${venv_dir}
 	fi
@@ -84,7 +89,7 @@ __sync_db(){
 __collect_static_files(){
     rm -rf ${DJANGO_STATIC_DIR}
     python manage.py collectstatic
-    rm -rf ${DJANGO_DEPLOY_STATIC_DIR}
+    rm -rf ${DJANGO_DEPLOY_STATIC_DIR}/${COLLECTED_STATIC_DIR}
     mkdir -p ${DJANGO_DEPLOY_STATIC_DIR}
     cp -rf ${DJANGO_STATIC_DIR}  ${DJANGO_DEPLOY_STATIC_DIR}
 }
