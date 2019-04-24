@@ -6,7 +6,9 @@ deploy_home="/var/template-spider.com"
 mkdir -p ${deploy_home}
 
 TEMPLATE_BASE_DIR="${deploy_home}/web-templates/"
-NGINX_INCLUDE_CONF_DIR=${deploy_home}/.nginx
+mkdir -p ${TEMPLATE_BASE_DIR}
+
+NGINX_INCLUDE_CONF_DIR=${deploy_home}/nginx
 
 COLLECTED_STATIC_DIR='collected_static'
 OPENRESTRY_DIR=/opt/openresty
