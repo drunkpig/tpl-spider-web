@@ -29,7 +29,7 @@ GIT_REPO=("git@github.com:jscrapy/tpl-spider-web.git ${PROJ_TPL_SPIDER_WEB} mast
           "git@github.com:jscrapy/tpl-spider-core.git ${PROJ_TPL_SPIDER_CORE} master")
 
 DJANGO_STATIC_DIR="${DEPLOY_PARENT_DIR}/${PROJ_TPL_SPIDER_WEB}/${COLLECTED_STATIC_DIR}"
-DJANGO_DEPLOY_STATIC_DIR="/var/tpl-spider"
+DJANGO_DEPLOY_STATIC_DIR="/var/tpl-spider/"
 #=========================================================================
 # 制作venv, 安装py依赖
 # 杀原来进程

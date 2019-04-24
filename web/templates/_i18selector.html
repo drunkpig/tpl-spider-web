@@ -1,5 +1,6 @@
 {% load i18n %}
 {% load mytags %}
+
 <div class="default-select" id="default-select">
     <div class="nice-select" tabindex="0">
         {% get_current_language as LANGUAGE_CODE %}
@@ -13,12 +14,24 @@
             {% for language in languages %}
                 <li class="option {% if language.code == LANGUAGE_CODE %}selected focus{% endif %}">
                     {% language language.code %}
-                        <a href="{% url ''|add:request.resolver_match.view_name %}">
-                            <img class="niceCountryInputMenuCountryFlag"
-                                 src="{% cache_get language.code %}"/>
-                            <span>{{ language.name_local }} ({{ language.code }})</span>
-                        </a>
+                        {% with args=request.resolver_match.kwargs %}
+                            {% if args|length <= 0 %}
+                                <a href="{% url ''|add:request.resolver_match.view_name %}">
+                                    <img class="niceCountryInputMenuCountryFlag"
+                                         src="{% cache_get language.code %}"/>
+                                    <span>{{ language.name_local }} ({{ language.code }})</span>
+                                </a>
+                            {% else %}
+                                <a href="{% url ''|add:request.resolver_match.view_name args %}">
+                                    <img class="niceCountryInputMenuCountryFlag"
+                                         src="{% cache_get language.code %}"/>
+                                    <span>{{ language.name_local }} ({{ language.code }})</span>
+                                </a>
+                            {% endif %}
+
+                        {% endwith %}
                     {% endlanguage %}
+
                 </li>
             {% endfor %}
         </ul>
