@@ -1,9 +1,9 @@
 
-<!DOCTYPE html><html lang='en' class=''>
-<head>
-<title>500 error</title>
-<meta charset='UTF-8'><meta name="robots" content="noindex">
-<style class="cp-pen-styles">body,
+<html>
+    <head>
+        <title>Error</title>
+<style>
+body,
 html {
     padding: 0;
     margin: 0;
@@ -67,11 +67,18 @@ html {
 }
 
 .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 100vh;
     width: 100%;
+    -webkit-transition: -webkit-transform .5s;
     transition: -webkit-transform .5s;
     transition: transform .5s;
     transition: transform .5s, -webkit-transform .5s;
@@ -81,16 +88,19 @@ html {
     position: relative;
     width: 420px;
     height: 210px;
+    -webkit-transition: width 1s, height 1s;
     transition: width 1s, height 1s;
 }
 
 .pokeup {
+    -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
 
 .pokeup:hover {
     -webkit-transform: translateY(-10px);
             transform: translateY(-10px);
+    -webkit-transition: .3s ease;
     transition: .3s ease;
 }
 
@@ -220,8 +230,11 @@ html {
 
   @media screen and (max-width: 775px) {
     .container {
-      flex-wrap: wrap-reverse;
-      align-items: inherit;
+      -ms-flex-wrap: wrap-reverse;
+          flex-wrap: wrap-reverse;
+      -webkit-box-align: inherit;
+          -ms-flex-align: inherit;
+              align-items: inherit;
     }
   }
 
@@ -230,13 +243,16 @@ html {
         -webkit-transform: scale(.6);
                 transform: scale(.6);
       }
-  }</style></head><body>
+  }
+</style>
+    </head>
+    <body>
 <div class="container">
         <div class="error">
             <h1>500</h1>
             <h2>error</h2>
             <p>Ruh-roh, something just isn't right... Time to paw through your logs and get down and dirty in your
-                stack-trace;)</p>
+                stack-trace :)</p>
         </div>
         <div class="stack-container">
             <div class="card-container">
@@ -344,12 +360,8 @@ html {
         </div>
 
     </div>
-<script type="javascript">
-
-"use strict";"object"!=typeof window.CP&&(window.CP={}),window.CP.PenTimer={programNoLongerBeingMonitored:!1,timeOfFirstCallToShouldStopLoop:0,_loopExits:{},_loopTimers:{},START_MONITORING_AFTER:2e3,STOP_ALL_MONITORING_TIMEOUT:5e3,MAX_TIME_IN_LOOP_WO_EXIT:2200,exitedLoop:function(o){this._loopExits[o]=!0},shouldStopLoop:function(o){if(this.programKilledSoStopMonitoring)return!0;if(this.programNoLongerBeingMonitored)return!1;if(this._loopExits[o])return!1;var t=this._getTime();if(0===this.timeOfFirstCallToShouldStopLoop)return this.timeOfFirstCallToShouldStopLoop=t,!1;var i=t-this.timeOfFirstCallToShouldStopLoop;if(i<this.START_MONITORING_AFTER)return!1;if(i>this.STOP_ALL_MONITORING_TIMEOUT)return this.programNoLongerBeingMonitored=!0,!1;try{this._checkOnInfiniteLoop(o,t)}catch(e){return this._sendErrorMessageToEditor(),this.programKilledSoStopMonitoring=!0,!0}return!1},_sendErrorMessageToEditor:function(){try{if(this._shouldPostMessage()){var o={action:"infinite-loop",line:this._findAroundLineNumber()};parent.postMessage(o,"*")}else this._throwAnErrorToStopPen()}catch(t){this._throwAnErrorToStopPen()}},_shouldPostMessage:function(){return document.location.href.match(/boomerang/)},_throwAnErrorToStopPen:function(){throw"We found an infinite loop in your Pen. We've stopped the Pen from running. Please correct it or contact support@codepen.io."},_findAroundLineNumber:function(){var o=new Error,t=0;if(o.stack){var i=o.stack.match(/boomerang\S+:(\d+):\d+/);i&&(t=i[1])}return t},_checkOnInfiniteLoop:function(o,t){if(!this._loopTimers[o])return this._loopTimers[o]=t,!1;if(t-this._loopTimers[o]>this.MAX_TIME_IN_LOOP_WO_EXIT)throw"Infinite Loop found on loop: "+o},_getTime:function(){return+new Date}},window.CP.shouldStopExecution=function(o){var t=window.CP.PenTimer.shouldStopLoop(o);return!0===t&&console.warn("[CodePen]: An infinite loop (or a loop taking too long) was detected, so we stopped its execution. Sorry!"),t},window.CP.exitedLoop=function(o){window.CP.PenTimer.exitedLoop(o)};
-</script>
-        <script id="rendered-js">
-          const stackContainer = document.querySelector('.stack-container');
+<script>
+const stackContainer = document.querySelector('.stack-container');
 const cardNodes = document.querySelectorAll('.card-container');
 const perspecNodes = document.querySelectorAll('.perspec');
 const perspec = document.querySelector('.perspec');
@@ -359,61 +371,61 @@ let counter = stackContainer.children.length;
 
 //function to generate random number
 function randomIntFromInterval(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 //after tilt animation, fire the explode animation
 card.addEventListener('animationend', function () {
-  perspecNodes.forEach(function (elem, index) {
-    elem.classList.add('explode');
-  });
+    perspecNodes.forEach(function (elem, index) {
+        elem.classList.add('explode');
+    });
 });
 
 //after explode animation do a bunch of stuff
 perspec.addEventListener('animationend', function (e) {
-  if (e.animationName === 'explode') {
-    cardNodes.forEach(function (elem, index) {
+    if (e.animationName === 'explode') {
+        cardNodes.forEach(function (elem, index) {
 
-      //add hover animation class
-      elem.classList.add('pokeup');
+            //add hover animation class
+            elem.classList.add('pokeup');
 
-      //add event listner to throw card on click
-      elem.addEventListener('click', function () {
-        let updown = [800, -800];
-        let randomY = updown[Math.floor(Math.random() * updown.length)];
-        let randomX = Math.floor(Math.random() * 1000) - 1000;
-        elem.style.transform = `translate(${randomX}px, ${randomY}px) rotate(-540deg)`;
-        elem.style.transition = "transform 1s ease, opacity 2s";
-        elem.style.opacity = "0";
-        counter--;
-        if (counter === 0) {
-          stackContainer.style.width = "0";
-          stackContainer.style.height = "0";
-        }
-      });
+            //add event listner to throw card on click
+            elem.addEventListener('click', function () {
+                let updown = [800, -800]
+                let randomY = updown[Math.floor(Math.random() * updown.length)];
+                let randomX = Math.floor(Math.random() * 1000) - 1000;
+                elem.style.transform = `translate(${randomX}px, ${randomY}px) rotate(-540deg)`
+                elem.style.transition = "transform 1s ease, opacity 2s";
+                elem.style.opacity = "0";
+                counter--;
+                if (counter === 0) {
+                    stackContainer.style.width = "0";
+                    stackContainer.style.height = "0";
+                }
+            });
 
-      //generate random number of lines of code between 4 and 10 and add to each card
-      let numLines = randomIntFromInterval(5, 10);
+            //generate random number of lines of code between 4 and 10 and add to each card
+            let numLines = randomIntFromInterval(5, 10);
 
-      //loop through the lines and add them to the DOM
-      for (let index = 0; index < numLines; index++) {if (window.CP.shouldStopExecution(0)) break;
-        let lineLength = randomIntFromInterval(25, 97);
-        var node = document.createElement("li");
-        node.classList.add('node-' + index);
-        elem.querySelector('.code ul').appendChild(node).setAttribute('style', '--linelength: ' + lineLength + '%;');
+            //loop through the lines and add them to the DOM
+            for (let index = 0; index < numLines; index++) {
+                let lineLength = randomIntFromInterval(25, 97);
+                var node = document.createElement("li");
+                node.classList.add('node-' + index);
+                elem.querySelector('.code ul').appendChild(node).setAttribute('style', '--linelength: ' + lineLength + '%;');
 
-        //draw lines of code 1 by 1
-        if (index == 0) {
-          elem.querySelector('.code ul .node-' + index).classList.add('writeLine');
-        } else {
-          elem.querySelector('.code ul .node-' + (index - 1)).addEventListener('animationend', function (e) {
-            elem.querySelector('.code ul .node-' + index).classList.add('writeLine');
-          });
-        }
-      }window.CP.exitedLoop(0);
-    });
-  }
+                //draw lines of code 1 by 1
+                if (index == 0) {
+                    elem.querySelector('.code ul .node-' + index).classList.add('writeLine');
+                } else {
+                    elem.querySelector('.code ul .node-' + (index - 1)).addEventListener('animationend', function (e) {
+                        elem.querySelector('.code ul .node-' + index).classList.add('writeLine');
+                    });
+                }
+            }
+        });
+    }
 });
-          //# sourceURL=pen.js
-        </script>
-</body></html>
+</script>
+</body>
+</html>
