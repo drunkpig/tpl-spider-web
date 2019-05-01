@@ -10,11 +10,11 @@
                 <div class="banner_content text-left">
 
                     <h2>
-                        {% trans '全部任务数量' %}{{ total_task }}
+                        {% trans '全部任务数量' %}: <span class="ml-10">{{ total_task }}</span>
                     </h2>
                     <br/>
                     {% if task_order %}
-                        <h2>{% trans '您前面的任务数量' %}{{ task_order }}</h2>
+                        <h2>{% trans '您前面的任务数量' %}:<span class="ml-10">{{ task_order }}</span></h2>
                     {% else %}
                         <h2>{% trans '您没有运行的任务' %}</h2>
                     {% endif %}
