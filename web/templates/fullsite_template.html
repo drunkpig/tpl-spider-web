@@ -6,6 +6,13 @@
     {% trans '全站模版' %}
 {% endblock %}
 
+{% block seo %}
+    <!-- Meta Description -->
+    <meta content="{% trans '您只需要输入一个URL，那么这个URL以及这个URL层级以下的html都会被制作成模版。图片，css,js您可以选择下载或者使用网络位置进行引用。' %}" name="description"/>
+    <!-- Meta Keyword -->
+    <meta content="{% trans '网页模板制作,全站模板,网站复制' %}" name="keywords"/>
+{% endblock %}
+
 {% block submit_url %}
     {% url 'fullsite_task' %}
 {% endblock %}

@@ -1,6 +1,14 @@
 {% extends "_layout.html" %}
 {% load static %}
 {% load i18n %}
+
+{% block seo %}
+    <!-- Meta Description -->
+    <meta content="{% trans '联系我们，共创未来' %}" name="description"/>
+    <!-- Meta Keyword -->
+    <meta content="{% trans '网页模板制作,联系方式，联系我们' %}" name="keywords"/>
+{% endblock %}
+
 {% block content %}
     <section class="banner_area ">
         <div class="banner_inner overlay d-flex align-items-center">

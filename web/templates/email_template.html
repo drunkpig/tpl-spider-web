@@ -7,6 +7,13 @@
     {% trans 'Email模版' %}
 {% endblock %}
 
+{% block seo %}
+    <!-- Meta Description -->
+    <meta content="{% trans '，服务会直接把页面包含的图片，css,js，字体文件压缩在一个html页面内。这样在用户收到您的邮件时候不至于会被屏蔽图片等，格式更加精美。' %}" name="description"/>
+    <!-- Meta Keyword -->
+    <meta content="{% trans '网页模板制作,电子邮件模板,单页模板' %}" name="keywords"/>
+{% endblock %}
+
 {% block submit_url %}
     {% url 'email_task' %}
 {% endblock %}

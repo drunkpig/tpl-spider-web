@@ -7,10 +7,12 @@
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
     <!-- Favicon-->
     <link href="{% static 'img/fav.png' %}" rel="shortcut icon"/>
+{% block seo %}
     <!-- Meta Description -->
-    <meta content="" name="description"/>
+    <meta content="{% trans '将别人的网站变成自己的网页模板，网站复制' %}" name="description"/>
     <!-- Meta Keyword -->
-    <meta content="" name="keywords"/>
+    <meta content="{% trans '网站模板，email模板，全站模板，免费网页模板，网站复制' %}" name="keywords"/>
+{% endblock %}
     <!-- meta character set -->
     <meta charset="utf-8"/>
     <!-- Site Title -->

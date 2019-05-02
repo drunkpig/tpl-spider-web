@@ -2,7 +2,7 @@
 ## 架构
 ![](docs/image/arch.jpg)
 
-## 部署
+## 说明
 1. django静态文件
     执行 `python manage.py collectstatic`之后静态文件被放在 `tpl-spider-web`工程目录下的
       `collected_static/`。
@@ -11,22 +11,25 @@
     位置会存储下载过程中的临时目录和压缩后的zip文件。这个路径被配置在`run.sh`里。在启动的时候
     传送给 `tpl-spider-core`。
 
-3. nginx(openrestry) 配置
+## 部署
+
+
+1. nginx(openrestry) 配置
     - 先安装openrestry,参考下一节openrestry安装
     - 首先需要root用户配置下nginx的自带配置文件`nginx.conf`， include 进去`$HOME/.nginx/*.conf`
       如果没有这个目录需要自己去建好,run.sh中会自动创建
     - 第二步，把`tpl-spider-web`工程下的`tpl-spider-web.conf`文件软链接到`$HOME/.nginx/tpl-spider-web.conf`。ｒｕｎ.sh脚本中已经做了
 
-4. 安装[pgmoon](http://leafo.net/guides/using-postgres-with-openresty.html)
+2. 安装[pgmoon](http://leafo.net/guides/using-postgres-with-openresty.html)
     - 首先安装[luarocks](http://luarocks.github.io/luarocks/releases/luarocks-3.0.4.tar.gz), 是管理lua包的。 `./configure --prefix=/opt/luarocks/  --with-lua=/opt/nginx/luajit/ --with-lua-include=/opt/nginx/luajit/include/luajit-2.1`, 随后，`make & make install`
     - 去https://luarocks.org/ 看看支持postgres的包， 我们选 [pgmoon](http://leafo.net/guides/using-postgres-with-openresty.html)
     - `sudo luarocks install --tree=/opt/openresty-1.15.8/luajit   pgmoon` 指定路径--tree别搞错，否则nginx找不到luarocks安装的库
 
-5. 安装postgresql
+3. 安装postgresql
    - ａｐt-get install postgresql postgresql-contrib
    - 配置 /etc/postgresql/10/main/pg_hba.conf, 在host开始的行最前面添加一行
      `host    all             postgres             127.0.0.1/32       trust`
-   - 重启/etc/init.d/postgresql restart
+   - 重启/etc/init.d/postgresql restart, 或者 `/usr/lib/postgresql/10/bin/pg_ctl -D /var/lib/postgresql/10/main -l /path/to/log.log start`
    - 用ｐsql 创建数据库 `ｃreate database tpl_spider`
    
 
@@ -66,6 +69,7 @@
 - [logo](https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1543832155706_R&pv=&ic=0&nc=1&z=0&hd=0&latest=0&copyright=0&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&word=%E6%B0%B4%E9%BB%BE+%E9%AB%98%E6%B8%85
 )
 - js、css换用cdn
+- 报表
 
 ## 模版网站地址
 

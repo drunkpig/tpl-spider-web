@@ -3,6 +3,14 @@
 {% load i18n %}
 
 {% block title %}{% trans '帮助文档' %}{% endblock %}
+
+{% block seo %}
+    <!-- Meta Description -->
+    <meta content="{% trans '帮助手册，查看快速制作精美模板，节省您的建站时间' %}" name="description"/>
+    <!-- Meta Keyword -->
+    <meta content="{% trans '模板制作在线帮助' %}" name="keywords"/>
+{% endblock %}
+
 {% block content %}
     <!--================Home Banner Area =================-->
     <section class="banner_area ">

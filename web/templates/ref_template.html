@@ -6,6 +6,13 @@
     {% trans '引用模版抓取' %}
 {% endblock %}
 
+{% block seo %}
+    <!-- Meta Description -->
+    <meta content="{% trans '引用模式会把css,js，字体文件等使用网络地址，这样您不需要花费额外的带宽费用。' %}" name="description"/>
+    <!-- Meta Keyword -->
+    <meta content="{% trans '网页模板制作,引用模板' %}" name="keywords"/>
+{% endblock %}
+
 {% block submit_url %}
     {% url 'ref_task' %}
 {% endblock %}

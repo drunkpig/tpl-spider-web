@@ -5,6 +5,13 @@
     {% trans '精准模版抓取' %}
 {% endblock %}
 
+{% block seo %}
+    <!-- Meta Description -->
+    <meta content="{% trans '精准网页模板制作：输入url把网页变成模板，静态资源下载到本地' %}" name="description"/>
+    <!-- Meta Keyword -->
+    <meta content="{% trans '精准网页模板制作，网页变模板,网站复制' %}" name="keywords"/>
+{% endblock %}
+
 {% block submit_url %}
     {% url 'accurate_task' %}
 {% endblock %}
