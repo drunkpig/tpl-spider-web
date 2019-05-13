@@ -40,7 +40,7 @@ msgstr "个人设计、我借認証"
 
 #: web/templates/_layout.html:77
 msgid "主&nbsp;&nbsp;&nbsp;&nbsp;页"
-msgstr "メイン＆nbsp;＆nbsp;＆nbsp;＆nbsp;ページ"
+msgstr "メインページ"
 
 #: web/templates/_layout.html:83 web/templates/_layout.html:159
 #: web/templates/index.html:80
