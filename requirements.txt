@@ -18,3 +18,4 @@ gunicorn==19.9.0
 #django-simple-captcha
 validators
 django-recaptcha==2.0.2
+django-autotranslate
