@@ -91,3 +91,6 @@ https://onepagelove.com/fusion-lite
 
 ## 参考
 - i18n https://juejin.im/post/5b3efc36e51d45197136eb09
+
+## 工具
+使用google 自动翻译多国语言。很强大！https://pypi.org/project/django-autotranslate/
