@@ -119,10 +119,12 @@
                                     {% trans '服务只会抓您提供的URL，以及和URL相关的图片，css,js，字体文件等。这些资源被抓取到本地并放入到不同的文件夹下进行归类。' %}</li>
                                 <li><b>{% trans '全站模版' %}</b>&nbsp;&nbsp;{% trans '对于' %}<a
                                         href="{% url 'fullsite_template' %}">{% trans '全站模版' %}</a>
-                                    {% trans '来说您只需要输入一个URL，那么这个URL以及这个URL层级以下的html都会被制作成模版。图片，css,js您可以选择下载或者使用网络位置进行引用。' %}</li>
+                                    {% trans '来说您只需要输入一个URL，那么这个URL以及这个URL层级以下的html都会被制作成模版。图片，css,js您可以选择下载或者使用网络位置进行引用。' %}
+                                </li>
                                 <li><b>{% trans '电邮模版' %}</b>&nbsp;&nbsp;{% trans '对于' %}<a
                                         href="{% url 'email_template' %}">{% trans '电子邮件模版' %}</a>
-                                    {% trans '，服务会直接把页面包含的图片，css,js，字体文件压缩在一个html页面内。这样在用户收到您的邮件时候不至于会被屏蔽图片等，格式更加精美。' %}</li>
+                                    {% trans '，服务会直接把页面包含的图片，css,js，字体文件压缩在一个html页面内。这样在用户收到您的邮件时候不至于会被屏蔽图片等，格式更加精美。' %}
+                                </li>
                                 <li><b>{% trans '引用模版' %}</b>&nbsp;&nbsp;{% trans '如果您的服务器带宽较小，您可以使用' %}<a
                                         href="{% url 'ref_template' %}">{% trans '引用模式。' %}</a>
                                     {% trans '引用模式会把css,js，字体文件等使用网络地址，这样您不需要花费额外的带宽费用。' %}</li>
@@ -146,12 +148,20 @@
 
                             </div>
                             <div class="row">
-                                <div class="col-6">
-                                    <img alt="" class="img-fluid" src="{% static 'img/post-img1.jpg' %}"/>
+                                <div class="col-12">
+                                    <script async
+                                            src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                    <ins class="adsbygoogle"
+                                         style="display:block; text-align:center;"
+                                         data-ad-layout="in-article"
+                                         data-ad-format="fluid"
+                                         data-ad-client="ca-pub-1303916705383433"
+                                         data-ad-slot="3796735745"></ins>
+                                    <script>
+                                        (adsbygoogle = window.adsbygoogle || []).push({});
+                                    </script>
                                 </div>
-                                <div class="col-6">
-                                    <img alt="" class="img-fluid" src="{% static 'img/post-img2.jpg' %}"/>
-                                </div>
+
                                 <div class="col-lg-12 mt-25">
                                     <p>
                                         {% trans 'HTML技术处于飞速发展中，我们的服务会存在各种未知的BUG。' %}
@@ -316,23 +326,18 @@
                     <div class="blog_right_sidebar">
 
                         <aside class="single_sidebar_widget ads_widget">
-                            <!-- <a href="#">
-                                 <img alt="" class="img-fluid" src="{% static 'img/add.jpg' %}"/>
-                             </a>
--> 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- template-spider -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1303916705383433"
-     data-ad-slot="5520525733"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-                            <div class="br">
-                            </div>
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <！-- template-spider -->
+                            <ins class="adsbygoogle"
+                                 style="display:block"
+                                 data-ad-client="ca-pub-1303916705383433"
+                                 data-ad-slot="5520525733"
+                                 data-ad-format="auto"
+                                 data-full-width-responsive="true"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+
                         </aside>
 
                     </div>
